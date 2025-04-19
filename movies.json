@@ -1,0 +1,572 @@
+[
+  {
+    "title": "The Shawshank Redemption",
+    "rating": "9.3",
+    "age_rating": "R",
+    "runtime": 142,
+    "genres": [
+      "Drama"
+    ],
+    "tags": [
+      "prison",
+      "hope",
+      "friendship",
+      "justice"
+    ],
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "rt_quote": "A moving, inspirational tale of hope and perseverance."
+  },
+  {
+    "title": "The Godfather",
+    "rating": "9.2",
+    "age_rating": "R",
+    "runtime": 175,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [
+      "mafia",
+      "family",
+      "power",
+      "classic"
+    ],
+    "description": "The aging patriarch of an organized crime dynasty transfers control to his reluctant son.",
+    "rt_quote": "A masterwork of cinematic storytelling and character study."
+  },
+  {
+    "title": "The Dark Knight",
+    "rating": "9.0",
+    "age_rating": "PG-13",
+    "runtime": 152,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "tags": [
+      "batman",
+      "joker",
+      "vigilante",
+      "dark"
+    ],
+    "description": "Batman faces the Joker, a criminal mastermind bent on chaos.",
+    "rt_quote": "An epic crime saga with riveting performances and blockbuster thrills."
+  },
+  {
+    "title": "The Godfather Part II",
+    "rating": "9.0",
+    "age_rating": "R",
+    "runtime": 202,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [
+      "mafia",
+      "prequel",
+      "family",
+      "legacy"
+    ],
+    "description": "The early life and career of Vito Corleone and the rise of his son Michael as the new Don.",
+    "rt_quote": "A rare sequel that equals or surpasses the original."
+  },
+  {
+    "title": "12 Angry Men",
+    "rating": "9.0",
+    "age_rating": "Approved",
+    "runtime": 96,
+    "genres": [
+      "Drama"
+    ],
+    "tags": [
+      "courtroom",
+      "jury",
+      "justice",
+      "claustrophobic"
+    ],
+    "description": "A jury holds out in a murder trial, forcing each member to confront their own biases.",
+    "rt_quote": "An absorbing, powerful study in character and consensus."
+  },
+  {
+    "title": "Schindler's List",
+    "rating": "9.0",
+    "age_rating": "R",
+    "runtime": 195,
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "tags": [
+      "holocaust",
+      "true story",
+      "redemption",
+      "heroism"
+    ],
+    "description": "In German-occupied Poland, Oskar Schindler becomes concerned for his Jewish workforce.",
+    "rt_quote": "A haunting and deeply human chronicle of compassion during horror."
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "rating": "9.0",
+    "age_rating": "PG-13",
+    "runtime": 201,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "tags": [
+      "fantasy",
+      "epic",
+      "battle",
+      "friendship"
+    ],
+    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to aid Frodo and Sam.",
+    "rt_quote": "A sweeping fantasy finale of immense heart and spectacle."
+  },
+  {
+    "title": "Pulp Fiction",
+    "rating": "8.9",
+    "age_rating": "R",
+    "runtime": 154,
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "tags": [
+      "nonlinear",
+      "gangsters",
+      "dark comedy",
+      "violence"
+    ],
+    "description": "The lives of two mob hitmen, a boxer, and others intertwine in violent and unexpected ways.",
+    "rt_quote": "A wildly original mix of satire, pulp, and pop culture brilliance."
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "rating": "8.8",
+    "age_rating": "PG-13",
+    "runtime": 178,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "tags": [
+      "fantasy",
+      "journey",
+      "magic",
+      "brotherhood"
+    ],
+    "description": "A meek Hobbit sets out with companions to destroy a powerful ring.",
+    "rt_quote": "An enchanting and visually stunning beginning to a legendary trilogy."
+  },
+  {
+    "title": "The Good, the Bad and the Ugly",
+    "rating": "8.8",
+    "age_rating": "R",
+    "runtime": 178,
+    "genres": [
+      "Western"
+    ],
+    "tags": [
+      "bounty hunters",
+      "civil war",
+      "duel",
+      "epic"
+    ],
+    "description": "A bounty hunting scam joins two men in an uneasy alliance against a third.",
+    "rt_quote": "A definitive spaghetti western filled with style and grit."
+  },
+  {
+    "title": "Forrest Gump",
+    "rating": "8.8",
+    "age_rating": "PG-13",
+    "runtime": 142,
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "tags": [
+      "life story",
+      "vietnam war",
+      "loyalty",
+      "historical"
+    ],
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and more through the eyes of Forrest Gump.",
+    "rt_quote": "Sentimental and sincere, with a powerhouse performance from Tom Hanks."
+  },
+  {
+    "title": "Fight Club",
+    "rating": "8.8",
+    "age_rating": "R",
+    "runtime": 139,
+    "genres": [
+      "Drama"
+    ],
+    "tags": [
+      "underground",
+      "violence",
+      "psychological",
+      "anti-establishment"
+    ],
+    "description": "An insomniac office worker and a soap maker form an underground fight club.",
+    "rt_quote": "Bold, controversial, and unforgettable."
+  },
+  {
+    "title": "Inception",
+    "rating": "8.8",
+    "age_rating": "PG-13",
+    "runtime": 148,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "tags": [
+      "dreams",
+      "heist",
+      "mind-bending",
+      "layers"
+    ],
+    "description": "A thief who steals corporate secrets through dream-sharing technology is given a task of inception.",
+    "rt_quote": "Visually stunning and intellectually challenging."
+  },
+  {
+    "title": "The Lord of the Rings: The Two Towers",
+    "rating": "8.8",
+    "age_rating": "PG-13",
+    "runtime": 179,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "tags": [
+      "fantasy",
+      "battle",
+      "middle-earth",
+      "epic"
+    ],
+    "description": "The Fellowship is broken but fights on to protect Middle-earth from darkness.",
+    "rt_quote": "Dark, sweeping, and grand \u2014 a worthy sequel."
+  },
+  {
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "rating": "8.7",
+    "age_rating": "PG",
+    "runtime": 124,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "tags": [
+      "space",
+      "jedi",
+      "empire",
+      "rebellion"
+    ],
+    "description": "Luke Skywalker trains with Yoda and faces Darth Vader in a pivotal battle.",
+    "rt_quote": "A landmark sequel with deeper drama and iconic moments."
+  },
+  {
+    "title": "The Matrix",
+    "rating": "8.7",
+    "age_rating": "R",
+    "runtime": 136,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "tags": [
+      "simulation",
+      "hacker",
+      "reality",
+      "rebellion"
+    ],
+    "description": "A computer hacker discovers the nature of his reality and joins a rebellion.",
+    "rt_quote": "Stylish and groundbreaking sci-fi action."
+  },
+  {
+    "title": "Goodfellas",
+    "rating": "8.7",
+    "age_rating": "R",
+    "runtime": 146,
+    "genres": [
+      "Biography",
+      "Crime",
+      "Drama"
+    ],
+    "tags": [
+      "gangster",
+      "mafia",
+      "narration",
+      "rise and fall"
+    ],
+    "description": "The rise and fall of mob associate Henry Hill.",
+    "rt_quote": "Scorsese's masterpiece \u2014 gripping and authentic."
+  },
+  {
+    "title": "One Flew Over the Cuckoo's Nest",
+    "rating": "8.6",
+    "age_rating": "R",
+    "runtime": 133,
+    "genres": [
+      "Drama"
+    ],
+    "tags": [
+      "mental health",
+      "institution",
+      "rebellion",
+      "tragic"
+    ],
+    "description": "A criminal fakes insanity and enters a mental institution, where he challenges authority.",
+    "rt_quote": "Jack Nicholson at his best in this powerful, tragic story."
+  },
+  {
+    "title": "Se7en",
+    "rating": "8.6",
+    "age_rating": "R",
+    "runtime": 127,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "tags": [
+      "serial killer",
+      "sin",
+      "detective",
+      "twist ending"
+    ],
+    "description": "Two detectives hunt a killer who uses the seven deadly sins as his motive.",
+    "rt_quote": "Dark, gripping, and disturbing \u2014 a modern noir."
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "rating": "8.6",
+    "age_rating": "R",
+    "runtime": 118,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "tags": [
+      "serial killer",
+      "psychology",
+      "FBI",
+      "cannibal"
+    ],
+    "description": "A young FBI cadet must confide in an imprisoned killer to catch another criminal.",
+    "rt_quote": "Chilling, intelligent, and unforgettable."
+  },
+  {
+    "title": "The Good Dinosaur",
+    "rating": "8.2",
+    "age_rating": "PG",
+    "runtime": 93,
+    "genres": [
+      "Animation",
+      "Family"
+    ],
+    "tags": [
+      "Dinosaurs",
+      "Adventure",
+      "Fun"
+    ],
+    "description": "A young dinosaur sets out on an epic journey with a human boy.",
+    "rt_quote": "A stunning visual journey with heart and adventure."
+  },
+  {
+    "title": "Ice Age: Dawn of the Dinosaurs",
+    "rating": "8.0",
+    "age_rating": "PG",
+    "runtime": 94,
+    "genres": [
+      "Animation",
+      "Family"
+    ],
+    "tags": [
+      "Dinosaurs",
+      "Fun",
+      "Adventure"
+    ],
+    "description": "Sid finds himself in a strange underground world of dinosaurs.",
+    "rt_quote": "A silly, thrilling ride that kids will enjoy."
+  },
+  {
+    "title": "Land Before Time",
+    "rating": "8.3",
+    "age_rating": "G",
+    "runtime": 69,
+    "genres": [
+      "Animation",
+      "Family"
+    ],
+    "tags": [
+      "Dinosaurs",
+      "Adventure"
+    ],
+    "description": "Young dinosaurs go on a journey to find a new home.",
+    "rt_quote": "A timeless classic that captures the imagination of every child."
+  },
+  {
+    "title": "When Harry Met Sally",
+    "rating": "7.6",
+    "age_rating": "R",
+    "runtime": 96,
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "tags": [
+      "Romantic",
+      "Witty",
+      "Relationships"
+    ],
+    "description": "Can men and women ever just be friends? This classic romcom explores the journey of two people over the years.",
+    "rt_quote": "Smart, sweet, and surprisingly honest."
+  },
+  {
+    "title": "10 Things I Hate About You",
+    "rating": "7.3",
+    "age_rating": "PG-13",
+    "runtime": 97,
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "tags": [
+      "Teen",
+      "High School",
+      "Love"
+    ],
+    "description": "A modern adaptation of Shakespeare's 'Taming of the Shrew' set in a high school.",
+    "rt_quote": "Funny, sharp, and full of heart."
+  },
+  {
+    "title": "Notting Hill",
+    "rating": "7.1",
+    "age_rating": "PG-13",
+    "runtime": 124,
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "tags": [
+      "Celebrity",
+      "London",
+      "Love story"
+    ],
+    "description": "A bookstore owner\u2019s life changes when he meets a famous actress.",
+    "rt_quote": "Charming, witty, and feel-good."
+  },
+  {
+    "title": "The Matrix",
+    "rating": "8.7",
+    "age_rating": "R",
+    "runtime": 136,
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "tags": [
+      "Reality",
+      "Rebellion",
+      "Simulation"
+    ],
+    "description": "A hacker discovers the truth about reality and joins a resistance movement.",
+    "rt_quote": "Stylish and groundbreaking."
+  },
+  {
+    "title": "Top Gun",
+    "rating": "6.9",
+    "age_rating": "PG",
+    "runtime": 110,
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "tags": [
+      "Jets",
+      "Military",
+      "Competition"
+    ],
+    "description": "Students at the Navy's elite fighter weapons school compete to be best.",
+    "rt_quote": "Slick and adrenaline-fueled."
+  },
+  {
+    "title": "Mission: Impossible",
+    "rating": "7.1",
+    "age_rating": "PG-13",
+    "runtime": 110,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "tags": [
+      "Espionage",
+      "Spy",
+      "Betrayal"
+    ],
+    "description": "An American agent goes rogue after being framed.",
+    "rt_quote": "Tense and stylish."
+  },
+  {
+    "title": "John Wick",
+    "rating": "7.4",
+    "age_rating": "R",
+    "runtime": 101,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "tags": [
+      "Revenge",
+      "Hitman",
+      "Stylized violence"
+    ],
+    "description": "A retired hitman seeks vengeance for his dog.",
+    "rt_quote": "Relentless action and cool style."
+  },
+  {
+    "title": "Gone Girl",
+    "rating": "8.1",
+    "age_rating": "R",
+    "runtime": 149,
+    "genres": [
+      "Thriller",
+      "Mystery",
+      "Drama"
+    ],
+    "tags": [
+      "Marriage",
+      "Mystery",
+      "Manipulation"
+    ],
+    "description": "A husband becomes the prime suspect when his wife disappears.",
+    "rt_quote": "Dark and endlessly twisty."
+  },
+  {
+    "title": "Prisoners",
+    "rating": "8.1",
+    "age_rating": "R",
+    "runtime": 153,
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "tags": [
+      "Kidnapping",
+      "Investigation",
+      "Gritty"
+    ],
+    "description": "When his daughter is kidnapped, a father takes matters into his own hands.",
+    "rt_quote": "Powerful and unsettling."
+  }
+]
