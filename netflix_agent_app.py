@@ -41,6 +41,7 @@ parsed_filters = {}
 if user_input:
     with st.spinner("🧠 Thinking..."):
         try:
+            client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 temperature=0,
@@ -49,10 +50,21 @@ if user_input:
                     {"role": "user", "content": user_input}
                 ]
             )
-            parsed_filters = json.loads(response.choices[0].message.content)
-        except Exception:
-            st.error("GPT couldn't parse your request. Try rephrasing.")
+
+            # 🧪 Debug (optional): print GPT response
+            raw_output = response.choices[0].message.content
+            try:
+                parsed_filters = json.loads(raw_output)
+            except json.JSONDecodeError:
+                st.error("GPT responded, but I couldn't parse its output into filters.")
+                st.code(raw_output)
+                st.stop()
+
+        except Exception as e:
+            st.error("GPT request failed. Try rephrasing.")
+            st.exception(e)
             st.stop()
+
 
 # --- Display Parsed Filters ---
 if parsed_filters:
