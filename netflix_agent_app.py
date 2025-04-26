@@ -30,18 +30,17 @@ Important:
 
 # --- Load Movies from JSON ---
 try:
-    with open("movies.json", "r") as f:
+    with open("full_movies_dataset.json", "r") as f:
         all_movies = json.load(f)
 except FileNotFoundError:
-    st.error("Could not find movies.json. Make sure it's in the same folder.")
+    st.error("Could not find full_movies_dataset.json. Make sure it's in the same folder.")
     st.stop()
 
 # --- Parse Filters ---
 parsed_filters = {}
 if user_input:
-    with st.spinner("🧠 Thinking..."):
+    with st.spinner("🧐 Thinking..."):
         try:
-            client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 temperature=0,
@@ -50,21 +49,12 @@ if user_input:
                     {"role": "user", "content": user_input}
                 ]
             )
-
-            # 🧪 Debug (optional): print GPT response
             raw_output = response.choices[0].message.content
-            try:
-                parsed_filters = json.loads(raw_output)
-            except json.JSONDecodeError:
-                st.error("GPT responded, but I couldn't parse its output into filters.")
-                st.code(raw_output)
-                st.stop()
-
+            parsed_filters = json.loads(raw_output)
         except Exception as e:
-            st.error("GPT request failed. Try rephrasing.")
+            st.error("GPT request failed or response couldn't be parsed.")
             st.exception(e)
             st.stop()
-
 
 # --- Display Parsed Filters ---
 if parsed_filters:
@@ -84,25 +74,21 @@ def score_movie(movie, filters):
     score = 0
 
     if filters.get("genres"):
-        if not any(genre in movie.get("genres", []) for genre in filters["genres"]):
-            return 0
-        score += 1
+        if any(genre.lower() in [g.lower() for g in movie.get("genres", [])] for genre in filters["genres"]):
+            score += 1
 
     if filters.get("mood"):
         mood_matches = sum(1 for mood in filters["mood"] if mood.lower() in [tag.lower() for tag in movie.get("tags", [])])
         score += mood_matches
 
     if filters.get("keywords"):
-        if not any(k.lower() in movie.get("description", "").lower() or k.lower() in [t.lower() for t in movie.get("tags", [])] for k in filters["keywords"]):
-            return 0
-        score += 1
+        keyword_matches = sum(1 for k in filters["keywords"] if k.lower() in movie.get("description", "").lower() or k.lower() in [tag.lower() for tag in movie.get("tags", [])])
+        score += keyword_matches
 
-    movie_rating = movie.get("age_rating", "")
-    required = filters.get("min_age_rating", "")
-    if required == "G" and movie_rating in ["G", "PG"]:
-        score += 1
-    elif required and movie_rating == required:
-        score += 1
+    if filters.get("min_age_rating"):
+        movie_rating = movie.get("age_rating", "")
+        if movie_rating == filters["min_age_rating"]:
+            score += 1
 
     return score
 
@@ -110,10 +96,10 @@ def score_movie(movie, filters):
 def explain_why(movie, filters):
     reasons = []
     for genre in filters.get("genres", []):
-        if genre in movie.get("genres", []):
+        if genre.lower() in [g.lower() for g in movie.get("genres", [])]:
             reasons.append(f"it's a {genre.lower()} movie")
     for mood in filters.get("mood", []):
-        if mood.lower() in movie.get("tags", []):
+        if mood.lower() in [t.lower() for t in movie.get("tags", [])]:
             reasons.append(f"it has a {mood.lower()} tone")
     for keyword in filters.get("keywords", []):
         if keyword.lower() in movie.get("description", "").lower() or keyword.lower() in [t.lower() for t in movie.get("tags", [])]:
@@ -121,9 +107,10 @@ def explain_why(movie, filters):
     if "min_age_rating" in filters and movie.get("age_rating"):
         if filters["min_age_rating"] == movie["age_rating"]:
             reasons.append(f"it's rated {movie['age_rating']}")
+
     explanation = "Chosen because " + ", and ".join(reasons) + "."
     if movie.get("rt_quote"):
-        explanation += f" Critics said: “{movie['rt_quote']}”"
+        explanation += f" Critics said: \u201c{movie['rt_quote']}\u201d"
     return explanation
 
 # --- Get Ranked Results ---
@@ -142,8 +129,8 @@ if parsed_filters:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
             st.markdown(f"**{movie['title']}**")
-            st.markdown(f"⭐ {movie['rating']} | {movie['age_rating']} | {movie['runtime']} mins")
-            st.markdown(movie['description'])
+            st.markdown(f"🌟 {movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins")
+            st.markdown(f"_{movie['description']}_")
             st.markdown(f"*Why this movie?* {explain_why(movie, parsed_filters)}")
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
