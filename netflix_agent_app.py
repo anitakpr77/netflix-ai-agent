@@ -30,10 +30,10 @@ Important:
 
 # --- Load Movies from JSON ---
 try:
-    with open("full_movies_dataset.json", "r") as f:
+    with open("movies.json", "r") as f:
         all_movies = json.load(f)
 except FileNotFoundError:
-    st.error("Could not find full_movies_dataset.json. Make sure it's in the same folder.")
+    st.error("Could not find movies.json. Make sure it's in the same folder.")
     st.stop()
 
 # --- Parse Filters ---
