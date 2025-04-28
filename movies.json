@@ -240,177 +240,185 @@
         "description": "Jason Bourne dodges a ruthless CIA operation while searching for his past.",
         "rt_quote": "An exhilarating, smartly-crafted thriller."
     },
-
     {
-        "title": "Sample Movie 11",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Superbad",
+        "rating": "87%",
+        "age_rating": "R",
+        "runtime": 113,
         "genres": [
-            "Drama",
+            "Comedy"
+        ],
+        "tags": [
+            "hilarious",
+            "coming-of-age",
+            "raunchy",
+            "wild"
+        ],
+        "description": "Two high school friends scramble to enjoy one last party before graduation.",
+        "rt_quote": "An endlessly quotable, riotously funny coming-of-age romp."
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 99,
+        "genres": [
+            "Comedy",
+            "Drama"
+        ],
+        "tags": [
+            "whimsical",
+            "witty",
+            "stylish",
+            "offbeat"
+        ],
+        "description": "The adventures of a legendary concierge at a famous hotel between the wars.",
+        "rt_quote": "A visual feast packed with eccentric delights."
+    },
+    {
+        "title": "Bridesmaids",
+        "rating": "76%",
+        "age_rating": "R",
+        "runtime": 125,
+        "genres": [
+            "Comedy",
+            "Romance"
+        ],
+        "tags": [
+            "outrageous",
+            "relatable",
+            "hilarious",
+            "heartfelt"
+        ],
+        "description": "Competition between the maid of honor and a bridesmaid over who is the bride's best friend.",
+        "rt_quote": "A wildly funny, refreshingly honest take on female friendship."
+    },
+    {
+        "title": "Groundhog Day",
+        "rating": "88%",
+        "age_rating": "PG",
+        "runtime": 101,
+        "genres": [
+            "Comedy",
+            "Fantasy",
+            "Romance"
+        ],
+        "tags": [
+            "clever",
+            "feel-good",
+            "time-loop",
+            "witty"
+        ],
+        "description": "A cynical weatherman finds himself reliving the same day over and over.",
+        "rt_quote": "A brilliant, endlessly inventive comedy classic."
+    },
+    {
+        "title": "The 40-Year-Old Virgin",
+        "rating": "84%",
+        "age_rating": "R",
+        "runtime": 116,
+        "genres": [
+            "Comedy",
+            "Romance"
+        ],
+        "tags": [
+            "awkward",
+            "raunchy",
+            "hilarious",
+            "charming"
+        ],
+        "description": "A middle-aged man's friends try to help him lose his virginity.",
+        "rt_quote": "Sweet, raunchy, and outrageously funny."
+    },
+    {
+        "title": "Ferris Bueller's Day Off",
+        "rating": "92%",
+        "age_rating": "PG-13",
+        "runtime": 103,
+        "genres": [
+            "Comedy",
             "Adventure"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "feel-good",
+            "rebellious",
+            "fun",
+            "coming-of-age"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A high school wise guy is determined to have a day off from school.",
+        "rt_quote": "A joyful, unforgettable ride through youthful rebellion."
     },
     {
-        "title": "Sample Movie 12",
-        "rating": "85%",
+        "title": "School of Rock",
+        "rating": "92%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 109,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Comedy",
+            "Music"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "fun",
+            "inspiring",
+            "feel-good",
+            "rock-n-roll"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A struggling musician turns a class of students into a rock band.",
+        "rt_quote": "A hilarious and heartfelt ode to the power of music."
     },
     {
-        "title": "Sample Movie 13",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Napoleon Dynamite",
+        "rating": "74%",
+        "age_rating": "PG",
+        "runtime": 96,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Comedy"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "quirky",
+            "awkward",
+            "deadpan",
+            "offbeat"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A socially awkward teen helps his friend run for class president.",
+        "rt_quote": "A wonderfully strange and charming offbeat comedy."
     },
     {
-        "title": "Sample Movie 14",
-        "rating": "85%",
+        "title": "Crazy Rich Asians",
+        "rating": "87%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 120,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Comedy",
+            "Romance"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "glamorous",
+            "feel-good",
+            "romantic",
+            "funny"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "An American-born Chinese woman travels to meet her boyfriend's insanely wealthy family.",
+        "rt_quote": "A lavish, heartfelt romantic comedy with modern flair."
     },
     {
-        "title": "Sample Movie 15",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Hangover",
+        "rating": "84%",
+        "age_rating": "R",
+        "runtime": 100,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Comedy"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "wild",
+            "raunchy",
+            "chaotic",
+            "hilarious"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Three groomsmen lose their soon-to-be-wed buddy during their Vegas bachelor party.",
+        "rt_quote": "A riotously funny and unpredictable ride."
     },
-    {
-        "title": "Sample Movie 16",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 17",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 18",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 19",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 20",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+    
     {
         "title": "Sample Movie 21",
         "rating": "85%",
