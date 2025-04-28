@@ -420,174 +420,192 @@
     },
     
     {
-        "title": "Sample Movie 21",
+        "title": "Interstellar",
         "rating": "85%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 169,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Adventure",
+            "Drama"
         ],
         "tags": [
+            "epic",
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "mind-bending",
+            "hopeful"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A team of explorers travel through a wormhole in space in a desperate attempt to ensure humanity's survival.",
+        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
     },
     {
-        "title": "Sample Movie 22",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Blade Runner 2049",
+        "rating": "81%",
+        "age_rating": "R",
+        "runtime": 164,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dark",
+            "philosophical",
+            "visually-stunning",
+            "thought-provoking"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
+        "rt_quote": "A breathtaking, thought-provoking sequel that honors its predecessor."
     },
     {
-        "title": "Sample Movie 23",
-        "rating": "85%",
+        "title": "Arrival",
+        "rating": "82%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 116,
         "genres": [
+            "Sci-Fi",
             "Drama",
-            "Adventure"
+            "Mystery"
         ],
         "tags": [
+            "philosophical",
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "thoughtful",
+            "introspective"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A linguist works to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+        "rt_quote": "A beautifully cerebral and emotional science fiction masterpiece."
     },
     {
-        "title": "Sample Movie 24",
+        "title": "The Matrix",
         "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "age_rating": "R",
+        "runtime": 136,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Action"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "mind-bending",
+            "intense",
+            "revolutionary",
+            "philosophical"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
+        "rt_quote": "A groundbreaking sci-fi thriller that redefined a generation."
     },
     {
-        "title": "Sample Movie 25",
-        "rating": "85%",
+        "title": "Gravity",
+        "rating": "79%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 91,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Thriller",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "suspenseful",
+            "visually-stunning",
+            "survival",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Two astronauts work together to survive after an accident leaves them stranded in space.",
+        "rt_quote": "A visually jaw-dropping, nerve-shredding thrill ride."
     },
     {
-        "title": "Sample Movie 26",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "District 9",
+        "rating": "82%",
+        "age_rating": "R",
+        "runtime": 112,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Action",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
+            "gritty",
             "thought-provoking",
-            "uplifting"
+            "political",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "An extraterrestrial race forced to live in slum-like conditions fights for its freedom.",
+        "rt_quote": "A powerful, gritty sci-fi allegory with a fresh perspective."
     },
     {
-        "title": "Sample Movie 27",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Ex Machina",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 108,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Thriller",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "philosophical",
+            "intense",
+            "intelligent",
+            "chilling"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence.",
+        "rt_quote": "A sleek, cerebral thriller that explores the nature of consciousness."
     },
     {
-        "title": "Sample Movie 28",
-        "rating": "85%",
+        "title": "Dune (2021)",
+        "rating": "83%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 155,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Adventure",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "epic",
+            "visually-stunning",
+            "political",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis.",
+        "rt_quote": "A breathtaking, immersive spectacle of sci-fi storytelling."
     },
     {
-        "title": "Sample Movie 29",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Looper",
+        "rating": "82%",
+        "age_rating": "R",
+        "runtime": 113,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Sci-Fi",
+            "Action",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
+            "time-travel",
+            "intense",
             "thought-provoking",
-            "uplifting"
+            "gritty"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "In the future, a hitman discovers his target is his older self, leading to unforeseen consequences.",
+        "rt_quote": "A smart, stylish, and thrilling take on time-travel."
     },
     {
-        "title": "Sample Movie 30",
+        "title": "Children of Men",
         "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "age_rating": "R",
+        "runtime": 109,
         "genres": [
+            "Sci-Fi",
             "Drama",
-            "Adventure"
+            "Thriller"
         ],
         "tags": [
+            "gritty",
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dystopian",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "In a bleak future where humans have become infertile, a disillusioned bureaucrat must protect the last pregnant woman on Earth.",
+        "rt_quote": "A powerful and deeply moving sci-fi masterpiece."
     },
     {
         "title": "Sample Movie 31",
