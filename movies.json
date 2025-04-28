@@ -608,174 +608,194 @@
         "rt_quote": "A powerful and deeply moving sci-fi masterpiece."
     },
     {
-        "title": "Sample Movie 31",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Gone Girl",
+        "rating": "87%",
+        "age_rating": "R",
+        "runtime": 149,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Mystery",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "psychological",
+            "dark",
+            "twisty",
+            "tense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A man becomes the prime suspect in the disappearance of his wife in a media frenzy.",
+        "rt_quote": "A masterful, chilling exploration of marriage and deceit."
     },
     {
-        "title": "Sample Movie 32",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Prisoners",
+        "rating": "88%",
+        "age_rating": "R",
+        "runtime": 153,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Crime",
+            "Drama"
         ],
         "tags": [
+            "gritty",
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "chilling",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "When two young girls go missing, one father takes matters into his own hands.",
+        "rt_quote": "A harrowing and emotionally gripping thriller."
     },
     {
-        "title": "Sample Movie 33",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Se7en",
+        "rating": "95%",
+        "age_rating": "R",
+        "runtime": 127,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Crime",
+            "Mystery"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dark",
+            "disturbing",
+            "intense",
+            "gritty"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
+        "rt_quote": "A brutally effective and chilling crime thriller."
     },
     {
-        "title": "Sample Movie 34",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Zodiac",
+        "rating": "89%",
+        "age_rating": "R",
+        "runtime": 157,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Mystery",
+            "Crime"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "methodical",
+            "tense",
+            "dark",
+            "slow-burn"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Based on real events, a cartoonist becomes obsessed with tracking down the Zodiac Killer.",
+        "rt_quote": "A meticulous, haunting investigation into obsession."
     },
     {
-        "title": "Sample Movie 35",
+        "title": "Nightcrawler",
         "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "age_rating": "R",
+        "runtime": 117,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Crime",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "creepy",
+            "psychological",
+            "disturbing",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A driven man blurs the lines between observer and participant in the world of crime journalism.",
+        "rt_quote": "A chilling and darkly compelling character study."
     },
     {
-        "title": "Sample Movie 36",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Girl with the Dragon Tattoo",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 158,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Mystery",
+            "Crime"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dark",
+            "intense",
+            "mysterious",
+            "gritty"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A journalist and a hacker dig into a family's dark secrets to solve a decades-old disappearance.",
+        "rt_quote": "A dark, stylish mystery with riveting performances."
     },
     {
-        "title": "Sample Movie 37",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Silence of the Lambs",
+        "rating": "95%",
+        "age_rating": "R",
+        "runtime": 118,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Crime",
+            "Horror"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "chilling",
+            "psychological",
+            "gripping",
+            "dark"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "An FBI trainee seeks the advice of an imprisoned cannibal killer to catch another serial killer.",
+        "rt_quote": "A tense and psychologically complex masterpiece."
     },
     {
-        "title": "Sample Movie 38",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "No Country for Old Men",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 122,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Crime",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "suspenseful",
+            "gritty",
+            "dark",
+            "tense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A hunter finds a stash of money left from a drug deal gone wrong, drawing ruthless pursuit.",
+        "rt_quote": "A brutal, suspenseful exploration of fate and violence."
     },
     {
-        "title": "Sample Movie 39",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Wind River",
+        "rating": "90%",
+        "age_rating": "R",
+        "runtime": 107,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Mystery",
+            "Crime"
         ],
         "tags": [
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "gritty",
+            "chilling",
+            "haunting"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A wildlife tracker and an FBI agent investigate a murder on a Native American reservation.",
+        "rt_quote": "A powerful, haunting thriller set in a chilling landscape."
     },
     {
-        "title": "Sample Movie 40",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Shutter Island",
+        "rating": "76%",
+        "age_rating": "R",
+        "runtime": 138,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Thriller",
+            "Mystery",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "psychological",
+            "twisty",
+            "tense",
+            "atmospheric"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A U.S. Marshal investigates the disappearance of a patient from a remote psychiatric facility.",
+        "rt_quote": "A visually haunting, mind-bending thriller."
     },
     {
         "title": "Sample Movie 41",
