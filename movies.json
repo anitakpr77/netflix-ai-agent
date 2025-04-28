@@ -798,174 +798,193 @@
         "rt_quote": "A visually haunting, mind-bending thriller."
     },
     {
-        "title": "Sample Movie 41",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Babadook",
+        "rating": "72%",
+        "age_rating": "Not Rated",
+        "runtime": 94,
         "genres": [
+            "Horror",
             "Drama",
-            "Adventure"
+            "Thriller"
         ],
         "tags": [
+            "psychological",
+            "creepy",
             "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dread"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A single mother and her child fall into a deep well of paranoia when an eerie children's book manifests in their home.",
+        "rt_quote": "A haunting, deeply emotional meditation on grief and fear."
     },
     {
-        "title": "Sample Movie 42",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Hereditary",
+        "rating": "70%",
+        "age_rating": "R",
+        "runtime": 127,
         "genres": [
+            "Horror",
             "Drama",
-            "Adventure"
+            "Mystery"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "dark",
+            "disturbing",
+            "family-horror",
+            "chilling"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "After the family matriarch passes away, a grieving family is haunted by tragic and disturbing occurrences.",
+        "rt_quote": "One of the most unsettling and artfully crafted horror films in years."
     },
     {
-        "title": "Sample Movie 43",
-        "rating": "85%",
+        "title": "A Quiet Place",
+        "rating": "82%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 90,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Thriller",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "suspenseful",
+            "intense",
+            "survival",
+            "minimalist"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "In a post-apocalyptic world, a family must live in silence to avoid blind monsters with acute hearing.",
+        "rt_quote": "A nerve-shredding thriller that's both terrifying and tender."
     },
     {
-        "title": "Sample Movie 44",
+        "title": "The Conjuring",
         "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "age_rating": "R",
+        "runtime": 112,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Mystery",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "supernatural",
+            "haunted-house",
+            "intense",
+            "chilling"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "Paranormal investigators work to help a family terrorized by a dark presence in their farmhouse.",
+        "rt_quote": "A terrifying and masterfully crafted haunted house tale."
     },
     {
-        "title": "Sample Movie 45",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "It Follows",
+        "rating": "66%",
+        "age_rating": "R",
+        "runtime": 100,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Mystery",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "atmospheric",
+            "slow-burn",
+            "creepy",
+            "original"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A teenager is followed by an unknown supernatural force after a sexual encounter.",
+        "rt_quote": "A refreshingly original, slow-burning horror experience."
     },
     {
-        "title": "Sample Movie 46",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Witch",
+        "rating": "59%",
+        "age_rating": "R",
+        "runtime": 92,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Mystery",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "atmospheric",
+            "slow-burn",
+            "psychological",
+            "folkloric"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A Puritan family encounters forces of evil in the woods beyond their New England farm.",
+        "rt_quote": "A chilling, atmospheric descent into religious paranoia and dread."
     },
     {
-        "title": "Sample Movie 47",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Midsommar",
+        "rating": "63%",
+        "age_rating": "R",
+        "runtime": 148,
         "genres": [
+            "Horror",
             "Drama",
-            "Adventure"
+            "Mystery"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "disturbing",
+            "psychological",
+            "folkloric",
+            "visually-stunning"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A couple travels to a rural Swedish village's fabled mid-summer festival and becomes trapped in a pagan cult.",
+        "rt_quote": "A mesmerizing, unsettling journey into sunlit terror."
     },
     {
-        "title": "Sample Movie 48",
-        "rating": "85%",
+        "title": "The Others",
+        "rating": "77%",
         "age_rating": "PG-13",
-        "runtime": 110,
+        "runtime": 104,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Mystery",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "ghost-story",
+            "atmospheric",
+            "twisty",
+            "haunting"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A woman who lives in her darkened old family house with her two photosensitive children becomes convinced that the home is haunted.",
+        "rt_quote": "A beautifully crafted, chillingly effective ghost story."
     },
     {
-        "title": "Sample Movie 49",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "Get Out",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 104,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Mystery",
+            "Thriller"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "psychological",
+            "satirical",
+            "creepy",
+            "social-commentary"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A young African-American visits his white girlfriend's parents for the weekend and uncovers a disturbing secret.",
+        "rt_quote": "A brilliantly unsettling and socially conscious thriller."
     },
     {
-        "title": "Sample Movie 50",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
+        "title": "The Shining",
+        "rating": "84%",
+        "age_rating": "R",
+        "runtime": 146,
         "genres": [
-            "Drama",
-            "Adventure"
+            "Horror",
+            "Drama"
         ],
         "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
+            "psychological",
+            "slow-burn",
+            "haunted",
+            "intense"
         ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "description": "A family heads to an isolated hotel where sinister forces drive the father into violence.",
+        "rt_quote": "An atmospheric, slow-building masterpiece of horror."
     },
     {
         "title": "Sample Movie 51",
