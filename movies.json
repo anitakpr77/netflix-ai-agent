@@ -1701,5 +1701,191 @@
         ],
         "description": "An inspiring tale of resilience and hope.",
         "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Mad Max: Fury Road",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 120,
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "tags": [
+            "explosive",
+            "intense",
+            "gritty",
+            "thrilling"
+        ],
+        "description": "In a post-apocalyptic wasteland, Max teams up with a rebel warrior to escape a tyrant.",
+        "rt_quote": "A high-octane masterpiece of visual storytelling."
+    },
+    {
+        "title": "John Wick",
+        "rating": "81%",
+        "age_rating": "R",
+        "runtime": 101,
+        "genres": [
+            "Action",
+            "Thriller"
+        ],
+        "tags": [
+            "stylish",
+            "violent",
+            "relentless",
+            "revenge"
+        ],
+        "description": "A retired hitman seeks vengeance for the death of his beloved dog.",
+        "rt_quote": "Sleek, stylish, and satisfyingly brutal."
+    },
+    {
+        "title": "Die Hard",
+        "rating": "94%",
+        "age_rating": "R",
+        "runtime": 132,
+        "genres": [
+            "Action",
+            "Thriller"
+        ],
+        "tags": [
+            "suspenseful",
+            "heroic",
+            "gritty",
+            "classic"
+        ],
+        "description": "An NYPD officer tries to save his wife and others taken hostage by terrorists.",
+        "rt_quote": "The definitive action movie experience."
+    },
+    {
+        "title": "Mission: Impossible \u2013 Fallout",
+        "rating": "88%",
+        "age_rating": "PG-13",
+        "runtime": 147,
+        "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+        ],
+        "tags": [
+            "high-stakes",
+            "intense",
+            "relentless",
+            "thrilling"
+        ],
+        "description": "Ethan Hunt and his team race against time after a mission gone wrong.",
+        "rt_quote": "A breathtaking spectacle of action mastery."
+    },
+    {
+        "title": "The Dark Knight",
+        "rating": "94%",
+        "age_rating": "PG-13",
+        "runtime": 152,
+        "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+        ],
+        "tags": [
+            "dark",
+            "intense",
+            "gritty",
+            "heroic"
+        ],
+        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
+        "rt_quote": "An electrifying portrayal of heroism and chaos."
+    },
+    {
+        "title": "Gladiator",
+        "rating": "87%",
+        "age_rating": "R",
+        "runtime": 155,
+        "genres": [
+            "Action",
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "epic",
+            "heroic",
+            "gritty",
+            "emotional"
+        ],
+        "description": "A betrayed Roman general seeks revenge against the corrupt emperor.",
+        "rt_quote": "A sweeping epic of honor, vengeance, and destiny."
+    },
+    {
+        "title": "Edge of Tomorrow",
+        "rating": "90%",
+        "age_rating": "PG-13",
+        "runtime": 113,
+        "genres": [
+            "Action",
+            "Sci-Fi"
+        ],
+        "tags": [
+            "time-loop",
+            "intense",
+            "smart",
+            "fast-paced"
+        ],
+        "description": "A soldier caught in a time loop must learn to defeat alien invaders.",
+        "rt_quote": "A wildly entertaining blend of sci-fi and action."
+    },
+    {
+        "title": "Lethal Weapon",
+        "rating": "86%",
+        "age_rating": "R",
+        "runtime": 110,
+        "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+        ],
+        "tags": [
+            "buddy-cop",
+            "gritty",
+            "fast-paced",
+            "classic"
+        ],
+        "description": "Two detectives, one suicidal and one by-the-book, team up to fight crime.",
+        "rt_quote": "The quintessential buddy-cop action flick."
+    },
+    {
+        "title": "Skyfall",
+        "rating": "86%",
+        "age_rating": "PG-13",
+        "runtime": 143,
+        "genres": [
+            "Action",
+            "Adventure",
+            "Thriller"
+        ],
+        "tags": [
+            "spy",
+            "intense",
+            "stylish",
+            "emotional"
+        ],
+        "description": "James Bond's loyalty to M is tested as her past comes back to haunt her.",
+        "rt_quote": "A bold reinvention of the Bond legacy."
+    },
+    {
+        "title": "The Bourne Ultimatum",
+        "rating": "91%",
+        "age_rating": "PG-13",
+        "runtime": 115,
+        "genres": [
+            "Action",
+            "Thriller"
+        ],
+        "tags": [
+            "fast-paced",
+            "intense",
+            "spy",
+            "gritty"
+        ],
+        "description": "Jason Bourne dodges a ruthless CIA operation while searching for his past.",
+        "rt_quote": "An exhilarating, smartly-crafted thriller."
     }
-]
+
