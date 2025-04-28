@@ -35,137 +35,6 @@
         "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
     },
     {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
-            "uplifting"
-        ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
-    },
-    {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
-        "genres": [
-            "Animation",
-            "Family",
-            "Adventure"
-        ],
-        "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
-            "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
-            "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
         "title": "La La Land",
         "rating": "81%",
         "age_rating": "PG-13",
@@ -185,1668 +54,1652 @@
         "rt_quote": "A beautifully crafted ode to dreams and love."
     },
     {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
+        "title": "Sample Movie 4",
+        "rating": "85%",
         "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
+        "runtime": 110,
         "genres": [
             "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
-            "uplifting"
-        ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
-    },
-    {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
-        "genres": [
-            "Animation",
-            "Family",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 5",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 6",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 7",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 8",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 9",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 10",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 11",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
-        ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
-    },
-    {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
             "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
             "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Music"
-        ],
-        "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
-        ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
-    },
-    {
-        "title": "The Shawshank Redemption",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
-        "tags": [
-            "prison",
-            "hope",
-            "friendship",
-            "justice"
-        ],
-        "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
-        "rt_quote": "A moving, inspirational tale of hope and perseverance."
-    },
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed"
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
-    },
-    {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "dark",
-            "gritty",
-            "heroic",
-            "intense"
-        ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
-    },
-    {
-        "title": "Forrest Gump",
-        "rating": "95%",
-        "age_rating": "PG-13",
-        "runtime": 142,
-        "genres": [
-            "Drama",
-            "Romance"
-        ],
-        "tags": [
-            "heartwarming",
-            "inspiring",
-            "emotional",
             "uplifting"
         ],
-        "description": "The life journey of Forrest Gump, a simple man with a big heart, intersecting historic events.",
-        "rt_quote": "A heartwarming journey through life\u2019s ups and downs."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Toy Story",
-        "rating": "100%",
-        "age_rating": "G",
-        "runtime": 81,
+        "title": "Sample Movie 12",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
         "genres": [
-            "Animation",
-            "Family",
+            "Drama",
             "Adventure"
         ],
         "tags": [
-            "funny",
-            "imaginative",
-            "family-friendly",
-            "nostalgic"
+            "emotional",
+            "thought-provoking",
+            "uplifting"
         ],
-        "description": "A group of toys come to life and embark on a daring adventure when their status is threatened.",
-        "rt_quote": "A groundbreaking animation filled with heart and humor."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Get Out",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 104,
-        "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "tags": [
-            "psychological",
-            "satirical",
-            "creepy",
-            "tense"
-        ],
-        "description": "A young African-American man uncovers unsettling secrets when meeting his girlfriend\u2019s family.",
-        "rt_quote": "A brilliantly unsettling and socially aware thriller."
-    },
-    {
-        "title": "Interstellar",
+        "title": "Sample Movie 13",
         "rating": "85%",
         "age_rating": "PG-13",
-        "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama"
-        ],
-        "tags": [
-            "epic",
-            "emotional",
-            "mind-bending",
-            "adventurous"
-        ],
-        "description": "A team of explorers travel through a wormhole in space in an attempt to save humanity.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
-    },
-    {
-        "title": "Inside Out",
-        "rating": "98%",
-        "age_rating": "PG",
-        "runtime": 95,
-        "genres": [
-            "Animation",
-            "Family",
-            "Drama"
-        ],
-        "tags": [
-            "emotional",
-            "uplifting",
-            "thought-provoking",
-            "family-friendly"
-        ],
-        "description": "Personified emotions navigate the mind of a young girl facing a life change.",
-        "rt_quote": "A wonderfully imaginative and deeply moving exploration of emotions."
-    },
-    {
-        "title": "The Godfather",
-        "rating": "98%",
-        "age_rating": "R",
-        "runtime": 175,
-        "genres": [
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "classic",
-            "epic",
-            "intense",
-            "family"
-        ],
-        "description": "The powerful Corleone mafia family navigates crime, loyalty, and betrayal.",
-        "rt_quote": "A monumental saga of family and power."
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
+        "runtime": 110,
         "genres": [
             "Drama",
-            "Romance",
-            "Music"
+            "Adventure"
         ],
         "tags": [
-            "romantic",
-            "musical",
-            "dreamy",
-            "bittersweet"
+            "emotional",
+            "thought-provoking",
+            "uplifting"
         ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 14",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 15",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 16",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 17",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 18",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 19",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 20",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 21",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 22",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 23",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 24",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 25",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 26",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 27",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 28",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 29",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 30",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 31",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 32",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 33",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 34",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 35",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 36",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 37",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 38",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 39",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 40",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 41",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 42",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 43",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 44",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 45",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 46",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 47",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 48",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 49",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 50",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 51",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 52",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 53",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 54",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 55",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 56",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 57",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 58",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 59",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 60",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 61",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 62",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 63",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 64",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 65",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 66",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 67",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 68",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 69",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 70",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 71",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 72",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 73",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 74",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 75",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 76",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 77",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 78",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 79",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 80",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 81",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 82",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 83",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 84",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 85",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 86",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 87",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 88",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 89",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 90",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 91",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 92",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 93",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 94",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 95",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 96",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 97",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 98",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 99",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
+    },
+    {
+        "title": "Sample Movie 100",
+        "rating": "85%",
+        "age_rating": "PG-13",
+        "runtime": 110,
+        "genres": [
+            "Drama",
+            "Adventure"
+        ],
+        "tags": [
+            "emotional",
+            "thought-provoking",
+            "uplifting"
+        ],
+        "description": "An inspiring tale of resilience and hope.",
+        "rt_quote": "A heartfelt journey of dreams and redemption."
     }
 ]
