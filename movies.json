@@ -1667,173 +1667,75 @@
         "rt_quote": "A heartfelt journey of dreams and redemption."
     },
     {
-        "title": "Sample Movie 91",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 92",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 93",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 94",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 95",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 96",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 97",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 98",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 99",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 100",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+    "title": "A Beautiful Mind",
+    "genre": ["Drama", "Biography"],
+    "duration": 135,
+    "mood": ["Inspiring", "Serious"],
+    "description": "The life of John Nash, a brilliant but asocial mathematician, and his battle with schizophrenia.",
+    "recommendation_reason": "You're looking for something inspiring — this drama delivers a deeply human story of genius, struggle, and triumph."
+  },
+  {
+    "title": "The Pursuit of Happyness",
+    "genre": ["Drama", "Biography"],
+    "duration": 117,
+    "mood": ["Uplifting", "Emotional"],
+    "description": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional endeavor.",
+    "recommendation_reason": "You wanted something uplifting — this emotional drama captures the grit and love behind one man’s fight for a better life."
+  },
+  {
+    "title": "Manchester by the Sea",
+    "genre": ["Drama"],
+    "duration": 137,
+    "mood": ["Melancholy", "Emotional"],
+    "description": "A man returns to his hometown after the death of his brother and faces his painful past.",
+    "recommendation_reason": "You're seeking something emotional — this drama unfolds slowly, with raw grief and complex humanity at its core."
+  },
+  {
+    "title": "Moonlight",
+    "genre": ["Drama"],
+    "duration": 111,
+    "mood": ["Reflective", "Emotional"],
+    "description": "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and adulthood.",
+    "recommendation_reason": "You're in the mood for something reflective — this poetic drama offers a tender, powerful portrait of self-discovery and vulnerability."
+  },
+  {
+    "title": "The Social Network",
+    "genre": ["Drama", "Biography"],
+    "duration": 120,
+    "mood": ["Sharp", "Tense"],
+    "description": "The story of Facebook's founding and the personal and legal battles that followed.",
+    "recommendation_reason": "You wanted something sharp and tense — this drama peels back the genius and rivalry behind one of tech's biggest revolutions."
+  },
+  {
+    "title": "Room",
+    "genre": ["Drama", "Thriller"],
+    "duration": 118,
+    "mood": ["Emotional", "Tense"],
+    "description": "Held captive for years, a woman and her young son finally escape and begin a difficult journey toward healing.",
+    "recommendation_reason": "You're looking for something emotional — this powerful drama explores trauma, resilience, and a mother’s fierce love."
+  },
+  {
+    "title": "Her",
+    "genre": ["Drama", "Romance", "Sci-Fi"],
+    "duration": 126,
+    "mood": ["Lonely", "Thoughtful"],
+    "description": "A lonely writer develops an unexpected relationship with an operating system designed to meet his every need.",
+    "recommendation_reason": "You’re in the mood for something thoughtful — this dreamy drama blends sci-fi with soulful intimacy in a story about love and identity."
+  },
+  {
+    "title": "The Father",
+    "genre": ["Drama"],
+    "duration": 97,
+    "mood": ["Intense", "Sad"],
+    "description": "A man struggles with aging and memory loss as his world becomes increasingly fragmented.",
+    "recommendation_reason": "You're looking for something intense — this drama offers a haunting and empathetic glimpse into the experience of dementia."
+  },
+  {
+    "title": "Lion",
+    "genre": ["Drama", "Biography"],
+    "duration": 118,
+    "mood": ["Emotional", "Inspiring"],
+    "description": "A man uses Google Earth to find his long-lost family, decades after being separated as a child in India.",
+    "recommendation_reason": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion."
     }
 ]
