@@ -986,176 +986,86 @@
         "description": "A family heads to an isolated hotel where sinister forces drive the father into violence.",
         "rt_quote": "An atmospheric, slow-building masterpiece of horror."
     },
-    {
-        "title": "Sample Movie 51",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 52",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 53",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 54",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 55",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 56",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 57",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 58",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 59",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 60",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+      {
+    "title": "Pride and Prejudice",
+    "genre": ["Romance", "Drama"],
+    "duration": 129,
+    "mood": ["Emotional", "Elegant"],
+    "description": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy in this classic Jane Austen tale.",
+    "recommendation_reason": "You’re in the mood for something emotional — this elegant period romance simmers with wit, pride, and slow-burning tension."
+  },
+  {
+    "title": "The Notebook",
+    "genre": ["Romance", "Drama"],
+    "duration": 123,
+    "mood": ["Passionate", "Melancholy"],
+    "description": "A young couple falls in love in the 1940s but are soon separated by social differences and fate.",
+    "recommendation_reason": "You mentioned wanting something passionate — this timeless love story captures the beauty and ache of a once-in-a-lifetime romance."
+  },
+  {
+    "title": "La La Land",
+    "genre": ["Romance", "Musical", "Drama"],
+    "duration": 128,
+    "mood": ["Dreamy", "Bittersweet"],
+    "description": "An aspiring actress and a jazz musician fall in love while chasing their dreams in Los Angeles.",
+    "recommendation_reason": "You're craving something dreamy — this bittersweet musical romance is a vibrant tribute to love, art, and what might have been."
+  },
+  {
+    "title": "Before Sunrise",
+    "genre": ["Romance", "Drama"],
+    "duration": 101,
+    "mood": ["Thoughtful", "Quiet"],
+    "description": "Two strangers meet on a train and spend one evening exploring Vienna and falling in love.",
+    "recommendation_reason": "You’re in the mood for something thoughtful — this quiet, dialogue-rich romance captures the magic of connection and fleeting time."
+  },
+  {
+    "title": "Call Me by Your Name",
+    "genre": ["Romance", "Drama"],
+    "duration": 132,
+    "mood": ["Sensual", "Reflective"],
+    "description": "In 1980s Italy, a summer romance blossoms between a 17-year-old boy and an older graduate student.",
+    "recommendation_reason": "You asked for something sensual — this coming-of-age romance is tender, sun-drenched, and aching with unspoken longing."
+  },
+  {
+    "title": "Silver Linings Playbook",
+    "genre": ["Romance", "Comedy", "Drama"],
+    "duration": 122,
+    "mood": ["Hopeful", "Offbeat"],
+    "description": "After a stint in a mental institution, Pat meets Tiffany — a mysterious woman with problems of her own.",
+    "recommendation_reason": "You're looking for something offbeat — this quirky romance finds beauty in broken people and second chances."
+  },
+  {
+    "title": "Carol",
+    "genre": ["Romance", "Drama"],
+    "duration": 118,
+    "mood": ["Tender", "Melancholy"],
+    "description": "An aspiring photographer and an older woman fall in love in 1950s New York against societal expectations.",
+    "recommendation_reason": "You wanted something tender — this beautifully restrained romance is full of stolen glances and quiet rebellion."
+  },
+  {
+    "title": "About Time",
+    "genre": ["Romance", "Fantasy", "Comedy"],
+    "duration": 123,
+    "mood": ["Warm", "Feel-Good"],
+    "description": "A young man discovers he can travel through time and uses the ability to find love and fix life’s mistakes.",
+    "recommendation_reason": "You're in the mood for something feel-good — this romantic gem mixes time travel with deep warmth and everyday magic."
+  },
+  {
+    "title": "Titanic",
+    "genre": ["Romance", "Drama"],
+    "duration": 195,
+    "mood": ["Epic", "Emotional"],
+    "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the ill-fated Titanic.",
+    "recommendation_reason": "You’re craving something epic — this sweeping romance blends grandeur and tragedy in unforgettable fashion."
+  },
+  {
+    "title": "500 Days of Summer",
+    "genre": ["Romance", "Comedy", "Drama"],
+    "duration": 95,
+    "mood": ["Wistful", "Playful"],
+    "description": "A nonlinear story of a young man who reflects on his failed relationship with a woman who didn’t believe in love.",
+    "recommendation_reason": "You wanted something playful yet real — this offbeat romance dissects love and heartbreak with charm and honesty."
+  },
     {
         "title": "Sample Movie 61",
         "rating": "85%",
