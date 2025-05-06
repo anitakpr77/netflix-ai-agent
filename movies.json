@@ -136,7 +136,8 @@
         "genres": [
             "Action",
             "Crime",
-            "Drama"
+            "Adventure",
+            "drama"
         ],
         "tags": [
             "dark",
@@ -281,8 +282,7 @@
         "age_rating": "R",
         "runtime": 125,
         "genres": [
-            "Comedy",
-            "Romance"
+            "Comedy"
         ],
         "tags": [
             "outrageous",
@@ -318,8 +318,7 @@
         "age_rating": "R",
         "runtime": 116,
         "genres": [
-            "Comedy",
-            "Romance"
+            "Comedy"
         ],
         "tags": [
             "awkward",
@@ -823,7 +822,6 @@
         "runtime": 127,
         "genres": [
             "Horror",
-            "Drama",
             "Mystery"
         ],
         "tags": [
@@ -974,8 +972,7 @@
         "age_rating": "R",
         "runtime": 146,
         "genres": [
-            "Horror",
-            "Drama"
+            "Horror"
         ],
         "tags": [
             "psychological",
@@ -1066,211 +1063,206 @@
     "description": "A nonlinear story of a young man who reflects on his failed relationship with a woman who didn’t believe in love.",
     "recommendation_reason": "You wanted something playful yet real — this offbeat romance dissects love and heartbreak with charm and honesty."
   },
-     {
+{
     "title": "Paddington 2",
-    "genre": ["Family", "Comedy"],
-    "duration": 103,
-    "mood": ["Wholesome", "Uplifting"],
+    "rating": "99%",
+    "age_rating": "PG",
+    "runtime": 103,
+    "genres": ["Family", "Comedy"],
+    "tags": ["wholesome", "light-hearted", "charming", "uplifting"],
     "description": "Paddington the bear spreads joy and marmalade as he searches for the perfect gift and ends up in a wild adventure.",
-    "recommendation_reason": "You asked for something wholesome — this delightful family film is full of charm, kindness, and lovable chaos."
+    "rt_quote": "Paddington 2 honors the heart of the original and adds even more warmth and wit."
   },
   {
     "title": "The Parent Trap (1998)",
-    "genre": ["Family", "Comedy"],
-    "duration": 128,
-    "mood": ["Heartwarming", "Playful"],
+    "rating": "86%",
+    "age_rating": "PG",
+    "runtime": 128,
+    "genres": ["Family", "Comedy"],
+    "tags": ["playful", "heartwarming", "feel-good", "clever"],
     "description": "Identical twins separated at birth meet at summer camp and scheme to reunite their parents.",
-    "recommendation_reason": "You’re in the mood for something heartwarming — this playful classic is full of clever tricks and sweet surprises."
+    "rt_quote": "A charming family comedy with Lindsay Lohan in a star-making dual role."
   },
   {
     "title": "Finding Nemo",
-    "genre": ["Family", "Adventure", "Animation"],
-    "duration": 100,
-    "mood": ["Adventurous", "Touching"],
+    "rating": "99%",
+    "age_rating": "G",
+    "runtime": 100,
+    "genres": ["Family", "Adventure", "Animation"],
+    "tags": ["adventurous", "touching", "underwater", "funny"],
     "description": "After his son is captured in the Great Barrier Reef, a timid clownfish sets out on a journey to bring him home.",
-    "recommendation_reason": "You wanted something touching — this animated adventure is a heartfelt journey of courage, family, and friendship."
+    "rt_quote": "Visually stunning and emotionally resonant — Pixar at its finest."
   },
   {
     "title": "The Sound of Music",
-    "genre": ["Family", "Musical", "Historical"],
-    "duration": 174,
-    "mood": ["Joyful", "Inspiring"],
+    "rating": "83%",
+    "age_rating": "G",
+    "runtime": 174,
+    "genres": ["Family", "Musical", "Historical"],
+    "tags": ["musical", "joyful", "classic", "uplifting"],
     "description": "A governess brings music and love to a strict family in Nazi-occupied Austria.",
-    "recommendation_reason": "You’re in the mood for something joyful — this classic musical blends heart, history, and unforgettable songs."
+    "rt_quote": "Sweeping, sentimental, and timeless — a musical triumph."
   },
   {
     "title": "E.T. the Extra-Terrestrial",
-    "genre": ["Family", "Sci-Fi", "Adventure"],
-    "duration": 115,
-    "mood": ["Magical", "Emotional"],
+    "rating": "99%",
+    "age_rating": "PG",
+    "runtime": 115,
+    "genres": ["Family", "Sci-Fi", "Adventure"],
+    "tags": ["magical", "emotional", "alien", "friendship"],
     "description": "A young boy befriends a gentle alien stranded on Earth and helps him return home.",
-    "recommendation_reason": "You asked for something magical — this family classic celebrates friendship, wonder, and childlike awe."
+    "rt_quote": "A heartfelt classic that captures the wonder of childhood and the power of connection."
   },
-    {
+ {
     "title": "Julie & Julia",
-    "genre": ["Drama", "Biography", "Feel-Good"],
-    "duration": 123,
-    "mood": ["Cozy", "Inspiring"],
+    "rating": "78%",
+    "age_rating": "PG-13",
+    "runtime": 123,
+    "genres": ["Drama", "Biography", "Feel-Good"],
+    "tags": ["cooking", "ambition", "cozy", "inspiring"],
     "description": "The parallel stories of Julia Child’s rise to fame and a modern woman finding purpose through cooking.",
-    "recommendation_reason": "You’re looking for something cozy — this warm, foodie-filled story celebrates finding joy in the everyday."
+    "rt_quote": "A delightful dual portrait of passion and purpose — with plenty of butter."
   },
   {
     "title": "The Intouchables",
-    "genre": ["Drama", "Comedy", "Feel-Good"],
-    "duration": 112,
-    "mood": ["Uplifting", "Funny"],
-    "description": "An unlikely friendship forms between a quadriplegic aristocrat and his free-spirited caregiver.",
-    "recommendation_reason": "You wanted something uplifting — this French gem is both hilarious and deeply moving."
+    "rating": "75%",
+    "age_rating": "R",
+    "runtime": 112,
+    "genres": ["Drama", "Comedy", "Feel-Good"],
+    "tags": ["friendship", "based-on-true-story", "funny", "life-affirming"],
+    "description": "An unlikely friendship forms between a quadriplegic aristocrat and his spirited caregiver from the suburbs.",
+    "rt_quote": "Hugely charming and unexpectedly powerful — a feel-good hit with soul."
   },
+{
+  "title": "Chef",
+  "rating": "87%",
+  "age_rating": "R",
+  "runtime": 114,
+  "genres": ["Comedy", "Drama", "Feel-Good"],
+  "tags": ["food", "road-trip", "father-son", "uplifting"],
+  "description": "A disgraced chef starts a food truck, reconnecting with his passion, culture, and his son while traveling across the country.",
+  "rt_quote": "A flavorful and heartwarming ride — *Chef* serves up laughs and love in equal measure."
+}
   {
-    "title": "Chef",
-    "genre": ["Comedy", "Drama", "Feel-Good"],
-    "duration": 114,
-    "mood": ["Light", "Satisfying"],
-    "description": "A disgraced chef starts a food truck, reconnecting with his passion and his son.",
-    "recommendation_reason": "You’re in the mood for something light — this feel-good film is a tasty blend of family, creativity, and second chances."
+    "title": "The Intouchables",
+    "rating": "75%",
+    "age_rating": "R",
+    "runtime": 112,
+    "genres": ["Drama", "Comedy", "Feel-Good"],
+    "tags": ["friendship", "based-on-true-story", "funny", "life-affirming"],
+    "description": "An unlikely friendship forms between a quadriplegic aristocrat and his spirited caregiver from the suburbs.",
+    "rt_quote": "Hugely charming and unexpectedly powerful — a feel-good hit with soul."
   },
-  {
-    "title": "The Secret Life of Walter Mitty",
-    "genre": ["Adventure", "Drama", "Feel-Good"],
-    "duration": 114,
-    "mood": ["Adventurous", "Hopeful"],
-    "description": "An introverted man escapes into daydreams — and eventually, real-life adventures — in search of a missing photo.",
-    "recommendation_reason": "You wanted something hopeful — this whimsical journey reminds us it’s never too late to start living."
-  },
-  {
+   {
     "title": "Amélie",
-    "genre": ["Romance", "Comedy", "Feel-Good"],
-    "duration": 122,
-    "mood": ["Whimsical", "Optimistic"],
+    "rating": "89%",
+    "age_rating": "R",
+    "runtime": 122,
+    "genres": ["Romance", "Comedy", "Feel-Good"],
+    "tags": ["whimsical", "quirky", "visual", "feel-good"],
     "description": "A shy waitress in Paris decides to change the lives of those around her for the better.",
-    "recommendation_reason": "You’re craving something whimsical — this feel-good classic is full of heart, charm, and tiny acts of magic."
+    "rt_quote": "A visual delight and heartwarming tribute to the joy of small gestures."
   },
-    {
+  {
     "title": "Spirited Away",
-    "genre": ["Animation", "Fantasy", "Adventure"],
-    "duration": 125,
-    "mood": ["Magical", "Reflective"],
+    "rating": "96%",
+    "age_rating": "PG",
+    "runtime": 125,
+    "genres": ["Animation", "Fantasy", "Adventure"],
+    "tags": ["magical", "spiritual", "dreamlike", "coming-of-age"],
     "description": "A young girl enters a mysterious spirit world and must find a way to save her parents.",
-    "recommendation_reason": "You’re in the mood for something magical — this stunning animated tale is full of wonder, spirits, and quiet strength."
+    "rt_quote": "A breathtaking masterpiece of imagination and emotional depth."
   },
   {
     "title": "Inside Out",
-    "genre": ["Animation", "Family", "Adventure"],
-    "duration": 95,
-    "mood": ["Heartfelt", "Clever"],
+    "rating": "98%",
+    "age_rating": "PG",
+    "runtime": 95,
+    "genres": ["Animation", "Family", "Adventure"],
+    "tags": ["emotional", "clever", "psychology", "imaginative"],
     "description": "The emotions inside a young girl’s mind struggle to help her navigate a big move.",
-    "recommendation_reason": "You wanted something heartfelt — this clever animated journey explores feelings in a way that’s both fun and deeply moving."
+    "rt_quote": "Inventive, heartfelt, and surprisingly profound — Pixar at its best."
   },
   {
     "title": "Coco",
-    "genre": ["Animation", "Family", "Fantasy"],
-    "duration": 105,
-    "mood": ["Colorful", "Emotional"],
+    "rating": "97%",
+    "age_rating": "PG",
+    "runtime": 105,
+    "genres": ["Animation", "Family", "Fantasy"],
+    "tags": ["musical", "family", "day-of-the-dead", "emotional"],
     "description": "A young boy ventures into the Land of the Dead to unlock his family’s musical legacy.",
-    "recommendation_reason": "You asked for something emotional — this vibrant story celebrates family, memory, and the power of music."
+    "rt_quote": "Vibrant, moving, and beautifully animated — a tribute to culture and family."
   },
   {
     "title": "Toy Story 3",
-    "genre": ["Animation", "Adventure", "Comedy"],
-    "duration": 103,
-    "mood": ["Nostalgic", "Touching"],
+    "rating": "98%",
+    "age_rating": "G",
+    "runtime": 103,
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "tags": ["nostalgic", "bittersweet", "friendship", "closure"],
     "description": "As Andy heads to college, Woody, Buzz, and the gang face an uncertain future.",
-    "recommendation_reason": "You wanted something nostalgic — this animated finale tugs at the heartstrings while reminding us why growing up is so hard."
+    "rt_quote": "Emotionally resonant and richly satisfying — a perfect sendoff to beloved characters."
   },
   {
     "title": "The Iron Giant",
-    "genre": ["Animation", "Sci-Fi", "Family"],
-    "duration": 86,
-    "mood": ["Emotional", "Heroic"],
+    "rating": "96%",
+    "age_rating": "PG",
+    "runtime": 86,
+    "genres": ["Animation", "Sci-Fi", "Family"],
+    "tags": ["robot", "sacrifice", "cold-war", "friendship"],
     "description": "A boy befriends a giant robot from outer space in 1950s America, teaching it what it means to be human.",
-    "recommendation_reason": "You're in the mood for something heroic — this touching animated classic is about courage, identity, and self-sacrifice."
+    "rt_quote": "A tender, underrated gem with powerful themes and emotional weight."
+  }
+    {
+    "title": "Matilda (1996)",
+    "rating": "91%",
+    "age_rating": "PG",
+    "runtime": 98,
+    "genres": ["Family", "Fantasy", "Comedy"],
+    "tags": ["magical", "rebellious", "funny", "clever"],
+    "description": "A gifted girl uses her wit and telekinetic powers to stand up to her tyrannical parents and principal.",
+    "rt_quote": "A smart, subversive, and endlessly entertaining family film."
   },
-    {
-        "title": "Sample Movie 76",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 77",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 78",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 79",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 80",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+  {
+    "title": "WALL-E",
+    "rating": "95%",
+    "age_rating": "G",
+    "runtime": 98,
+    "genres": ["Family", "Animation", "Sci-Fi"],
+    "tags": ["robot", "silent", "environmental", "emotional"],
+    "description": "In a distant future, a lonely trash-compacting robot discovers new purpose after meeting another robot named EVE.",
+    "rt_quote": "Visually dazzling and emotionally rich — a bold achievement in animation."
+  },
+  {
+    "title": "Mary Poppins",
+    "rating": "96%",
+    "age_rating": "G",
+    "runtime": 139,
+    "genres": ["Family", "Musical", "Fantasy"],
+    "tags": ["musical", "magical", "classic", "charming"],
+    "description": "A magical nanny brings discipline and delight to a London family with a spoonful of sugar.",
+    "rt_quote": "Practically perfect in every way — an enchanting musical classic."
+  },
+  {
+    "title": "The Lego Movie",
+    "rating": "96%",
+    "age_rating": "PG",
+    "runtime": 100,
+    "genres": ["Family", "Animation", "Adventure"],
+    "tags": ["funny", "fast-paced", "creative", "feel-good"],
+    "description": "An ordinary LEGO figure is mistakenly identified as the most extraordinary person and joins a quest to save the universe.",
+    "rt_quote": "A gleefully bonkers joyride packed with laughs, heart, and unexpected depth."
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "rating": "94%",
+    "age_rating": "G",
+    "runtime": 86,
+    "genres": ["Family", "Animation", "Fantasy"],
+    "tags": ["gentle", "magical", "nature", "wholesome"],
+    "description": "Two young sisters discover magical creatures in the forest near their new countryside home.",
+    "rt_quote": "A tender, slow-blooming classic that radiates innocence and wonder."
+  },
     {
         "title": "Sample Movie 81",
         "rating": "85%",
