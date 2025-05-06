@@ -1066,261 +1066,126 @@
     "description": "A nonlinear story of a young man who reflects on his failed relationship with a woman who didn’t believe in love.",
     "recommendation_reason": "You wanted something playful yet real — this offbeat romance dissects love and heartbreak with charm and honesty."
   },
+     {
+    "title": "Paddington 2",
+    "genre": ["Family", "Comedy"],
+    "duration": 103,
+    "mood": ["Wholesome", "Uplifting"],
+    "description": "Paddington the bear spreads joy and marmalade as he searches for the perfect gift and ends up in a wild adventure.",
+    "recommendation_reason": "You asked for something wholesome — this delightful family film is full of charm, kindness, and lovable chaos."
+  },
+  {
+    "title": "The Parent Trap (1998)",
+    "genre": ["Family", "Comedy"],
+    "duration": 128,
+    "mood": ["Heartwarming", "Playful"],
+    "description": "Identical twins separated at birth meet at summer camp and scheme to reunite their parents.",
+    "recommendation_reason": "You’re in the mood for something heartwarming — this playful classic is full of clever tricks and sweet surprises."
+  },
+  {
+    "title": "Finding Nemo",
+    "genre": ["Family", "Adventure", "Animation"],
+    "duration": 100,
+    "mood": ["Adventurous", "Touching"],
+    "description": "After his son is captured in the Great Barrier Reef, a timid clownfish sets out on a journey to bring him home.",
+    "recommendation_reason": "You wanted something touching — this animated adventure is a heartfelt journey of courage, family, and friendship."
+  },
+  {
+    "title": "The Sound of Music",
+    "genre": ["Family", "Musical", "Historical"],
+    "duration": 174,
+    "mood": ["Joyful", "Inspiring"],
+    "description": "A governess brings music and love to a strict family in Nazi-occupied Austria.",
+    "recommendation_reason": "You’re in the mood for something joyful — this classic musical blends heart, history, and unforgettable songs."
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial",
+    "genre": ["Family", "Sci-Fi", "Adventure"],
+    "duration": 115,
+    "mood": ["Magical", "Emotional"],
+    "description": "A young boy befriends a gentle alien stranded on Earth and helps him return home.",
+    "recommendation_reason": "You asked for something magical — this family classic celebrates friendship, wonder, and childlike awe."
+  },
     {
-        "title": "Sample Movie 61",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+    "title": "Julie & Julia",
+    "genre": ["Drama", "Biography", "Feel-Good"],
+    "duration": 123,
+    "mood": ["Cozy", "Inspiring"],
+    "description": "The parallel stories of Julia Child’s rise to fame and a modern woman finding purpose through cooking.",
+    "recommendation_reason": "You’re looking for something cozy — this warm, foodie-filled story celebrates finding joy in the everyday."
+  },
+  {
+    "title": "The Intouchables",
+    "genre": ["Drama", "Comedy", "Feel-Good"],
+    "duration": 112,
+    "mood": ["Uplifting", "Funny"],
+    "description": "An unlikely friendship forms between a quadriplegic aristocrat and his free-spirited caregiver.",
+    "recommendation_reason": "You wanted something uplifting — this French gem is both hilarious and deeply moving."
+  },
+  {
+    "title": "Chef",
+    "genre": ["Comedy", "Drama", "Feel-Good"],
+    "duration": 114,
+    "mood": ["Light", "Satisfying"],
+    "description": "A disgraced chef starts a food truck, reconnecting with his passion and his son.",
+    "recommendation_reason": "You’re in the mood for something light — this feel-good film is a tasty blend of family, creativity, and second chances."
+  },
+  {
+    "title": "The Secret Life of Walter Mitty",
+    "genre": ["Adventure", "Drama", "Feel-Good"],
+    "duration": 114,
+    "mood": ["Adventurous", "Hopeful"],
+    "description": "An introverted man escapes into daydreams — and eventually, real-life adventures — in search of a missing photo.",
+    "recommendation_reason": "You wanted something hopeful — this whimsical journey reminds us it’s never too late to start living."
+  },
+  {
+    "title": "Amélie",
+    "genre": ["Romance", "Comedy", "Feel-Good"],
+    "duration": 122,
+    "mood": ["Whimsical", "Optimistic"],
+    "description": "A shy waitress in Paris decides to change the lives of those around her for the better.",
+    "recommendation_reason": "You’re craving something whimsical — this feel-good classic is full of heart, charm, and tiny acts of magic."
+  },
     {
-        "title": "Sample Movie 62",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 63",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 64",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 65",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 66",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 67",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 68",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 69",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 70",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 71",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 72",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 73",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 74",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 75",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+    "title": "Spirited Away",
+    "genre": ["Animation", "Fantasy", "Adventure"],
+    "duration": 125,
+    "mood": ["Magical", "Reflective"],
+    "description": "A young girl enters a mysterious spirit world and must find a way to save her parents.",
+    "recommendation_reason": "You’re in the mood for something magical — this stunning animated tale is full of wonder, spirits, and quiet strength."
+  },
+  {
+    "title": "Inside Out",
+    "genre": ["Animation", "Family", "Adventure"],
+    "duration": 95,
+    "mood": ["Heartfelt", "Clever"],
+    "description": "The emotions inside a young girl’s mind struggle to help her navigate a big move.",
+    "recommendation_reason": "You wanted something heartfelt — this clever animated journey explores feelings in a way that’s both fun and deeply moving."
+  },
+  {
+    "title": "Coco",
+    "genre": ["Animation", "Family", "Fantasy"],
+    "duration": 105,
+    "mood": ["Colorful", "Emotional"],
+    "description": "A young boy ventures into the Land of the Dead to unlock his family’s musical legacy.",
+    "recommendation_reason": "You asked for something emotional — this vibrant story celebrates family, memory, and the power of music."
+  },
+  {
+    "title": "Toy Story 3",
+    "genre": ["Animation", "Adventure", "Comedy"],
+    "duration": 103,
+    "mood": ["Nostalgic", "Touching"],
+    "description": "As Andy heads to college, Woody, Buzz, and the gang face an uncertain future.",
+    "recommendation_reason": "You wanted something nostalgic — this animated finale tugs at the heartstrings while reminding us why growing up is so hard."
+  },
+  {
+    "title": "The Iron Giant",
+    "genre": ["Animation", "Sci-Fi", "Family"],
+    "duration": 86,
+    "mood": ["Emotional", "Heroic"],
+    "description": "A boy befriends a giant robot from outer space in 1950s America, teaching it what it means to be human.",
+    "recommendation_reason": "You're in the mood for something heroic — this touching animated classic is about courage, identity, and self-sacrifice."
+  },
     {
         "title": "Sample Movie 76",
         "rating": "85%",
