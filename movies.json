@@ -124,7 +124,9 @@
         "runtime": 132,
         "genres": [
             "Action",
-            "Thriller"
+            "Thriller",
+           "Adventure",
+           "Suspense"
         ],
         "tags": [
             "suspenseful",
@@ -132,11 +134,13 @@
             "gritty",
             "classic"
         ],
-        "description": "An NYPD officer tries to save his wife and others taken hostage by terrorists.",
-        "rt_quote": "The definitive action movie experience."
+        "description": "New York City policeman John McClane (Bruce Willis) is visiting his estranged wife (Bonnie Bedelia) on Christmas Eve. He joins her at a holiday party in the headquarters of the Japanese-owned business she works for. But the festivities are interrupted by a group of terrorists who take over the exclusive high-rise, and everyone in it. Very soon McClane realizes that there's no one to save the hostages -- but him.",
+        "rt_quote": "Its many imitators (and sequels) have never come close to matching the taut thrills of the definitive holiday action classic.",
+       "director": "John McTiernan",
+  "stars": ["Bruce Willis", "Alan Rickman", "Bonnie Bedelia"]
     },
     {
-        "title": "Mission: Impossible \u2013 Fallout",
+        "title": "Mission: Impossible - Fallout",
         "rating": "88%",
         "age_rating": "PG-13",
         "runtime": 147,
@@ -151,8 +155,10 @@
             "relentless",
             "thrilling"
         ],
-        "description": "Ethan Hunt and his team race against time after a mission gone wrong.",
-        "rt_quote": "A breathtaking spectacle of action mastery."
+        "description": "Ethan Hunt and the IMF team join forces with CIA assassin August Walker to prevent a disaster of epic proportions. Arms dealer John Lark and a group of terrorists known as the Apostles plan to use three plutonium cores for a simultaneous nuclear attack on the Vatican, Jerusalem and Mecca, Saudi Arabia. When the weapons go missing, Ethan and his crew find themselves in a desperate race against time to prevent them from falling into the wrong hands.",
+        "rt_quote": "Fast, sleek, and fun, Mission: Impossible - Fallout lives up to the "impossible" part of its name by setting yet another high mark for insane set pieces in a franchise full of them.",
+       "director": "Christopher McQuarrie",
+  "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
     },
     {
         "title": "The Dark Knight",
