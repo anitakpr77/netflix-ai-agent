@@ -115,21 +115,19 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick")
 
-    themes = []
+    matched_themes = set()
     if filters.get("mood"):
-        themes += [m for m in movie.get("tags", []) if m.lower() in [f.lower() for f in filters["mood"]]]
+        matched_themes.update(m for m in movie.get("tags", []) if m.lower() in [f.lower() for f in filters["mood"]])
     if filters.get("keywords"):
-        themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
-    if themes:
-        parts.append(f"It has themes like {', '.join(set(themes))}")
+        matched_themes.update(k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower())
 
-    if movie.get("age_rating"):
-        parts.append(f"and it’s rated {movie['age_rating']}.")
+    if matched_themes:
+        parts.append(f"We picked this film for you because it has themes like {', '.join(matched_themes)}.")
 
     if movie.get("rt_quote"):
-        parts.append(f'Critics say: “{movie["rt_quote"]}”')
+        parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    parts.append(f"It’s also {now.strftime('%A')}")
+    date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
 
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -145,17 +143,18 @@ def explain_why(movie, filters, now):
 
         if after_5pm and ends_after_bedtime:
             if requested_family:
-                parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
+                date_time_string += f" and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night."
             else:
-                parts.append(f"and the runtime is {runtime_str}. It ends around {end_time.strftime('%I:%M %p')}—a longer watch, but worth it.")
+                date_time_string += f" and the runtime is {runtime_str}. It ends around {end_time.strftime('%I:%M %p')}—a longer watch, but worth it."
         else:
             if now.hour < 12:
-                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for a morning watch.")
+                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for a morning watch."
             elif now.hour < 17:
-                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, a great pick for today.")
+                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, a great pick for today."
             else:
-                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
+                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight."
 
+    parts.append(date_time_string)
     return "Why this movie? " + " ".join(parts)
 
 # --- Movie Recommendation Display ---
