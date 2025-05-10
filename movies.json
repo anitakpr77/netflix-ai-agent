@@ -206,7 +206,8 @@
            "history",
            "sword",
            "sandal",
-           "historical fiction"
+           "historical", 
+           "fiction"
         ],
         "description": "Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.",
         "rt_quote": "While not everyone will be entertained by Gladiator's glum revenge story, Russell Crowe thunderously wins the crowd with a star-making turn that provides Ridley Scott's opulent resurrection of Rome its bruised heart.",
@@ -229,7 +230,9 @@
             "fast-paced"
         ],
         "description": "A soldier caught in a time loop must learn to defeat alien invaders.",
-        "rt_quote": "A wildly entertaining blend of sci-fi and action."
+        "rt_quote": "A wildly entertaining blend of sci-fi and action.",
+       "director": "Christopher McQuarrie",
+       "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
     },
     {
         "title": "Lethal Weapon",
@@ -248,7 +251,9 @@
             "classic"
         ],
         "description": "Two detectives, one suicidal and one by-the-book, team up to fight crime.",
-        "rt_quote": "The quintessential buddy-cop action flick."
+        "rt_quote": "The quintessential buddy-cop action flick.",
+       "director": "Christopher McQuarrie",
+       "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
     },
     {
         "title": "Skyfall",
@@ -267,7 +272,9 @@
             "emotional"
         ],
         "description": "James Bond's loyalty to M is tested as her past comes back to haunt her.",
-        "rt_quote": "A bold reinvention of the Bond legacy."
+        "rt_quote": "A bold reinvention of the Bond legacy.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Bourne Ultimatum",
@@ -285,7 +292,9 @@
             "gritty"
         ],
         "description": "Jason Bourne dodges a ruthless CIA operation while searching for his past.",
-        "rt_quote": "An exhilarating, smartly-crafted thriller."
+        "rt_quote": "An exhilarating, smartly-crafted thriller.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Superbad",
@@ -302,7 +311,9 @@
             "wild"
         ],
         "description": "Two high school friends scramble to enjoy one last party before graduation.",
-        "rt_quote": "An endlessly quotable, riotously funny coming-of-age romp."
+        "rt_quote": "An endlessly quotable, riotously funny coming-of-age romp.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Grand Budapest Hotel",
@@ -320,7 +331,9 @@
             "offbeat"
         ],
         "description": "The adventures of a legendary concierge at a famous hotel between the wars.",
-        "rt_quote": "A visual feast packed with eccentric delights."
+        "rt_quote": "A visual feast packed with eccentric delights.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Bridesmaids",
@@ -337,7 +350,9 @@
             "heartfelt"
         ],
         "description": "Competition between the maid of honor and a bridesmaid over who is the bride's best friend.",
-        "rt_quote": "A wildly funny, refreshingly honest take on female friendship."
+        "rt_quote": "A wildly funny, refreshingly honest take on female friendship.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Groundhog Day",
@@ -356,7 +371,9 @@
             "witty"
         ],
         "description": "A cynical weatherman finds himself reliving the same day over and over.",
-        "rt_quote": "A brilliant, endlessly inventive comedy classic."
+        "rt_quote": "A brilliant, endlessly inventive comedy classic.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The 40-Year-Old Virgin",
@@ -373,7 +390,9 @@
             "charming"
         ],
         "description": "A middle-aged man's friends try to help him lose his virginity.",
-        "rt_quote": "Sweet, raunchy, and outrageously funny."
+        "rt_quote": "Sweet, raunchy, and outrageously funny.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Ferris Bueller's Day Off",
@@ -391,7 +410,9 @@
             "coming-of-age"
         ],
         "description": "A high school wise guy is determined to have a day off from school.",
-        "rt_quote": "A joyful, unforgettable ride through youthful rebellion."
+        "rt_quote": "A joyful, unforgettable ride through youthful rebellion.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "School of Rock",
@@ -409,7 +430,9 @@
             "rock-n-roll"
         ],
         "description": "A struggling musician turns a class of students into a rock band.",
-        "rt_quote": "A hilarious and heartfelt ode to the power of music."
+        "rt_quote": "A hilarious and heartfelt ode to the power of music.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Napoleon Dynamite",
@@ -426,7 +449,9 @@
             "offbeat"
         ],
         "description": "A socially awkward teen helps his friend run for class president.",
-        "rt_quote": "A wonderfully strange and charming offbeat comedy."
+        "rt_quote": "A wonderfully strange and charming offbeat comedy.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Crazy Rich Asians",
@@ -444,7 +469,9 @@
             "funny"
         ],
         "description": "An American-born Chinese woman travels to meet her boyfriend's insanely wealthy family.",
-        "rt_quote": "A lavish, heartfelt romantic comedy with modern flair."
+        "rt_quote": "A lavish, heartfelt romantic comedy with modern flair.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Hangover",
@@ -461,7 +488,9 @@
             "hilarious"
         ],
         "description": "Three groomsmen lose their soon-to-be-wed buddy during their Vegas bachelor party.",
-        "rt_quote": "A riotously funny and unpredictable ride."
+        "rt_quote": "A riotously funny and unpredictable ride.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     
     {
@@ -481,7 +510,9 @@
             "hopeful"
         ],
         "description": "A team of explorers travel through a wormhole in space in a desperate attempt to ensure humanity's survival.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey."
+        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Blade Runner 2049",
@@ -499,7 +530,9 @@
             "thought-provoking"
         ],
         "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
-        "rt_quote": "A breathtaking, thought-provoking sequel that honors its predecessor."
+        "rt_quote": "A breathtaking, thought-provoking sequel that honors its predecessor.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Arrival",
@@ -518,7 +551,9 @@
             "introspective"
         ],
         "description": "A linguist works to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
-        "rt_quote": "A beautifully cerebral and emotional science fiction masterpiece."
+        "rt_quote": "A beautifully cerebral and emotional science fiction masterpiece.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Matrix",
@@ -536,7 +571,9 @@
             "philosophical"
         ],
         "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
-        "rt_quote": "A groundbreaking sci-fi thriller that redefined a generation."
+        "rt_quote": "A groundbreaking sci-fi thriller that redefined a generation.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Gravity",
@@ -555,7 +592,9 @@
             "intense"
         ],
         "description": "Two astronauts work together to survive after an accident leaves them stranded in space.",
-        "rt_quote": "A visually jaw-dropping, nerve-shredding thrill ride."
+        "rt_quote": "A visually jaw-dropping, nerve-shredding thrill ride.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "District 9",
@@ -574,7 +613,9 @@
             "intense"
         ],
         "description": "An extraterrestrial race forced to live in slum-like conditions fights for its freedom.",
-        "rt_quote": "A powerful, gritty sci-fi allegory with a fresh perspective."
+        "rt_quote": "A powerful, gritty sci-fi allegory with a fresh perspective.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Ex Machina",
@@ -593,7 +634,9 @@
             "chilling"
         ],
         "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence.",
-        "rt_quote": "A sleek, cerebral thriller that explores the nature of consciousness."
+        "rt_quote": "A sleek, cerebral thriller that explores the nature of consciousness.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Dune (2021)",
@@ -612,7 +655,9 @@
             "intense"
         ],
         "description": "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis.",
-        "rt_quote": "A breathtaking, immersive spectacle of sci-fi storytelling."
+        "rt_quote": "A breathtaking, immersive spectacle of sci-fi storytelling.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Looper",
@@ -631,7 +676,9 @@
             "gritty"
         ],
         "description": "In the future, a hitman discovers his target is his older self, leading to unforeseen consequences.",
-        "rt_quote": "A smart, stylish, and thrilling take on time-travel."
+        "rt_quote": "A smart, stylish, and thrilling take on time-travel.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Children of Men",
@@ -650,7 +697,9 @@
             "intense"
         ],
         "description": "In a bleak future where humans have become infertile, a disillusioned bureaucrat must protect the last pregnant woman on Earth.",
-        "rt_quote": "A powerful and deeply moving sci-fi masterpiece."
+        "rt_quote": "A powerful and deeply moving sci-fi masterpiece.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Gone Girl",
@@ -669,7 +718,9 @@
             "tense"
         ],
         "description": "A man becomes the prime suspect in the disappearance of his wife in a media frenzy.",
-        "rt_quote": "A masterful, chilling exploration of marriage and deceit."
+        "rt_quote": "A masterful, chilling exploration of marriage and deceit.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Prisoners",
@@ -688,7 +739,9 @@
             "intense"
         ],
         "description": "When two young girls go missing, one father takes matters into his own hands.",
-        "rt_quote": "A harrowing and emotionally gripping thriller."
+        "rt_quote": "A harrowing and emotionally gripping thriller.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Se7en",
@@ -707,7 +760,9 @@
             "gritty"
         ],
         "description": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
-        "rt_quote": "A brutally effective and chilling crime thriller."
+        "rt_quote": "A brutally effective and chilling crime thriller.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Zodiac",
@@ -726,7 +781,9 @@
             "slow-burn"
         ],
         "description": "Based on real events, a cartoonist becomes obsessed with tracking down the Zodiac Killer.",
-        "rt_quote": "A meticulous, haunting investigation into obsession."
+        "rt_quote": "A meticulous, haunting investigation into obsession.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Nightcrawler",
@@ -745,7 +802,9 @@
             "intense"
         ],
         "description": "A driven man blurs the lines between observer and participant in the world of crime journalism.",
-        "rt_quote": "A chilling and darkly compelling character study."
+        "rt_quote": "A chilling and darkly compelling character study.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Girl with the Dragon Tattoo",
@@ -764,7 +823,9 @@
             "gritty"
         ],
         "description": "A journalist and a hacker dig into a family's dark secrets to solve a decades-old disappearance.",
-        "rt_quote": "A dark, stylish mystery with riveting performances."
+        "rt_quote": "A dark, stylish mystery with riveting performances.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Silence of the Lambs",
@@ -783,7 +844,9 @@
             "dark"
         ],
         "description": "An FBI trainee seeks the advice of an imprisoned cannibal killer to catch another serial killer.",
-        "rt_quote": "A tense and psychologically complex masterpiece."
+        "rt_quote": "A tense and psychologically complex masterpiece.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "No Country for Old Men",
@@ -802,7 +865,9 @@
             "tense"
         ],
         "description": "A hunter finds a stash of money left from a drug deal gone wrong, drawing ruthless pursuit.",
-        "rt_quote": "A brutal, suspenseful exploration of fate and violence."
+        "rt_quote": "A brutal, suspenseful exploration of fate and violence.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Wind River",
@@ -821,7 +886,9 @@
             "haunting"
         ],
         "description": "A wildlife tracker and an FBI agent investigate a murder on a Native American reservation.",
-        "rt_quote": "A powerful, haunting thriller set in a chilling landscape."
+        "rt_quote": "A powerful, haunting thriller set in a chilling landscape.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Shutter Island",
@@ -841,6 +908,8 @@
         ],
         "description": "A U.S. Marshal investigates the disappearance of a patient from a remote psychiatric facility.",
         "rt_quote": "A visually haunting, mind-bending thriller."
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Babadook",
@@ -860,6 +929,8 @@
         ],
         "description": "A single mother and her child fall into a deep well of paranoia when an eerie children's book manifests in their home.",
         "rt_quote": "A haunting, deeply emotional meditation on grief and fear."
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Hereditary",
@@ -877,7 +948,9 @@
             "chilling"
         ],
         "description": "After the family matriarch passes away, a grieving family is haunted by tragic and disturbing occurrences.",
-        "rt_quote": "One of the most unsettling and artfully crafted horror films in years."
+        "rt_quote": "One of the most unsettling and artfully crafted horror films in years.".
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "A Quiet Place",
@@ -896,7 +969,9 @@
             "minimalist"
         ],
         "description": "In a post-apocalyptic world, a family must live in silence to avoid blind monsters with acute hearing.",
-        "rt_quote": "A nerve-shredding thriller that's both terrifying and tender."
+        "rt_quote": "A nerve-shredding thriller that's both terrifying and tender.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Conjuring",
@@ -915,7 +990,9 @@
             "chilling"
         ],
         "description": "Paranormal investigators work to help a family terrorized by a dark presence in their farmhouse.",
-        "rt_quote": "A terrifying and masterfully crafted haunted house tale."
+        "rt_quote": "A terrifying and masterfully crafted haunted house tale.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "It Follows",
@@ -934,7 +1011,9 @@
             "original"
         ],
         "description": "A teenager is followed by an unknown supernatural force after a sexual encounter.",
-        "rt_quote": "A refreshingly original, slow-burning horror experience."
+        "rt_quote": "A refreshingly original, slow-burning horror experience.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Witch",
@@ -953,7 +1032,9 @@
             "folkloric"
         ],
         "description": "A Puritan family encounters forces of evil in the woods beyond their New England farm.",
-        "rt_quote": "A chilling, atmospheric descent into religious paranoia and dread."
+        "rt_quote": "A chilling, atmospheric descent into religious paranoia and dread.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Midsommar",
@@ -972,7 +1053,9 @@
             "visually-stunning"
         ],
         "description": "A couple travels to a rural Swedish village's fabled mid-summer festival and becomes trapped in a pagan cult.",
-        "rt_quote": "A mesmerizing, unsettling journey into sunlit terror."
+        "rt_quote": "A mesmerizing, unsettling journey into sunlit terror.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Others",
@@ -991,7 +1074,9 @@
             "haunting"
         ],
         "description": "A woman who lives in her darkened old family house with her two photosensitive children becomes convinced that the home is haunted.",
-        "rt_quote": "A beautifully crafted, chillingly effective ghost story."
+        "rt_quote": "A beautifully crafted, chillingly effective ghost story.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Get Out",
@@ -1010,7 +1095,9 @@
             "social-commentary"
         ],
         "description": "A young African-American visits his white girlfriend's parents for the weekend and uncovers a disturbing secret.",
-        "rt_quote": "A brilliantly unsettling and socially conscious thriller."
+        "rt_quote": "A brilliantly unsettling and socially conscious thriller.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "The Shining",
@@ -1027,7 +1114,9 @@
             "intense"
         ],
         "description": "A family heads to an isolated hotel where sinister forces drive the father into violence.",
-        "rt_quote": "An atmospheric, slow-building masterpiece of horror."
+        "rt_quote": "An atmospheric, slow-building masterpiece of horror.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
       {
     "title": "Pride and Prejudice",
@@ -1035,7 +1124,9 @@
     "duration": 129,
     "mood": ["Emotional", "Elegant"],
     "description": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy in this classic Jane Austen tale.",
-    "recommendation_reason": "You’re in the mood for something emotional — this elegant period romance simmers with wit, pride, and slow-burning tension."
+    "recommendation_reason": "You’re in the mood for something emotional — this elegant period romance simmers with wit, pride, and slow-burning tension.",
+         "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Notebook",
@@ -1043,7 +1134,9 @@
     "duration": 123,
     "mood": ["Passionate", "Melancholy"],
     "description": "A young couple falls in love in the 1940s but are soon separated by social differences and fate.",
-    "recommendation_reason": "You mentioned wanting something passionate — this timeless love story captures the beauty and ache of a once-in-a-lifetime romance."
+    "recommendation_reason": "You mentioned wanting something passionate — this timeless love story captures the beauty and ache of a once-in-a-lifetime romance.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "La La Land",
@@ -1117,7 +1210,9 @@
     "genres": ["Family", "Comedy"],
     "tags": ["wholesome", "light-hearted", "charming", "uplifting"],
     "description": "Paddington the bear spreads joy and marmalade as he searches for the perfect gift and ends up in a wild adventure.",
-    "rt_quote": "Paddington 2 honors the heart of the original and adds even more warmth and wit."
+    "rt_quote": "Paddington 2 honors the heart of the original and adds even more warmth and wit.",
+   "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Parent Trap (1998)",
@@ -1127,7 +1222,9 @@
     "genres": ["Family", "Comedy"],
     "tags": ["playful", "heartwarming", "feel-good", "clever"],
     "description": "Identical twins separated at birth meet at summer camp and scheme to reunite their parents.",
-    "rt_quote": "A charming family comedy with Lindsay Lohan in a star-making dual role."
+    "rt_quote": "A charming family comedy with Lindsay Lohan in a star-making dual role.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Finding Nemo",
@@ -1137,7 +1234,9 @@
     "genres": ["Family", "Adventure", "Animation"],
     "tags": ["adventurous", "touching", "underwater", "funny"],
     "description": "After his son is captured in the Great Barrier Reef, a timid clownfish sets out on a journey to bring him home.",
-    "rt_quote": "Visually stunning and emotionally resonant — Pixar at its finest."
+    "rt_quote": "Visually stunning and emotionally resonant — Pixar at its finest.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Sound of Music",
@@ -1147,7 +1246,9 @@
     "genres": ["Family", "Musical", "Historical"],
     "tags": ["musical", "joyful", "classic", "uplifting"],
     "description": "A governess brings music and love to a strict family in Nazi-occupied Austria.",
-    "rt_quote": "Sweeping, sentimental, and timeless — a musical triumph."
+    "rt_quote": "Sweeping, sentimental, and timeless — a musical triumph.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "E.T. the Extra-Terrestrial",
@@ -1157,7 +1258,9 @@
     "genres": ["Family", "Sci-Fi", "Adventure"],
     "tags": ["magical", "emotional", "alien", "friendship"],
     "description": "A young boy befriends a gentle alien stranded on Earth and helps him return home.",
-    "rt_quote": "A heartfelt classic that captures the wonder of childhood and the power of connection."
+    "rt_quote": "A heartfelt classic that captures the wonder of childhood and the power of connection.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
  {
     "title": "Julie & Julia",
@@ -1167,7 +1270,9 @@
     "genres": ["Drama", "Biography", "Feel-Good"],
     "tags": ["cooking", "ambition", "cozy", "inspiring"],
     "description": "The parallel stories of Julia Child’s rise to fame and a modern woman finding purpose through cooking.",
-    "rt_quote": "A delightful dual portrait of passion and purpose — with plenty of butter."
+    "rt_quote": "A delightful dual portrait of passion and purpose — with plenty of butter.",
+    "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Intouchables",
@@ -1187,7 +1292,9 @@
   "genres": ["Comedy", "Drama", "Feel-Good"],
   "tags": ["food", "road-trip", "father-son", "uplifting"],
   "description": "A disgraced chef starts a food truck, reconnecting with his passion, culture, and his son while traveling across the country.",
-  "rt_quote": "A flavorful and heartwarming ride — *Chef* serves up laughs and love in equal measure."
+  "rt_quote": "A flavorful and heartwarming ride — *Chef* serves up laughs and love in equal measure.",
+   "director": "XXX",
+       "stars": ["XXXX"]
 },
   {
     "title": "The Intouchables",
@@ -1197,7 +1304,9 @@
     "genres": ["Drama", "Comedy", "Feel-Good"],
     "tags": ["friendship", "based-on-true-story", "funny", "life-affirming"],
     "description": "An unlikely friendship forms between a quadriplegic aristocrat and his spirited caregiver from the suburbs.",
-    "rt_quote": "Hugely charming and unexpectedly powerful — a feel-good hit with soul."
+    "rt_quote": "Hugely charming and unexpectedly powerful — a feel-good hit with soul.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
    {
     "title": "Amélie",
@@ -1207,7 +1316,9 @@
     "genres": ["Romance", "Comedy", "Feel-Good"],
     "tags": ["whimsical", "quirky", "visual", "feel-good"],
     "description": "A shy waitress in Paris decides to change the lives of those around her for the better.",
-    "rt_quote": "A visual delight and heartwarming tribute to the joy of small gestures."
+    "rt_quote": "A visual delight and heartwarming tribute to the joy of small gestures.",
+      "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Spirited Away",
@@ -1217,7 +1328,9 @@
     "genres": ["Animation", "Fantasy", "Adventure"],
     "tags": ["magical", "spiritual", "dreamlike", "coming-of-age"],
     "description": "A young girl enters a mysterious spirit world and must find a way to save her parents.",
-    "rt_quote": "A breathtaking masterpiece of imagination and emotional depth."
+    "rt_quote": "A breathtaking masterpiece of imagination and emotional depth.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Inside Out",
@@ -1227,7 +1340,9 @@
     "genres": ["Animation", "Family", "Adventure"],
     "tags": ["emotional", "clever", "psychology", "imaginative"],
     "description": "The emotions inside a young girl’s mind struggle to help her navigate a big move.",
-    "rt_quote": "Inventive, heartfelt, and surprisingly profound — Pixar at its best."
+    "rt_quote": "Inventive, heartfelt, and surprisingly profound — Pixar at its best.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Coco",
@@ -1237,7 +1352,9 @@
     "genres": ["Animation", "Family", "Fantasy"],
     "tags": ["musical", "family", "day-of-the-dead", "emotional"],
     "description": "A young boy ventures into the Land of the Dead to unlock his family’s musical legacy.",
-    "rt_quote": "Vibrant, moving, and beautifully animated — a tribute to culture and family."
+    "rt_quote": "Vibrant, moving, and beautifully animated — a tribute to culture and family.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Toy Story 3",
@@ -1247,7 +1364,9 @@
     "genres": ["Animation", "Adventure", "Comedy"],
     "tags": ["nostalgic", "bittersweet", "friendship", "closure"],
     "description": "As Andy heads to college, Woody, Buzz, and the gang face an uncertain future.",
-    "rt_quote": "Emotionally resonant and richly satisfying — a perfect sendoff to beloved characters."
+    "rt_quote": "Emotionally resonant and richly satisfying — a perfect sendoff to beloved characters.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Iron Giant",
@@ -1257,7 +1376,9 @@
     "genres": ["Animation", "Sci-Fi", "Family"],
     "tags": ["robot", "sacrifice", "cold-war", "friendship"],
     "description": "A boy befriends a giant robot from outer space in 1950s America, teaching it what it means to be human.",
-    "rt_quote": "A tender, underrated gem with powerful themes and emotional weight."
+    "rt_quote": "A tender, underrated gem with powerful themes and emotional weight.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
     {
     "title": "Matilda (1996)",
@@ -1268,6 +1389,8 @@
     "tags": ["magical", "rebellious", "funny", "clever"],
     "description": "A gifted girl uses her wit and telekinetic powers to stand up to her tyrannical parents and principal.",
     "rt_quote": "A smart, subversive, and endlessly entertaining family film."
+       "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "WALL-E",
@@ -1277,7 +1400,9 @@
     "genres": ["Family", "Animation", "Sci-Fi"],
     "tags": ["robot", "silent", "environmental", "emotional"],
     "description": "In a distant future, a lonely trash-compacting robot discovers new purpose after meeting another robot named EVE.",
-    "rt_quote": "Visually dazzling and emotionally rich — a bold achievement in animation."
+    "rt_quote": "Visually dazzling and emotionally rich — a bold achievement in animation.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Mary Poppins",
@@ -1287,7 +1412,9 @@
     "genres": ["Family", "Musical", "Fantasy"],
     "tags": ["musical", "magical", "classic", "charming"],
     "description": "A magical nanny brings discipline and delight to a London family with a spoonful of sugar.",
-    "rt_quote": "Practically perfect in every way — an enchanting musical classic."
+    "rt_quote": "Practically perfect in every way — an enchanting musical classic.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Lego Movie",
@@ -1297,7 +1424,9 @@
     "genres": ["Family", "Animation", "Adventure"],
     "tags": ["funny", "fast-paced", "creative", "feel-good"],
     "description": "An ordinary LEGO figure is mistakenly identified as the most extraordinary person and joins a quest to save the universe.",
-    "rt_quote": "A gleefully bonkers joyride packed with laughs, heart, and unexpected depth."
+    "rt_quote": "A gleefully bonkers joyride packed with laughs, heart, and unexpected depth.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "My Neighbor Totoro",
@@ -1307,7 +1436,9 @@
     "genres": ["Family", "Animation", "Fantasy"],
     "tags": ["gentle", "magical", "nature", "wholesome"],
     "description": "Two young sisters discover magical creatures in the forest near their new countryside home.",
-    "rt_quote": "A tender, slow-blooming classic that radiates innocence and wonder."
+    "rt_quote": "A tender, slow-blooming classic that radiates innocence and wonder.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
     {
         "title": "Sample Movie 81",
