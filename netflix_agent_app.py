@@ -31,14 +31,27 @@ if not js_result or not isinstance(js_result, str) or js_result.strip() == "":
 try:
     if use_server_time:
         now = datetime.now().astimezone()
+        iso_time = now.isoformat()
+        offset_minutes = -now.utcoffset().total_seconds() / 60
     else:
         browser_data = json.loads(js_result)
         iso_time = browser_data.get("iso")
         offset_minutes = int(browser_data.get("offset", 0))
         tz_offset = timezone(timedelta(minutes=-offset_minutes))
-        now = parser.isoparse(iso_time).replace(tzinfo=timezone.utc).astimezone(tz_offset)
+        dt = parser.isoparse(iso_time)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        now = dt.astimezone(tz_offset)
 except Exception:
     now = datetime.now().astimezone()
+    iso_time = now.isoformat()
+    offset_minutes = -now.utcoffset().total_seconds() / 60
+
+# --- Timezone Debug ---
+with st.expander("🕵️ Debug Timezone Info"):
+    st.write("ISO Time from Browser:", iso_time)
+    st.write("Offset Minutes:", offset_minutes)
+    st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
