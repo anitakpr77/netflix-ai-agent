@@ -126,7 +126,7 @@ def explain_why(movie, filters, now):
     if filters.get("keywords"):
         themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
     if themes:
-        parts.append(f"With themes like {', '.join(set(themes))}")
+        parts.append(f"It has themes like {', '.join(set(themes))}")
 
     if movie.get("age_rating"):
         parts.append(f"and it’s rated {movie['age_rating']}.")
