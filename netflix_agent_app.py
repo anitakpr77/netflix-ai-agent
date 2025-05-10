@@ -16,12 +16,6 @@ st.write("Tell me what you feel like watching and I’ll find something perfect.
 pacific = pytz.timezone("America/Los_Angeles")
 now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
 now = now_utc.astimezone(pacific)
-browser_time_str = now.strftime("%a %b %d %Y %I:%M:%S %p %Z")
-
-# --- Time Debug ---
-with st.expander("🕵️ Debug Timezone Info"):
-    st.write("Fixed Local Time String:", browser_time_str)
-    st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
