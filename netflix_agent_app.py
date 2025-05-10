@@ -1,6 +1,7 @@
 import streamlit as st
 import openai
 import json
+from datetime import datetime
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -102,24 +103,48 @@ def score_movie(movie, filters):
 
 # --- Explanation Generator ---
 def explain_why(movie, filters):
-    reasons = []
-    for genre in filters.get("genres", []):
-        if genre.lower() in [g.lower() for g in movie.get("genres", [])]:
-            reasons.append(f"it's a {genre.lower()} movie")
-    for mood in filters.get("mood", []):
-        if mood.lower() in [t.lower() for t in movie.get("tags", [])]:
-            reasons.append(f"it has a {mood.lower()} tone")
-    for keyword in filters.get("keywords", []):
-        if keyword.lower() in movie.get("description", "").lower() or keyword.lower() in [t.lower() for t in movie.get("tags", [])]:
-            reasons.append(f"it features {keyword.lower()}")
-    if "min_age_rating" in filters and movie.get("age_rating"):
-        if filters["min_age_rating"] == movie["age_rating"]:
-            reasons.append(f"it's rated {movie['age_rating']}")
+    parts = []
 
-    explanation = "Chosen because " + ", and ".join(reasons) + "."
+    # 1. Family-friendly label
+    if movie.get("age_rating") in ["G", "PG", "PG-13"]:
+        parts.append("This is a family-friendly pick")
+
+    # 2. Themes
+    themes = []
+    if movie.get("tags") and filters.get("mood"):
+        themes += [tag for tag in movie["tags"] if tag.lower() in [m.lower() for m in filters["mood"]]]
+    if filters.get("keywords"):
+        themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
+    if themes:
+        unique_themes = list(set(themes))
+        parts.append(f"with themes like {', '.join(unique_themes)}")
+
+    # 3. Rating
+    if movie.get("age_rating"):
+        parts.append(f"and it’s rated {movie['age_rating']}.")
+
+    # 4. Critics quote
     if movie.get("rt_quote"):
-        explanation += f" Critics said: \u201c{movie['rt_quote']}\u201d"
-    return explanation
+        parts.append(f'Critics say: “{movie["rt_quote"]}”')
+
+    # 5. Day of the week
+    today = datetime.now().strftime("%A")
+    parts.append(f"It’s also {today}")
+
+    # 6. Runtime
+    if movie.get("runtime"):
+        minutes = movie["runtime"]
+        hours = minutes // 60
+        mins = minutes % 60
+        if hours:
+            runtime_str = f"{hours} hour{'s' if hours > 1 else ''}"
+            if mins:
+                runtime_str += f" {mins} mins"
+        else:
+            runtime_str = f"{mins} mins"
+        parts.append(f"and the runtime is {runtime_str}—perfect for tonight.")
+
+    return " ".join(parts)
 
 # --- Get Ranked Results ---
 if parsed_filters:
@@ -158,3 +183,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
