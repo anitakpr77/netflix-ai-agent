@@ -186,6 +186,11 @@ if parsed_filters:
             st.markdown(f"**{movie['title']}**")
             st.markdown(f"🌟 {movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins")
             st.markdown(f"_{movie['description']}_")
+            if movie.get("director"):
+                st.markdown(f"🎨 Directed by {movie['director']}")
+            if movie.get("stars"):
+                star_list = ", ".join(movie["stars"][:-1]) + f", and {movie['stars'][-1]}" if len(movie["stars"]) > 1 else movie["stars"][0]
+                st.markdown(f"⭐ Starring {star_list}")
             st.markdown(f"*{explain_why(movie, parsed_filters, now)}*")
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
