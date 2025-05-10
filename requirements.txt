@@ -1,3 +1,4 @@
 streamlit
 openai
 streamlit-javascript
+python-dateutil
