@@ -69,6 +69,14 @@ if "last_filters" not in st.session_state or st.session_state.last_filters != pa
     st.session_state.shown_titles = []
     st.session_state.last_filters = parsed_filters
 
+# --- Rating Filter Helper ---
+def is_rating_appropriate(movie_rating, user_min_rating):
+    rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
+    try:
+        return rating_order.index(movie_rating) <= rating_order.index(user_min_rating)
+    except ValueError:
+        return False  # Unknown rating format
+
 # --- Scoring Function ---
 def score_movie(movie, filters):
     score = 0
@@ -117,10 +125,17 @@ def explain_why(movie, filters):
 if parsed_filters:
     scored_matches = []
     for movie in all_movies:
-        if movie["title"] not in st.session_state.shown_titles:
-            score = score_movie(movie, parsed_filters)
-            if score > 0:
-                scored_matches.append((score, movie))
+        if movie["title"] in st.session_state.shown_titles:
+            continue
+
+        # Filter out movies above the max acceptable age rating
+        if parsed_filters.get("min_age_rating"):
+            if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
+                continue
+
+        score = score_movie(movie, parsed_filters)
+        if score > 0:
+            scored_matches.append((score, movie))
 
     scored_matches.sort(reverse=True, key=lambda x: x[0])
     results_to_show = [m for _, m in scored_matches[:4]]
