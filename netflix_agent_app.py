@@ -13,11 +13,12 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get local browser time as string (e.g., "Sat May 11 2025 08:24:00 GMT-0700 (Pacific Daylight Time)") ---
+# --- Get browser local time (reliable async version) ---
 js_result = st_javascript("""
-    () => {
-        return new Date().toString();
-    }
+    new Promise((resolve) => {
+        const now = new Date().toString();  // e.g., "Sat May 11 2025 08:30:00 GMT-0700"
+        resolve(now);
+    });
 """)
 
 try:
