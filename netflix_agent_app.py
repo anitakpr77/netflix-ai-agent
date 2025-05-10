@@ -131,7 +131,9 @@ def explain_why(movie, filters, now):
     matched_themes = [k for k, v in sorted(tag_scores.items(), key=lambda item: item[1], reverse=True)]
 
     if matched_themes:
-        parts.append(f"We picked this film for you because it has themes of {', '.join(matched_themes)}.")
+        top_themes = matched_themes[:3]  # show only top 3
+        theme_badges = " ".join([f"`{theme}`" for theme in top_themes])
+        parts.append(f"We picked this film for you because it has themes of {theme_badges}.")
 
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
