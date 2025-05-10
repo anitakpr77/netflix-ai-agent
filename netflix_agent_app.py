@@ -28,7 +28,7 @@ if result is None:
 
 # --- Parse time with fallback + debug logging ---
 try:
-    parsed = json.loads(result)
+    parsed = result
     iso_time = parsed.get("isoTime")
     offset_minutes = int(parsed.get("offsetMinutes", 0))
 
