@@ -150,15 +150,17 @@ def explain_why(movie, filters, now):
         runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
 
         if 5 <= hour < 12:
-            date_time_string += f" and the runtime is {runtime_str} — perfect for a morning watch."
+            time_label = "perfect for a morning watch"
         elif 12 <= hour < 17:
-            date_time_string += f" and the runtime is {runtime_str} — a great afternoon pick."
+            time_label = "a great afternoon pick"
         elif 17 <= hour < 21:
-            date_time_string += f" and the runtime is {runtime_str} — ideal for tonight’s unwind."
+            time_label = "ideal for tonight’s unwind"
         elif 21 <= hour < 23:
-            date_time_string += f" and the runtime is {runtime_str} — a solid late-night option."
+            time_label = "a solid late-night option"
         else:
-            date_time_string += f" and the runtime is {runtime_str} — might be a bit late, but worth it."
+            time_label = "a very late watch — maybe save it for tomorrow"
+
+        date_time_string += f" and the runtime is {runtime_str} — {time_label}."
 
     parts.append(date_time_string)
 
@@ -206,4 +208,3 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
