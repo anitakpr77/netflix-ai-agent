@@ -4,7 +4,7 @@
         "rating": "98%",
         "age_rating": "R",
         "runtime": 142,
-        "genres": ["classic", "drama", "prison drama", "murder"],
+        "genres": ["Classic", "Drama", "Prison drama", "Murder"],
         "tags": [
             "prison",
             "hope",
@@ -22,16 +22,24 @@
         "runtime": 148,
         "genres": [
             "Sci-Fi",
-            "Thriller"
+            "Thriller",
+            "Action",
+            "Suspense",
+            "Action thriller",
+            "Pyschological thriller"
         ],
         "tags": [
             "mind-bending",
             "dreams",
             "intense",
-            "action-packed"
+            "action-packed",
+            "action heist",
+            "psychological thriller",
+            "fantasy"
+            
         ],
         "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "A dazzlingly complex and thrilling ride into the dreamscape."
+        "rt_quote": "Smart, innovative, and thrilling, Inception is that rare summer blockbuster that succeeds viscerally as well as intellectually."
     },
     {
         "title": "La La Land",
