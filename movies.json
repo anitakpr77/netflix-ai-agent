@@ -54,16 +54,21 @@
         "genres": [
             "Drama",
             "Romance",
-            "Music"
+            "Musical",
+            "Comedy",
+           
         ],
         "tags": [
             "romantic",
             "musical",
             "dreamy",
-            "bittersweet"
+            "bittersweet",
+            "without happy ending"
         ],
-        "description": "A jazz musician and an aspiring actress fall in love while pursuing their dreams.",
-        "rt_quote": "A beautifully crafted ode to dreams and love."
+        "description": "A jazz musician and an aspiring actress are drawn together by their common desire to do what they love. But as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+        "rt_quote": "La La Land breathes new life into a bygone genre with thrillingly assured direction, powerful performances, and an irresistible excess of heart.",
+       "director": "Damien Chazelle",
+       "stars": ["Emma Stone", "Ryan Gosling", "John Legend", "J. K. Simmons"]
     },
     
     {
