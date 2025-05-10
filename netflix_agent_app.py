@@ -115,9 +115,7 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick")
 
-    matched_themes = []
     tag_scores = {}
-
     if filters.get("mood"):
         for m in movie.get("tags", []):
             if m.lower() in [f.lower() for f in filters["mood"]]:
@@ -129,11 +127,8 @@ def explain_why(movie, filters, now):
                 tag_scores[k] = tag_scores.get(k, 0) + 1
 
     matched_themes = [k for k, v in sorted(tag_scores.items(), key=lambda item: item[1], reverse=True)]
-
     if matched_themes:
-        top_themes = matched_themes[:3]  # show only top 3
-        theme_badges = " ".join([f"`{theme}`" for theme in top_themes])
-        parts.append(f"We picked this film for you because it has themes of {theme_badges}.")
+        parts.append(f"We picked this film for you because it has themes of {', '.join(matched_themes[:3])}.")
 
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
