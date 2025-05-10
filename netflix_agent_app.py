@@ -1,6 +1,7 @@
 import streamlit as st
 import openai
 import json
+import ast
 from datetime import datetime, timedelta, timezone
 from dateutil import parser
 from streamlit_javascript import st_javascript
@@ -13,7 +14,7 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser time and offset ---
+# --- Get browser time and timezone offset ---
 js_code = """
     const date = new Date();
     const isoTime = date.toISOString();
@@ -26,17 +27,13 @@ if result is None:
     st.info("Detecting your local time...")
     st.stop()
 
-# --- Parse time with fallback + debug logging ---
+# --- Parse and convert time info ---
 try:
-    parsed = result
-    iso_time = parsed.get("isoTime")
-    offset_minutes = int(parsed.get("offsetMinutes", 0))
-
-    # Debug output
+    parsed = ast.literal_eval(result) if isinstance(result, str) else result
     st.write("📦 Browser time data:", parsed)
 
-    if not iso_time:
-        raise ValueError("Missing isoTime from browser")
+    iso_time = parsed.get("isoTime")
+    offset_minutes = int(parsed.get("offsetMinutes", 0))
 
     tz_offset = timezone(timedelta(minutes=-offset_minutes))
     now = parser.isoparse(iso_time).astimezone(tz_offset)
@@ -136,7 +133,7 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Smart theme matching
+    # Theme matching
     matched_themes = []
     user_words = set()
     for term in filters.get("mood", []) + filters.get("keywords", []) + filters.get("genres", []):
