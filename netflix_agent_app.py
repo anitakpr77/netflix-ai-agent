@@ -115,7 +115,9 @@ def score_movie(movie, filters):
 def explain_why(movie, filters, now):
     parts = []
 
-    if movie.get("age_rating") in ["G", "PG", "PG-13"]:
+    requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
+    is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
+    if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick")
 
     themes = []
@@ -142,12 +144,11 @@ def explain_why(movie, filters, now):
         mins = minutes % 60
         runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
 
-        is_family = movie.get("age_rating") in ["G", "PG", "PG-13"]
         after_5pm = now.hour >= 17
         bedtime = now.replace(hour=22, minute=0, second=0, microsecond=0)
         ends_after_bedtime = end_time > bedtime
 
-        if is_family and after_5pm and ends_after_bedtime:
+        if after_5pm and ends_after_bedtime:
             parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
         else:
             parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
@@ -188,6 +189,5 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
 
 
