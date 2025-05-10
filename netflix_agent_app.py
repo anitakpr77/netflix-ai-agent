@@ -101,10 +101,11 @@ def score_movie(movie, filters):
 def explain_why(movie, filters, now):
     parts = []
 
-    requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
+    requested_family = any(
+        term in filters.get("genres", []) + filters.get("keywords", [])
+        for term in ["Family", "Kids", "Children", "Animated"]
+    )
     is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
-    if requested_family and is_suitable_rating:
-        parts.append("This is a family-friendly pick.")
 
     matched_themes = []
     user_words = set()
@@ -119,14 +120,20 @@ def explain_why(movie, filters, now):
     seen = set()
     matched_themes = [x for x in matched_themes if not (x.lower() in seen or seen.add(x.lower()))]
 
+    reason_parts = []
+    if requested_family and is_suitable_rating:
+        reason_parts.append("it’s family-friendly")
     if matched_themes:
         if len(matched_themes) == 1:
-            parts.append(f"We picked this film for you because it has themes of {matched_themes[0]}.")
+            reason_parts.append(f"it has themes of {matched_themes[0]}")
         else:
-            tag_string = ", ".join(matched_themes[:-1]) + f" and {matched_themes[-1]}"
-            parts.append(f"We picked this film for you because it has themes of {tag_string}.")
+            theme_string = ", ".join(matched_themes[:-1]) + f", and {matched_themes[-1]}"
+            reason_parts.append(f"it has themes of {theme_string}")
+
+    if reason_parts:
+        parts.append("We picked this film for you because " + " and ".join(reason_parts) + ".")
     else:
-        parts.append("We picked this film for you because it matched your search request.")
+        parts.append("We picked this film for you based on your preferences.")
 
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
