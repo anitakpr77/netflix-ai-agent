@@ -1,7 +1,6 @@
 import streamlit as st
 import openai
 import json
-import ast
 from datetime import datetime, timedelta, timezone
 from dateutil import parser
 from streamlit_javascript import st_javascript
@@ -14,32 +13,29 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser time and timezone offset ---
-js_code = """
-    const date = new Date();
-    const isoTime = date.toISOString();
-    const offsetMinutes = date.getTimezoneOffset();
-    return JSON.stringify({ isoTime, offsetMinutes });
-"""
-result = st_javascript(js_code)
+# --- Get local browser time and offset ---
+js_result = st_javascript("""
+    const now = new Date();
+    const payload = {
+        iso: now.toISOString(),
+        offset: now.getTimezoneOffset()
+    };
+    return JSON.stringify(payload);
+""")
 
-if result is None:
+if js_result is None:
     st.info("Detecting your local time...")
     st.stop()
 
-# --- Parse and convert time info ---
+# --- Parse and adjust local time ---
 try:
-    parsed = ast.literal_eval(result) if isinstance(result, str) else result
-    st.write("📦 Browser time data:", parsed)
-
-    iso_time = parsed.get("isoTime")
-    offset_minutes = int(parsed.get("offsetMinutes", 0))
-
+    browser_data = json.loads(js_result)
+    iso_time = browser_data["iso"]
+    offset_minutes = int(browser_data["offset"])
     tz_offset = timezone(timedelta(minutes=-offset_minutes))
     now = parser.isoparse(iso_time).astimezone(tz_offset)
-except Exception as e:
+except Exception:
     st.warning("Could not parse your local time.")
-    st.exception(e)
     st.stop()
 
 # --- User Input ---
@@ -83,9 +79,8 @@ if user_input:
             )
             raw_output = response.choices[0].message.content
             parsed_filters = json.loads(raw_output)
-        except Exception as e:
+        except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
-            st.exception(e)
             st.stop()
 
 # --- Show Filters ---
@@ -123,17 +118,15 @@ def score_movie(movie, filters):
         score += 1
     return score
 
-# --- Explain Why Function ---
+# --- Explanation ---
 def explain_why(movie, filters, now):
     parts = []
 
-    # Family-friendly logic
     requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
     is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Theme matching
     matched_themes = []
     user_words = set()
     for term in filters.get("mood", []) + filters.get("keywords", []) + filters.get("genres", []):
@@ -156,11 +149,9 @@ def explain_why(movie, filters, now):
     else:
         parts.append("We picked this film for you because it matches the vibe you're going for.")
 
-    # Critic quote
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    # Day/time logic
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -187,7 +178,7 @@ def explain_why(movie, filters, now):
 
     return "Why this movie?\n\n" + "\n\n".join(parts)
 
-# --- Movie Recommendation Display ---
+# --- Movie Display ---
 if parsed_filters:
     scored_matches = []
     for movie in all_movies:
