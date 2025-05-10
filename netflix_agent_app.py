@@ -115,14 +115,23 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick")
 
-    matched_themes = set()
+    matched_themes = []
+    tag_scores = {}
+
     if filters.get("mood"):
-        matched_themes.update(m for m in movie.get("tags", []) if m.lower() in [f.lower() for f in filters["mood"]])
+        for m in movie.get("tags", []):
+            if m.lower() in [f.lower() for f in filters["mood"]]:
+                tag_scores[m] = tag_scores.get(m, 0) + 1
+
     if filters.get("keywords"):
-        matched_themes.update(k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower())
+        for k in filters["keywords"]:
+            if k.lower() in movie.get("description", "").lower():
+                tag_scores[k] = tag_scores.get(k, 0) + 1
+
+    matched_themes = [k for k, v in sorted(tag_scores.items(), key=lambda item: item[1], reverse=True)]
 
     if matched_themes:
-        parts.append(f"We picked this film for you because it has themes like {', '.join(matched_themes)}.")
+        parts.append(f"We picked this film for you because it has themes of {', '.join(matched_themes)}.")
 
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
@@ -191,4 +200,3 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
