@@ -22,7 +22,7 @@ if local_time_str is None:
 now = None
 if "GMT" in local_time_str:
     try:
-        now = datetime.strptime(local_time_str[:24], "%a %b %d %Y %H:%M:%S")
+        now = datetime.strptime(local_time_str[:33], "%a %b %d %Y %H:%M:%S GMT%z")
     except Exception:
         st.warning("Could not parse your local time.")
         st.stop()
