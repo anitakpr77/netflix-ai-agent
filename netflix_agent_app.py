@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from dateutil import parser
 from streamlit_javascript import st_javascript
 
@@ -13,15 +13,25 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser local time ---
-local_time_str = st_javascript("new Date().toISOString()")
-if local_time_str is None:
+# --- Get browser time + timezone offset ---
+js_code = """
+    const date = new Date();
+    const isoTime = date.toISOString();
+    const offsetMinutes = date.getTimezoneOffset();
+    return JSON.stringify({ isoTime, offsetMinutes });
+"""
+result = st_javascript(js_code)
+
+if result is None:
     st.info("Detecting your local time...")
     st.stop()
 
-# --- Parse local time string safely ---
+# --- Parse ISO time and apply timezone offset ---
 try:
-    now = parser.isoparse(local_time_str).astimezone()
+    parsed = json.loads(result)
+    offset_minutes = int(parsed["offsetMinutes"])
+    tz_offset = timezone(timedelta(minutes=-offset_minutes))  # JS gives negative offset for UTC+
+    now = parser.isoparse(parsed["isoTime"]).astimezone(tz_offset)
 except Exception:
     st.warning("Could not parse your local time.")
     st.stop()
@@ -141,11 +151,11 @@ def explain_why(movie, filters, now):
     else:
         parts.append("We picked this film for you because it matches the vibe you're going for.")
 
-    # Critic quote (own paragraph)
+    # Critic quote
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    # Time string (own paragraph)
+    # Day/time logic
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
