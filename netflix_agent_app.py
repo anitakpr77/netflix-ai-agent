@@ -106,30 +106,39 @@ def score_movie(movie, filters):
         score += 1
     return score
 
-# --- Explanation Function ---
+# --- Explain Why Function (updated) ---
 def explain_why(movie, filters, now):
     parts = []
 
+    # Family-friendly flag
     requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
     is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
     if requested_family and is_suitable_rating:
-        parts.append("This is a family-friendly pick")
+        parts.append("This is a family-friendly pick.")
 
+    # Match multiple themes
     matched_themes = []
     if filters.get("mood"):
-        matched_themes += [tag for tag in movie.get("tags", []) if tag.lower() in [m.lower() for m in filters["mood"]]]
+        matched_themes += [tag for tag in movie.get("tags", []) if any(m.lower() in tag.lower() for m in filters["mood"])]
     if filters.get("keywords"):
         matched_themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
-
     seen = set()
     matched_themes = [x for x in matched_themes if not (x.lower() in seen or seen.add(x.lower()))]
 
     if matched_themes:
-        parts.append(f"We picked this film for you because it has themes of {', '.join(matched_themes[:3])}.")
+        if len(matched_themes) == 1:
+            parts.append(f"We picked this film for you because it has themes of {matched_themes[0]}.")
+        else:
+            tag_string = ", ".join(matched_themes[:-1]) + f" and {matched_themes[-1]}"
+            parts.append(f"We picked this film for you because it has themes of {tag_string}.")
+    else:
+        parts.append("We picked this film for you because it matches the vibe you're going for.")
 
+    # Critic quote in its own paragraph
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
+    # Day/time summary
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -153,7 +162,8 @@ def explain_why(movie, filters, now):
             else:
                 date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight."
     parts.append(date_time_string)
-    return "Why this movie? " + " ".join(parts)
+
+    return "Why this movie?\n\n" + "\n\n".join(parts)
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
