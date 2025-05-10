@@ -4,9 +4,7 @@
         "rating": "98%",
         "age_rating": "R",
         "runtime": 142,
-        "genres": [
-            "Drama"
-        ],
+        "genres": ["classic", "drama", "prison drama", "murder"],
         "tags": [
             "prison",
             "hope",
