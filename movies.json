@@ -71,22 +71,29 @@
     
     {
         "title": "Mad Max: Fury Road",
-        "rating": "86%",
+        "rating": "97%",
         "age_rating": "R",
         "runtime": 120,
         "genres": [
             "Action",
             "Adventure",
-            "Sci-Fi"
+            "Sci-Fi",
+           "Punk"
         ],
         "tags": [
             "explosive",
             "intense",
             "gritty",
-            "thrilling"
+            "thrilling",
+           "apocalyptic",
+           "dystopian",
+           "science fiction",
+           "fantasty"
         ],
-        "description": "In a post-apocalyptic wasteland, Max teams up with a rebel warrior to escape a tyrant.",
-        "rt_quote": "A high-octane masterpiece of visual storytelling."
+        "description": "Years after the collapse of civilization, the tyrannical Immortan Joe enslaves apocalypse survivors inside the desert fortress the Citadel. When the warrior Imperator Furiosa (Charlize Theron) leads the despot's five wives in a daring escape, she forges an alliance with Max Rockatansky (Tom Hardy), a loner and former captive. Fortified in the massive, armored truck the War Rig, they try to outrun the ruthless warlord and his henchmen in a deadly high-speed chase through the Wasteland.",
+        "rt_quote": "With exhilarating action and a surprising amount of narrative heft, Mad Max: Fury Road brings George Miller's post-apocalyptic franchise roaring vigorously back to life.",
+       "director": "George Miller",
+  "stars": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult", "Zoe Kravitz"]
     },
     {
         "title": "John Wick",
