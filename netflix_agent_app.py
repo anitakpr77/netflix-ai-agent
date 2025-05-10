@@ -20,7 +20,8 @@ if local_time_str is None:
 
 # --- Parse local time string ---
 try:
-    now = datetime.fromisoformat(local_time_str.replace("Z", "+00:00")).astimezone()
+    from dateutil import parser
+now = parser.isoparse(local_time_str)
 except Exception:
     st.warning("Could not parse your local time.")
     st.stop()
