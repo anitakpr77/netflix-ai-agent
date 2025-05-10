@@ -149,11 +149,14 @@ def explain_why(movie, filters, now):
         ends_after_bedtime = end_time > bedtime
 
         if after_5pm and ends_after_bedtime:
-            parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
+            if requested_family:
+                parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
+            else:
+                parts.append(f"and the runtime is {runtime_str}. It ends around {end_time.strftime('%I:%M %p')}—a longer watch, but worth it.")
         else:
             parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
 
-    return " ".join(parts)
+    return "Why this movie? " + " ".join(parts)
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
@@ -177,7 +180,7 @@ if parsed_filters:
             st.markdown(f"**{movie['title']}**")
             st.markdown(f"🌟 {movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins")
             st.markdown(f"_{movie['description']}_")
-            st.markdown(f"*Why this movie?* {explain_why(movie, parsed_filters, now)}")
+            st.markdown(f"*{explain_why(movie, parsed_filters, now)}*")
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
@@ -189,5 +192,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
 
