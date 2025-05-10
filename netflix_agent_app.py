@@ -126,7 +126,7 @@ def explain_why(movie, filters, now):
             tag_string = ", ".join(matched_themes[:-1]) + f" and {matched_themes[-1]}"
             parts.append(f"We picked this film for you because it has themes of {tag_string}.")
     else:
-        parts.append("We picked this film for you because it matches the vibe you're going for.")
+        parts.append("We picked this film for you because it matched your search of {matched_themes[0]}.")
 
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
