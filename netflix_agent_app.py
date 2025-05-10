@@ -149,9 +149,11 @@ def explain_why(movie, filters, now):
         mins = minutes % 60
         runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
 
-        if 5 <= hour < 12:
+        if 5 <= hour < 11:
             time_label = "perfect for a morning watch"
-        elif 12 <= hour < 17:
+        elif 11 <= hour < 14:
+            time_label = "a great midday pick"
+        elif 14 <= hour < 17:
             time_label = "a great afternoon pick"
         elif 17 <= hour < 21:
             time_label = "ideal for tonight’s unwind"
