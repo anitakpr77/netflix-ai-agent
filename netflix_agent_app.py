@@ -106,7 +106,7 @@ def score_movie(movie, filters):
         score += 1
     return score
 
-# --- Explain Why Function (improved matching) ---
+# --- Explain Why Function (final matching logic) ---
 def explain_why(movie, filters, now):
     parts = []
 
@@ -116,23 +116,16 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Flexible theme matching
+    # Smart word-matching logic
     matched_themes = []
-    movie_tags = [tag.lower() for tag in movie.get("tags", [])]
-    movie_description = movie.get("description", "").lower()
+    user_words = set()
+    for term in filters.get("mood", []) + filters.get("keywords", []) + filters.get("genres", []):
+        user_words.update(term.lower().split())
 
-    if filters.get("mood"):
-        for mood in filters["mood"]:
-            mood = mood.lower()
-            for tag in movie_tags:
-                if mood in tag or tag in mood:
-                    matched_themes.append(tag.title())
-
-    if filters.get("keywords"):
-        for keyword in filters["keywords"]:
-            keyword = keyword.lower()
-            if keyword in movie_description:
-                matched_themes.append(keyword.title())
+    for tag in movie.get("tags", []):
+        tag_words = set(tag.lower().split())
+        if user_words & tag_words:
+            matched_themes.append(tag.title())
 
     # Deduplicate
     seen = set()
@@ -147,11 +140,11 @@ def explain_why(movie, filters, now):
     else:
         parts.append("We picked this film for you because it matches the vibe you're going for.")
 
-    # Critic quote (new paragraph)
+    # Critic quote (separate paragraph)
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    # Time & day logic (new paragraph)
+    # Date/time paragraph
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
