@@ -106,22 +106,35 @@ def score_movie(movie, filters):
         score += 1
     return score
 
-# --- Explain Why Function (updated) ---
+# --- Explain Why Function (improved matching) ---
 def explain_why(movie, filters, now):
     parts = []
 
-    # Family-friendly flag
+    # Family-friendly logic
     requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
     is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Match multiple themes
+    # Flexible theme matching
     matched_themes = []
+    movie_tags = [tag.lower() for tag in movie.get("tags", [])]
+    movie_description = movie.get("description", "").lower()
+
     if filters.get("mood"):
-        matched_themes += [tag for tag in movie.get("tags", []) if any(m.lower() in tag.lower() for m in filters["mood"])]
+        for mood in filters["mood"]:
+            mood = mood.lower()
+            for tag in movie_tags:
+                if mood in tag or tag in mood:
+                    matched_themes.append(tag.title())
+
     if filters.get("keywords"):
-        matched_themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
+        for keyword in filters["keywords"]:
+            keyword = keyword.lower()
+            if keyword in movie_description:
+                matched_themes.append(keyword.title())
+
+    # Deduplicate
     seen = set()
     matched_themes = [x for x in matched_themes if not (x.lower() in seen or seen.add(x.lower()))]
 
@@ -134,11 +147,11 @@ def explain_why(movie, filters, now):
     else:
         parts.append("We picked this film for you because it matches the vibe you're going for.")
 
-    # Critic quote in its own paragraph
+    # Critic quote (new paragraph)
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    # Day/time summary
+    # Time & day logic (new paragraph)
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
