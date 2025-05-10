@@ -195,16 +195,23 @@
         "genres": [
             "Action",
             "Drama",
-            "Adventure"
+            "Adventure",
+           "Historical Fiction"
         ],
         "tags": [
             "epic",
             "heroic",
             "gritty",
-            "emotional"
+            "emotional",
+           "history",
+           "sword",
+           "sandal",
+           "historical fiction"
         ],
-        "description": "A betrayed Roman general seeks revenge against the corrupt emperor.",
-        "rt_quote": "A sweeping epic of honor, vengeance, and destiny."
+        "description": "Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.",
+        "rt_quote": "While not everyone will be entertained by Gladiator's glum revenge story, Russell Crowe thunderously wins the crowd with a star-making turn that provides Ridley Scott's opulent resurrection of Rome its bruised heart.",
+       "director": "Ridley Scott",
+       "stars": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen", "Oliver Reed", "Djimon Hounsou"]
     },
     {
         "title": "Edge of Tomorrow",
