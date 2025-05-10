@@ -13,7 +13,7 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser time + timezone offset ---
+# --- Get browser time and offset ---
 js_code = """
     const date = new Date();
     const isoTime = date.toISOString();
@@ -26,14 +26,23 @@ if result is None:
     st.info("Detecting your local time...")
     st.stop()
 
-# --- Parse ISO time and apply timezone offset ---
+# --- Parse time with fallback + debug logging ---
 try:
     parsed = json.loads(result)
-    offset_minutes = int(parsed["offsetMinutes"])
-    tz_offset = timezone(timedelta(minutes=-offset_minutes))  # JS gives negative offset for UTC+
-    now = parser.isoparse(parsed["isoTime"]).astimezone(tz_offset)
-except Exception:
+    iso_time = parsed.get("isoTime")
+    offset_minutes = int(parsed.get("offsetMinutes", 0))
+
+    # Debug output
+    st.write("📦 Browser time data:", parsed)
+
+    if not iso_time:
+        raise ValueError("Missing isoTime from browser")
+
+    tz_offset = timezone(timedelta(minutes=-offset_minutes))
+    now = parser.isoparse(iso_time).astimezone(tz_offset)
+except Exception as e:
     st.warning("Could not parse your local time.")
+    st.exception(e)
     st.stop()
 
 # --- User Input ---
@@ -127,7 +136,7 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Smart tag matching
+    # Smart theme matching
     matched_themes = []
     user_words = set()
     for term in filters.get("mood", []) + filters.get("keywords", []) + filters.get("genres", []):
@@ -138,7 +147,6 @@ def explain_why(movie, filters, now):
         if user_words & tag_words:
             matched_themes.append(tag.title())
 
-    # Deduplicate
     seen = set()
     matched_themes = [x for x in matched_themes if not (x.lower() in seen or seen.add(x.lower()))]
 
