@@ -170,16 +170,22 @@
             "Action",
             "Crime",
             "Adventure",
-            "drama"
+            "drama",
+           "Superhero",
+           "Thriller",
+           "Neo Noir"
         ],
         "tags": [
             "dark",
             "intense",
             "gritty",
-            "heroic"
+            "heroic",
+           "noir"
         ],
-        "description": "Batman faces his nemesis, the Joker, who wreaks havoc and chaos on Gotham City.",
-        "rt_quote": "An electrifying portrayal of heroism and chaos."
+        "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.",
+        "rt_quote": "Dark, complex, and unforgettable, The Dark Knight succeeds not just as an entertaining comic book film, but as a richly thrilling crime saga.",
+        "director": "Christopher Nolan",
+  "stars": ["Christian Bale", "Heath Ledger", "Gary Oldman", "Aaron Eckhart", "Michael Caine", "Morgan Freeman", "Maggie Gyllenhal"]
     },
     {
         "title": "Gladiator",
