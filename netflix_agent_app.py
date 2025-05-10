@@ -14,7 +14,11 @@ st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Get local browser time as string (e.g., "Sat May 11 2025 08:24:00 GMT-0700 (Pacific Daylight Time)") ---
-js_result = st_javascript("return new Date().toString();")
+js_result = st_javascript("""
+    () => {
+        return new Date().toString();
+    }
+""")
 
 try:
     now = date_parser.parse(js_result)
