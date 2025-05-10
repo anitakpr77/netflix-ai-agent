@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -131,9 +131,12 @@ def explain_why(movie, filters):
     today = datetime.now().strftime("%A")
     parts.append(f"It’s also {today}")
 
-    # 6. Runtime
+    # 6. Runtime with time check
     if movie.get("runtime"):
         minutes = movie["runtime"]
+        now = datetime.now()
+        end_time = now + timedelta(minutes=minutes)
+
         hours = minutes // 60
         mins = minutes % 60
         if hours:
@@ -142,7 +145,12 @@ def explain_why(movie, filters):
                 runtime_str += f" {mins} mins"
         else:
             runtime_str = f"{mins} mins"
-        parts.append(f"and the runtime is {runtime_str}—perfect for tonight.")
+
+        # Add smart suggestion based on current time
+        if end_time.hour < 22 or (end_time.hour == 22 and end_time.minute <= 30):
+            parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
+        else:
+            parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, so maybe save it for the weekend.")
 
     return " ".join(parts)
 
@@ -183,4 +191,5 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
 
