@@ -13,22 +13,24 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser local time (reliable async version) ---
+# --- Get local time from browser correctly ---
 js_result = st_javascript("""
-    new Promise((resolve) => {
-        const now = new Date().toString();  // e.g., "Sat May 11 2025 08:30:00 GMT-0700"
-        resolve(now);
-    });
+    () => {
+        const now = new Date().toString(); // Example: "Sat May 11 2025 08:35:00 GMT-0700 (Pacific Daylight Time)"
+        return { localTime: now };
+    }
 """)
 
 try:
-    now = date_parser.parse(js_result)
+    browser_time_str = js_result.get("localTime", "")
+    now = date_parser.parse(browser_time_str)
 except Exception:
     now = datetime.now().astimezone()
+    browser_time_str = "Fallback to server time"
 
 # --- Time Debug ---
 with st.expander("🕵️ Debug Timezone Info"):
-    st.write("Browser Date String:", js_result)
+    st.write("Browser Time String:", browser_time_str)
     st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
