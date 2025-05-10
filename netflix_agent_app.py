@@ -1,8 +1,8 @@
 import streamlit as st
 import openai
 import json
-from datetime import datetime, timedelta, timezone
-from dateutil import parser
+from datetime import datetime, timedelta
+from dateutil import parser as date_parser
 from streamlit_javascript import st_javascript
 
 # --- API Key ---
@@ -13,44 +13,17 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get browser time OR fallback to server time ---
-js_result = st_javascript("""
-    const now = new Date();
-    const payload = {
-        iso: now.toISOString(),
-        offset: now.getTimezoneOffset()
-    };
-    return JSON.stringify(payload);
-""")
-
-use_server_time = False
-
-if not js_result or not isinstance(js_result, str) or js_result.strip() == "":
-    use_server_time = True
+# --- Get local browser time as string (e.g., "Sat May 11 2025 08:24:00 GMT-0700 (Pacific Daylight Time)") ---
+js_result = st_javascript("return new Date().toString();")
 
 try:
-    if use_server_time:
-        now = datetime.now().astimezone()
-        iso_time = now.isoformat()
-        offset_minutes = -now.utcoffset().total_seconds() / 60
-    else:
-        browser_data = json.loads(js_result)
-        iso_time = browser_data.get("iso")
-        offset_minutes = int(browser_data.get("offset", 0))
-        tz_offset = timezone(timedelta(minutes=-offset_minutes))
-        dt = parser.isoparse(iso_time)
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        now = dt.astimezone(tz_offset)
+    now = date_parser.parse(js_result)
 except Exception:
     now = datetime.now().astimezone()
-    iso_time = now.isoformat()
-    offset_minutes = -now.utcoffset().total_seconds() / 60
 
-# --- Timezone Debug ---
+# --- Time Debug ---
 with st.expander("🕵️ Debug Timezone Info"):
-    st.write("ISO Time from Browser:", iso_time)
-    st.write("Offset Minutes:", offset_minutes)
+    st.write("Browser Date String:", js_result)
     st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
