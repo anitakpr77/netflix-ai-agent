@@ -131,7 +131,7 @@ def explain_why(movie, filters):
     today = datetime.now().strftime("%A")
     parts.append(f"It’s also {today}")
 
-    # 6. Runtime with time check
+    # 6. Runtime with family night logic
     if movie.get("runtime"):
         minutes = movie["runtime"]
         now = datetime.now()
@@ -146,11 +146,14 @@ def explain_why(movie, filters):
         else:
             runtime_str = f"{mins} mins"
 
-        # Add smart suggestion based on current time
-        if end_time.hour < 22 or (end_time.hour == 22 and end_time.minute <= 30):
-            parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
+        is_family_friendly = movie.get("age_rating") in ["G", "PG", "PG-13"]
+        after_5pm = now.hour >= 17
+        ends_after_10pm = end_time.hour > 22 or (end_time.hour == 22 and end_time.minute > 0)
+
+        if is_family_friendly and after_5pm and ends_after_10pm:
+            parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
         else:
-            parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, so maybe save it for the weekend.")
+            parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
 
     return " ".join(parts)
 
