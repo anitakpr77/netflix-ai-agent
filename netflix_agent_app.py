@@ -13,7 +13,7 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get local browser time and offset ---
+# --- Get browser time OR fallback to server time ---
 js_result = st_javascript("""
     const now = new Date();
     const payload = {
@@ -23,22 +23,22 @@ js_result = st_javascript("""
     return JSON.stringify(payload);
 """)
 
-# --- Handle delay or empty result ---
-if not js_result or not isinstance(js_result, str) or js_result.strip() == "":
-    st.info("Still detecting your local time... Please wait a second and refresh if needed.")
-    st.stop()
+use_server_time = False
 
-# --- Parse time info ---
+if not js_result or not isinstance(js_result, str) or js_result.strip() == "":
+    use_server_time = True
+
 try:
-    browser_data = json.loads(js_result)
-    iso_time = browser_data.get("iso")
-    offset_minutes = int(browser_data.get("offset", 0))
-    tz_offset = timezone(timedelta(minutes=-offset_minutes))
-    now = parser.isoparse(iso_time).astimezone(tz_offset)
-except Exception as e:
-    st.warning("Could not parse your local time.")
-    st.exception(e)
-    st.stop()
+    if use_server_time:
+        now = datetime.now().astimezone()
+    else:
+        browser_data = json.loads(js_result)
+        iso_time = browser_data.get("iso")
+        offset_minutes = int(browser_data.get("offset", 0))
+        tz_offset = timezone(timedelta(minutes=-offset_minutes))
+        now = parser.isoparse(iso_time).astimezone(tz_offset)
+except Exception:
+    now = datetime.now().astimezone()
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
