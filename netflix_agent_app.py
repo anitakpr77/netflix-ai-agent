@@ -2,8 +2,7 @@ import streamlit as st
 import openai
 import json
 from datetime import datetime, timedelta
-from dateutil import parser as date_parser
-from tzlocal import get_localzone
+import pytz
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -13,18 +12,15 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Use tzlocal to detect local timezone ---
-try:
-    local_tz = get_localzone()
-    now = datetime.now(local_tz)
-    browser_time_str = now.strftime("%a %b %d %Y %I:%M:%S %p %Z")
-except Exception:
-    now = datetime.now()
-    browser_time_str = "Fallback to UTC"
+# --- Force timezone to Pacific Time ---
+pacific = pytz.timezone("America/Los_Angeles")
+now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
+now = now_utc.astimezone(pacific)
+browser_time_str = now.strftime("%a %b %d %Y %I:%M:%S %p %Z")
 
 # --- Time Debug ---
 with st.expander("🕵️ Debug Timezone Info"):
-    st.write("Local Timezone String:", browser_time_str)
+    st.write("Fixed Local Time String:", browser_time_str)
     st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
@@ -201,4 +197,3 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
