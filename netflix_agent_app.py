@@ -3,7 +3,7 @@ import openai
 import json
 from datetime import datetime, timedelta
 from dateutil import parser as date_parser
-from streamlit_javascript import st_javascript
+from tzlocal import get_localzone
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -13,24 +13,18 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Get local time from browser correctly ---
-js_result = st_javascript("""
-    () => {
-        const now = new Date().toString(); // Example: "Sat May 11 2025 08:35:00 GMT-0700 (Pacific Daylight Time)"
-        return { localTime: now };
-    }
-""")
-
+# --- Use tzlocal to detect local timezone ---
 try:
-    browser_time_str = js_result.get("localTime", "")
-    now = date_parser.parse(browser_time_str)
+    local_tz = get_localzone()
+    now = datetime.now(local_tz)
+    browser_time_str = now.strftime("%a %b %d %Y %I:%M:%S %p %Z")
 except Exception:
-    now = datetime.now().astimezone()
-    browser_time_str = "Fallback to server time"
+    now = datetime.now()
+    browser_time_str = "Fallback to UTC"
 
 # --- Time Debug ---
 with st.expander("🕵️ Debug Timezone Info"):
-    st.write("Browser Time String:", browser_time_str)
+    st.write("Local Timezone String:", browser_time_str)
     st.write("Parsed Now:", now.strftime("%A %Y-%m-%d %I:%M:%S %p %Z"))
 
 # --- User Input ---
@@ -207,3 +201,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
