@@ -139,6 +139,8 @@ def explain_why(movie, filters, now):
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
+    # Time of day logic
+    hour = now.hour
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -146,21 +148,18 @@ def explain_why(movie, filters, now):
         hours = minutes // 60
         mins = minutes % 60
         runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
-        after_5pm = now.hour >= 17
-        bedtime = now.replace(hour=22, minute=0, second=0, microsecond=0)
-        ends_after_bedtime = end_time > bedtime
-        if after_5pm and ends_after_bedtime:
-            if requested_family:
-                date_time_string += f" and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night."
-            else:
-                date_time_string += f" and the runtime is {runtime_str}. It ends around {end_time.strftime('%I:%M %p')}—a longer watch, but worth it."
+
+        if 5 <= hour < 12:
+            date_time_string += f" and the runtime is {runtime_str} — perfect for a morning watch."
+        elif 12 <= hour < 17:
+            date_time_string += f" and the runtime is {runtime_str} — a great afternoon pick."
+        elif 17 <= hour < 21:
+            date_time_string += f" and the runtime is {runtime_str} — ideal for tonight’s unwind."
+        elif 21 <= hour < 23:
+            date_time_string += f" and the runtime is {runtime_str} — a solid late-night option."
         else:
-            if now.hour < 12:
-                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for a morning watch."
-            elif now.hour < 17:
-                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, a great pick for today."
-            else:
-                date_time_string += f" and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight."
+            date_time_string += f" and the runtime is {runtime_str} — might be a bit late, but worth it."
+
     parts.append(date_time_string)
 
     return "Why this movie?\n\n" + "\n\n".join(parts)
@@ -207,3 +206,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
