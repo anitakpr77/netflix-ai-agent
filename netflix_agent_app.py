@@ -13,21 +13,16 @@ st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Get browser local time ---
-local_time_str = st_javascript("new Date().toString()")
+local_time_str = st_javascript("new Date().toISOString()")
 if local_time_str is None:
     st.info("Detecting your local time...")
     st.stop()
 
 # --- Parse local time string ---
-now = None
-if "GMT" in local_time_str:
-    try:
-        now = datetime.strptime(local_time_str[:33], "%a %b %d %Y %H:%M:%S GMT%z")
-    except Exception:
-        st.warning("Could not parse your local time.")
-        st.stop()
-else:
-    st.warning("Could not retrieve local time from browser.")
+try:
+    now = datetime.fromisoformat(local_time_str.replace("Z", "+00:00")).astimezone()
+except Exception:
+    st.warning("Could not parse your local time.")
     st.stop()
 
 # --- User Input ---
@@ -154,7 +149,12 @@ def explain_why(movie, filters, now):
             else:
                 parts.append(f"and the runtime is {runtime_str}. It ends around {end_time.strftime('%I:%M %p')}—a longer watch, but worth it.")
         else:
-            parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
+            if now.hour < 12:
+                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for a morning watch.")
+            elif now.hour < 17:
+                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, a great pick for today.")
+            else:
+                parts.append(f"and the runtime is {runtime_str}—you’ll finish by {end_time.strftime('%I:%M %p')}, perfect for tonight.")
 
     return "Why this movie? " + " ".join(parts)
 
