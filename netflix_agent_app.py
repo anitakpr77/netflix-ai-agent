@@ -144,8 +144,8 @@ def explain_why(movie, filters, now):
 
         is_family = movie.get("age_rating") in ["G", "PG", "PG-13"]
         after_5pm = now.hour >= 17
-        bedtime = now.replace(hour=22, minute=0, second=0, microsecond=0)
-        ends_after_bedtime = end_time > bedtime
+        bedtime_time = datetime.strptime("22:00", "%H:%M").time()
+        ends_after_bedtime = end_time.time() > bedtime_time
 
         if is_family and after_5pm and ends_after_bedtime:
             parts.append(f"and the runtime is {runtime_str}. Heads up—it ends around {end_time.strftime('%I:%M %p')}, which might be a bit late for a family night.")
@@ -188,7 +188,6 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
 
 
 
