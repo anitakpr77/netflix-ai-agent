@@ -21,7 +21,7 @@ if local_time_str is None:
 
 # --- Parse local time string safely ---
 try:
-    now = parser.isoparse(local_time_str)
+    now = parser.isoparse(local_time_str).astimezone()
 except Exception:
     st.warning("Could not parse your local time.")
     st.stop()
