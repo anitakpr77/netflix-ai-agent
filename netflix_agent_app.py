@@ -120,8 +120,10 @@ def explain_why(movie, filters, now):
         matched_themes += [tag for tag in movie.get("tags", []) if tag.lower() in [m.lower() for m in filters["mood"]]]
     if filters.get("keywords"):
         matched_themes += [k for k in filters["keywords"] if k.lower() in movie.get("description", "").lower()]
+
     seen = set()
     matched_themes = [x for x in matched_themes if not (x.lower() in seen or seen.add(x.lower()))]
+
     if matched_themes:
         parts.append(f"We picked this film for you because it has themes of {', '.join(matched_themes[:3])}.")
 
