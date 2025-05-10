@@ -36,7 +36,7 @@ try:
         iso_time = browser_data.get("iso")
         offset_minutes = int(browser_data.get("offset", 0))
         tz_offset = timezone(timedelta(minutes=-offset_minutes))
-        now = parser.isoparse(iso_time).astimezone(tz_offset)
+        now = parser.isoparse(iso_time).replace(tzinfo=timezone.utc).astimezone(tz_offset)
 except Exception:
     now = datetime.now().astimezone()
 
