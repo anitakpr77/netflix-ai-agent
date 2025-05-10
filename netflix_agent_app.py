@@ -2,6 +2,7 @@ import streamlit as st
 import openai
 import json
 from datetime import datetime, timedelta
+from dateutil import parser
 from streamlit_javascript import st_javascript
 
 # --- API Key ---
@@ -18,10 +19,9 @@ if local_time_str is None:
     st.info("Detecting your local time...")
     st.stop()
 
-# --- Parse local time string ---
+# --- Parse local time string safely ---
 try:
-    from dateutil import parser
-now = parser.isoparse(local_time_str)
+    now = parser.isoparse(local_time_str)
 except Exception:
     st.warning("Could not parse your local time.")
     st.stop()
@@ -107,7 +107,7 @@ def score_movie(movie, filters):
         score += 1
     return score
 
-# --- Explain Why Function (final matching logic) ---
+# --- Explain Why Function ---
 def explain_why(movie, filters, now):
     parts = []
 
@@ -117,7 +117,7 @@ def explain_why(movie, filters, now):
     if requested_family and is_suitable_rating:
         parts.append("This is a family-friendly pick.")
 
-    # Smart word-matching logic
+    # Smart tag matching
     matched_themes = []
     user_words = set()
     for term in filters.get("mood", []) + filters.get("keywords", []) + filters.get("genres", []):
@@ -141,11 +141,11 @@ def explain_why(movie, filters, now):
     else:
         parts.append("We picked this film for you because it matches the vibe you're going for.")
 
-    # Critic quote (separate paragraph)
+    # Critic quote (own paragraph)
     if movie.get("rt_quote"):
         parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
 
-    # Date/time paragraph
+    # Time string (own paragraph)
     date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
