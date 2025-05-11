@@ -174,11 +174,13 @@ if parsed_filters:
     if results_to_show:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
-            # Why first
+            # Title First
+            st.markdown(f"### 🎬 {movie['title']}")
+
+            # Why This Movie next
             st.markdown(explain_why(movie, parsed_filters, now))
 
-            # Then movie info
-            st.markdown(f"### 🎬 {movie['title']}")
+            # Then the film info block
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
@@ -193,3 +195,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
