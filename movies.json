@@ -714,34 +714,37 @@
     },
     {
         "title": "Looper",
-        "rating": "82%",
+        "rating": "93%",
         "age_rating": "R",
         "runtime": 113,
         "genres": [
             "Sci-Fi",
             "Action",
-            "Thriller"
+            "Thriller",
+           "Super-natural"
         ],
         "tags": [
             "time-travel",
             "intense",
             "thought-provoking",
-            "gritty"
+            "gritty",
+           "futuristic"
         ],
-        "description": "In the future, a hitman discovers his target is his older self, leading to unforeseen consequences.",
-        "rt_quote": "A smart, stylish, and thrilling take on time-travel.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "In a future society, time-travel exists, but it's only available to those with the means to pay for it on the black market. When the mob wants to eliminate someone, it sends the target into the past, where a hit man known as a looper lies in wait to finish the job. Joe (Joseph Gordon-Levitt) is one such hired gun, and he does his job well -- until the day his bosses decide to "close the loop" and send Joe's future self (Bruce Willis) back in time to be killed.",
+        "rt_quote": "As thought-provoking as it is thrilling, Looper delivers an uncommonly smart, bravely original blend of futuristic sci-fi and good old-fashioned action.",
+       "director": "Rian Johnson",
+       "stars": [Joseph Gordon-Levitt", "Bruce Willis" , "Emily Blunt", "Paul Dano"]
     },
     {
         "title": "Children of Men",
-        "rating": "85%",
+        "rating": "92%",
         "age_rating": "R",
         "runtime": 109,
         "genres": [
             "Sci-Fi",
             "Drama",
-            "Thriller"
+            "Thriller",
+           "Dystopian"
         ],
         "tags": [
             "gritty",
@@ -749,10 +752,10 @@
             "dystopian",
             "intense"
         ],
-        "description": "In a bleak future where humans have become infertile, a disillusioned bureaucrat must protect the last pregnant woman on Earth.",
-        "rt_quote": "A powerful and deeply moving sci-fi masterpiece.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "When infertility threatens mankind with extinction and the last child born has perished, a disillusioned bureaucrat (Clive Owen) becomes the unlikely champion in the fight for the survival of Earth's population; He must face down his own demons and protect the planet's last remaining hope from danger.",
+        "rt_quote": "Children of Men works on every level: as a violent chase thriller, a fantastical cautionary tale, and a sophisticated human drama about societies struggling to live.",
+       "director": "Alfonso Cuarón",
+       "stars": ["Clive Owen", "Julianne Moore", "Michael Caine", "Chiwetel Ejiofor"]
     },
     {
         "title": "Gone Girl",
@@ -762,7 +765,8 @@
         "genres": [
             "Thriller",
             "Mystery",
-            "Drama"
+            "Drama",
+           "Crime"
         ],
         "tags": [
             "psychological",
@@ -770,10 +774,10 @@
             "twisty",
             "tense"
         ],
-        "description": "A man becomes the prime suspect in the disappearance of his wife in a media frenzy.",
-        "rt_quote": "A masterful, chilling exploration of marriage and deceit.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "In Carthage, Mo., former New York-based writer Nick Dunne and his glamorous wife Amy present a portrait of a blissful marriage to the public; when Amy goes missing on the couple's fifth wedding anniversary, Nick becomes the prime suspect in her disappearance; the resulting police pressure and media frenzy cause the Dunnes' image of a happy union to crumble, leading to tantalizing questions about who Nick and Amy truly are.",
+        "rt_quote": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike.",
+       "director": "David Fincher",
+       "stars": ["Ben Affleck", "Rosamund Pike", "Emily Ratajkowski", "Neil Patrick Harris"]
     },
     {
         "title": "Prisoners",
