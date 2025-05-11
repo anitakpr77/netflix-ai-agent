@@ -130,7 +130,7 @@ def explain_why(movie, filters, now):
         reason_parts.append("it has " + ", ".join(selected[:3]))
 
     reason = "We picked this film for you because " + " and ".join(reason_parts) + "." if reason_parts else "We picked this film for you based on your preferences."
-    critic_quote = f"\n\n*What critics say:* “{movie['rt_quote']}”" if movie.get("rt_quote") else ""
+    critic_quote = f"\n\nCritics say: “{movie['rt_quote']}”" if movie.get("rt_quote") else ""
 
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -149,7 +149,7 @@ def explain_why(movie, filters, now):
         else:
             label = "a very late watch — maybe save it for tomorrow"
 
-        finish_info = f"It’s {now.strftime('%A')} and the runtime is {minutes} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
+        finish_info = f"It’s {now.strftime('%A')} and the runtime is {minutes // 60} hours {minutes % 60} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
     else:
         finish_info = ""
 
@@ -174,16 +174,16 @@ if parsed_filters:
     if results_to_show:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
+            # Why first
             st.markdown(explain_why(movie, parsed_filters, now))
-            st.markdown(f"""
-**🎬 {movie['title']}**  
-**Directed by:** {movie['director']}  
-**Starring:** {", ".join(movie['stars'])}  
-**Score:** ⭐ {movie['rating']} | {movie['age_rating']} | {movie['runtime']} mins  
 
-_{movie['description']}_
----
-            """)
+            # Then movie info
+            st.markdown(f"### 🎬 {movie['title']}")
+            st.markdown(f"🎨 **Directed by** {movie['director']}")
+            st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
+            st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
+            st.markdown(f"_{movie['description']}_")
+            st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
         if len(scored_matches) > 4 and st.button("🔄 Show me different options"):
