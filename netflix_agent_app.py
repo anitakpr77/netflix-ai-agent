@@ -129,6 +129,7 @@ def explain_why(movie, filters, now):
         elif len(selected) == 2:
             reason_parts.append(f"it has {selected[0]} and {selected[1]}")
         else:
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a very late watch — maybe save it for tomorrow"
             reason_parts.append(f"it has {', '.join(selected[:2])}, and {selected[2]}")
 
     if reason_parts:
@@ -150,17 +151,21 @@ def explain_why(movie, filters, now):
         runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
 
         if 5 <= hour < 11:
-            time_label = "perfect for a morning watch"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""perfect for a morning watch"
         elif 11 <= hour < 14:
-            time_label = "a great midday pick"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a great midday pick"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""a great midday pick"
         elif 14 <= hour < 17:
-            time_label = "a great afternoon pick"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a great afternoon pick"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""a great afternoon pick"
         elif 17 <= hour < 21:
-            time_label = "ideal for tonight’s unwind"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — ideal for tonight’s unwind"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""ideal for tonight’s unwind"
         elif 21 <= hour < 23:
-            time_label = "a solid late-night option"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a solid late-night option"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""a solid late-night option"
         else:
-            time_label = "a very late watch — maybe save it for tomorrow"
+            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch""a very late watch — maybe save it for tomorrow"
 
         date_time_string += f" and the runtime is {runtime_str} — {time_label}."
 
