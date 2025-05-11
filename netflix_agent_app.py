@@ -164,8 +164,6 @@ def explain_why(movie, filters, now):
 if parsed_filters:
     scored_matches = []
     for movie in all_movies:
-        if movie["title"] in st.session_state.shown_titles:
-            continue
         if parsed_filters.get("min_age_rating"):
             if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
                 continue
@@ -195,12 +193,12 @@ if parsed_filters:
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
-        if len(unique_results) > 4 and st.button("🔄 Show me different options"):
-            st.session_state.shown_titles = []
-            st.rerun()
+        if len(unique_results) > 4:
+            if st.button("🔄 Show me different options"):
+                st.session_state.shown_titles = []
+                st.rerun()
     else:
         st.warning("No perfect matches found. Want to try something close?")
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
