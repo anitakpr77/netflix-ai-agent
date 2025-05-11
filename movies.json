@@ -674,6 +674,7 @@
         "genres": [
             "Sci-Fi",
             "Thriller",
+           "Mystery",
             "Drama"
         ],
         "tags": [
@@ -682,10 +683,10 @@
             "intelligent",
             "chilling"
         ],
-        "description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence.",
-        "rt_quote": "A sleek, cerebral thriller that explores the nature of consciousness.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Caleb Smith (Domhnall Gleeson) a programmer at a huge Internet company, wins a contest that enables him to spend a week at the private estate of Nathan Bateman (Oscar Isaac), his firm's brilliant CEO. When he arrives, Caleb learns that he has been chosen to be the human component in a Turing test to determine the capabilities and consciousness of Ava (Alicia Vikander), a beautiful robot. However, it soon becomes evident that Ava is far more self-aware and deceptive than either man imagined.",
+        "rt_quote": "Ex Machina leans heavier on ideas than effects, but it's still a visually polished piece of work -- and an uncommonly engaging sci-fi feature.",
+       "director": "Alex Garland",
+       "stars": ["Alicia Vikander", "Oscar Isaac", "Domhnall Gleeson"]
     },
     {
         "title": "Dune (2021)",
@@ -694,8 +695,11 @@
         "runtime": 155,
         "genres": [
             "Sci-Fi",
+           "Action",
+           "Fantasy",
             "Adventure",
-            "Drama"
+            "Drama",
+           "Epic"
         ],
         "tags": [
             "epic",
@@ -703,10 +707,10 @@
             "political",
             "intense"
         ],
-        "description": "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis.",
-        "rt_quote": "A breathtaking, immersive spectacle of sci-fi storytelling.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to a dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of a precious resource in existence, only those who can conquer their own fear will survive.",
+        "rt_quote": "ADune occasionally struggles with its unwieldy source material, but those issues are largely overshadowed by the scope and ambition of this visually thrilling adaptation.",
+       "director": "Denis Villeneuve",
+       "stars": ["Timothee Chalamet", "Zendaya", "Javier Bardiem", "Rebecca Ferguson", "Oscar Isaac", "Jason Mamoa", "Josh Brolin"]
     },
     {
         "title": "Looper",
