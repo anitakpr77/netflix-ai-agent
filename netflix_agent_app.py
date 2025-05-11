@@ -93,10 +93,7 @@ def score_movie(movie, filters):
     if genres:
         for g in genres:
             if g in [m.lower() for m in movie.get("genres", [])]:
-                if g == "romance":
-                    score += 2  # Boost romance genre
-                else:
-                    score += 1
+                score += 2 if g == "romance" else 1
 
     if filters.get("mood"):
         score += sum(1 for m in filters["mood"] if m.lower() in tags)
@@ -111,14 +108,6 @@ def score_movie(movie, filters):
 
 # --- Why This Movie Function ---
 def explain_why(movie, filters, now):
-    parts = []
-
-    requested_family = any(
-        term in filters.get("genres", []) + filters.get("keywords", [])
-        for term in ["Family", "Kids", "Children", "Animated"]
-    )
-    is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
-
     tag_map = {
         "high-stakes": "high-stakes action",
         "intense": "intense sequences",
@@ -130,54 +119,41 @@ def explain_why(movie, filters, now):
         "classic": "a classic tone",
     }
 
+    requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
+    is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
     selected = [tag_map[tag] for tag in movie.get("tags", []) if tag in tag_map]
 
     reason_parts = []
     if requested_family and is_suitable_rating:
         reason_parts.append("it’s family-friendly")
     if selected:
-        if len(selected) == 1:
-            reason_parts.append(f"it has {selected[0]}")
-        elif len(selected) == 2:
-            reason_parts.append(f"it has {selected[0]} and {selected[1]}")
-        else:
-            reason_parts.append(f"it has {', '.join(selected[:2])}, and {selected[2]}")
+        reason_parts.append("it has " + ", ".join(selected[:3]))
 
-    if reason_parts:
-        parts.append("We picked this film for you because " + " and ".join(reason_parts) + ".")
-    else:
-        parts.append("We picked this film for you based on your preferences.")
+    reason = "We picked this film for you because " + " and ".join(reason_parts) + "." if reason_parts else "We picked this film for you based on your preferences."
+    critic_quote = f"\n\n*What critics say:* “{movie['rt_quote']}”" if movie.get("rt_quote") else ""
 
-    if movie.get("rt_quote"):
-        parts.append(f"\n\nCritics say: “{movie['rt_quote']}”")
-
-    hour = now.hour
-    date_time_string = f"\n\nIt’s also {now.strftime('%A')}"
     if movie.get("runtime"):
         minutes = movie["runtime"]
         end_time = now + timedelta(minutes=minutes)
-        hours = minutes // 60
-        mins = minutes % 60
-        runtime_str = f"{hours} hour{'s' if hours > 1 else ''} {mins} mins" if hours else f"{mins} mins"
-
+        hour = now.hour
         if 5 <= hour < 11:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — perfect for a morning watch"
+            label = "perfect for a morning watch"
         elif 11 <= hour < 14:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a great midday pick"
+            label = "a great midday pick"
         elif 14 <= hour < 17:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a great afternoon pick"
+            label = "a great afternoon pick"
         elif 17 <= hour < 21:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — ideal for tonight’s unwind"
+            label = "ideal for tonight’s unwind"
         elif 21 <= hour < 23:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a solid late-night option"
+            label = "a solid late-night option"
         else:
-            time_label = f"you’ll finish by {end_time.strftime('%I:%M %p')} — a very late watch — maybe save it for tomorrow"
+            label = "a very late watch — maybe save it for tomorrow"
 
-        date_time_string += f" and the runtime is {runtime_str} — {time_label}."
+        finish_info = f"It’s {now.strftime('%A')} and the runtime is {minutes} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
+    else:
+        finish_info = ""
 
-    parts.append(date_time_string)
-
-    return "Why this movie?\n\n" + "\n\n".join(parts)
+    return f"### 🎯 Why this movie?\n\n{reason}{critic_quote}\n\n{finish_info}"
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
@@ -198,24 +174,20 @@ if parsed_filters:
     if results_to_show:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
-            st.markdown(f"**{movie['title']}**")
+            st.markdown(explain_why(movie, parsed_filters, now))
+            st.markdown(f"""
+**🎬 {movie['title']}**  
+**Directed by:** {movie['director']}  
+**Starring:** {", ".join(movie['stars'])}  
+**Score:** ⭐ {movie['rating']} | {movie['age_rating']} | {movie['runtime']} mins  
 
-            if movie.get("director"):
-                st.markdown(f"🎨 Directed by {movie['director']}")
-
-            if movie.get("stars"):
-                star_list = ", ".join(movie["stars"][:-1]) + f", and {movie['stars'][-1]}" if len(movie["stars"]) > 1 else movie["stars"][0]
-                st.markdown(f"⭐ Starring {star_list}")
-
-            st.markdown(f"🌟 {movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins")
-            st.markdown(f"_{movie['description']}_")
-            st.markdown(f"*{explain_why(movie, parsed_filters, now)}*")
-            st.markdown("---")
+_{movie['description']}_
+---
+            """)
             st.session_state.shown_titles.append(movie["title"])
 
-        if len(scored_matches) > 4:
-            if st.button("🔄 Show me different options"):
-                st.rerun()
+        if len(scored_matches) > 4 and st.button("🔄 Show me different options"):
+            st.rerun()
     else:
         st.warning("No perfect matches found. Want to try something close?")
         if st.button("🔄 Show me something similar"):
