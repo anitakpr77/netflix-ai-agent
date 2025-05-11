@@ -375,24 +375,26 @@
     },
     {
         "title": "Groundhog Day",
-        "rating": "88%",
+        "rating": "94%",
         "age_rating": "PG",
         "runtime": 101,
         "genres": [
             "Comedy",
             "Fantasy",
-            "Romance"
+            "Romance", 
+           "Melodrama"
         ],
         "tags": [
             "clever",
             "feel-good",
             "time-loop",
-            "witty"
+            "witty",
+           "romantic comedy"
         ],
-        "description": "A cynical weatherman finds himself reliving the same day over and over.",
-        "rt_quote": "A brilliant, endlessly inventive comedy classic.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Phil (Bill Murray), a weatherman, is out to cover the annual emergence of the groundhog from its hole. He gets caught in a blizzard that he didn't predict and finds himself trapped in a time warp. He is doomed to relive the same day over and over again until he gets it right.",
+        "rt_quote": "Smart, sweet, and inventive, Groundhog Day highlights Murray's dramatic gifts while still leaving plenty of room for laughs.",
+       "director": "Harold Ramis",
+       "stars": ["Bill Murray", "Andie MacDowell", "Harold Ramis", "Chris Elliott"]
     },
     {
         "title": "The 40-Year-Old Virgin",
@@ -400,7 +402,10 @@
         "age_rating": "R",
         "runtime": 116,
         "genres": [
-            "Comedy"
+            "Comedy",
+           "Romantic Comedy",
+           "Sexual Comedy",
+           "Buddy"
         ],
         "tags": [
             "awkward",
@@ -408,10 +413,10 @@
             "hilarious",
             "charming"
         ],
-        "description": "A middle-aged man's friends try to help him lose his virginity.",
-        "rt_quote": "Sweet, raunchy, and outrageously funny.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Three dysfunctional co-workers embark on a mission to help their newfound friend lose his sexual innocence.",
+        "rt_quote": "Steve Carell's first star turn scores big with a tender treatment of its titular underdog, using raunchy but realistically funny comedy to connect with adult audiences.",
+       "director": "Judd Apatow",
+       "stars": ["Steve Carrell", "Paul Rudd", "Seth Rogen" ,"Catherine Keener"]
     },
     {
         "title": "Ferris Bueller's Day Off",
