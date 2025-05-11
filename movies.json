@@ -1619,7 +1619,9 @@
             "uplifting"
         ],
         "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "rt_quote": "A heartfelt journey of dreams and redemption.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
         "title": "Sample Movie 90",
@@ -1636,78 +1638,118 @@
             "uplifting"
         ],
         "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
+        "rt_quote": "A heartfelt journey of dreams and redemption.",
+       "director": "XXX",
+       "stars": ["XXXX"]
     },
     {
     "title": "A Beautiful Mind",
+       "rating": "74%",
+        "age_rating": "PG-13",
     "genre": ["Drama", "Biography"],
-    "duration": 135,
-    "mood": ["Inspiring", "Serious"],
-    "description": "The life of John Nash, a brilliant but asocial mathematician, and his battle with schizophrenia.",
-    "recommendation_reason": "You're looking for something inspiring — this drama delivers a deeply human story of genius, struggle, and triumph."
+        "tags": ["drama", "biographical", "inspiration", "serious"],
+    "runtime": 135,
+    "description": "From the heights of notoriety to the depths of depravity, John Forbes Nash Jr. experiences it all; as a mathematical expert, he made a discovery early in his career and stands on the brink of international acclaim; but Nash soon finds himself on a painful and harrowing journey of self-discovery.",
+    "rt_quote": "The well-acted A Beautiful Mind is both a moving love story and a revealing look at mental illness.",
+       "director": "Ron Howard",
+       "stars": ["Russell Crowe", "Jennifer Connelly"]
   },
   {
     "title": "The Pursuit of Happyness",
-    "genre": ["Drama", "Biography"],
-    "duration": 117,
+     "rating": "67%",
+        "age_rating": "PG-13",
+    "genre": ["Drama", "Family", "Inspirational", "Biography"],
+    "runtime": 117,
     "mood": ["Uplifting", "Emotional"],
-    "description": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional endeavor.",
-    "recommendation_reason": "You wanted something uplifting — this emotional drama captures the grit and love behind one man’s fight for a better life."
+     "tags": ["family", "powerful", "insightful", "inspiring"],
+    "description": "A single father and his young son endure many hardships as the father strives to provide a better future for both of them.",
+    "rt_quote": "Will Smith's heartfelt performance elevates The Pursuit of Happyness above mere melodrama.",
+     "director": "Gabriele Muccino",
+       "stars": ["Will Smith", "Jaden Smith", "Thandie Newton"]
   },
   {
     "title": "Manchester by the Sea",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama"],
-    "duration": 137,
+    "runtime": 137,
     "mood": ["Melancholy", "Emotional"],
     "description": "A man returns to his hometown after the death of his brother and faces his painful past.",
-    "recommendation_reason": "You're seeking something emotional — this drama unfolds slowly, with raw grief and complex humanity at its core."
+    "recommendation_reason": "You're seeking something emotional — this drama unfolds slowly, with raw grief and complex humanity at its core.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Moonlight",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama"],
-    "duration": 111,
+    "runtime": 111,
     "mood": ["Reflective", "Emotional"],
     "description": "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and adulthood.",
-    "recommendation_reason": "You're in the mood for something reflective — this poetic drama offers a tender, powerful portrait of self-discovery and vulnerability."
+    "recommendation_reason": "You're in the mood for something reflective — this poetic drama offers a tender, powerful portrait of self-discovery and vulnerability.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Social Network",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama", "Biography"],
-    "duration": 120,
+    "runtime": 120,
     "mood": ["Sharp", "Tense"],
     "description": "The story of Facebook's founding and the personal and legal battles that followed.",
-    "recommendation_reason": "You wanted something sharp and tense — this drama peels back the genius and rivalry behind one of tech's biggest revolutions."
+    "recommendation_reason": "You wanted something sharp and tense — this drama peels back the genius and rivalry behind one of tech's biggest revolutions.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Room",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama", "Thriller"],
-    "duration": 118,
+    "runtime": 118,
     "mood": ["Emotional", "Tense"],
     "description": "Held captive for years, a woman and her young son finally escape and begin a difficult journey toward healing.",
-    "recommendation_reason": "You're looking for something emotional — this powerful drama explores trauma, resilience, and a mother’s fierce love."
+    "recommendation_reason": "You're looking for something emotional — this powerful drama explores trauma, resilience, and a mother’s fierce love.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Her",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama", "Romance", "Sci-Fi"],
-    "duration": 126,
+    "runtime": 126,
     "mood": ["Lonely", "Thoughtful"],
     "description": "A lonely writer develops an unexpected relationship with an operating system designed to meet his every need.",
-    "recommendation_reason": "You’re in the mood for something thoughtful — this dreamy drama blends sci-fi with soulful intimacy in a story about love and identity."
+    "recommendation_reason": "You’re in the mood for something thoughtful — this dreamy drama blends sci-fi with soulful intimacy in a story about love and identity.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "The Father",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama"],
-    "duration": 97,
+    "runtime": 97,
     "mood": ["Intense", "Sad"],
     "description": "A man struggles with aging and memory loss as his world becomes increasingly fragmented.",
-    "recommendation_reason": "You're looking for something intense — this drama offers a haunting and empathetic glimpse into the experience of dementia."
+    "recommendation_reason": "You're looking for something intense — this drama offers a haunting and empathetic glimpse into the experience of dementia.",
+     "director": "XXX",
+       "stars": ["XXXX"]
   },
   {
     "title": "Lion",
+     "rating": "X",
+        "age_rating": "X",
     "genre": ["Drama", "Biography"],
-    "duration": 118,
+    "runtime": 118,
     "mood": ["Emotional", "Inspiring"],
+      "tags": ["musical", "magical", "classic", "charming"],
     "description": "A man uses Google Earth to find his long-lost family, decades after being separated as a child in India.",
-    "recommendation_reason": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion."
+    "recommendation_reason": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion.",
+     "director": "XXX",
+       "stars": ["XXXX"]
     }
 ]
