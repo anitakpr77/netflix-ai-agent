@@ -1,555 +1,289 @@
 [
-   {
+  {
   "title": "The Shawshank Redemption",
   "rating": "98%",
   "age_rating": "R",
   "runtime": 142,
   "genres": ["Classic", "Drama", "Prison drama", "Murder"],
-  "tags": [
-    "prison",
-    "hope",
-    "friendship",
-    "justice",
-    "gripping"
-  ],
+  "tags": ["prison", "hope", "friendship", "justice", "gripping"],
   "description": "Two imprisoned men bond over years, finding solace and redemption through acts of common decency.",
   "rt_quote": "Steeped in old-fashioned storytelling and given evergreen humanity by Morgan Freeman and Tim Robbins, The Shawshank Redemption chronicles the hardship of incarceration patiently enough to come by its uplift honestly.",
   "director": "Frank Darabont",
   "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
 },
-
-    {
-        "title": "Inception",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 148,
-        "genres": [
-            "Thriller",
-            "Action",
-            "Suspense",
-            "Action thriller",
-            "Pyschological"
-        ],
-        "tags": [
-            "mind-bending",
-            "dreams",
-            "intense",
-            "action-packed",
-            "action heist",
-            "psychological thriller",
-            "fantasy",
-           "science fiction"
-            
-        ],
-        "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
-        "rt_quote": "Smart, innovative, and thrilling, Inception is that rare summer blockbuster that succeeds viscerally as well as intellectually.",
-         "director": "Christopher Nolan",
+{
+  "title": "Inception",
+  "rating": "91%",
+  "age_rating": "PG-13",
+  "runtime": 148,
+  "genres": ["Thriller", "Action", "Suspense", "Action thriller", "Pyschological"],
+  "tags": ["mind-bending", "dreams", "intense", "action-packed", "action heist", "psychological thriller", "fantasy", "science fiction"],
+  "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
+  "rt_quote": "Smart, innovative, and thrilling, Inception is that rare summer blockbuster that succeeds viscerally as well as intellectually.",
+  "director": "Christopher Nolan",
   "stars": ["Leonardo DiCaprio", "Cillian Murphy", "Joseph Gordon-Levitt", "Tom Hardy", "Elliot Page", "Marion Cotilard", "Ken Watanabe", "Michael Caine"]
-    },
-    {
-        "title": "La La Land",
-        "rating": "81%",
-        "age_rating": "PG-13",
-        "runtime": 128,
-        "genres": [
-            "Drama",
-            "Romance",
-            "Musical",
-            "Comedy"
-        ],
-        "tags": [
-            "romance",
-            "dreamy",
-            "bittersweet",
-            "without happy ending"
-        ],
-        "description": "A jazz musician and an aspiring actress are drawn together by their common desire to do what they love. But as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
-        "rt_quote": "La La Land breathes new life into a bygone genre with thrillingly assured direction, powerful performances, and an irresistible excess of heart.",
-       "director": "Damien Chazelle",
-       "stars": ["Emma Stone", "Ryan Gosling", "John Legend", "J. K. Simmons"]
-    },
-    
-    {
-        "title": "Mad Max: Fury Road",
-        "rating": "97%",
-        "age_rating": "R",
-        "runtime": 120,
-        "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-           "Punk"
-        ],
-        "tags": [
-            "explosive",
-            "intense",
-            "gritty",
-            "thrilling",
-           "apocalyptic",
-           "dystopian",
-           "science fiction",
-           "fantasty"
-        ],
-        "description": "Years after the collapse of civilization, the tyrannical Immortan Joe enslaves apocalypse survivors inside the desert fortress the Citadel. When the warrior Imperator Furiosa (Charlize Theron) leads the despot's five wives in a daring escape, she forges an alliance with Max Rockatansky (Tom Hardy), a loner and former captive. Fortified in the massive, armored truck the War Rig, they try to outrun the ruthless warlord and his henchmen in a deadly high-speed chase through the Wasteland.",
-        "rt_quote": "With exhilarating action and a surprising amount of narrative heft, Mad Max: Fury Road brings George Miller's post-apocalyptic franchise roaring vigorously back to life.",
-       "director": "George Miller",
+},
+{
+  "title": "La La Land",
+  "rating": "81%",
+  "age_rating": "PG-13",
+  "runtime": 128,
+  "genres": ["Drama", "Romance", "Musical", "Comedy"],
+  "tags": ["romance", "dreamy", "bittersweet", "without happy ending"],
+  "description": "A jazz musician and an aspiring actress are drawn together by their common desire to do what they love. But as success mounts they are faced with decisions that begin to fray the fragile fabric of their love affair, and the dreams they worked so hard to maintain in each other threaten to rip them apart.",
+  "rt_quote": "La La Land breathes new life into a bygone genre with thrillingly assured direction, powerful performances, and an irresistible excess of heart.",
+  "director": "Damien Chazelle",
+  "stars": ["Emma Stone", "Ryan Gosling", "John Legend", "J. K. Simmons"]
+},
+{
+  "title": "Mad Max: Fury Road",
+  "rating": "97%",
+  "age_rating": "R",
+  "runtime": 120,
+  "genres": ["Action", "Adventure", "Sci-Fi", "Punk"],
+  "tags": ["explosive", "intense", "gritty", "thrilling", "apocalyptic", "dystopian", "science fiction", "fantasty"],
+  "description": "Years after the collapse of civilization, the tyrannical Immortan Joe enslaves apocalypse survivors inside the desert fortress the Citadel. When the warrior Imperator Furiosa (Charlize Theron) leads the despot's five wives in a daring escape, she forges an alliance with Max Rockatansky (Tom Hardy), a loner and former captive. Fortified in the massive, armored truck the War Rig, they try to outrun the ruthless warlord and his henchmen in a deadly high-speed chase through the Wasteland.",
+  "rt_quote": "With exhilarating action and a surprising amount of narrative heft, Mad Max: Fury Road brings George Miller's post-apocalyptic franchise roaring vigorously back to life.",
+  "director": "George Miller",
   "stars": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult", "Zoe Kravitz"]
-    },
-    {
-        "title": "John Wick",
-        "rating": "81%",
-        "age_rating": "R",
-        "runtime": 101,
-        "genres": [
-            "Action",
-            "Thriller",
-           "Neo Noir"
-        ],
-        "tags": [
-            "stylish",
-            "violent",
-            "relentless",
-            "revenge",
-           "gritty"
-        ],
-        "description": "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
-        "rt_quote": "Stylish, thrilling, and giddily kinetic, John Wick serves as a satisfying return to action for Keanu Reeves -- and what looks like it could be the first of a franchise.",
-       "director": "Chad Stahelski",
-        "stars": ["Keanu Reeves", "Michael Nyqvist", "Ian McShane", "Laurence Fishburn", "Lance Reddick"]
-    },
-    {
-        "title": "Die Hard",
-        "rating": "94%",
-        "age_rating": "R",
-        "runtime": 132,
-        "genres": [
-            "Action",
-            "Thriller",
-           "Adventure",
-           "Suspense"
-        ],
-        "tags": [
-            "suspenseful",
-            "heroic",
-            "gritty",
-            "classic"
-        ],
-        "description": "New York City policeman John McClane (Bruce Willis) is visiting his estranged wife (Bonnie Bedelia) on Christmas Eve. He joins her at a holiday party in the headquarters of the Japanese-owned business she works for. But the festivities are interrupted by a group of terrorists who take over the exclusive high-rise, and everyone in it. Very soon McClane realizes that there's no one to save the hostages -- but him.",
-        "rt_quote": "Its many imitators (and sequels) have never come close to matching the taut thrills of the definitive holiday action classic.",
-       "director": "John McTiernan",
-       "stars": ["Bruce Willis", "Alan Rickman", "Bonnie Bedelia"]
-    },
-    {
-        "title": "Mission: Impossible - Fallout",
-        "rating": "88%",
-        "age_rating": "PG-13",
-        "runtime": 147,
-        "genres": [
-            "Action",
-            "Adventure",
-            "Thriller"
-        ],
-        "tags": [
-            "high-stakes",
-            "intense",
-            "relentless",
-            "thrilling"
-        ],
-        "description": "Ethan Hunt and the IMF team join forces with CIA assassin August Walker to prevent a disaster of epic proportions. Arms dealer John Lark and a group of terrorists known as the Apostles plan to use three plutonium cores for a simultaneous nuclear attack on the Vatican, Jerusalem and Mecca, Saudi Arabia. When the weapons go missing, Ethan and his crew find themselves in a desperate race against time to prevent them from falling into the wrong hands.",
-        "rt_quote": "Fast, sleek, and fun, Mission: Impossible - Fallout lives up to the \"impossible\" part of its name by setting yet another high mark for insane set pieces in a franchise full of them.",
+},
 
-       "director": "Christopher McQuarrie",
-       "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
-    },
     {
-        "title": "The Dark Knight",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 152,
-        "genres": [
-            "Action",
-            "Crime",
-            "Adventure",
-            "drama",
-           "Superhero",
-           "Thriller",
-           "Neo Noir"
-        ],
-        "tags": [
-            "dark",
-            "intense",
-            "gritty",
-            "heroic",
-           "noir"
-        ],
-        "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.",
-        "rt_quote": "Dark, complex, and unforgettable, The Dark Knight succeeds not just as an entertaining comic book film, but as a richly thrilling crime saga.",
-        "director": "Christopher Nolan",
+  "title": "John Wick",
+  "rating": "81%",
+  "age_rating": "R",
+  "runtime": 101,
+  "genres": ["Action", "Thriller", "Neo Noir"],
+  "tags": ["stylish", "violent", "relentless", "revenge", "gritty"],
+  "description": "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
+  "rt_quote": "Stylish, thrilling, and giddily kinetic, John Wick serves as a satisfying return to action for Keanu Reeves -- and what looks like it could be the first of a franchise.",
+  "director": "Chad Stahelski",
+  "stars": ["Keanu Reeves", "Michael Nyqvist", "Ian McShane", "Laurence Fishburne", "Lance Reddick"]
+},
+{
+  "title": "Die Hard",
+  "rating": "94%",
+  "age_rating": "R",
+  "runtime": 132,
+  "genres": ["Action", "Thriller", "Adventure", "Suspense"],
+  "tags": ["suspenseful", "heroic", "gritty", "classic"],
+  "description": "New York City policeman John McClane (Bruce Willis) is visiting his estranged wife (Bonnie Bedelia) on Christmas Eve. He joins her at a holiday party in the headquarters of the Japanese-owned business she works for. But the festivities are interrupted by a group of terrorists who take over the exclusive high-rise, and everyone in it. Very soon McClane realizes that there's no one to save the hostages -- but him.",
+  "rt_quote": "Its many imitators (and sequels) have never come close to matching the taut thrills of the definitive holiday action classic.",
+  "director": "John McTiernan",
+  "stars": ["Bruce Willis", "Alan Rickman", "Bonnie Bedelia"]
+},
+{
+  "title": "Mission: Impossible - Fallout",
+  "rating": "88%",
+  "age_rating": "PG-13",
+  "runtime": 147,
+  "genres": ["Action", "Adventure", "Thriller"],
+  "tags": ["high-stakes", "intense", "relentless", "thrilling"],
+  "description": "Ethan Hunt and the IMF team join forces with CIA assassin August Walker to prevent a disaster of epic proportions. Arms dealer John Lark and a group of terrorists known as the Apostles plan to use three plutonium cores for a simultaneous nuclear attack on the Vatican, Jerusalem and Mecca, Saudi Arabia. When the weapons go missing, Ethan and his crew find themselves in a desperate race against time to prevent them from falling into the wrong hands.",
+  "rt_quote": "Fast, sleek, and fun, Mission: Impossible - Fallout lives up to the \"impossible\" part of its name by setting yet another high mark for insane set pieces in a franchise full of them.",
+  "director": "Christopher McQuarrie",
+  "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
+},
+{
+  "title": "The Dark Knight",
+  "rating": "94%",
+  "age_rating": "PG-13",
+  "runtime": 152,
+  "genres": ["Action", "Crime", "Adventure", "drama", "Superhero", "Thriller", "Neo Noir"],
+  "tags": ["dark", "intense", "gritty", "heroic", "noir"],
+  "description": "With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism.",
+  "rt_quote": "Dark, complex, and unforgettable, The Dark Knight succeeds not just as an entertaining comic book film, but as a richly thrilling crime saga.",
+  "director": "Christopher Nolan",
   "stars": ["Christian Bale", "Heath Ledger", "Gary Oldman", "Aaron Eckhart", "Michael Caine", "Morgan Freeman", "Maggie Gyllenhal"]
-    },
-    {
-        "title": "Gladiator",
-        "rating": "87%",
-        "age_rating": "R",
-        "runtime": 155,
-        "genres": [
-            "Action",
-            "Drama",
-            "Adventure",
-           "Historical Fiction"
-        ],
-        "tags": [
-            "epic",
-            "heroic",
-            "gritty",
-            "emotional",
-           "history",
-           "sword",
-           "sandal",
-           "historical", 
-           "fiction"
-        ],
-        "description": "Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.",
-        "rt_quote": "While not everyone will be entertained by Gladiator's glum revenge story, Russell Crowe thunderously wins the crowd with a star-making turn that provides Ridley Scott's opulent resurrection of Rome its bruised heart.",
-       "director": "Ridley Scott",
-       "stars": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen", "Oliver Reed", "Djimon Hounsou"]
-    },
-    {
-        "title": "Edge of Tomorrow",
-        "rating": "90%",
-        "age_rating": "PG-13",
-        "runtime": 113,
-        "genres": [
-            "Action",
-            "Sci-Fi",
-           "War",
-           "Alien",
-           "Aliens"
-        ],
-        "tags": [
-            "time-loop",
-            "intense",
-            "smart",
-            "fast-paced",
-           "alien",
-           "invasion"
-        ],
-        "description": "When Earth falls under attack from invincible aliens, no military unit in the world is able to beat them. Maj. William Cage (Tom Cruise), an officer who has never seen combat, is assigned to a suicide mission. Killed within moments, Cage finds himself thrown into a time loop, in which he relives the same brutal fight -- and his death -- over and over again. However, Cage's fighting skills improve with each encore, bringing him and a comrade (Emily Blunt) ever closer to defeating the aliens.",
-        "rt_quote": "Gripping, well-acted, funny, and clever, Edge of Tomorrow offers entertaining proof that Tom Cruise is still more than capable of shouldering the weight of a blockbuster action thriller.",
-       "director": "Doug Liman",
-       "stars": ["Tom Cruise", "Emily Blunt", "Bill Paxton", "Brendan Gleeson"]
-    },
-    {
-        "title": "Lethal Weapon",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 110,
-        "genres": [
-            "Action",
-            "Crime",
-            "Thriller",
-           "Police"
-        ],
-        "tags": [
-            "buddy-cop",
-            "gritty",
-            "fast-paced",
-            "classic",
-           "action comedy",
-           "police"
-        ],
-        "description": "Following the death of his wife, Los Angeles police detective Martin Riggs (Mel Gibson) becomes reckless and suicidal. When he is reassigned and partnered with Roger Murtaugh (Danny Glover), Riggs immediately clashes with the older officer. Together they uncover a massive drug-trafficking ring. As they encounter increasingly dangerous situations, Riggs and Murtaugh begin to form a bond. Riggs' volatile behavior might just help them apprehend the criminals -- if it doesn't kill them both first.",
-        "rt_quote": "The most successful installment in a phenomenally successful series, Lethal Weapon helped redefine action movies for the 1980s and 1990s.",
-       "director": "Richard Donner",
-       "stars": ["Mel Gibson", "Danny Glover", "Joe Pesci", "Traci Wolfe"]
-    },
-    {
-        "title": "Skyfall",
-        "rating": "86%",
-        "age_rating": "PG-13",
-        "runtime": 143,
-        "genres": [
-            "Action",
-            "Adventure",
-            "Thriller",
-           "Spy"
-        ],
-        "tags": [
-            "spy",
-            "intense",
-            "stylish",
-            "emotional",
-           "action"
-        ],
-        "description": "When James Bond's (Daniel Craig) latest assignment goes terribly wrong, it leads to a calamitous turn of events: Undercover agents around the world are exposed, and MI6 is attacked, forcing M (Judi Dench) to relocate the agency. With MI6 now compromised inside and out, M turns to the one man she can trust: Bond. Aided only by a field agent (Naomie Harris), Bond takes to the shadows and follows a trail to Silva (Javier Bardem), a man from M's past who wants to settle an old score.",
-        "rt_quote": "Sam Mendes brings Bond surging back with a smart, sexy, riveting action thriller that qualifies as one of the best 007 films to date.",
-       "director": "Sam Mendes",
-       "stars": ["Daniel Craig", "Javier Bardem", "Judi Dench", "Naomie Harris", "Ben Whishaw"]
-    },
-    {
-        "title": "The Bourne Ultimatum",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 115,
-        "genres": [
-            "Action",
-            "Thriller",
-           "Spy",
-           "CIA",
-           "Suspense",
-           "Thriller"
-        ],
-        "tags": [
-            "fast-paced",
-            "intense",
-            "spy",
-            "gritty"
-        ],
-        "description": "Jason Bourne (Matt Damon) continues his international quest to uncover his true identity. From Russia to Europe to northern Africa to the United States, he must stay one step ahead of those who would capture or kill him before he has a chance to discover the truth.",
-        "rt_quote": "The Bourne Ultimatum is an intelligent, finely tuned non-stop thrill ride. Another strong performance from Matt Damon and sharp camerawork from Paul Greengrass make this the finest installment of the Bourne trilogy.",
-       "director": "Paul Greengrass",
-       "stars": ["Matt Damon", "Julia Stiles", "David Straitharn", "Joan Allen"]
-    },
-    {
-        "title": "Superbad",
-        "rating": "87%",
-        "age_rating": "R",
-        "runtime": 113,
-        "genres": [
-            "Comedy",
-           "Teen"
-        ],
-        "tags": [
-            "hilarious",
-            "coming-of-age",
-            "raunchy",
-            "wild"
-        ],
-        "description": "High school seniors Seth and Evan have high hopes for a graduation party. The co-dependent teens plan to score booze and babes so they can become part of the in-crowd, but separation anxiety and two bored police officers complicate the pair's self-proclaimed mission.",
-        "rt_quote": "Deftly balancing vulgarity and sincerity while placing its protagonists in excessive situations, Superbad is an authentic take on friendship and the overarching awkwardness of the high school experience.",
-       "director": "Greg Motola",
-       "stars": ["Seth Rogen", "Jonah Hill", "Michael Cera", "Christopher Mintz-Plasse", "Emma Stone", "Bill Hader"]
-    },
-    {
-        "title": "The Grand Budapest Hotel",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 99,
-        "genres": [
-            "Comedy",
-            "Drama",
-            "Mystery",
-            "Indie"
-        ],
-        "tags": [
-            "whimsical",
-            "witty",
-            "stylish",
-            "offbeat"
-        ],
-        "description": "In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege. Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.",
-        "rt_quote": "Typically stylish but deceptively thoughtful, The Grand Budapest Hotel finds Wes Anderson once again using ornate visual environments to explore deeply emotional ideas.",
-       "director": "Wes Anderson",
-       "stars": ["Ralph Fiennes", "Bill Murray", "Tony Revolori", "Tilda Swinton", "Edward Norton", "Jason Schwartzman"]
-    },
-    {
-        "title": "Bridesmaids",
-        "rating": "76%",
-        "age_rating": "R",
-        "runtime": 125,
-        "genres": [
-            "Comedy",
-           "Melodrama"
-        ],
-        "tags": [
-            "outrageous",
-            "relatable",
-            "hilarious",
-            "heartfelt",
-           "chick flick"
-        ],
-        "description": "Annie (Kristen Wiig) is a single woman whose own life is a mess, but when she learns that her lifelong best friend, Lillian (Maya Rudolph), is engaged, she has no choice but to serve as the maid of honor. Though lovelorn and almost penniless, Annie, nevertheless, winds her way through the strange and expensive rituals associated with her job as the bride's go-to gal. Determined to make things perfect, she gamely leads Lillian and the other bridesmaids down the wild road to the wedding.",
-        "rt_quote": "A marriage of genuine characters, gross out gags, and pathos, Bridesmaids is a female-driven comedy that refuses to be boxed in as Kristen Wiig emerges as a real star.",
-       "director": "Paul Feig",
-       "stars": ["Kristin Wiig", "Maya Rudolph", "Melissa McCarthy", "Rose Byrne"]
-    },
-    {
-        "title": "Groundhog Day",
-        "rating": "94%",
-        "age_rating": "PG",
-        "runtime": 101,
-        "genres": [
-            "Comedy",
-            "Fantasy",
-            "Romance", 
-           "Melodrama"
-        ],
-        "tags": [
-            "clever",
-            "feel-good",
-            "time-loop",
-            "witty",
-           "romantic comedy"
-        ],
-        "description": "Phil (Bill Murray), a weatherman, is out to cover the annual emergence of the groundhog from its hole. He gets caught in a blizzard that he didn't predict and finds himself trapped in a time warp. He is doomed to relive the same day over and over again until he gets it right.",
-        "rt_quote": "Smart, sweet, and inventive, Groundhog Day highlights Murray's dramatic gifts while still leaving plenty of room for laughs.",
-       "director": "Harold Ramis",
-       "stars": ["Bill Murray", "Andie MacDowell", "Harold Ramis", "Chris Elliott"]
-    },
-    {
-        "title": "The 40-Year-Old Virgin",
-        "rating": "84%",
-        "age_rating": "R",
-        "runtime": 116,
-        "genres": [
-            "Comedy",
-           "Romantic",
-           "Sexual",
-           "Buddy"
-        ],
-        "tags": [
-            "awkward",
-            "raunchy",
-            "hilarious",
-            "charming"
-        ],
-        "description": "Three dysfunctional co-workers embark on a mission to help their newfound friend lose his sexual innocence.",
-        "rt_quote": "Steve Carell's first star turn scores big with a tender treatment of its titular underdog, using raunchy but realistically funny comedy to connect with adult audiences.",
-       "director": "Judd Apatow",
-       "stars": ["Steve Carrell", "Paul Rudd", "Seth Rogen", "Catherine Keener"]
-    },
-    {
-        "title": "Ferris Bueller's Day Off",
-        "rating": "92%",
-        "age_rating": "PG-13",
-        "runtime": 103,
-        "genres": [
-            "Comedy",
-            "Classic",
-           "Teen",
-           "Highschool"
-        ],
-        "tags": [
-            "feel-good",
-            "rebellious",
-            "fun",
-            "coming-of-age"
-        ],
-        "description": "Ferris Bueller (Matthew Broderick) has an uncanny skill at cutting classes and getting away with it. Intending to make one last duck-out before graduation, Ferris calls in sick, \"borrows\" a Ferrari, and embarks on a one-day journey through the streets of Chicago. On Ferris' trail is high school principal Rooney (Jeffrey Jones), determined to catch him in the act.",
-        "rt_quote": "Matthew Broderick charms in Ferris Bueller's Day Off, a light and irrepressibly fun movie about being young and having fun.",
-       "director": "John Hughes",
-       "stars": ["Matthew Broderick", "Alan Ruck", "Mia Sara", "Jennifer Grey"]
-    },
-    {
-        "title": "School of Rock",
-        "rating": "92%",
-        "age_rating": "PG-13",
-        "runtime": 109,
-        "genres": [
-            "Comedy",
-            "Music"
-        ],
-        "tags": [
-            "fun",
-            "inspiring",
-            "feel-good",
-            "rock-n-roll"
-        ],
-        "description": "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his bar band and finds himself in desperate need of work. Posing as a substitute music teacher at an elite private elementary school, he exposes his students to the hard rock gods he idolizes and emulates -- much to the consternation of the uptight principal (Joan Cusack). As he gets his privileged and precocious charges in touch with their inner rock 'n' roll animals, he imagines redemption at a local Battle of the Bands.",
-        "rt_quote": "Black's exuberant, gleeful performance turns School of Rock into a hilarious, rocking good time.",
-       "director": "Richard Linklater",
-       "stars": ["Jack Black", "Mike White", "Kevin Clark", "Nicky Katt"]
-    },
-    {
-        "title": "Napoleon Dynamite",
-        "rating": "74%",
-        "age_rating": "PG",
-        "runtime": 96,
-        "genres": [
-            "Comedy",
-           "Indie",
-           "Teen"
-        ],
-        "tags": [
-            "quirky",
-            "awkward",
-            "deadpan",
-            "offbeat"
-        ],
-        "description": "In small-town Preston, Idaho, awkward teen Napoleon Dynamite has trouble fitting in. After his grandmother is injured in an accident, his life is made even worse when his strangely nostalgic uncle, Rico, shows up to keep an eye on him. With no safe haven at home or at school, Napoleon befriends the new kid, Pedro, a morose Hispanic boy who speaks little English. Together the two launch a campaign to run for class president.",
-        "rt_quote": "A charming, quirky, and often funny comedy.",
-       "director": "Jared Hess",
-       "stars": ["Jon Heder", "Efren Ramirez", "Jon Gries", "Aaron Ruell"]
-    },
-    {
-        "title": "Crazy Rich Asians",
-        "rating": "91%",
-        "age_rating": "PG-13",
-        "runtime": 120,
-        "genres": [
-            "Comedy",
-            "Romance", 
-           "Drama"
-        ],
-        "tags": [
-            "glamorous",
-            "feel-good",
-            "romantic",
-            "funny",
-           "family",
-           "Asian",
-           "engagement",
-           "wedding"
-        ],
-        "description": "Rachel Chu is happy to accompany her longtime boyfriend, Nick, to his best friend's wedding in Singapore. She's also surprised to learn that Nick's family is extremely wealthy and he's considered one of the country's most eligible bachelors. Thrust into the spotlight, Rachel must now contend with jealous socialites, quirky relatives and something far, far worse -- Nick's disapproving mother.",
-        "rt_quote": "With a terrific cast and a surfeit of visual razzle dazzle, Crazy Rich Asians takes a satisfying step forward for screen representation while deftly drawing inspiration from the classic -- and still effective -- rom-com formula.",
-       "director": "Jon M. Chu",
-       "stars": ["Henry Golding", "Constance Wu", "Gemma Chan","Awkwafina", "Michelle Yeoh"]
-    },
+},
+{
+  "title": "Gladiator",
+  "rating": "87%",
+  "age_rating": "R",
+  "runtime": 155,
+  "genres": ["Action", "Drama", "Adventure", "Historical Fiction"],
+  "tags": ["epic", "heroic", "gritty", "emotional", "history", "sword", "sandal", "historical", "fiction"],
+  "description": "Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.",
+  "rt_quote": "While not everyone will be entertained by Gladiator's glum revenge story, Russell Crowe thunderously wins the crowd with a star-making turn that provides Ridley Scott's opulent resurrection of Rome its bruised heart.",
+  "director": "Ridley Scott",
+  "stars": ["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen", "Oliver Reed", "Djimon Hounsou"]
+},
+{
+  "title": "Edge of Tomorrow",
+  "rating": "90%",
+  "age_rating": "PG-13",
+  "runtime": 113,
+  "genres": ["Action", "Sci-Fi", "War", "Alien", "Aliens"],
+  "tags": ["time-loop", "intense", "smart", "fast-paced", "alien", "invasion"],
+  "description": "When Earth falls under attack from invincible aliens, no military unit in the world is able to beat them. Maj. William Cage (Tom Cruise), an officer who has never seen combat, is assigned to a suicide mission. Killed within moments, Cage finds himself thrown into a time loop, in which he relives the same brutal fight -- and his death -- over and over again. However, Cage's fighting skills improve with each encore, bringing him and a comrade (Emily Blunt) ever closer to defeating the aliens.",
+  "rt_quote": "Gripping, well-acted, funny, and clever, Edge of Tomorrow offers entertaining proof that Tom Cruise is still more than capable of shouldering the weight of a blockbuster action thriller.",
+  "director": "Doug Liman",
+  "stars": ["Tom Cruise", "Emily Blunt", "Bill Paxton", "Brendan Gleeson"]
+},
+{
+  "title": "Lethal Weapon",
+  "rating": "86%",
+  "age_rating": "R",
+  "runtime": 110,
+  "genres": ["Action", "Crime", "Thriller", "Police"],
+  "tags": ["buddy-cop", "gritty", "fast-paced", "classic", "action comedy", "police"],
+  "description": "Following the death of his wife, Los Angeles police detective Martin Riggs (Mel Gibson) becomes reckless and suicidal. When he is reassigned and partnered with Roger Murtaugh (Danny Glover), Riggs immediately clashes with the older officer. Together they uncover a massive drug-trafficking ring. As they encounter increasingly dangerous situations, Riggs and Murtaugh begin to form a bond. Riggs' volatile behavior might just help them apprehend the criminals -- if it doesn't kill them both first.",
+  "rt_quote": "The most successful installment in a phenomenally successful series, Lethal Weapon helped redefine action movies for the 1980s and 1990s.",
+  "director": "Richard Donner",
+  "stars": ["Mel Gibson", "Danny Glover", "Joe Pesci", "Traci Wolfe"]
+},
+{
+  "title": "Skyfall",
+  "rating": "86%",
+  "age_rating": "PG-13",
+  "runtime": 143,
+  "genres": ["Action", "Adventure", "Thriller", "Spy"],
+  "tags": ["spy", "intense", "stylish", "emotional", "action"],
+  "description": "When James Bond's (Daniel Craig) latest assignment goes terribly wrong, it leads to a calamitous turn of events: Undercover agents around the world are exposed, and MI6 is attacked, forcing M (Judi Dench) to relocate the agency. With MI6 now compromised inside and out, M turns to the one man she can trust: Bond. Aided only by a field agent (Naomie Harris), Bond takes to the shadows and follows a trail to Silva (Javier Bardem), a man from M's past who wants to settle an old score.",
+  "rt_quote": "Sam Mendes brings Bond surging back with a smart, sexy, riveting action thriller that qualifies as one of the best 007 films to date.",
+  "director": "Sam Mendes",
+  "stars": ["Daniel Craig", "Javier Bardem", "Judi Dench", "Naomie Harris", "Ben Whishaw"]
+},
+{
+  "title": "The Bourne Ultimatum",
+  "rating": "91%",
+  "age_rating": "PG-13",
+  "runtime": 115,
+  "genres": ["Action", "Thriller", "Spy", "CIA", "Suspense", "Thriller"],
+  "tags": ["fast-paced", "intense", "spy", "gritty"],
+  "description": "Jason Bourne (Matt Damon) continues his international quest to uncover his true identity. From Russia to Europe to northern Africa to the United States, he must stay one step ahead of those who would capture or kill him before he has a chance to discover the truth.",
+  "rt_quote": "The Bourne Ultimatum is an intelligent, finely tuned non-stop thrill ride. Another strong performance from Matt Damon and sharp camerawork from Paul Greengrass make this the finest installment of the Bourne trilogy.",
+  "director": "Paul Greengrass",
+  "stars": ["Matt Damon", "Julia Stiles", "David Straitharn", "Joan Allen"]
+},
+   {
+  "title": "Superbad",
+  "rating": "87%",
+  "age_rating": "R",
+  "runtime": 113,
+  "genres": ["Comedy", "Teen"],
+  "tags": ["hilarious", "coming-of-age", "raunchy", "wild"],
+  "description": "High school seniors Seth and Evan have high hopes for a graduation party. The co-dependent teens plan to score booze and babes so they can become part of the in-crowd, but separation anxiety and two bored police officers complicate the pair's self-proclaimed mission.",
+  "rt_quote": "Deftly balancing vulgarity and sincerity while placing its protagonists in excessive situations, Superbad is an authentic take on friendship and the overarching awkwardness of the high school experience.",
+  "director": "Greg Motola",
+  "stars": ["Seth Rogen", "Jonah Hill", "Michael Cera", "Christopher Mintz-Plasse", "Emma Stone", "Bill Hader"]
+},
+{
+  "title": "The Grand Budapest Hotel",
+  "rating": "86%",
+  "age_rating": "R",
+  "runtime": 99,
+  "genres": ["Comedy", "Drama", "Mystery", "Indie"],
+  "tags": ["whimsical", "witty", "stylish", "offbeat"],
+  "description": "In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustave's friend and protege. Gustave prides himself on providing first-class service to the hotel's guests, including satisfying the sexual needs of the many elderly women who stay there. When one of Gustave's lovers dies mysteriously, Gustave finds himself the recipient of a priceless painting and the chief suspect in her murder.",
+  "rt_quote": "Typically stylish but deceptively thoughtful, The Grand Budapest Hotel finds Wes Anderson once again using ornate visual environments to explore deeply emotional ideas.",
+  "director": "Wes Anderson",
+  "stars": ["Ralph Fiennes", "Bill Murray", "Tony Revolori", "Tilda Swinton", "Edward Norton", "Jason Schwartzman"]
+},
+{
+  "title": "Bridesmaids",
+  "rating": "76%",
+  "age_rating": "R",
+  "runtime": 125,
+  "genres": ["Comedy", "Melodrama"],
+  "tags": ["outrageous", "relatable", "hilarious", "heartfelt", "chick flick"],
+  "description": "Annie (Kristen Wiig) is a single woman whose own life is a mess, but when she learns that her lifelong best friend, Lillian (Maya Rudolph), is engaged, she has no choice but to serve as the maid of honor. Though lovelorn and almost penniless, Annie, nevertheless, winds her way through the strange and expensive rituals associated with her job as the bride's go-to gal. Determined to make things perfect, she gamely leads Lillian and the other bridesmaids down the wild road to the wedding.",
+  "rt_quote": "A marriage of genuine characters, gross out gags, and pathos, Bridesmaids is a female-driven comedy that refuses to be boxed in as Kristen Wiig emerges as a real star.",
+  "director": "Paul Feig",
+  "stars": ["Kristin Wiig", "Maya Rudolph", "Melissa McCarthy", "Rose Byrne"]
+},
+{
+  "title": "Groundhog Day",
+  "rating": "94%",
+  "age_rating": "PG",
+  "runtime": 101,
+  "genres": ["Comedy", "Fantasy", "Romance", "Melodrama"],
+  "tags": ["clever", "feel-good", "time-loop", "witty", "romantic comedy"],
+  "description": "Phil (Bill Murray), a weatherman, is out to cover the annual emergence of the groundhog from its hole. He gets caught in a blizzard that he didn't predict and finds himself trapped in a time warp. He is doomed to relive the same day over and over again until he gets it right.",
+  "rt_quote": "Smart, sweet, and inventive, Groundhog Day highlights Murray's dramatic gifts while still leaving plenty of room for laughs.",
+  "director": "Harold Ramis",
+  "stars": ["Bill Murray", "Andie MacDowell", "Harold Ramis", "Chris Elliott"]
+},
+{
+  "title": "The 40-Year-Old Virgin",
+  "rating": "84%",
+  "age_rating": "R",
+  "runtime": 116,
+  "genres": ["Comedy", "Romantic", "Sexual", "Buddy"],
+  "tags": ["awkward", "raunchy", "hilarious", "charming"],
+  "description": "Three dysfunctional co-workers embark on a mission to help their newfound friend lose his sexual innocence.",
+  "rt_quote": "Steve Carell's first star turn scores big with a tender treatment of its titular underdog, using raunchy but realistically funny comedy to connect with adult audiences.",
+  "director": "Judd Apatow",
+  "stars": ["Steve Carrell", "Paul Rudd", "Seth Rogen", "Catherine Keener"]
+},
+{
+  "title": "Ferris Bueller's Day Off",
+  "rating": "92%",
+  "age_rating": "PG-13",
+  "runtime": 103,
+  "genres": ["Comedy", "Classic", "Teen", "Highschool"],
+  "tags": ["feel-good", "rebellious", "fun", "coming-of-age"],
+  "description": "Ferris Bueller (Matthew Broderick) has an uncanny skill at cutting classes and getting away with it. Intending to make one last duck-out before graduation, Ferris calls in sick, \"borrows\" a Ferrari, and embarks on a one-day journey through the streets of Chicago. On Ferris' trail is high school principal Rooney (Jeffrey Jones), determined to catch him in the act.",
+  "rt_quote": "Matthew Broderick charms in Ferris Bueller's Day Off, a light and irrepressibly fun movie about being young and having fun.",
+  "director": "John Hughes",
+  "stars": ["Matthew Broderick", "Alan Ruck", "Mia Sara", "Jennifer Grey"]
+},
+{
+  "title": "School of Rock",
+  "rating": "92%",
+  "age_rating": "PG-13",
+  "runtime": 109,
+  "genres": ["Comedy", "Music"],
+  "tags": ["fun", "inspiring", "feel-good", "rock-n-roll"],
+  "description": "Overly enthusiastic guitarist Dewey Finn (Jack Black) gets thrown out of his bar band and finds himself in desperate need of work. Posing as a substitute music teacher at an elite private elementary school, he exposes his students to the hard rock gods he idolizes and emulates -- much to the consternation of the uptight principal (Joan Cusack). As he gets his privileged and precocious charges in touch with their inner rock 'n' roll animals, he imagines redemption at a local Battle of the Bands.",
+  "rt_quote": "Black's exuberant, gleeful performance turns School of Rock into a hilarious, rocking good time.",
+  "director": "Richard Linklater",
+  "stars": ["Jack Black", "Mike White", "Kevin Clark", "Nicky Katt"]
+},
+{
+  "title": "Napoleon Dynamite",
+  "rating": "74%",
+  "age_rating": "PG",
+  "runtime": 96,
+  "genres": ["Comedy", "Indie", "Teen"],
+  "tags": ["quirky", "awkward", "deadpan", "offbeat"],
+  "description": "In small-town Preston, Idaho, awkward teen Napoleon Dynamite has trouble fitting in. After his grandmother is injured in an accident, his life is made even worse when his strangely nostalgic uncle, Rico, shows up to keep an eye on him. With no safe haven at home or at school, Napoleon befriends the new kid, Pedro, a morose Hispanic boy who speaks little English. Together the two launch a campaign to run for class president.",
+  "rt_quote": "A charming, quirky, and often funny comedy.",
+  "director": "Jared Hess",
+  "stars": ["Jon Heder", "Efren Ramirez", "Jon Gries", "Aaron Ruell"]
+},
+{
+  "title": "Crazy Rich Asians",
+  "rating": "91%",
+  "age_rating": "PG-13",
+  "runtime": 120,
+  "genres": ["Comedy", "Romance", "Drama"],
+  "tags": ["glamorous", "feel-good", "romantic", "funny", "family", "Asian", "engagement", "wedding"],
+  "description": "Rachel Chu is happy to accompany her longtime boyfriend, Nick, to his best friend's wedding in Singapore. She's also surprised to learn that Nick's family is extremely wealthy and he's considered one of the country's most eligible bachelors. Thrust into the spotlight, Rachel must now contend with jealous socialites, quirky relatives and something far, far worse -- Nick's disapproving mother.",
+  "rt_quote": "With a terrific cast and a surfeit of visual razzle dazzle, Crazy Rich Asians takes a satisfying step forward for screen representation while deftly drawing inspiration from the classic -- and still effective -- rom-com formula.",
+  "director": "Jon M. Chu",
+  "stars": ["Henry Golding", "Constance Wu", "Gemma Chan", "Awkwafina", "Michelle Yeoh"]
+}
+
     {
         "title": "The Hangover",
         "rating": "79%",
         "age_rating": "R",
         "runtime": 100,
-        "genres": [
-            "Comedy",
-           "Sexual",
-           "Bachelor Party"
-        ],
-        "tags": [
-            "wild",
-            "raunchy",
-            "chaotic",
-            "hilarious",
-           "sexual comedy",
-           "bachelor party",
-           "Las Vegas",
-           "party"
-           
-        ],
+        "genres": ["Comedy", "Sexual", "Bachelor Party"],
+        "tags": ["wild", "raunchy", "chaotic", "hilarious", "sexual comedy", "bachelor party", "Las Vegas", "party"],
         "description": "Two days before his wedding, Doug (Justin Bartha) and three friends (Bradley Cooper, Ed Helms, Zach Galifianakis) drive to Las Vegas for a wild and memorable stag party. In fact, when the three groomsmen wake up the next morning, they can't remember a thing; nor can they find Doug. With little time to spare, the three hazy pals try to re-trace their steps and find Doug so they can get him back to Los Angeles in time to walk down the aisle.",
         "rt_quote": "With a clever script and hilarious interplay among the cast, The Hangover nails just the right tone of raunchy humor, and the non-stop laughs overshadow any flaw.",
        "director": "Todd Phillips",
        "stars": ["Bradley Cooper", "Zach Galifianakis", "Ed Helms", "Todd Phillips"]
     },
-    
     {
         "title": "Interstellar",
         "rating": "85%",
         "age_rating": "PG-13",
         "runtime": 169,
-        "genres": [
-            "Sci-Fi",
-            "Adventure",
-            "Drama",
-           "Thriller"
-        ],
-        "tags": [
-            "epic",
-            "emotional",
-            "mind-bending",
-            "hopeful"
-        ],
+        "genres": ["Sci-Fi", "Adventure", "Drama", "Thriller"],
+        "tags": ["epic", "emotional", "mind-bending", "hopeful"],
         "description": "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home.",
         "rt_quote": "Interstellar represents more of the thrilling, thought-provoking, and visually resplendent filmmaking moviegoers have come to expect from writer-director Christopher Nolan, even if its intellectual reach somewhat exceeds its grasp.",
        "director": "Christopher Nolan",
@@ -560,375 +294,208 @@
         "rating": "81%",
         "age_rating": "R",
         "runtime": 164,
-        "genres": [
-            "Sci-Fi",
-            "Thriller"
-        ],
-        "tags": [
-            "dark",
-            "philosophical",
-            "visually-stunning",
-            "thought-provoking"
-        ],
+        "genres": ["Sci-Fi", "Thriller"],
+        "tags": ["dark", "philosophical", "visually-stunning", "thought-provoking"],
         "description": "Officer K (Ryan Gosling), a new blade runner for the Los Angeles Police Department, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. His discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former blade runner who's been missing for 30 years.",
         "rt_quote": "Visually stunning and narratively satisfying, Blade Runner 2049 deepens and expands its predecessor's story while standing as an impressive filmmaking achievement in its own right.",
        "director": "Denis Villeneuve",
        "stars": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"]
     },
     {
-        "title": "Arrival",
-        "rating": "94%",
-        "age_rating": "PG-13",
-        "runtime": 116,
-        "genres": [
-            "Sci-Fi",
-            "Drama",
-            "Mystery"
-        ],
-        "tags": [
-            "philosophical",
-            "emotional",
-            "thoughtful",
-            "introspective"
-        ],
-        "description": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
-        "rt_quote": "Arrival delivers a must-see experience for fans of thinking person's sci-fi that anchors its heady themes with genuinely affecting emotion and a terrific performance from Amy Adams.",
-       "director": "Denis Villeneuve",
-       "stars": ["Amy Adams", "Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg"]
-    },
+       {
+  "title": "Arrival",
+  "rating": "94%",
+  "age_rating": "PG-13",
+  "runtime": 116,
+  "genres": ["Sci-Fi", "Drama", "Mystery"],
+  "tags": ["philosophical", "emotional", "thoughtful", "introspective"],
+  "description": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
+  "rt_quote": "Arrival delivers a must-see experience for fans of thinking person's sci-fi that anchors its heady themes with genuinely affecting emotion and a terrific performance from Amy Adams.",
+  "director": "Denis Villeneuve",
+  "stars": ["Amy Adams", "Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg"]
+},
+{
+  "title": "The Matrix",
+  "rating": "88%",
+  "age_rating": "R",
+  "runtime": 136,
+  "genres": ["Sci-Fi", "Action", "Gritty", "Cyberpunk", "Noir", "Fantasy"],
+  "tags": ["mind-bending", "intense", "revolutionary", "philosophical"],
+  "description": "Neo believes that Morpheus, an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity, a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent secret agents. It is a truth that could cost Neo something more precious than his life.",
+  "rt_quote": "Thanks to the Wachowskis' imaginative vision, The Matrix is a smartly crafted combination of spectacular action and groundbreaking special effects.",
+  "director": "Lana and Lilly Wachowski",
+  "stars": ["Keanu Reeves", "Carrie Anne Moss", "Laurence Fishburn", "Hugo Weaving"]
+},
+{
+  "title": "Gravity",
+  "rating": "79%",
+  "age_rating": "PG-13",
+  "runtime": 91,
+  "genres": ["Sci-Fi", "Thriller", "Drama"],
+  "tags": ["suspenseful", "visually-stunning", "survival", "intense", "disaster"],
+  "description": "Dr. Ryan Stone (Sandra Bullock) is a medical engineer on her first shuttle mission. Her commander is veteran astronaut Matt Kowalsky (George Clooney), helming his last flight before retirement. Then, during a routine space walk by the pair, disaster strikes: The shuttle is destroyed, leaving Ryan and Matt stranded in deep space with no link to Earth and no hope of rescue. As fear turns to panic, they realize that the only way home may be to venture further into space.",
+  "rt_quote": "Alfonso Cuarón's Gravity is an eerie, tense sci-fi thriller that's masterfully directed and visually stunning.",
+  "director": "Alfonso Cuarón",
+  "stars": ["Sandra Bullock", "George Clooney"]
+},
+{
+  "title": "District 9",
+  "rating": "90%",
+  "age_rating": "R",
+  "runtime": 112,
+  "genres": ["Sci-Fi", "Action", "Thriller", "Gritty", "Aliens", "Invasion"],
+  "tags": ["gritty", "thought-provoking", "political", "intense"],
+  "description": "Thirty years ago, aliens arrive on Earth -- not to conquer or give aid, but -- to find refuge from their dying planet. Separated from humans in a South African area called District 9, the aliens are managed by Multi-National United, which is unconcerned with the aliens' welfare but will do anything to master their advanced technology. When a company field agent (Sharlto Copley) contracts a mysterious virus that begins to alter his DNA, there is only one place he can hide: District 9.",
+  "rt_quote": "Technically brilliant and emotionally wrenching, District 9 has action, imagination, and all the elements of a thoroughly entertaining science-fiction classic.",
+  "director": "Neill Blomkamp",
+  "stars": ["Sharlto Copley", "Vanessa Haywood", "Jason Cope"]
+},
+
+   {
+  "title": "Ex Machina",
+  "rating": "86%",
+  "age_rating": "R",
+  "runtime": 108,
+  "genres": ["Sci-Fi", "Thriller", "Mystery", "Drama"],
+  "tags": ["philosophical", "intense", "intelligent", "chilling"],
+  "description": "Caleb Smith (Domhnall Gleeson) a programmer at a huge Internet company, wins a contest that enables him to spend a week at the private estate of Nathan Bateman (Oscar Isaac), his firm's brilliant CEO. When he arrives, Caleb learns that he has been chosen to be the human component in a Turing test to determine the capabilities and consciousness of Ava (Alicia Vikander), a beautiful robot. However, it soon becomes evident that Ava is far more self-aware and deceptive than either man imagined.",
+  "rt_quote": "Ex Machina leans heavier on ideas than effects, but it's still a visually polished piece of work -- and an uncommonly engaging sci-fi feature.",
+  "director": "Alex Garland",
+  "stars": ["Alicia Vikander", "Oscar Isaac", "Domhnall Gleeson"]
+},
+{
+  "title": "Dune (2021)",
+  "rating": "83%",
+  "age_rating": "PG-13",
+  "runtime": 155,
+  "genres": ["Sci-Fi", "Action", "Fantasy", "Adventure", "Drama", "Epic"],
+  "tags": ["epic", "visually-stunning", "political", "intense"],
+  "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to a dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of a precious resource in existence, only those who can conquer their own fear will survive.",
+  "rt_quote": "Dune occasionally struggles with its unwieldy source material, but those issues are largely overshadowed by the scope and ambition of this visually thrilling adaptation.",
+  "director": "Denis Villeneuve",
+  "stars": ["Timothee Chalamet", "Zendaya", "Javier Bardem", "Rebecca Ferguson", "Oscar Isaac", "Jason Momoa", "Josh Brolin"]
+},
+{
+  "title": "Looper",
+  "rating": "93%",
+  "age_rating": "R",
+  "runtime": 113,
+  "genres": ["Sci-Fi", "Action", "Thriller", "Supernatural"],
+  "tags": ["time-travel", "intense", "thought-provoking", "gritty", "futuristic"],
+  "description": "In a future society, time-travel exists, but it's only available to those with the means to pay for it on the black market. When the mob wants to eliminate someone, it sends the target into the past, where a hit man known as a looper lies in wait to finish the job. Joe (Joseph Gordon-Levitt) is one such hired gun, and he does his job well -- until the day his bosses decide to \"close the loop\" and send Joe's future self (Bruce Willis) back in time to be killed.",
+  "rt_quote": "As thought-provoking as it is thrilling, Looper delivers an uncommonly smart, bravely original blend of futuristic sci-fi and good old-fashioned action.",
+  "director": "Rian Johnson",
+  "stars": ["Joseph Gordon-Levitt", "Bruce Willis", "Emily Blunt", "Paul Dano"]
+},
+{
+  "title": "Children of Men",
+  "rating": "92%",
+  "age_rating": "R",
+  "runtime": 109,
+  "genres": ["Sci-Fi", "Drama", "Thriller", "Dystopian"],
+  "tags": ["gritty", "emotional", "dystopian", "intense"],
+  "description": "When infertility threatens mankind with extinction and the last child born has perished, a disillusioned bureaucrat (Clive Owen) becomes the unlikely champion in the fight for the survival of Earth's population; He must face down his own demons and protect the planet's last remaining hope from danger.",
+  "rt_quote": "Children of Men works on every level: as a violent chase thriller, a fantastical cautionary tale, and a sophisticated human drama about societies struggling to live.",
+  "director": "Alfonso Cuarón",
+  "stars": ["Clive Owen", "Julianne Moore", "Michael Caine", "Chiwetel Ejiofor"]
+},
+
+   {
+  "title": "Gone Girl",
+  "rating": "87%",
+  "age_rating": "R",
+  "runtime": 149,
+  "genres": ["Thriller", "Mystery", "Drama", "Crime"],
+  "tags": ["psychological", "dark", "twisty", "tense"],
+  "description": "In Carthage, Mo., former New York-based writer Nick Dunne and his glamorous wife Amy present a portrait of a blissful marriage to the public; when Amy goes missing on the couple's fifth wedding anniversary, Nick becomes the prime suspect in her disappearance; the resulting police pressure and media frenzy cause the Dunnes' image of a happy union to crumble, leading to tantalizing questions about who Nick and Amy truly are.",
+  "rt_quote": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike.",
+  "director": "David Fincher",
+  "stars": ["Ben Affleck", "Rosamund Pike", "Emily Ratajkowski", "Neil Patrick Harris"]
+},
+{
+  "title": "Prisoners",
+  "rating": "88%",
+  "age_rating": "R",
+  "runtime": 153,
+  "genres": ["Thriller", "Crime", "Drama"],
+  "tags": ["gritty", "emotional", "chilling", "intense"],
+  "description": "When two young girls go missing, one father takes matters into his own hands.",
+  "rt_quote": "A harrowing and emotionally gripping thriller.",
+  "director": "Denis Villeneuve",
+  "stars": ["Hugh Jackman", "Jake Gyllenhaal", "Viola Davis", "Melissa Leo", "Paul Dano"]
+},
+{
+  "title": "Se7en",
+  "rating": "95%",
+  "age_rating": "R",
+  "runtime": 127,
+  "genres": ["Thriller", "Crime", "Mystery", "Horror"],
+  "tags": ["dark", "disturbing", "intense", "gritty"],
+  "description": "When retiring police Detective William Somerset (Morgan Freeman) tackles a final case with the aid of newly transferred David Mills (Brad Pitt), they discover a number of elaborate and grisly murders. They soon realize they are dealing with a serial killer (Kevin Spacey) who is targeting people he thinks represent one of the seven deadly sins. Somerset also befriends Mills' wife, Tracy (Gwyneth Paltrow), who is pregnant and afraid to raise her child in the crime-riddled city.",
+  "rt_quote": "A brutal, relentlessly grimy shocker with taut performances, slick gore effects, and a haunting finale.",
+  "director": "David Fincher",
+  "stars": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey", "Gwyneth Paltrow"]
+},
+{
+  "title": "Zodiac",
+  "rating": "89%",
+  "age_rating": "R",
+  "runtime": 157,
+  "genres": ["Thriller", "Mystery", "Crime"],
+  "tags": ["methodical", "tense", "dark", "slow-burn"],
+  "description": "Based on real events, a cartoonist becomes obsessed with tracking down the Zodiac Killer.",
+  "rt_quote": "A meticulous, haunting investigation into obsession.",
+  "director": "David Fincher",
+  "stars": ["Jake Gyllenhaal", "Robert Downey Jr.", "Mark Ruffalo", "Chloë Sevigny"]
+},
+{
+  "title": "Nightcrawler",
+  "rating": "85%",
+  "age_rating": "R",
+  "runtime": 117,
+  "genres": ["Thriller", "Crime", "Drama"],
+  "tags": ["creepy", "psychological", "disturbing", "intense"],
+  "description": "A driven man blurs the lines between observer and participant in the world of crime journalism.",
+  "rt_quote": "A chilling and darkly compelling character study.",
+  "director": "Dan Gilroy",
+  "stars": ["Jake Gyllenhaal", "Rene Russo", "Riz Ahmed", "Bill Paxton"]
+},
     {
-        "title": "The Matrix",
-        "rating": "88%",
-        "age_rating": "R",
-        "runtime": 136,
-        "genres": [
-            "Sci-Fi",
-            "Action",
-           "Gritty",
-           "Cyberpunk",
-           "Noir",
-           "Fantasy"
-        ],
-        "tags": [
-            "mind-bending",
-            "intense",
-            "revolutionary",
-            "philosophical"
-        ],
-        "description": "Neo believes that Morpheus, an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity, a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent secret agents. It is a truth that could cost Neo something more precious than his life.",
-        "rt_quote": "Thanks to the Wachowskis' imaginative vision, The Matrix is a smartly crafted combination of spectacular action and groundbreaking special effects.",
-       "director": "Lana and Lilly Wachowski",
-       "stars": ["Keanu Reeves", "Carrie Anne Moss", "Laurence Fishburn", "Hugo Weaving"]
-    },
-    {
-        "title": "Gravity",
-        "rating": "79%",
-        "age_rating": "PG-13",
-        "runtime": 91,
-        "genres": [
-            "Sci-Fi",
-            "Thriller",
-            "Drama"
-        ],
-        "tags": [
-            "suspenseful",
-            "visually-stunning",
-            "survival",
-            "intense",
-           "disaster"
-        ],
-        "description": "Dr. Ryan Stone (Sandra Bullock) is a medical engineer on her first shuttle mission. Her commander is veteran astronaut Matt Kowalsky (George Clooney), helming his last flight before retirement. Then, during a routine space walk by the pair, disaster strikes: The shuttle is destroyed, leaving Ryan and Matt stranded in deep space with no link to Earth and no hope of rescue. As fear turns to panic, they realize that the only way home may be to venture further into space.",
-        "rt_quote": "Alfonso Cuarón's Gravity is an eerie, tense sci-fi thriller that's masterfully directed and visually stunning.",
-       "director": "Alfonso Cuarón",
-       "stars": ["Sandra Bullock", "George Clooney"]
-    },
-    {
-        "title": "District 9",
-        "rating": "90%",
-        "age_rating": "R",
-        "runtime": 112,
-        "genres": [
-            "Sci-Fi",
-            "Action",
-            "Thriller",
-           "Gritty",
-           "Aliens",
-           "Invasion"
-        ],
-        "tags": [
-            "gritty",
-            "thought-provoking",
-            "political",
-            "intense"
-        ],
-        "description": "Thirty years ago, aliens arrive on Earth -- not to conquer or give aid, but -- to find refuge from their dying planet. Separated from humans in a South African area called District 9, the aliens are managed by Multi-National United, which is unconcerned with the aliens' welfare but will do anything to master their advanced technology. When a company field agent (Sharlto Copley) contracts a mysterious virus that begins to alter his DNA, there is only one place he can hide: District 9.",
-        "rt_quote": "Technically brilliant and emotionally wrenching, District 9 has action, imagination, and all the elements of a thoroughly entertaining science-fiction classic.",
-       "director": "Neill Blomkamp",
-       "stars": ["Sharlto Copley", "Vanessa Haywood", "Jason Cope"]
-    },
-    {
-        "title": "Ex Machina",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 108,
-        "genres": [
-            "Sci-Fi",
-            "Thriller",
-           "Mystery",
-            "Drama"
-        ],
-        "tags": [
-            "philosophical",
-            "intense",
-            "intelligent",
-            "chilling"
-        ],
-        "description": "Caleb Smith (Domhnall Gleeson) a programmer at a huge Internet company, wins a contest that enables him to spend a week at the private estate of Nathan Bateman (Oscar Isaac), his firm's brilliant CEO. When he arrives, Caleb learns that he has been chosen to be the human component in a Turing test to determine the capabilities and consciousness of Ava (Alicia Vikander), a beautiful robot. However, it soon becomes evident that Ava is far more self-aware and deceptive than either man imagined.",
-        "rt_quote": "Ex Machina leans heavier on ideas than effects, but it's still a visually polished piece of work -- and an uncommonly engaging sci-fi feature.",
-       "director": "Alex Garland",
-       "stars": ["Alicia Vikander", "Oscar Isaac", "Domhnall Gleeson"]
-    },
-    {
-        "title": "Dune (2021)",
-        "rating": "83%",
-        "age_rating": "PG-13",
-        "runtime": 155,
-        "genres": [
-            "Sci-Fi",
-           "Action",
-           "Fantasy",
-            "Adventure",
-            "Drama",
-           "Epic"
-        ],
-        "tags": [
-            "epic",
-            "visually-stunning",
-            "political",
-            "intense"
-        ],
-        "description": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to a dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of a precious resource in existence, only those who can conquer their own fear will survive.",
-        "rt_quote": "Dune occasionally struggles with its unwieldy source material, but those issues are largely overshadowed by the scope and ambition of this visually thrilling adaptation.",
-       "director": "Denis Villeneuve",
-       "stars": ["Timothee Chalamet", "Zendaya", "Javier Bardem", "Rebecca Ferguson", "Oscar Isaac", "Jason Momoa", "Josh Brolin"]
-    },
-    {
-        "title": "Looper",
-        "rating": "93%",
-        "age_rating": "R",
-        "runtime": 113,
-        "genres": [
-            "Sci-Fi",
-            "Action",
-            "Thriller",
-           "Supernatural"
-        ],
-        "tags": [
-            "time-travel",
-            "intense",
-            "thought-provoking",
-            "gritty",
-           "futuristic"
-        ],
-        "description": "In a future society, time-travel exists, but it's only available to those with the means to pay for it on the black market. When the mob wants to eliminate someone, it sends the target into the past, where a hit man known as a looper lies in wait to finish the job. Joe (Joseph Gordon-Levitt) is one such hired gun, and he does his job well -- until the day his bosses decide to \"close the loop\" and send Joe's future self (Bruce Willis) back in time to be killed.",
-        "rt_quote": "As thought-provoking as it is thrilling, Looper delivers an uncommonly smart, bravely original blend of futuristic sci-fi and good old-fashioned action.",
-       "director": "Rian Johnson",
-       "stars": ["Joseph Gordon-Levitt", "Bruce Willis", "Emily Blunt", "Paul Dano"]
-    },
-    {
-        "title": "Children of Men",
-        "rating": "92%",
-        "age_rating": "R",
-        "runtime": 109,
-        "genres": [
-            "Sci-Fi",
-            "Drama",
-            "Thriller",
-           "Dystopian"
-        ],
-        "tags": [
-            "gritty",
-            "emotional",
-            "dystopian",
-            "intense"
-        ],
-        "description": "When infertility threatens mankind with extinction and the last child born has perished, a disillusioned bureaucrat (Clive Owen) becomes the unlikely champion in the fight for the survival of Earth's population; He must face down his own demons and protect the planet's last remaining hope from danger.",
-        "rt_quote": "Children of Men works on every level: as a violent chase thriller, a fantastical cautionary tale, and a sophisticated human drama about societies struggling to live.",
-       "director": "Alfonso Cuarón",
-       "stars": ["Clive Owen", "Julianne Moore", "Michael Caine", "Chiwetel Ejiofor"]
-    },
-    {
-        "title": "Gone Girl",
-        "rating": "87%",
-        "age_rating": "R",
-        "runtime": 149,
-        "genres": [
-            "Thriller",
-            "Mystery",
-            "Drama",
-           "Crime"
-        ],
-        "tags": [
-            "psychological",
-            "dark",
-            "twisty",
-            "tense"
-        ],
-        "description": "In Carthage, Mo., former New York-based writer Nick Dunne and his glamorous wife Amy present a portrait of a blissful marriage to the public; when Amy goes missing on the couple's fifth wedding anniversary, Nick becomes the prime suspect in her disappearance; the resulting police pressure and media frenzy cause the Dunnes' image of a happy union to crumble, leading to tantalizing questions about who Nick and Amy truly are.",
-        "rt_quote": "Dark, intelligent, and stylish to a fault, Gone Girl plays to director David Fincher's sick strengths while bringing the best out of stars Ben Affleck and Rosamund Pike.",
-       "director": "David Fincher",
-       "stars": ["Ben Affleck", "Rosamund Pike", "Emily Ratajkowski", "Neil Patrick Harris"]
-    },
-    {
-        "title": "Prisoners",
-        "rating": "88%",
-        "age_rating": "R",
-        "runtime": 153,
-        "genres": [
-            "Thriller",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "gritty",
-            "emotional",
-            "chilling",
-            "intense"
-        ],
-        "description": "When two young girls go missing, one father takes matters into his own hands.",
-        "rt_quote": "A harrowing and emotionally gripping thriller.",
-      "director": "Denis Villeneuve",
-"stars": ["Hugh Jackman", "Jake Gyllenhaal", "Viola Davis", "Melissa Leo", "Paul Dano"]
-    },
-    {
-        "title": "Se7en",
-        "rating": "95%",
-        "age_rating": "R",
-        "runtime": 127,
-        "genres": [
-            "Thriller",
-            "Crime",
-            "Mystery",
-           "Horror"
-        ],
-        "tags": [
-            "dark",
-            "disturbing",
-            "intense",
-            "gritty"
-        ],
-        "description": "When retiring police Detective William Somerset (Morgan Freeman) tackles a final case with the aid of newly transferred David Mills (Brad Pitt), they discover a number of elaborate and grisly murders. They soon realize they are dealing with a serial killer (Kevin Spacey) who is targeting people he thinks represent one of the seven deadly sins. Somerset also befriends Mills' wife, Tracy (Gwyneth Paltrow), who is pregnant and afraid to raise her child in the crime-riddled city.",
-        "rt_quote": "A brutal, relentlessly grimy shocker with taut performances, slick gore effects, and a haunting finale.",
-       "director": "David Fincher",
-       "stars": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey", "Gwyneth Paltrow"]
-    },
-    {
-        "title": "Zodiac",
-        "rating": "89%",
-        "age_rating": "R",
-        "runtime": 157,
-        "genres": [
-            "Thriller",
-            "Mystery",
-            "Crime"
-        ],
-        "tags": [
-            "methodical",
-            "tense",
-            "dark",
-            "slow-burn"
-        ],
-        "description": "Based on real events, a cartoonist becomes obsessed with tracking down the Zodiac Killer.",
-        "rt_quote": "A meticulous, haunting investigation into obsession.",
-    "director": "David Fincher",
-"stars": ["Jake Gyllenhaal", "Robert Downey Jr.", "Mark Ruffalo", "Chloë Sevigny"]
-    },
-    {
-        "title": "Nightcrawler",
-        "rating": "85%",
-        "age_rating": "R",
-        "runtime": 117,
-        "genres": [
-            "Thriller",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "creepy",
-            "psychological",
-            "disturbing",
-            "intense"
-        ],
-        "description": "A driven man blurs the lines between observer and participant in the world of crime journalism.",
-        "rt_quote": "A chilling and darkly compelling character study.",
-     "director": "Dan Gilroy",
-"stars": ["Jake Gyllenhaal", "Rene Russo", "Riz Ahmed", "Bill Paxton"]
-    },
-    {
-        "title": "The Girl with the Dragon Tattoo",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 158,
-        "genres": [
-            "Thriller",
-            "Mystery",
-            "Crime"
-        ],
-        "tags": [
-            "dark",
-            "intense",
-            "mysterious",
-            "gritty"
-        ],
-        "description": "Disgraced financial reporter Mikael Blomkvist (Daniel Craig) finds a chance to redeem his honor after being hired by wealthy Swedish industrialist Henrik Vanger (Christopher Plummer) to solve the 40-year-old murder of Vanger's niece, Harriet. Vanger believes that Harriet was killed by a member of his own family. Eventually joining Blomkvist on his dangerous quest for the truth is Lisbeth Salander (Rooney Mara), an unusual but ingenious investigator whose fragile trust is not easily won.",
-        "rt_quote": "Brutal yet captivating, The Girl With the Dragon Tattoo is the result of David Fincher working at his lurid best with total role commitment from star Rooney Mara.",
-       "director": "David Fincher",
-       "stars": ["Daniel Craig", "Rooney Mara"]
-    },
-    {
-        "title": "The Silence of the Lambs",
-        "rating": "95%",
-        "age_rating": "R",
-        "runtime": 118,
-        "genres": [
-            "Thriller",
-            "Crime",
-            "Horror"
-        ],
-        "tags": [
-            "chilling",
-            "psychological",
-            "gripping",
-            "dark",
-           "disturbing"
-        ],
-        "description": "Jodie Foster stars as Clarice Starling, a top student at the FBI's training academy. Jack Crawford (Scott Glenn) wants Clarice to interview Dr. Hannibal Lecter (Anthony Hopkins), a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism. Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.",
-        "rt_quote": "Director Jonathan Demme's smart, taut thriller teeters on the edge between psychological study and all-out horror, and benefits greatly from stellar performances by Anthony Hopkins and Jodie Foster.",
-       "director": "Jonathan Demme",
-       "stars": ["Anthony Hopkins", "Jodie Foster", "Scott Glenn"]
-    },
-    {
-        "title": "No Country for Old Men",
-        "rating": "86%",
-        "age_rating": "R",
-        "runtime": 122,
-        "genres": [
-            "Thriller",
-            "Crime",
-            "Drama"
-        ],
-        "tags": [
-            "suspenseful",
-            "gritty",
-            "dark",
-            "tense",
-           "violent"
-        ],
-        "description": "While out hunting, Llewelyn Moss (Josh Brolin) finds the grisly aftermath of a drug deal. Though he knows better, he cannot resist the cash left behind and takes it with him. The hunter becomes the hunted when a merciless killer named Chigurh (Javier Bardem) picks up his trail. Also looking for Moss is Sheriff Bell (Tommy Lee Jones), an aging lawman who reflects on a changing world and a dark secret of his own, as he tries to find and protect Moss.",
-        "rt_quote": "Bolstered by powerful lead performances from Javier Bardem, Josh Brolin, and Tommy Lee Jones, No Country for Old Men finds the Coen brothers spinning cinematic gold out of Cormac McCarthy's grim, darkly funny novel.",
-       "director": "Ethan and Joel Coen",
-       "stars": ["Javier Bardem", "Josh Brolin", "Tommy Lee Jones", "Woody Harrelson"]
-    },
+  "title": "The Girl with the Dragon Tattoo",
+  "rating": "86%",
+  "age_rating": "R",
+  "runtime": 158,
+  "genres": ["Thriller", "Mystery", "Crime"],
+  "tags": ["dark", "intense", "mysterious", "gritty"],
+  "description": "Disgraced financial reporter Mikael Blomkvist (Daniel Craig) finds a chance to redeem his honor after being hired by wealthy Swedish industrialist Henrik Vanger (Christopher Plummer) to solve the 40-year-old murder of Vanger's niece, Harriet. Vanger believes that Harriet was killed by a member of his own family. Eventually joining Blomkvist on his dangerous quest for the truth is Lisbeth Salander (Rooney Mara), an unusual but ingenious investigator whose fragile trust is not easily won.",
+  "rt_quote": "Brutal yet captivating, The Girl With the Dragon Tattoo is the result of David Fincher working at his lurid best with total role commitment from star Rooney Mara.",
+  "director": "David Fincher",
+  "stars": ["Daniel Craig", "Rooney Mara"]
+},
+{
+  "title": "The Silence of the Lambs",
+  "rating": "95%",
+  "age_rating": "R",
+  "runtime": 118,
+  "genres": ["Thriller", "Crime", "Horror"],
+  "tags": ["chilling", "psychological", "gripping", "dark", "disturbing"],
+  "description": "Jodie Foster stars as Clarice Starling, a top student at the FBI's training academy. Jack Crawford (Scott Glenn) wants Clarice to interview Dr. Hannibal Lecter (Anthony Hopkins), a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism. Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.",
+  "rt_quote": "Director Jonathan Demme's smart, taut thriller teeters on the edge between psychological study and all-out horror, and benefits greatly from stellar performances by Anthony Hopkins and Jodie Foster.",
+  "director": "Jonathan Demme",
+  "stars": ["Anthony Hopkins", "Jodie Foster", "Scott Glenn"]
+},
+{
+  "title": "No Country for Old Men",
+  "rating": "86%",
+  "age_rating": "R",
+  "runtime": 122,
+  "genres": ["Thriller", "Crime", "Drama"],
+  "tags": ["suspenseful", "gritty", "dark", "tense", "violent"],
+  "description": "While out hunting, Llewelyn Moss (Josh Brolin) finds the grisly aftermath of a drug deal. Though he knows better, he cannot resist the cash left behind and takes it with him. The hunter becomes the hunted when a merciless killer named Chigurh (Javier Bardem) picks up his trail. Also looking for Moss is Sheriff Bell (Tommy Lee Jones), an aging lawman who reflects on a changing world and a dark secret of his own, as he tries to find and protect Moss.",
+  "rt_quote": "Bolstered by powerful lead performances from Javier Bardem, Josh Brolin, and Tommy Lee Jones, No Country for Old Men finds the Coen brothers spinning cinematic gold out of Cormac McCarthy's grim, darkly funny novel.",
+  "director": "Ethan and Joel Coen",
+  "stars": ["Javier Bardem", "Josh Brolin", "Tommy Lee Jones", "Woody Harrelson"]
+},
    {
   "title": "Wind River",
   "rating": "90%",
@@ -1099,16 +666,16 @@
   "stars": ["Ryan Gosling", "Rachel McAdams", "James Garner", "Gena Rowlands"]
 },
 {
-  "title": "La La Land",
-  "rating": "91%",
-  "age_rating": "PG-13",
-  "genres": ["Romance", "Musical", "Drama"],
-  "runtime": 128,
-  "tags": ["dreamy", "bittersweet"],
-  "description": "An aspiring actress and a jazz musician fall in love while chasing their dreams in Los Angeles.",
-  "rt_quote": "You're craving something dreamy — this bittersweet musical romance is a vibrant tribute to love, art, and what might have been.",
-  "director": "Damien Chazelle",
-  "stars": ["Ryan Gosling", "Emma Stone", "John Legend"]
+  "title": "The Wolf of Wall Street",
+  "rating": "79%",
+  "age_rating": "R",
+  "runtime": 180,
+  "genres": ["Biography", "Crime", "Drama", "Dark Comedy"],
+  "tags": ["finance", "Wall Street", "excess", "drugs", "power", "fraud", "rise and fall"],
+  "description": "A stockbroker's meteoric rise to wealth is fueled by corruption, drugs, and unrestrained debauchery in this high-octane tale of greed and downfall.",
+  "rt_quote": "Funny, self-referential, and irreverent to a fault, The Wolf of Wall Street finds Martin Scorsese and Leonardo DiCaprio at their most uninhibited—and electrifying.",
+  "director": "Martin Scorsese",
+  "stars": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie", "Kyle Chandler"]
 },
 {
   "title": "Before Sunrise",
