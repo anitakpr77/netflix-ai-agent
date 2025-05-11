@@ -483,42 +483,54 @@
     },
     {
         "title": "Crazy Rich Asians",
-        "rating": "87%",
+        "rating": "91%",
         "age_rating": "PG-13",
         "runtime": 120,
         "genres": [
             "Comedy",
-            "Romance"
+            "Romance", 
+           "Drama"
         ],
         "tags": [
             "glamorous",
             "feel-good",
             "romantic",
-            "funny"
+            "funny",
+           "family",
+           "Asian",
+           "engagement",
+           "wedding"
         ],
-        "description": "An American-born Chinese woman travels to meet her boyfriend's insanely wealthy family.",
-        "rt_quote": "A lavish, heartfelt romantic comedy with modern flair.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Rachel Chu is happy to accompany her longtime boyfriend, Nick, to his best friend's wedding in Singapore. She's also surprised to learn that Nick's family is extremely wealthy and he's considered one of the country's most eligible bachelors. Thrust into the spotlight, Rachel must now contend with jealous socialites, quirky relatives and something far, far worse -- Nick's disapproving mother.",
+        "rt_quote": "With a terrific cast and a surfeit of visual razzle dazzle, Crazy Rich Asians takes a satisfying step forward for screen representation while deftly drawing inspiration from the classic -- and still effective -- rom-com formula.",
+       "director": "Jon M. Chu",
+       "stars": ["Henry Golding", "Constance Wu", "Gemma Chan" ,"Awkwafina", "Michelle Yeoh"]
     },
     {
         "title": "The Hangover",
-        "rating": "84%",
+        "rating": "79%",
         "age_rating": "R",
         "runtime": 100,
         "genres": [
-            "Comedy"
+            "Comedy",
+           "Sexual",
+           "Bachelor Party"
         ],
         "tags": [
             "wild",
             "raunchy",
             "chaotic",
-            "hilarious"
+            "hilarious",
+           "sexual comedy",
+           "bachelor party",
+           "Las Vegas",
+           "party"
+           
         ],
-        "description": "Three groomsmen lose their soon-to-be-wed buddy during their Vegas bachelor party.",
-        "rt_quote": "A riotously funny and unpredictable ride.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Two days before his wedding, Doug (Justin Bartha) and three friends (Bradley Cooper, Ed Helms, Zach Galifianakis) drive to Las Vegas for a wild and memorable stag party. In fact, when the three groomsmen wake up the next morning, they can't remember a thing; nor can they find Doug. With little time to spare, the three hazy pals try to re-trace their steps and find Doug so they can get him back to Los Angeles in time to walk down the aisle.",
+        "rt_quote": "With a clever script and hilarious interplay among the cast, The Hangover nails just the right tone of raunchy humor, and the non-stop laughs overshadow any flaw.",
+       "director": "Todd Phillips",
+       "stars": ["Bradley Cooper", "Zach Galifianakis", "Ed Helms", "Todd Phillips"]
     },
     
     {
@@ -529,7 +541,8 @@
         "genres": [
             "Sci-Fi",
             "Adventure",
-            "Drama"
+            "Drama",
+           "Thriller"
         ],
         "tags": [
             "epic",
@@ -537,10 +550,10 @@
             "mind-bending",
             "hopeful"
         ],
-        "description": "A team of explorers travel through a wormhole in space in a desperate attempt to ensure humanity's survival.",
-        "rt_quote": "A visually stunning and emotionally charged sci-fi odyssey.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "In Earth's future, a global crop blight and second Dust Bowl are slowly rendering the planet uninhabitable. Professor Brand (Michael Caine), a brilliant NASA physicist, is working on plans to save mankind by transporting Earth's population to a new home via a wormhole. But first, Brand must send former NASA pilot Cooper (Matthew McConaughey) and a team of researchers through the wormhole and across the galaxy to find out which of three planets could be mankind's new home.",
+        "rt_quote": "Interstellar represents more of the thrilling, thought-provoking, and visually resplendent filmmaking moviegoers have come to expect from writer-director Christopher Nolan, even if its intellectual reach somewhat exceeds its grasp.",
+       "director": "Christopher Nolan",
+       "stars": ["Matthew McConaughey", "Anne Hathaway", "Matt Damon", "Michael Caine", "Jessica Chastain",  ]
     },
     {
         "title": "Blade Runner 2049",
