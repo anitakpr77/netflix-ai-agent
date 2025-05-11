@@ -86,15 +86,27 @@ def is_rating_appropriate(movie_rating, user_min_rating):
 # --- Scoring Function ---
 def score_movie(movie, filters):
     score = 0
-    if filters.get("genres"):
-        if any(g.lower() in [m.lower() for m in movie.get("genres", [])] for g in filters["genres"]):
-            score += 1
+    genres = [g.lower() for g in filters.get("genres", [])]
+    tags = [t.lower() for t in movie.get("tags", [])]
+    description = movie.get("description", "").lower()
+
+    if genres:
+        for g in genres:
+            if g in [m.lower() for m in movie.get("genres", [])]:
+                if g == "romance":
+                    score += 2  # Boost romance genre
+                else:
+                    score += 1
+
     if filters.get("mood"):
-        score += sum(1 for m in filters["mood"] if m.lower() in [t.lower() for t in movie.get("tags", [])])
+        score += sum(1 for m in filters["mood"] if m.lower() in tags)
+
     if filters.get("keywords"):
-        score += sum(1 for k in filters["keywords"] if k.lower() in movie.get("description", "").lower())
+        score += sum(1 for k in filters["keywords"] if k.lower() in description)
+
     if filters.get("min_age_rating") and movie.get("age_rating") == filters["min_age_rating"]:
         score += 1
+
     return score
 
 # --- Why This Movie Function ---
