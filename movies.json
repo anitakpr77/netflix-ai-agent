@@ -1424,180 +1424,130 @@
   "stars": ["Noriko Hidaka", "Chika Sakamoto", "Hitoshi Takagi"]
 },
 
+   {
+    "title": "Jaws",
+    "rating": "97%",
+    "age_rating": "PG",
+    "runtime": 124,
+    "genres": ["Thriller", "Horror", "Adventure"],
+    "tags": ["shark", "beach", "suspense", "classic", "sea monster"],
+    "description": "When a killer shark unleashes chaos on a beach community, a local sheriff, a marine biologist, and an old seafarer must hunt the beast down.",
+    "rt_quote": "Compelling, well-crafted storytelling and a landmark in suspense filmmaking.",
+    "director": "Steven Spielberg",
+    "stars": ["Roy Scheider", "Robert Shaw", "Richard Dreyfuss"]
+},
+{
+    "title": "Psycho",
+    "rating": "96%",
+    "age_rating": "R",
+    "runtime": 109,
+    "genres": ["Horror", "Mystery", "Thriller"],
+    "tags": ["motel", "serial killer", "psychological", "classic", "black and white"],
+    "description": "A secretary embezzles money and ends up at a secluded motel run by a disturbed young man under his mother’s domination.",
+    "rt_quote": "Infamous for its shower scene and twist ending, Hitchcock's masterpiece continues to inspire fear and admiration.",
+    "director": "Alfred Hitchcock",
+    "stars": ["Anthony Perkins", "Janet Leigh", "Vera Miles"]
+},
+
+   {
+    "title": "Jaws",
+    "rating": "97%",
+    "age_rating": "PG",
+    "runtime": 124,
+    "genres": ["Thriller", "Horror", "Adventure"],
+    "tags": ["shark", "beach", "suspense", "classic", "sea monster"],
+    "description": "When a killer shark unleashes chaos on a beach community, a local sheriff, a marine biologist, and an old seafarer must hunt the beast down.",
+    "rt_quote": "Compelling, well-crafted storytelling and a landmark in suspense filmmaking.",
+    "director": "Steven Spielberg",
+    "stars": ["Roy Scheider", "Robert Shaw", "Richard Dreyfuss"]
+},
+{
+    "title": "Psycho",
+    "rating": "96%",
+    "age_rating": "R",
+    "runtime": 109,
+    "genres": ["Horror", "Mystery", "Thriller"],
+    "tags": ["motel", "serial killer", "psychological", "classic", "black and white"],
+    "description": "A secretary embezzles money and ends up at a secluded motel run by a disturbed young man under his mother’s domination.",
+    "rt_quote": "Infamous for its shower scene and twist ending, Hitchcock's masterpiece continues to inspire fear and admiration.",
+    "director": "Alfred Hitchcock",
+    "stars": ["Anthony Perkins", "Janet Leigh", "Vera Miles"]
+}
+
     {
-        "title": "Sample Movie 81",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
+    "title": "Lord of the Rings - Return of the King",
+    "rating": "94%",
+    "age_rating": "PG-13",
+    "runtime": 201,
+    "genres": ["Fantasy", "Adventure", "Drama"],
+    "tags": ["epic", "battle", "friendship", "middle-earth", "heroic journey"],
+    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "rt_quote": "Visually breathtaking and emotionally powerful, The Return of the King is a masterful conclusion to a landmark trilogy.",
+    "director": "Peter Jackson",
+    "stars": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"]
+},
+{
+    "title": "Pulpfiction",
+    "rating": "92%",
+    "age_rating": "R",
+    "runtime": 154,
+    "genres": ["Crime", "Drama", "Black Comedy"],
+    "tags": ["nonlinear", "hitmen", "gangster", "dark humor", "cult classic"],
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "rt_quote": "One of the most influential films of the 1990s, Tarantino's masterpiece is stylish, witty, and unapologetically bold.",
+    "director": "Quentin Tarantino",
+    "stars": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"]
+},
+
+   {
+    "title": "Goodfellas",
+    "rating": "96%",
+    "age_rating": "R",
+    "runtime": 146,
+    "genres": ["Crime", "Drama", "Biography"],
+    "tags": ["mafia", "based on true story", "violence", "rise and fall", "gangster"],
+    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito.",
+    "rt_quote": "Hard-hitting, stylish, and brilliantly acted, Goodfellas is a classic of modern American cinema.",
+    "director": "Martin Scorsese",
+    "stars": ["Ray Liotta", "Robert De Niro", "Joe Pesci"]
+},
+{
+    "title": "Star Wars",
+    "rating": "93%",
+    "age_rating": "PG",
+    "runtime": 121,
+    "genres": ["Sci-Fi", "Adventure", "Fantasy"],
+    "tags": ["space opera", "rebellion", "lightsaber", "galactic war", "classic"],
+    "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire’s world-destroying battle station.",
+    "rt_quote": "A landmark in cinema, Star Wars dazzles with its groundbreaking effects and enduring mythological storytelling.",
+    "director": "George Lucas",
+    "stars": ["Mark Hamill", "Harrison Ford", "Carrie Fisher"]
+},
+{
+    "title": "Jurassic Park",
+    "rating": "91%",
+    "age_rating": "PG-13",
+    "runtime": 127,
+    "genres": ["Adventure", "Sci-Fi", "Thriller"],
+    "tags": ["dinosaurs", "science gone wrong", "island", "suspense", "blockbuster"],
+    "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+    "rt_quote": "Groundbreaking visual effects and a terrifying sense of wonder make Jurassic Park a thrilling blockbuster classic.",
+    "director": "Steven Spielberg",
+    "stars": ["Sam Neill", "Laura Dern", "Jeff Goldblum"]
+},
     {
-        "title": "Sample Movie 82",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 83",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 84",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 85",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 86",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 87",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 88",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption."
-    },
-    {
-        "title": "Sample Movie 89",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption.",
-       "director": "XXX",
-       "stars": ["XXXX"]
-    },
-    {
-        "title": "Sample Movie 90",
-        "rating": "85%",
-        "age_rating": "PG-13",
-        "runtime": 110,
-        "genres": [
-            "Drama",
-            "Adventure"
-        ],
-        "tags": [
-            "emotional",
-            "thought-provoking",
-            "uplifting"
-        ],
-        "description": "An inspiring tale of resilience and hope.",
-        "rt_quote": "A heartfelt journey of dreams and redemption.",
-       "director": "XXX",
-       "stars": ["XXXX"]
-    },
+    "title": "Godfather Part 2",
+    "rating": "96%",
+    "age_rating": "R",
+    "runtime": 202,
+    "genres": ["Crime", "Drama"],
+    "tags": ["mafia", "family", "power", "betrayal", "rise to power", "sequel"],
+    "description": "The early life and career of Vito Corleone is portrayed while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+    "rt_quote": "One of the rare sequels that outshines the original, The Godfather Part II is a chilling portrait of power, legacy, and corruption.",
+    "director": "Francis Ford Coppola",
+    "stars": ["Al Pacino", "Robert De Niro", "Robert Duvall"]
+},
+
     {
     "title": "A Beautiful Mind",
        "rating": "74%",
@@ -1706,5 +1656,17 @@
     "rt_quote": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion.",
     "director": "Garth Davis",
     "stars": ["Dev Patel", "Nicole Kidman", "Rooney Mara", "Sunny Pawar"]
-  }
+  },
+   {
+    "title": "Fight Club",
+    "rating": "79%",
+    "age_rating": "R",
+    "runtime": 139,
+    "genres": ["Drama", "Thriller", "Psychological"],
+    "tags": ["anti-establishment", "split personality", "underground", "dark", "cult classic"],
+    "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into something far more dangerous.",
+    "rt_quote": "A daring, provocative film that explores identity and consumerism with unforgettable intensity and style.",
+    "director": "David Fincher",
+    "stars": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"]
+}
 ]
