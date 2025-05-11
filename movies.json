@@ -577,7 +577,7 @@
     },
     {
         "title": "Arrival",
-        "rating": "82%",
+        "rating": "94%",
         "age_rating": "PG-13",
         "runtime": 116,
         "genres": [
@@ -591,19 +591,23 @@
             "thoughtful",
             "introspective"
         ],
-        "description": "A linguist works to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
-        "rt_quote": "A beautifully cerebral and emotional science fiction masterpiece.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Linguistics professor Louise Banks (Amy Adams) leads an elite team of investigators when gigantic spaceships touch down in 12 locations around the world. As nations teeter on the verge of global war, Banks and her crew must race against time to find a way to communicate with the extraterrestrial visitors. Hoping to unravel the mystery, she takes a chance that could threaten her life and quite possibly all of mankind.",
+        "rt_quote": "Arrival delivers a must-see experience for fans of thinking person's sci-fi that anchors its heady themes with genuinely affecting emotion and a terrific performance from Amy Adams.",
+       "director": "Denis Villeneuve",
+       "stars": ["Amy Adams", "Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg"]
     },
     {
         "title": "The Matrix",
-        "rating": "85%",
+        "rating": "88%",
         "age_rating": "R",
         "runtime": 136,
         "genres": [
             "Sci-Fi",
             "Action"
+           "Gritty",
+           "Cyberpunk",
+           "Noir",
+           "Fantasy"
         ],
         "tags": [
             "mind-bending",
@@ -611,10 +615,10 @@
             "revolutionary",
             "philosophical"
         ],
-        "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
-        "rt_quote": "A groundbreaking sci-fi thriller that redefined a generation.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Neo believes that Morpheus, an elusive figure considered to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted by Trinity, a beautiful stranger who leads him into an underworld where he meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent secret agents. It is a truth that could cost Neo something more precious than his life.",
+        "rt_quote": "Thanks to the Wachowskis' imaginative vision, The Matrix is a smartly crafted combination of spectacular action and groundbreaking special effects.",
+       "director": "Lana Wachowski", "Lilly Wachowski"
+       "stars": ["Keanu Reeves", "Carrie Anne Moss", "Laurence Fishburn", "Hugo Weaving"]
     },
     {
         "title": "Gravity",
@@ -630,12 +634,13 @@
             "suspenseful",
             "visually-stunning",
             "survival",
-            "intense"
+            "intense",
+           "disaster"
         ],
-        "description": "Two astronauts work together to survive after an accident leaves them stranded in space.",
-        "rt_quote": "A visually jaw-dropping, nerve-shredding thrill ride.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Dr. Ryan Stone (Sandra Bullock) is a medical engineer on her first shuttle mission. Her commander is veteran astronaut Matt Kowalsky (George Clooney), helming his last flight before retirement. Then, during a routine space walk by the pair, disaster strikes: The shuttle is destroyed, leaving Ryan and Matt stranded in deep space with no link to Earth and no hope of rescue. As fear turns to panic, they realize that the only way home may be to venture further into space.",
+        "rt_quote": "Alfonso Cuarón's Gravity is an eerie, tense sci-fi thriller that's masterfully directed and visually stunning.",
+       "director": "Alfonso Cuarón",
+       "stars": ["Sandra Bullock", "George Clooney"]
     },
     {
         "title": "District 9",
