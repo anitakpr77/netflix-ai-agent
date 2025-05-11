@@ -24,7 +24,6 @@
         "age_rating": "PG-13",
         "runtime": 148,
         "genres": [
-            "Sci-Fi",
             "Thriller",
             "Action",
             "Suspense",
@@ -38,7 +37,8 @@
             "action-packed",
             "action heist",
             "psychological thriller",
-            "fantasy"
+            "fantasy",
+           "science fiction"
             
         ],
         "description": "A skilled thief leads a team into the subconscious minds to plant an idea in a target's mind.",
@@ -570,10 +570,10 @@
             "visually-stunning",
             "thought-provoking"
         ],
-        "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
-        "rt_quote": "A breathtaking, thought-provoking sequel that honors its predecessor.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Officer K (Ryan Gosling), a new blade runner for the Los Angeles Police Department, unearths a long-buried secret that has the potential to plunge what's left of society into chaos. His discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former blade runner who's been missing for 30 years.",
+        "rt_quote": "Visually stunning and narratively satisfying, Blade Runner 2049 deepens and expands its predecessor's story while standing as an impressive filmmaking achievement in its own right.",
+       "director": "Denis Villeneuve",
+       "stars": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"]
     },
     {
         "title": "Arrival",
