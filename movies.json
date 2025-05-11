@@ -223,6 +223,7 @@
             "Action",
             "Sci-Fi",
            "War",
+           "Alien",
            "Aliens"
         ],
         "tags": [
@@ -357,18 +358,20 @@
         "age_rating": "R",
         "runtime": 125,
         "genres": [
-            "Comedy"
+            "Comedy",
+           "Melodrama"
         ],
         "tags": [
             "outrageous",
             "relatable",
             "hilarious",
-            "heartfelt"
+            "heartfelt",
+           "chick flick"
         ],
-        "description": "Competition between the maid of honor and a bridesmaid over who is the bride's best friend.",
-        "rt_quote": "A wildly funny, refreshingly honest take on female friendship.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "Annie (Kristen Wiig) is a single woman whose own life is a mess, but when she learns that her lifelong best friend, Lillian (Maya Rudolph), is engaged, she has no choice but to serve as the maid of honor. Though lovelorn and almost penniless, Annie, nevertheless, winds her way through the strange and expensive rituals associated with her job as the bride's go-to gal. Determined to make things perfect, she gamely leads Lillian and the other bridesmaids down the wild road to the wedding.",
+        "rt_quote": "A marriage of genuine characters, gross out gags, and pathos, Bridesmaids is a female-driven comedy that refuses to be boxed in as Kristen Wiig emerges as a real star.",
+       "director": "Paul Feig",
+       "stars": ["Kristin Wiig", "Maya Rudolph", "Melissa McCarthy", "Rose Byrne"]
     },
     {
         "title": "Groundhog Day",
