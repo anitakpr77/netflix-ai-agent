@@ -250,10 +250,10 @@
             "fast-paced",
             "classic"
         ],
-        "description": "Two detectives, one suicidal and one by-the-book, team up to fight crime.",
-        "rt_quote": "The quintessential buddy-cop action flick.",
-       "director": "Christopher McQuarrie",
-       "stars": ["Tom Cruise", "Rebecca Ferguson", "Simon Pegg", "Henry Cavill"]
+        "description": "Following the death of his wife, Los Angeles police detective Martin Riggs (Mel Gibson) becomes reckless and suicidal. When he is reassigned and partnered with Roger Murtaugh (Danny Glover), Riggs immediately clashes with the older officer. Together they uncover a massive drug-trafficking ring. As they encounter increasingly dangerous situations, Riggs and Murtaugh begin to form a bond. Riggs' volatile behavior might just help them apprehend the criminals -- if it doesn't kill them both first.",
+        "rt_quote": "The most successful installment in a phenomenally successful series, Lethal Weapon helped redefine action movies for the 1980s and 1990s.",
+       "director": "Richard Donner",
+       "stars": ["Mel Gibson", "Danny Glover", "Joe Pesci", "Traci Wolfe"]
     },
     {
         "title": "Skyfall",
@@ -271,10 +271,10 @@
             "stylish",
             "emotional"
         ],
-        "description": "James Bond's loyalty to M is tested as her past comes back to haunt her.",
-        "rt_quote": "A bold reinvention of the Bond legacy.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "When James Bond's (Daniel Craig) latest assignment goes terribly wrong, it leads to a calamitous turn of events: Undercover agents around the world are exposed, and MI6 is attacked, forcing M (Judi Dench) to relocate the agency. With MI6 now compromised inside and out, M turns to the one man she can trust: Bond. Aided only by a field agent (Naomie Harris), Bond takes to the shadows and follows a trail to Silva (Javier Bardem), a man from M's past who wants to settle an old score.",
+        "rt_quote": "Sam Mendes brings Bond surging back with a smart, sexy, riveting action thriller that qualifies as one of the best 007 films to date.",
+       "director": "Sam Mendes",
+       "stars": ["Daniel Craig", "Javier Bardem", "Judi Dench", "Naomie Harris", "Ben Whishaw"]
     },
     {
         "title": "The Bourne Ultimatum",
