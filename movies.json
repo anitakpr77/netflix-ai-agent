@@ -797,8 +797,8 @@
         ],
         "description": "When two young girls go missing, one father takes matters into his own hands.",
         "rt_quote": "A harrowing and emotionally gripping thriller.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+      "director": "Denis Villeneuve",
+"stars": ["Hugh Jackman", "Jake Gyllenhaal", "Viola Davis", "Melissa Leo", "Paul Dano"]
     },
     {
         "title": "Se7en",
@@ -820,7 +820,7 @@
         "description": "When retiring police Detective William Somerset (Morgan Freeman) tackles a final case with the aid of newly transferred David Mills (Brad Pitt), they discover a number of elaborate and grisly murders. They soon realize they are dealing with a serial killer (Kevin Spacey) who is targeting people he thinks represent one of the seven deadly sins. Somerset also befriends Mills' wife, Tracy (Gwyneth Paltrow), who is pregnant and afraid to raise her child in the crime-riddled city.",
         "rt_quote": "A brutal, relentlessly grimy shocker with taut performances, slick gore effects, and a haunting finale.",
        "director": "David Fincher",
-       "stars": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey", "Gwyneth Paltrow "]
+       "stars": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey", "Gwyneth Paltrow"]
     },
     {
         "title": "Zodiac",
@@ -841,7 +841,7 @@
         "description": "Based on real events, a cartoonist becomes obsessed with tracking down the Zodiac Killer.",
         "rt_quote": "A meticulous, haunting investigation into obsession.",
     "director": "David Fincher",
-"stars": ["Jake Gyllenhaal", "Robert Downey Jr.", "Mark Ruffalo", "Chloë Sevigny"
+"stars": ["Jake Gyllenhaal", "Robert Downey Jr.", "Mark Ruffalo", "Chloë Sevigny"]
     },
     {
         "title": "Nightcrawler",
@@ -861,8 +861,8 @@
         ],
         "description": "A driven man blurs the lines between observer and participant in the world of crime journalism.",
         "rt_quote": "A chilling and darkly compelling character study.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+     "director": "Dan Gilroy",
+"stars": ["Jake Gyllenhaal", "Rene Russo", "Riz Ahmed", "Bill Paxton"]
     },
     {
         "title": "The Girl with the Dragon Tattoo",
