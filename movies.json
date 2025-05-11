@@ -1148,79 +1148,99 @@
     },
       {
     "title": "Pride and Prejudice",
-    "genre": ["Romance", "Drama"],
-    "duration": 129,
-    "mood": ["Emotional", "Elegant"],
-    "description": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy in this classic Jane Austen tale.",
-    "recommendation_reason": "You’re in the mood for something emotional — this elegant period romance simmers with wit, pride, and slow-burning tension.",
-         "director": "XXX",
-       "stars": ["XXXX"]
+     "rating": "87%",
+    "age_rating": "PG",
+    "genre": ["Romance", "Drama", "History", "Fiction", "Melodrama"],
+    "runtime": 129,
+    "tags": ["emotional", "elegant", "romantic", "melodrama"],
+    "description": "In this adaptation of Jane Austen's beloved novel, Elizabeth Bennet (Keira Knightley) lives with her mother, father and sisters in the English countryside. As the eldest, she faces mounting pressure from her parents to marry. When the outspoken Elizabeth is introduced to the handsome and upper-class Mr. Darcy (Matthew Macfadyen), sparks fly. Although there is obvious chemistry between the two, Darcy's overly reserved nature threatens the fledgling relationship.",
+    "rt_quote": "A breathtaking adaptation of an Austen classic, Pride & Prejudice may stray from its source but the timeless romance between Elizabeth Bennet and Mr. Darcy is bewitching despite, or because, of it.",
+         "director": "Joe Wright",
+       "stars": ["Kiera Knightly", "Matthew Macfayden", "Donald Sutherland", "Judi Dench"]
   },
   {
     "title": "The Notebook",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Drama"],
-    "duration": 123,
-    "mood": ["Passionate", "Melancholy"],
+    "runtime": 123,
+    "tags": ["Passionate", "Melancholy"],
     "description": "A young couple falls in love in the 1940s but are soon separated by social differences and fate.",
-    "recommendation_reason": "You mentioned wanting something passionate — this timeless love story captures the beauty and ache of a once-in-a-lifetime romance.",
+    "rt_quote": "You mentioned wanting something passionate — this timeless love story captures the beauty and ache of a once-in-a-lifetime romance.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
   {
     "title": "La La Land",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Musical", "Drama"],
-    "duration": 128,
-    "mood": ["Dreamy", "Bittersweet"],
+    "runtime": 128,
+    "tags": ["Dreamy", "Bittersweet"],
     "description": "An aspiring actress and a jazz musician fall in love while chasing their dreams in Los Angeles.",
-    "recommendation_reason": "You're craving something dreamy — this bittersweet musical romance is a vibrant tribute to love, art, and what might have been."
+    "rt_quote": "You're craving something dreamy — this bittersweet musical romance is a vibrant tribute to love, art, and what might have been."
   },
   {
     "title": "Before Sunrise",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Drama"],
-    "duration": 101,
-    "mood": ["Thoughtful", "Quiet"],
+    "runtime": 101,
+    "tags": ["Thoughtful", "Quiet"],
     "description": "Two strangers meet on a train and spend one evening exploring Vienna and falling in love.",
-    "recommendation_reason": "You’re in the mood for something thoughtful — this quiet, dialogue-rich romance captures the magic of connection and fleeting time."
+    "rt_quote": "You’re in the mood for something thoughtful — this quiet, dialogue-rich romance captures the magic of connection and fleeting time."
   },
   {
     "title": "Call Me by Your Name",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Drama"],
-    "duration": 132,
-    "mood": ["Sensual", "Reflective"],
+    "runtime": 132,
+    "tags": ["Sensual", "Reflective"],
     "description": "In 1980s Italy, a summer romance blossoms between a 17-year-old boy and an older graduate student.",
-    "recommendation_reason": "You asked for something sensual — this coming-of-age romance is tender, sun-drenched, and aching with unspoken longing."
+    "rt_quote": "You asked for something sensual — this coming-of-age romance is tender, sun-drenched, and aching with unspoken longing."
   },
   {
     "title": "Silver Linings Playbook",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Comedy", "Drama"],
-    "duration": 122,
+    "runtime": 122,
     "mood": ["Hopeful", "Offbeat"],
     "description": "After a stint in a mental institution, Pat meets Tiffany — a mysterious woman with problems of her own.",
-    "recommendation_reason": "You're looking for something offbeat — this quirky romance finds beauty in broken people and second chances."
+    "rt_quote": "You're looking for something offbeat — this quirky romance finds beauty in broken people and second chances."
   },
   {
     "title": "Carol",
+       "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Drama"],
     "duration": 118,
-    "mood": ["Tender", "Melancholy"],
+    "tags": ["Tender", "Melancholy"],
     "description": "An aspiring photographer and an older woman fall in love in 1950s New York against societal expectations.",
-    "recommendation_reason": "You wanted something tender — this beautifully restrained romance is full of stolen glances and quiet rebellion."
+    "rt_quote": "You wanted something tender — this beautifully restrained romance is full of stolen glances and quiet rebellion."
   },
   {
     "title": "About Time",
+     "rating": "XX",
+    "age_rating": "XX",
     "genre": ["Romance", "Fantasy", "Comedy"],
-    "duration": 123,
-    "mood": ["Warm", "Feel-Good"],
+    "runtime": 123,
+    "tags": ["Warm", "Feel-Good"],
     "description": "A young man discovers he can travel through time and uses the ability to find love and fix life’s mistakes.",
-    "recommendation_reason": "You're in the mood for something feel-good — this romantic gem mixes time travel with deep warmth and everyday magic."
+    "rt_quote": "You're in the mood for something feel-good — this romantic gem mixes time travel with deep warmth and everyday magic."
   },
   {
     "title": "Titanic",
-    "genre": ["Romance", "Drama"],
-    "duration": 195,
-    "mood": ["Epic", "Emotional"],
-    "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the ill-fated Titanic.",
-    "recommendation_reason": "You’re craving something epic — this sweeping romance blends grandeur and tragedy in unforgettable fashion."
+         "rating": "88%",
+    "age_rating": "PG-13",
+    "genre": ["Romance", "Drama", "Adventure", "History"],
+    "runtime": 195,
+    "tags": ["epic", "emotional", "adventure", "bittersweet", "historical", "fiction"],
+    "description": "Two young lovers from completely different backgrounds meet and fall in love on the ill-fated maiden voyage of the unsinkable R.M.S. Titanic.",
+    "rt_quote": "A mostly unqualified triumph for James Cameron, who offers a dizzying blend of spectacular visuals and old-fashioned melodrama.",
+      "director": "James Cameron",
+       "stars": ["Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates", "Bill Paxton", "Gloria Stuart"]
   },
   {
     "title": "500 Days of Summer",
@@ -1673,9 +1693,9 @@
         "age_rating": "X",
     "genre": ["Drama"],
     "runtime": 137,
-    "mood": ["Melancholy", "Emotional"],
+    "tags": ["melancholy", "emotional"],
     "description": "A man returns to his hometown after the death of his brother and faces his painful past.",
-    "recommendation_reason": "You're seeking something emotional — this drama unfolds slowly, with raw grief and complex humanity at its core.",
+    "rt_quote": "You're seeking something emotional — this drama unfolds slowly, with raw grief and complex humanity at its core.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1685,9 +1705,9 @@
         "age_rating": "X",
     "genre": ["Drama"],
     "runtime": 111,
-    "mood": ["Reflective", "Emotional"],
+    "tags": ["reflective", "emotional"],
     "description": "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and adulthood.",
-    "recommendation_reason": "You're in the mood for something reflective — this poetic drama offers a tender, powerful portrait of self-discovery and vulnerability.",
+    "rt_quote": "You're in the mood for something reflective — this poetic drama offers a tender, powerful portrait of self-discovery and vulnerability.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1697,9 +1717,9 @@
         "age_rating": "X",
     "genre": ["Drama", "Biography"],
     "runtime": 120,
-    "mood": ["Sharp", "Tense"],
+    "tags": ["sharp", "tense"],
     "description": "The story of Facebook's founding and the personal and legal battles that followed.",
-    "recommendation_reason": "You wanted something sharp and tense — this drama peels back the genius and rivalry behind one of tech's biggest revolutions.",
+    "rt_quote": "You wanted something sharp and tense — this drama peels back the genius and rivalry behind one of tech's biggest revolutions.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1709,9 +1729,9 @@
         "age_rating": "X",
     "genre": ["Drama", "Thriller"],
     "runtime": 118,
-    "mood": ["Emotional", "Tense"],
+    "tags": ["emotional", "tense", "horror"],
     "description": "Held captive for years, a woman and her young son finally escape and begin a difficult journey toward healing.",
-    "recommendation_reason": "You're looking for something emotional — this powerful drama explores trauma, resilience, and a mother’s fierce love.",
+    "rt_quote": "You're looking for something emotional — this powerful drama explores trauma, resilience, and a mother’s fierce love.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1721,9 +1741,9 @@
         "age_rating": "X",
     "genre": ["Drama", "Romance", "Sci-Fi"],
     "runtime": 126,
-    "mood": ["Lonely", "Thoughtful"],
+    "tags": ["lonely", "thoughtful"],
     "description": "A lonely writer develops an unexpected relationship with an operating system designed to meet his every need.",
-    "recommendation_reason": "You’re in the mood for something thoughtful — this dreamy drama blends sci-fi with soulful intimacy in a story about love and identity.",
+    "rt_quote": "You’re in the mood for something thoughtful — this dreamy drama blends sci-fi with soulful intimacy in a story about love and identity.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1733,9 +1753,9 @@
         "age_rating": "X",
     "genre": ["Drama"],
     "runtime": 97,
-    "mood": ["Intense", "Sad"],
+    "tags": ["intense", "sad"],
     "description": "A man struggles with aging and memory loss as his world becomes increasingly fragmented.",
-    "recommendation_reason": "You're looking for something intense — this drama offers a haunting and empathetic glimpse into the experience of dementia.",
+    "rt_quote": "You're looking for something intense — this drama offers a haunting and empathetic glimpse into the experience of dementia.",
      "director": "XXX",
        "stars": ["XXXX"]
   },
@@ -1748,7 +1768,7 @@
     "mood": ["Emotional", "Inspiring"],
       "tags": ["musical", "magical", "classic", "charming"],
     "description": "A man uses Google Earth to find his long-lost family, decades after being separated as a child in India.",
-    "recommendation_reason": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion.",
+    "rt_quote": "You asked for something emotional — this true story is a heartfelt journey of loss, identity, and reunion.",
      "director": "XXX",
        "stars": ["XXXX"]
     }
