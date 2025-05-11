@@ -808,7 +808,8 @@
         "genres": [
             "Thriller",
             "Crime",
-            "Mystery"
+            "Mystery",
+           "Horror"
         ],
         "tags": [
             "dark",
@@ -816,10 +817,10 @@
             "intense",
             "gritty"
         ],
-        "description": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
-        "rt_quote": "A brutally effective and chilling crime thriller.",
-       "director": "XXX",
-       "stars": ["XXXX"]
+        "description": "When retiring police Detective William Somerset (Morgan Freeman) tackles a final case with the aid of newly transferred David Mills (Brad Pitt), they discover a number of elaborate and grisly murders. They soon realize they are dealing with a serial killer (Kevin Spacey) who is targeting people he thinks represent one of the seven deadly sins. Somerset also befriends Mills' wife, Tracy (Gwyneth Paltrow), who is pregnant and afraid to raise her child in the crime-riddled city.",
+        "rt_quote": "A brutal, relentlessly grimy shocker with taut performances, slick gore effects, and a haunting finale.",
+       "director": "David Fincher",
+       "stars": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey", "Gwenyth Paltrow"]
     },
     {
         "title": "Zodiac",
