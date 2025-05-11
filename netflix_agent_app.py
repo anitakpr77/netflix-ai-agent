@@ -87,13 +87,18 @@ def is_rating_appropriate(movie_rating, user_min_rating):
 def score_movie(movie, filters):
     score = 0
     genres = [g.lower() for g in filters.get("genres", [])]
+    movie_genres = [g.lower() for g in movie.get("genres", [])]
     tags = [t.lower() for t in movie.get("tags", [])]
     description = movie.get("description", "").lower()
 
+    # Require genre match if user specified genres
     if genres:
-        for g in genres:
-            if g in [m.lower() for m in movie.get("genres", [])]:
-                score += 2 if g == "romance" else 1
+        if not any(g in movie_genres for g in genres):
+            return 0  # Reject movie if no matching genre
+
+    for g in genres:
+        if g in movie_genres:
+            score += 2 if g == "romance" else 1
 
     if filters.get("mood"):
         score += sum(1 for m in filters["mood"] if m.lower() in tags)
@@ -181,13 +186,8 @@ if parsed_filters:
     if results_to_show:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
-            # Title First
             st.markdown(f"### 🎬 {movie['title']}")
-
-            # Why This Movie next
             st.markdown(explain_why(movie, parsed_filters, now))
-
-            # Then the film info block
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
@@ -203,3 +203,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
