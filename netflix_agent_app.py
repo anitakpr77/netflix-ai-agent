@@ -9,7 +9,7 @@ client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
 st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
-st.title("🎬Netflix AI Agent")
+st.title("🎬 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Force timezone to Pacific Time ---
