@@ -168,8 +168,15 @@ if parsed_filters:
         if score > 0:
             scored_matches.append((score, movie))
 
-    scored_matches.sort(reverse=True, key=lambda x: x[0])
-    results_to_show = [m for _, m in scored_matches[:4]]
+    # Deduplicate titles
+    seen_titles = set()
+    unique_results = []
+    for score, movie in scored_matches:
+        if movie["title"] not in seen_titles:
+            seen_titles.add(movie["title"])
+            unique_results.append((score, movie))
+
+    results_to_show = [m for _, m in unique_results[:4]]
 
     if results_to_show:
         st.subheader("Here’s what I found:")
@@ -188,11 +195,11 @@ if parsed_filters:
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
-        if len(scored_matches) > 4 and st.button("🔄 Show me different options"):
+        if len(unique_results) > 4 and st.button("🔄 Show me different options"):
+            st.session_state.shown_titles = []
             st.rerun()
     else:
         st.warning("No perfect matches found. Want to try something close?")
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
