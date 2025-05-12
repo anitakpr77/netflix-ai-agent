@@ -84,7 +84,7 @@ def is_rating_appropriate(movie_rating, user_min_rating):
     except ValueError:
         return False
 
-# --- Scoring Function (stricter) ---
+# --- Scoring Function (Stricter) ---
 def score_movie(movie, filters):
     score = 0
     reasons = []
@@ -118,8 +118,8 @@ def score_movie(movie, filters):
 
     return score, reasons
 
-# --- GPT-Powered Why This Movie ---
-def explain_why(movie, user_input, filters, client):
+# --- GPT-Powered Explanation + Time Context ---
+def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
@@ -139,7 +139,7 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
 - Start with: "We chose this film because you asked for: '...'"
-- If the match is not perfect, **say so honestly**
+- If the match is not perfect, say so honestly
 - If the movie lacks a specific genre/mood the user asked for, gently explain that too
 - Emphasize age-appropriateness if it's a good fit
 - End with something warm like "We think you’ll enjoy it!"
@@ -156,9 +156,49 @@ Avoid pretending it's a perfect fit if it’s not. Be smart, transparent, and he
                 {"role": "user", "content": prompt}
             ]
         )
-        return f"### 🎯 Why this movie?\n\n{response.choices[0].message.content}"
+        explanation = response.choices[0].message.content
     except Exception as e:
-        return f"### 🎯 Why this movie?\n\n(There was an error generating a response.)\n\n{str(e)}"
+        explanation = f"(There was an error generating a response.)\n\n{str(e)}"
+
+    # Time/Day Summary
+    if movie.get("runtime"):
+        minutes = movie["runtime"]
+        end_time = now + timedelta(minutes=minutes)
+
+        hour = now.hour
+        if 5 <= hour < 11:
+            time_label = "perfect for a morning watch"
+        elif 11 <= hour < 14:
+            time_label = "a great midday pick"
+        elif 14 <= hour < 17:
+            time_label = "a great afternoon pick"
+        elif 17 <= hour < 21:
+            time_label = "ideal for tonight’s unwind"
+        elif 21 <= hour < 23:
+            time_label = "a solid late-night option"
+        else:
+            time_label = "a very late watch — maybe save it for tomorrow"
+
+        day_of_week = now.strftime('%A')
+        day_label = {
+            "Friday": "It’s Friday night — perfect for family movie time.",
+            "Saturday": "It’s Saturday — time to relax and enjoy something fun.",
+            "Sunday": "It’s Sunday — the perfect wind-down before a new week.",
+            "Monday": "It’s Monday — how about something uplifting?",
+            "Tuesday": "It’s Tuesday — a midweek escape could be just right.",
+            "Wednesday": "It’s Wednesday — halfway there, treat yourself.",
+            "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
+        }.get(day_of_week, f"It’s {day_of_week}.")
+
+        time_msg = (
+            f"\n\n{day_label} "
+            f"The runtime is {minutes // 60} hours {minutes % 60} mins — "
+            f"you’ll finish by {end_time.strftime('%I:%M %p')} — {time_label}."
+        )
+    else:
+        time_msg = ""
+
+    return f"### 🎯 Why this movie?\n\n{explanation}{time_msg}"
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
@@ -187,7 +227,7 @@ if parsed_filters:
         st.subheader("Here’s what I found:")
         for score, movie, reasons in unique_results[:4]:
             st.markdown(f"### 🎬 {movie['title']}")
-            st.markdown(explain_why(movie, user_input, parsed_filters, client))
+            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
