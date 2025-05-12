@@ -45,38 +45,6 @@ except FileNotFoundError:
     st.error("Could not find movies.json. Make sure it's in the same folder.")
     st.stop()
 
-# --- Parse Filters ---
-parsed_filters = {}
-if user_input:
-    with st.spinner("🧐 Thinking..."):
-        try:
-            response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                temperature=0,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_input}
-                ]
-            )
-            raw_output = response.choices[0].message.content
-            parsed_filters = json.loads(raw_output)
-        except Exception:
-            st.error("GPT request failed or response couldn't be parsed.")
-            st.stop()
-
-# --- Show Filters ---
-if parsed_filters:
-    with st.expander("🔍 GPT parsed filters:"):
-        st.json(parsed_filters)
-
-# --- Session State Tracking ---
-if "shown_titles" not in st.session_state:
-    st.session_state.shown_titles = []
-
-if "last_filters" not in st.session_state or st.session_state.last_filters != parsed_filters:
-    st.session_state.shown_titles = []
-    st.session_state.last_filters = parsed_filters
-
 # --- Age Rating Filter ---
 def is_rating_appropriate(movie_rating, user_min_rating):
     rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
@@ -107,7 +75,7 @@ def score_movie(movie, filters):
         return 0, ["rejected: not a romance genre"]
 
     # Genre-specific restriction for romcom (must have both)
-    if sorted(genres) == ["comedy", "romance"]:
+    if "romance" in genres and "comedy" in genres:
         if not ("romance" in movie_genres and "comedy" in movie_genres):
             return 0, ["rejected: not a romcom"]
 
@@ -131,6 +99,25 @@ def score_movie(movie, filters):
         reasons.append(f"matched age rating: {movie.get('age_rating')}")
 
     return score, reasons
+
+# --- Parse Filters ---
+parsed_filters = {}
+if user_input:
+    with st.spinner("🧐 Thinking..."):
+        try:
+            response = client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                temperature=0,
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_input}
+                ]
+            )
+            raw_output = response.choices[0].message.content
+            parsed_filters = json.loads(raw_output)
+        except Exception:
+            st.error("GPT request failed or response couldn't be parsed.")
+            st.stop()
 
 # --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
@@ -223,6 +210,9 @@ def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
     return matches
 
 if parsed_filters:
+    if "shown_titles" not in st.session_state:
+        st.session_state.shown_titles = []
+
     random.shuffle(all_movies)
     scored_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=3)
 
