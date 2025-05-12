@@ -21,7 +21,7 @@ now = now_utc.astimezone(pacific)
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
 
-# --- GPT System Prompt ---
+# --- GPT System Prompt for Filter Extraction ---
 system_prompt = """
 You are a helpful movie assistant. Your job is to extract structured filters from natural-language movie prompts.
 
@@ -112,51 +112,42 @@ def score_movie(movie, filters):
 
     return score
 
-# --- Updated Why This Movie Function ---
-def explain_why(movie, filters, now, user_input):
-    title = movie.get("title", "This movie")
-    age_rating = movie.get("age_rating", "N/A")
-    genres = movie.get("genres", [])
-    tags = movie.get("tags", [])
-    description = movie.get("description", "")
+# --- NEW: GPT-Powered Why This Movie Explanation ---
+def explain_why(movie, user_input, client):
+    prompt = f"""
+You are an AI movie assistant. A user asked for a movie recommendation by saying: "{user_input}".
 
-    explanation = f'We chose this film because you asked for: **"{user_input}"**.\n\n'
+You selected the movie **{movie['title']}**. Here are the movie details:
+- Rating: {movie.get('rating')}
+- Age Rating: {movie.get('age_rating')}
+- Runtime: {movie.get('runtime')} minutes
+- Genres: {', '.join(movie.get('genres', []))}
+- Tags: {', '.join(movie.get('tags', []))}
+- Description: {movie.get('description')}
+- Critics Quote: "{movie.get('rt_quote', '')}"
 
-    if age_rating:
-        explanation += f'{title} is rated **{age_rating}**, which makes it suitable for many 13-year-old viewers.\n'
+Your task:
+- Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
+- Start with: "We chose this film because you asked for: '...'"
+- Mention age-appropriateness if relevant
+- Reference 1–2 fitting genres or themes
+- End with something warm like "We think you’ll enjoy it!" or similar
 
-    matched_genres = [genre for genre in genres if genre.lower() in user_input.lower()]
-    matched_tags = [tag for tag in tags if tag.lower() in user_input.lower()]
+Avoid listing too many facts. Keep it natural and human-sounding.
+"""
 
-    if matched_genres or matched_tags:
-        explanation += f"\nIt features elements of **{', '.join(matched_genres + matched_tags)}**, which match the kind of movie you're in the mood for.\n"
-    else:
-        explanation += "\nWhile it might not check every box, it shares a similar vibe with themes like "
-        explanation += f"**{', '.join(genres[:2] + tags[:2])}**.\n"
-
-    if movie.get("rt_quote"):
-        explanation += f'\n\nCritics say: “{movie["rt_quote"]}”'
-
-    if movie.get("runtime"):
-        minutes = movie["runtime"]
-        end_time = now + timedelta(minutes=minutes)
-        hour = now.hour
-        if 5 <= hour < 11:
-            label = "perfect for a morning watch"
-        elif 11 <= hour < 14:
-            label = "a great midday pick"
-        elif 14 <= hour < 17:
-            label = "a great afternoon pick"
-        elif 17 <= hour < 21:
-            label = "ideal for tonight’s unwind"
-        elif 21 <= hour < 23:
-            label = "a solid late-night option"
-        else:
-            label = "a very late watch — maybe save it for tomorrow"
-
-        explanation += f"\n\nIt’s {now.strftime('%A')} and the runtime is {minutes // 60} hours {minutes % 60} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
-
-    return f"### 🎯 Why this movie?\n\n{explanation}"
+    try:
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=0.7,
+            messages=[
+                {"role": "system", "content": "You are a thoughtful movie assistant."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        return f"### 🎯 Why this movie?\n\n{response.choices[0].message.content}"
+    except Exception as e:
+        return f"### 🎯 Why this movie?\n\n(There was an error generating a response.)\n\n{str(e)}"
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
@@ -185,7 +176,7 @@ if parsed_filters:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
             st.markdown(f"### 🎬 {movie['title']}")
-            st.markdown(explain_why(movie, parsed_filters, now, user_input))  # UPDATED
+            st.markdown(explain_why(movie, user_input, client))  # 💡 GPT-powered reason
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
@@ -202,4 +193,3 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
