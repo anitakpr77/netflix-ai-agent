@@ -97,9 +97,13 @@ def score_movie(movie, filters):
     movie_tags = [t.lower() for t in movie.get("tags", [])]
     description = movie.get("description", "").lower()
 
+    # Genre-specific restriction for horror
+    if "horror" in genres and "horror" not in movie_genres:
+        return 0, ["rejected: not a horror genre"]
+
     for g in genres:
         if g in movie_genres:
-            score += 2 if g == "romance" else 1
+            score += 2 if g in ["romance", "horror"] else 1
             reasons.append(f"matched genre: {g}")
 
     for m in moods:
@@ -118,7 +122,7 @@ def score_movie(movie, filters):
 
     return score, reasons
 
-# --- Explain Why Movie ---
+# --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
     prompt = f"""
@@ -194,7 +198,7 @@ Your task:
 
     return f"### 🎯 Why this movie?\n\n{explanation}{time_msg}"
 
-# --- Fallback Matching ---
+# --- Matching and Display Logic ---
 def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
     matches = []
     for movie in all_movies:
@@ -208,7 +212,6 @@ def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
             matches.append((score, movie, reasons))
     return matches
 
-# --- Display Movies ---
 if parsed_filters:
     random.shuffle(all_movies)
     scored_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=3)
