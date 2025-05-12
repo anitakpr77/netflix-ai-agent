@@ -105,6 +105,13 @@ def score_movie(movie, filters):
     if "romance" in genres and "romance" not in movie_genres:
         return 0, ["rejected: not a romance genre"]
 
+    # Genre-specific restriction for romcom (must have both)
+    if "romance" in genres and "comedy" in genres:
+        if not ("romance" in movie_genres and "comedy" in movie_genres):
+            return 0, ["rejected: not a romcom"]
+    if "romance" in genres and "romance" not in movie_genres:
+        return 0, ["rejected: not a romance genre"]
+
     for g in genres:
         if g in movie_genres:
             score += 2 if g in ["romance", "horror"] else 1
@@ -259,4 +266,5 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
 
