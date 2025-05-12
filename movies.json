@@ -11,6 +11,78 @@
   "director": "Frank Darabont",
   "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
 },
+  {
+    "title": "Moonstruck",
+    "rating": "93%",
+    "age_rating": "PG",
+    "runtime": 102,
+    "genres": ["Romance", "Comedy", "Drama"],
+    "tags": ["Italian-American", "family", "engagement", "forbidden love"],
+    "description": "A widowed woman finds herself falling in love with her fiancé’s passionate younger brother, upending her carefully ordered life.",
+    "rt_quote": "A funny, warm-hearted tale with brilliant performances — Cher’s Oscar-winning turn is unforgettable.",
+    "director": "Norman Jewison",
+    "stars": ["Cher", "Nicolas Cage", "Olympia Dukakis"]
+  },
+  {
+    "title": "Love Actually",
+    "rating": "64%",
+    "age_rating": "R",
+    "runtime": 135,
+    "genres": ["Romance", "Comedy", "Holiday"],
+    "tags": ["Christmas", "interconnected stories", "London", "love in all forms"],
+    "description": "Multiple love stories unfold in London during the holidays, exploring the highs and lows of romance and connection.",
+    "rt_quote": "Messy but utterly charming — a holiday rom-com that wears its heart on its sleeve.",
+    "director": "Richard Curtis",
+    "stars": ["Hugh Grant", "Emma Thompson", "Keira Knightley"]
+  },
+  {
+    "title": "Four Weddings and a Funeral",
+    "rating": "96%",
+    "age_rating": "R",
+    "runtime": 117,
+    "genres": ["Romance", "Comedy", "Drama"],
+    "tags": ["British humor", "weddings", "death", "friendship"],
+    "description": "A bumbling Englishman finds love — and personal growth — while attending a string of weddings (and one funeral).",
+    "rt_quote": "Witty and heartfelt with standout performances — a rom-com classic with emotional depth.",
+    "director": "Mike Newell",
+    "stars": ["Hugh Grant", "Andie MacDowell", "Kristin Scott Thomas"]
+  },
+  {
+    "title": "Sleepless in Seattle",
+    "rating": "75%",
+    "age_rating": "PG",
+    "runtime": 105,
+    "genres": ["Romance", "Comedy", "Drama"],
+    "tags": ["long-distance", "radio show", "fate", "single parent"],
+    "description": "A recently widowed man's son calls a radio show to find his father a new wife, leading to a cross-country romance with destiny.",
+    "rt_quote": "Charming, wistful, and endlessly romantic — Hanks and Ryan are magic.",
+    "director": "Nora Ephron",
+    "stars": ["Tom Hanks", "Meg Ryan", "Ross Malinger"]
+  },
+  {
+    "title": "Tootsie",
+    "rating": "89%",
+    "age_rating": "PG",
+    "runtime": 116,
+    "genres": ["Romance", "Comedy", "Drama"],
+    "tags": ["gender roles", "soap opera", "acting", "deception"],
+    "description": "A struggling actor disguises himself as a woman to land a role — but finds more than he bargained for in love and life.",
+    "rt_quote": "Clever, heartfelt, and hilarious — Tootsie is more than just a gimmick; it's a landmark film.",
+    "director": "Sydney Pollack",
+    "stars": ["Dustin Hoffman", "Jessica Lange", "Teri Garr"]
+  },
+  {
+    "title": "Harold and Maude",
+    "rating": "86%",
+    "age_rating": "PG",
+    "runtime": 91,
+    "genres": ["Romance", "Comedy", "Dark"],
+    "tags": ["age gap", "dark humor", "death", "life-affirming"],
+    "description": "An eccentric young man obsessed with death forms a life-changing bond with a wildly free-spirited elderly woman.",
+    "rt_quote": "Offbeat and oddly beautiful — a cult classic that explores love beyond convention.",
+    "director": "Hal Ashby",
+    "stars": ["Bud Cort", "Ruth Gordon", "Vivian Pickles"]
+  },
 {
   "title": "Inception",
   "rating": "91%",
