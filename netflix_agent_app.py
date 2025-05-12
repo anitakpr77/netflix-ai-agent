@@ -74,10 +74,16 @@ def score_movie(movie, filters):
     if "romance" in genres and "romance" not in movie_genres:
         return 0, ["rejected: not a romance genre"]
 
-    # Genre-specific restriction for romcom (must have both)
+    # Romcom scoring boost (but allow near matches)
     if "romance" in genres and "comedy" in genres:
-        if not ("romance" in movie_genres and "comedy" in movie_genres):
-            return 0, ["rejected: not a romcom"]
+        if "romance" in movie_genres and "comedy" in movie_genres:
+            score += 3
+            reasons.append("perfect romcom match")
+        elif "romance" in movie_genres or "comedy" in movie_genres:
+            score += 1
+            reasons.append("partial romcom match — allowed")
+        else:
+            reasons.append("no romcom elements found")
 
     for g in genres:
         if g in movie_genres:
