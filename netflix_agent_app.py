@@ -3,6 +3,7 @@ import openai
 import json
 from datetime import datetime, timedelta
 import pytz
+import random
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -87,24 +88,24 @@ def is_rating_appropriate(movie_rating, user_min_rating):
 def score_movie(movie, filters):
     score = 0
     genres = [g.lower() for g in filters.get("genres", [])]
-    movie_genres = [g.lower() for g in movie.get("genres", [])]
-    tags = [t.lower() for t in movie.get("tags", [])]
-    description = movie.get("description", "").lower()
+    moods = [m.lower() for m in filters.get("mood", [])]
+    keywords = [k.lower() for k in filters.get("keywords", [])]
 
-    # Require genre match if user specified genres
-    if genres:
-        if not any(g in movie_genres for g in genres):
-            return 0  # Reject movie if no matching genre
+    movie_genres = [g.lower() for g in movie.get("genres", [])]
+    movie_tags = [t.lower() for t in movie.get("tags", [])]
+    description = movie.get("description", "").lower()
 
     for g in genres:
         if g in movie_genres:
             score += 2 if g == "romance" else 1
 
-    if filters.get("mood"):
-        score += sum(1 for m in filters["mood"] if m.lower() in tags)
+    for m in moods:
+        if m in movie_tags:
+            score += 1
 
-    if filters.get("keywords"):
-        score += sum(1 for k in filters["keywords"] if k.lower() in description)
+    for k in keywords:
+        if k in description:
+            score += 1
 
     if filters.get("min_age_rating") and movie.get("age_rating") == filters["min_age_rating"]:
         score += 1
@@ -162,8 +163,11 @@ def explain_why(movie, filters, now):
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
+    random.shuffle(all_movies)
     scored_matches = []
     for movie in all_movies:
+        if movie["title"] in st.session_state.shown_titles:
+            continue
         if parsed_filters.get("min_age_rating"):
             if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
                 continue
@@ -171,7 +175,6 @@ if parsed_filters:
         if score > 0:
             scored_matches.append((score, movie))
 
-    # Deduplicate titles
     seen_titles = set()
     unique_results = []
     for score, movie in scored_matches:
@@ -193,7 +196,7 @@ if parsed_filters:
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
-        if len(unique_results) > 4:
+        if len(scored_matches) > len(results_to_show):
             if st.button("🔄 Show me different options"):
                 st.session_state.shown_titles = []
                 st.rerun()
