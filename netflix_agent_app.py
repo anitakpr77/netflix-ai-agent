@@ -21,7 +21,7 @@ now = now_utc.astimezone(pacific)
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
 
-# --- GPT System Prompt for Filter Extraction ---
+# --- GPT Prompt for Filter Extraction ---
 system_prompt = """
 You are a helpful movie assistant. Your job is to extract structured filters from natural-language movie prompts.
 
@@ -84,9 +84,11 @@ def is_rating_appropriate(movie_rating, user_min_rating):
     except ValueError:
         return False
 
-# --- Scoring Function ---
+# --- Scoring Function (stricter) ---
 def score_movie(movie, filters):
     score = 0
+    reasons = []
+
     genres = [g.lower() for g in filters.get("genres", [])]
     moods = [m.lower() for m in filters.get("mood", [])]
     keywords = [k.lower() for k in filters.get("keywords", [])]
@@ -98,24 +100,32 @@ def score_movie(movie, filters):
     for g in genres:
         if g in movie_genres:
             score += 2 if g == "romance" else 1
+            reasons.append(f"matched genre: {g}")
 
     for m in moods:
         if m in movie_tags:
             score += 1
+            reasons.append(f"matched mood/tag: {m}")
 
     for k in keywords:
         if k in description:
             score += 1
+            reasons.append(f"matched keyword: {k}")
 
     if filters.get("min_age_rating") and movie.get("age_rating") == filters["min_age_rating"]:
         score += 1
+        reasons.append(f"matched age rating: {movie.get('age_rating')}")
 
-    return score
+    return score, reasons
 
-# --- NEW: GPT-Powered Why This Movie Explanation ---
-def explain_why(movie, user_input, client):
+# --- GPT-Powered Why This Movie ---
+def explain_why(movie, user_input, filters, client):
+    parsed = json.dumps(filters, indent=2)
     prompt = f"""
-You are an AI movie assistant. A user asked for a movie recommendation by saying: "{user_input}".
+You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
+
+Your system parsed the following filters:
+{parsed}
 
 You selected the movie **{movie['title']}**. Here are the movie details:
 - Rating: {movie.get('rating')}
@@ -129,11 +139,12 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
 - Start with: "We chose this film because you asked for: '...'"
-- Mention age-appropriateness if relevant
-- Reference 1–2 fitting genres or themes
-- End with something warm like "We think you’ll enjoy it!" or similar
+- If the match is not perfect, **say so honestly**
+- If the movie lacks a specific genre/mood the user asked for, gently explain that too
+- Emphasize age-appropriateness if it's a good fit
+- End with something warm like "We think you’ll enjoy it!"
 
-Avoid listing too many facts. Keep it natural and human-sounding.
+Avoid pretending it's a perfect fit if it’s not. Be smart, transparent, and helpful.
 """
 
     try:
@@ -141,7 +152,7 @@ Avoid listing too many facts. Keep it natural and human-sounding.
             model="gpt-3.5-turbo",
             temperature=0.7,
             messages=[
-                {"role": "system", "content": "You are a thoughtful movie assistant."},
+                {"role": "system", "content": "You are a thoughtful, honest movie assistant."},
                 {"role": "user", "content": prompt}
             ]
         )
@@ -159,28 +170,31 @@ if parsed_filters:
         if parsed_filters.get("min_age_rating"):
             if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
                 continue
-        score = score_movie(movie, parsed_filters)
-        if score > 0:
-            scored_matches.append((score, movie))
+        score, reasons = score_movie(movie, parsed_filters)
+        if score >= 3:
+            scored_matches.append((score, movie, reasons))
 
     seen_titles = set()
     unique_results = []
-    for score, movie in scored_matches:
+    for score, movie, reasons in scored_matches:
         if movie["title"] not in seen_titles:
             seen_titles.add(movie["title"])
-            unique_results.append((score, movie))
+            unique_results.append((score, movie, reasons))
 
-    results_to_show = [m for _, m in unique_results[:4]]
+    results_to_show = [m for _, m, _ in unique_results[:4]]
 
     if results_to_show:
         st.subheader("Here’s what I found:")
-        for movie in results_to_show:
+        for score, movie, reasons in unique_results[:4]:
             st.markdown(f"### 🎬 {movie['title']}")
-            st.markdown(explain_why(movie, user_input, client))  # 💡 GPT-powered reason
+            st.markdown(explain_why(movie, user_input, parsed_filters, client))
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
             st.markdown(f"_{movie['description']}_")
+            with st.expander("🛠 Debug: Why this was chosen"):
+                st.write(f"Score: {score}")
+                st.write(reasons)
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
