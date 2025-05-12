@@ -9,9 +9,9 @@ import random
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="Netflix AI Agent", page_icon="🎥")
-st.title("🎥 Netflix AI Agent")  # works more reliably
-st.write("Tell me what you feel like watching and I\u2019ll find something perfect.")
+st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
+st.title("🎬 Netflix AI Agent")
+st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Force timezone to Pacific Time ---
 pacific = pytz.timezone("America/Los_Angeles")
@@ -32,8 +32,8 @@ Return a dictionary with these keys:
 - keywords: list of subject-related terms (e.g., dinosaurs, pirates)
 
 Important:
-- If the user doesn\u2019t explicitly state the mood, infer it based on their phrasing.
-- Never return an empty list for mood \u2014 always include your best guess.
+- If the user doesn’t explicitly state the mood, infer it based on their phrasing.
+- Never return an empty list for mood — always include your best guess.
 """
 
 # --- Load Movies ---
@@ -47,7 +47,7 @@ except FileNotFoundError:
 # --- Parse Filters ---
 parsed_filters = {}
 if user_input:
-    with st.spinner("\ud83e\uddd0 Thinking..."):
+    with st.spinner("🧐 Thinking..."):
         try:
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -65,7 +65,7 @@ if user_input:
 
 # --- Show Filters ---
 if parsed_filters:
-    with st.expander("\ud83d\udd0d GPT parsed filters:"):
+    with st.expander("🔍 GPT parsed filters:"):
         st.json(parsed_filters)
 
 # --- Session State Tracking ---
