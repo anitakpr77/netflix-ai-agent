@@ -210,7 +210,9 @@ def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
         if parsed_filters.get("min_age_rating"):
             if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
                 continue
-        score, reasons = score_movie(movie, parsed_filters)
+        gpt_result = gpt_score_movie(client, user_input, movie)
+        score = gpt_result["score"]
+        reasons = [gpt_result["reason"]]
         if score >= min_score:
             matches.append((score, movie, reasons))
     return matches
