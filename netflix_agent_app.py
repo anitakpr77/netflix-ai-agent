@@ -179,7 +179,7 @@ Your task:
             "Friday": "It’s Friday night — perfect for family movie time.",
             "Saturday": "It’s Saturday — time to relax and enjoy something fun.",
             "Sunday": "It’s Sunday — the perfect wind-down before a new week.",
-            "Monday": "Happy Monday - ",
+            "Monday": "It’s Monday — how about something uplifting?",
             "Tuesday": "It’s Tuesday — a midweek escape could be just right.",
             "Wednesday": "It’s Wednesday — halfway there, treat yourself.",
             "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
@@ -240,9 +240,6 @@ if parsed_filters:
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
             st.markdown(f"_{movie['description']}_")
-            with st.expander("🛠 Debug: Why this was chosen"):
-                st.write(f"Score: {score}")
-                st.write(reasons)
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
