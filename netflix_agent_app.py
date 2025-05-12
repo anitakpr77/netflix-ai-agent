@@ -32,6 +32,7 @@ Return a dictionary with these keys:
 - keywords: list of subject-related terms (e.g., dinosaurs, pirates)
 
 Important:
+- If the user says "romantic comedy" or "romcom", set genres to ["Romance", "Comedy"].
 - If the user doesn’t explicitly state the mood, infer it based on their phrasing.
 - Never return an empty list for mood — always include your best guess.
 """
