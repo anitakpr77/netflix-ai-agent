@@ -36,18 +36,6 @@
   "stars": ["Robert De Niro", "Chazz Palminteri", "Lillo Brancato"]
 },
   {
-  "title": "A Bronx Tale",
-  "rating": "97%",
-  "age_rating": "R",
-  "runtime": 121,
-  "genres": ["Crime", "Drama", "Coming-of-Age"],
-  "tags": ["mafia", "father-son", "racism", "neighborhood", "coming of age"],
-  "description": "A young boy in 1960s Bronx is torn between the values of his honest, working-class father and the lure of organized crime.",
-  "rt_quote": "A Bronx Tale is a well-acted, deeply felt coming-of-age story with heart and grit.",
-  "director": "Robert De Niro",
-  "stars": ["Robert De Niro", "Chazz Palminteri", "Lillo Brancato"]
-},
-  {
     "title": "Malcolm X",
     "rating": "89%",
     "age_rating": "PG-13",
@@ -192,6 +180,18 @@
     "stars": ["John David Washington", "Adam Driver", "Topher Grace"]
   },
   {
+  "title": "American Gangster",
+  "rating": "80%",
+  "age_rating": "R",
+  "runtime": 157,
+  "genres": ["Crime", "Drama", "Biography", "Gangster"],
+  "tags": ["drug trade", "Harlem", "based on true story", "1970s", "kingpin", "cop vs criminal"],
+  "description": "In 1970s Harlem, a heroin kingpin rises to power and faces off against a dogged detective determined to bring him down.",
+  "rt_quote": "American Gangster is a gritty, stylish crime epic with powerhouse performances from Washington and Crowe.",
+  "director": "Ridley Scott",
+  "stars": ["Denzel Washington", "Russell Crowe", "Chiwetel Ejiofor"]
+},
+  {
     "title": "He Got Game",
     "rating": "80%",
     "age_rating": "R",
@@ -202,6 +202,90 @@
     "rt_quote": "A moving sports drama with a standout performance by Denzel Washington and real emotion.",
     "director": "Spike Lee",
     "stars": ["Denzel Washington", "Ray Allen", "Rosario Dawson"]
+  },
+    {
+    "title": "Alien",
+    "rating": "98%",
+    "age_rating": "R",
+    "runtime": 117,
+    "genres": ["Horror", "Sci-Fi", "Thriller"],
+    "tags": ["space", "alien", "survival", "suspense", "isolation"],
+    "description": "The crew of a commercial spacecraft encounters a deadly alien lifeform after investigating a distress signal.",
+    "rt_quote": "A modern classic, Alien blends science fiction, horror, and bone-chilling tension with unforgettable style.",
+    "director": "Ridley Scott",
+    "stars": ["Sigourney Weaver", "Tom Skerritt", "John Hurt"]
+  },
+  {
+    "title": "The Martian",
+    "rating": "91%",
+    "age_rating": "PG-13",
+    "runtime": 144,
+    "genres": ["Adventure", "Drama", "Sci-Fi"],
+    "tags": ["Mars", "survival", "NASA", "science", "isolation"],
+    "description": "An astronaut becomes stranded on Mars and must use his ingenuity to survive while awaiting rescue.",
+    "rt_quote": "Smart, thrilling, and surprisingly funny, The Martian is a gripping survival story powered by science and heart.",
+    "director": "Ridley Scott",
+    "stars": ["Matt Damon", "Jessica Chastain", "Kristen Wiig"]
+  },
+  {
+    "title": "Black Hawk Down",
+    "rating": "76%",
+    "age_rating": "R",
+    "runtime": 144,
+    "genres": ["Action", "Drama", "History"],
+    "tags": ["war", "military", "Somalia", "rescue", "based on true story"],
+    "description": "U.S. soldiers face intense combat during a mission in Mogadishu, Somalia, in this visceral war drama.",
+    "rt_quote": "Visually stunning and unrelentingly intense, Black Hawk Down is a powerful portrayal of modern warfare.",
+    "director": "Ridley Scott",
+    "stars": ["Josh Hartnett", "Ewan McGregor", "Eric Bana"]
+  },
+  {
+    "title": "Thelma & Louise",
+    "rating": "86%",
+    "age_rating": "R",
+    "runtime": 130,
+    "genres": ["Adventure", "Crime", "Drama"],
+    "tags": ["feminism", "friendship", "road trip", "freedom", "outlaw"],
+    "description": "Two women embark on a road trip that turns into a flight from the law — and a journey toward liberation.",
+    "rt_quote": "Empowering and defiant, Thelma & Louise is a genre-redefining classic.",
+    "director": "Ridley Scott",
+    "stars": ["Geena Davis", "Susan Sarandon", "Harvey Keitel"]
+  },
+  {
+    "title": "House of Gucci",
+    "rating": "62%",
+    "age_rating": "R",
+    "runtime": 158,
+    "genres": ["Biography", "Crime", "Drama"],
+    "tags": ["fashion", "murder", "family", "betrayal", "wealth"],
+    "description": "The story of Patrizia Reggiani and the shocking murder of Maurizio Gucci that rocked the fashion world.",
+    "rt_quote": "A decadent dive into fashion, power, and betrayal — led by a fearless Lady Gaga.",
+    "director": "Ridley Scott",
+    "stars": ["Lady Gaga", "Adam Driver", "Jared Leto"]
+  },
+  {
+    "title": "Kingdom of Heaven",
+    "rating": "76%",
+    "age_rating": "R",
+    "runtime": 144,
+    "genres": ["Action", "Adventure", "Drama"],
+    "tags": ["Crusades", "Jerusalem", "epic", "religion", "knight"],
+    "description": "A blacksmith becomes a knight and defends Jerusalem during the Crusades, confronting faith and war.",
+    "rt_quote": "Visually grand and thematically ambitious, Kingdom of Heaven finds greater success in its extended director's cut.",
+    "director": "Ridley Scott",
+    "stars": ["Orlando Bloom", "Eva Green", "Liam Neeson"]
+  },
+  {
+    "title": "Napoleon",
+    "rating": "59%",
+    "age_rating": "R",
+    "runtime": 158,
+    "genres": ["Biography", "Drama", "History"],
+    "tags": ["war", "conquest", "France", "historical", "ambition"],
+    "description": "A sweeping portrait of Napoleon Bonaparte’s rise and fall, from military genius to exiled emperor.",
+    "rt_quote": "Ridley Scott crafts an ambitious, visually commanding epic — even if its subject remains elusive.",
+    "director": "Ridley Scott",
+    "stars": ["Joaquin Phoenix", "Vanessa Kirby", "Tahar Rahim"]
   },
   {
     "title": "Crooklyn",
