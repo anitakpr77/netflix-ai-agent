@@ -240,7 +240,7 @@ if parsed_filters:
             st.info("These are the closest matches I could find based on your request.")
 
         for score, movie, reasons in unique_results[:4]:
-            st.markdown(f"### \ud83c\udfaC {movie['title']}")
+            st.markdown(f"### {chr(0x1F3AC)} {movie['title']}")
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
             st.markdown(f"\ud83c\udfa8 **Directed by** {movie['director']}")
             st.markdown(f"\u2b50 **Starring** {', '.join(movie['stars'])}")
