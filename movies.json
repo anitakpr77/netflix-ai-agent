@@ -12,6 +12,78 @@
   "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
 },
   {
+  "title": "Moonrise Kingdom",
+  "rating": "93%",
+  "age_rating": "PG-13",
+  "runtime": 94,
+  "genres": ["Comedy", "Drama", "Romance"],
+  "tags": ["young love", "runaways", "island", "camp", "1960s"],
+  "description": "Two twelve-year-olds fall in love and run away together, turning their small New England town upside down.",
+  "rt_quote": "Whimsical and sweet, Moonrise Kingdom captures young love with style and warmth.",
+  "director": "Wes Anderson",
+  "stars": ["Jared Gilman", "Kara Hayward", "Bruce Willis"]
+},
+{
+  "title": "Fantastic Mr. Fox",
+  "rating": "93%",
+  "age_rating": "PG",
+  "runtime": 87,
+  "genres": ["Animation", "Adventure", "Comedy"],
+  "tags": ["fox", "stop motion", "heist", "family", "farmers"],
+  "description": "A clever fox plans one last big heist, dragging his family and friends into a battle with local farmers.",
+  "rt_quote": "Visually stunning and wickedly funny, Fantastic Mr. Fox is a triumph of stop-motion storytelling.",
+  "director": "Wes Anderson",
+  "stars": ["George Clooney", "Meryl Streep", "Jason Schwartzman"]
+},
+{
+  "title": "The Royal Tenenbaums",
+  "rating": "81%",
+  "age_rating": "R",
+  "runtime": 110,
+  "genres": ["Comedy", "Drama"],
+  "tags": ["dysfunctional family", "genius children", "reunion", "eccentric", "narrator"],
+  "description": "The three gifted Tenenbaum children reunite under one roof as their estranged father claims he’s dying.",
+  "rt_quote": "Wes Anderson's bittersweet comedy is as eccentric as it is heartfelt.",
+  "director": "Wes Anderson",
+  "stars": ["Gene Hackman", "Gwyneth Paltrow", "Ben Stiller"]
+},
+{
+  "title": "Rushmore",
+  "rating": "90%",
+  "age_rating": "R",
+  "runtime": 93,
+  "genres": ["Comedy", "Drama", "Coming-of-Age"],
+  "tags": ["private school", "student rivalry", "playwright", "mentor", "love triangle"],
+  "description": "An eccentric teen at a private school forms an unlikely friendship with an industrialist, both falling for the same teacher.",
+  "rt_quote": "Sharp, quirky, and full of heart, Rushmore is a standout in Anderson's early career.",
+  "director": "Wes Anderson",
+  "stars": ["Jason Schwartzman", "Bill Murray", "Olivia Williams"]
+},
+{
+  "title": "Isle of Dogs",
+  "rating": "90%",
+  "age_rating": "PG-13",
+  "runtime": 101,
+  "genres": ["Animation", "Adventure", "Sci-Fi"],
+  "tags": ["dogs", "japan", "stop motion", "politics", "rescue"],
+  "description": "In a dystopian future Japan, a boy searches for his dog exiled to Trash Island with the help of canine companions.",
+  "rt_quote": "Inventive and visually arresting, Isle of Dogs is both a heartfelt tribute and a sharp satire.",
+  "director": "Wes Anderson",
+  "stars": ["Bryan Cranston", "Koyu Rankin", "Edward Norton"]
+},
+{
+  "title": "The French Dispatch",
+  "rating": "75%",
+  "age_rating": "R",
+  "runtime": 107,
+  "genres": ["Comedy", "Drama", "Anthology"],
+  "tags": ["journalism", "magazine", "french culture", "vignettes", "illustrated stories"],
+  "description": "A love letter to journalists, this anthology-style film tells three whimsical tales from the final issue of a fictional magazine.",
+  "rt_quote": "Bursting with visual invention, The French Dispatch is a vibrant ode to storytelling.",
+  "director": "Wes Anderson",
+  "stars": ["Benicio del Toro", "Timothée Chalamet", "Tilda Swinton"]
+},
+  {
   "title": "Fargo",
   "rating": "94%",
   "age_rating": "R",
