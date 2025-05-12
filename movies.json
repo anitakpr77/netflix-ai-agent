@@ -12,6 +12,42 @@
   "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
 },
   {
+    "title": "Saving Private Ryan",
+    "rating": "94%",
+    "age_rating": "R",
+    "runtime": 169,
+    "genres": ["War", "Drama", "History"],
+    "tags": ["WWII", "brotherhood", "invasion of Normandy", "sacrifice"],
+    "description": "After the D-Day landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+    "rt_quote": "Gripping, powerful, and unflinching — Spielberg’s war epic redefined realism in combat filmmaking.",
+    "director": "Steven Spielberg",
+    "stars": ["Tom Hanks", "Matt Damon", "Tom Sizemore"]
+  },
+  {
+    "title": "Close Encounters of the Third Kind",
+    "rating": "94%",
+    "age_rating": "PG",
+    "runtime": 138,
+    "genres": ["Sci-Fi", "Drama", "Mystery"],
+    "tags": ["aliens", "contact", "obsession", "communication"],
+    "description": "After an encounter with a UFO, a man becomes obsessed with a vision that leads to a world-changing revelation.",
+    "rt_quote": "A bold and beautiful sci-fi tale filled with wonder and Spielberg’s signature humanity.",
+    "director": "Steven Spielberg",
+    "stars": ["Richard Dreyfuss", "Teri Garr", "François Truffaut"]
+  },
+  {
+    "title": "The Fabelmans",
+    "rating": "92%",
+    "age_rating": "PG-13",
+    "runtime": 151,
+    "genres": ["Drama", "Coming-of-Age"],
+    "tags": ["filmmaking", "family", "childhood", "autobiography"],
+    "description": "A young aspiring filmmaker discovers the power of storytelling while navigating a turbulent family life in this semi-autobiographical tale.",
+    "rt_quote": "Deeply personal and tender — Spielberg’s ode to cinema and the roots of creativity.",
+    "director": "Steven Spielberg",
+    "stars": ["Gabriel LaBelle", "Michelle Williams", "Paul Dano"]
+  },
+  {
     "title": "Moonstruck",
     "rating": "93%",
     "age_rating": "PG",
