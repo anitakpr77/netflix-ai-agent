@@ -112,31 +112,30 @@ def score_movie(movie, filters):
 
     return score
 
-# --- Why This Movie Function ---
-def explain_why(movie, filters, now):
-    tag_map = {
-        "high-stakes": "high-stakes action",
-        "intense": "intense sequences",
-        "relentless": "relentless pacing",
-        "thrilling": "thrilling moments",
-        "suspenseful": "suspenseful storytelling",
-        "heroic": "heroic moments",
-        "gritty": "gritty realism",
-        "classic": "a classic tone",
-    }
+# --- Updated Why This Movie Function ---
+def explain_why(movie, filters, now, user_input):
+    title = movie.get("title", "This movie")
+    age_rating = movie.get("age_rating", "N/A")
+    genres = movie.get("genres", [])
+    tags = movie.get("tags", [])
+    description = movie.get("description", "")
 
-    requested_family = any(term in filters.get("genres", []) + filters.get("keywords", []) for term in ["Family", "Kids", "Children", "Animated"])
-    is_suitable_rating = movie.get("age_rating") in ["G", "PG"]
-    selected = [tag_map[tag] for tag in movie.get("tags", []) if tag in tag_map]
+    explanation = f'We chose this film because you asked for: **"{user_input}"**.\n\n'
 
-    reason_parts = []
-    if requested_family and is_suitable_rating:
-        reason_parts.append("it’s family-friendly")
-    if selected:
-        reason_parts.append("it has " + ", ".join(selected[:3]))
+    if age_rating:
+        explanation += f'{title} is rated **{age_rating}**, which makes it suitable for many 13-year-old viewers.\n'
 
-    reason = "We picked this film for you because " + " and ".join(reason_parts) + "." if reason_parts else "We picked this film for you based on your preferences."
-    critic_quote = f"\n\nCritics say: “{movie['rt_quote']}”" if movie.get("rt_quote") else ""
+    matched_genres = [genre for genre in genres if genre.lower() in user_input.lower()]
+    matched_tags = [tag for tag in tags if tag.lower() in user_input.lower()]
+
+    if matched_genres or matched_tags:
+        explanation += f"\nIt features elements of **{', '.join(matched_genres + matched_tags)}**, which match the kind of movie you're in the mood for.\n"
+    else:
+        explanation += "\nWhile it might not check every box, it shares a similar vibe with themes like "
+        explanation += f"**{', '.join(genres[:2] + tags[:2])}**.\n"
+
+    if movie.get("rt_quote"):
+        explanation += f'\n\nCritics say: “{movie["rt_quote"]}”'
 
     if movie.get("runtime"):
         minutes = movie["runtime"]
@@ -155,11 +154,9 @@ def explain_why(movie, filters, now):
         else:
             label = "a very late watch — maybe save it for tomorrow"
 
-        finish_info = f"It’s {now.strftime('%A')} and the runtime is {minutes // 60} hours {minutes % 60} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
-    else:
-        finish_info = ""
+        explanation += f"\n\nIt’s {now.strftime('%A')} and the runtime is {minutes // 60} hours {minutes % 60} mins — you’ll finish by {end_time.strftime('%I:%M %p')} — {label}."
 
-    return f"### 🎯 Why this movie?\n\n{reason}{critic_quote}\n\n{finish_info}"
+    return f"### 🎯 Why this movie?\n\n{explanation}"
 
 # --- Movie Recommendation Display ---
 if parsed_filters:
@@ -188,7 +185,7 @@ if parsed_filters:
         st.subheader("Here’s what I found:")
         for movie in results_to_show:
             st.markdown(f"### 🎬 {movie['title']}")
-            st.markdown(explain_why(movie, parsed_filters, now))
+            st.markdown(explain_why(movie, parsed_filters, now, user_input))  # UPDATED
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
@@ -205,3 +202,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
