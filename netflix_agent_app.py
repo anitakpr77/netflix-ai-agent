@@ -179,7 +179,7 @@ Your task:
             "Friday": "It’s Friday night — perfect for family movie time.",
             "Saturday": "It’s Saturday — time to relax and enjoy something fun.",
             "Sunday": "It’s Sunday — the perfect wind-down before a new week.",
-            "Monday": "It’s Monday — how about something uplifting?",
+            "Monday": "Happy Monday - ",
             "Tuesday": "It’s Tuesday — a midweek escape could be just right.",
             "Wednesday": "It’s Wednesday — halfway there, treat yourself.",
             "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
