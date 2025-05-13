@@ -292,7 +292,7 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-            if st.button("🔄 Show me different options"):
+            if st.button("🔄 Show me different options", key="refresh_button"):
                 st.session_state.shown_titles = []
                 st.rerun()
     else:
