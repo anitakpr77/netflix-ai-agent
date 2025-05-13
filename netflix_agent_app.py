@@ -209,6 +209,8 @@ if user_input:
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
 
+            
+
             # --- Add day/time label ---
             if movie.get("runtime"):
                 minutes = movie["runtime"]
@@ -239,6 +241,9 @@ if user_input:
                 }.get(day_of_week, f"It’s {day_of_week}.")
 
                 st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
+            st.markdown(f"### 🎯 Why this movie?")
+            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+            st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
             st.markdown(f"_{movie['description']}_")
             
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
@@ -246,4 +251,3 @@ if user_input:
             st.session_state.shown_titles.append(title)
     else:
         st.warning("No matches found that GPT felt confident about.")
-
