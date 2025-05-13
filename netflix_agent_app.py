@@ -298,7 +298,3 @@ if user_input:
     else:
         st.warning("No strong matches found. Try a different request!")
 
-# --- Reset Button ---
-if st.button("🔄 Show me different options"):
-    st.session_state.shown_titles = []
-    st.rerun()
