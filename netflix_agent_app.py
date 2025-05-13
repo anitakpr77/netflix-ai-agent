@@ -35,6 +35,7 @@ Important:
 - If the user says "romantic comedy" or "romcom", set genres to ["Romance", "Comedy"].
 - If the user doesn’t explicitly state the mood, infer it based on their phrasing.
 - Never return an empty list for mood — always include your best guess.
+- If the user mentions a specific age (e.g., "for a 10 year old" or "for teens"), infer and set the appropriate min_age_rating (e.g., PG for under 10, PG-13 for 13–15, R for adults).
 """
 
 # --- Load Movies ---
@@ -161,6 +162,8 @@ if user_input:
             )
             raw_output = response.choices[0].message.content
             parsed_filters = json.loads(raw_output)
+
+            # --- GPT now handles age rating inference based on prompt --- (manual override removed)
         except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
@@ -188,11 +191,12 @@ if user_input:
     final_movies = [m for m in candidates if m["title"] in title_to_reason]
 
     if final_movies:
-        st.subheader("Here’s what I found:")
-        for movie in final_movies:
+        st.markdown(f"🔍 You asked for: *{user_input}*")
+st.subheader("Here’s what I found:")
+        for idx, movie in enumerate(final_movies, 1):
             title = movie["title"]
             reason = title_to_reason.get(title, "")
-            st.markdown(f"### 🎬 {title}")
+            st.markdown(f"### {idx}. 🎬 {title}")
             st.markdown(f"🧠 **Why GPT picked it:** {reason}")
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
