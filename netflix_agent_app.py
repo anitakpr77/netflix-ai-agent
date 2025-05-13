@@ -9,14 +9,18 @@ import random
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="Movies AI Agent", page_icon="🎬")
-st.title("🎬 Movies AI Agent")
+st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
+st.title("🎬 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Force timezone to Pacific Time ---
 pacific = pytz.timezone("America/Los_Angeles")
 now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
 now = now_utc.astimezone(pacific)
+
+# --- Session State Init ---
+if "shown_titles" not in st.session_state:
+    st.session_state.shown_titles = []
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
@@ -126,6 +130,8 @@ def score_movie(movie, filters):
         reasons.append(f"matched age rating: {movie.get('age_rating')}")
 
     return score, reasons
+
+# (the rest of the code remains unchanged)
 
 # --- GPT Ranking Function ---
 def gpt_rank_movies(user_input, filters, candidate_movies):
@@ -292,3 +298,7 @@ if user_input:
     else:
         st.warning("No strong matches found. Try a different request!")
 
+# --- Reset Button ---
+if st.button("🔄 Show me different options"):
+    st.session_state.shown_titles = []
+    st.rerun()
