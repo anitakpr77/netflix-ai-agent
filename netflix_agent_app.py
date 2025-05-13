@@ -9,9 +9,12 @@ import random
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
-st.title("🎬 Netflix AI Agent")
+st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
+st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
+
+# --- Toggle for "Not Rated" Films ---
+include_unrated = st.sidebar.checkbox("Include 'Not Rated' films", value=True)
 
 # --- Force timezone to Pacific Time ---
 pacific = pytz.timezone("America/Los_Angeles")
@@ -66,15 +69,12 @@ def score_movie(movie, filters):
     movie_tags = [t.lower() for t in movie.get("tags", [])]
     description = movie.get("description", "").lower()
 
-    # Genre-specific restriction for horror
     if "horror" in genres and "horror" not in movie_genres:
         return 0, ["rejected: not a horror genre"]
 
-    # Genre-specific restriction for romance
     if "romance" in genres and "romance" not in movie_genres:
         return 0, ["rejected: not a romance genre"]
 
-    # Romcom scoring boost (but allow near matches)
     if "romance" in genres and "comedy" in genres:
         if "romance" in movie_genres and "comedy" in movie_genres:
             score += 3
@@ -141,14 +141,14 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 - Genres: {', '.join(movie.get('genres', []))}
 - Tags: {', '.join(movie.get('tags', []))}
 - Description: {movie.get('description')}
-- Critics Quote: "{movie.get('rt_quote', '')}"
+- Critics Quote: \"{movie.get('rt_quote', '')}\"
 
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
-- Start with: "We chose this film because you asked for: '..."'
+- Start with: \"We chose this film because you asked for: '...\"
 - If the match is not perfect, say so honestly
 - Emphasize age-appropriateness if it's a good fit
-- End with something warm like "We think you'll enjoy it!"
+- End with something warm like \"We think you'll enjoy it!\"
 """
 
     try:
@@ -210,6 +210,8 @@ def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
         if parsed_filters.get("min_age_rating"):
             if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
                 continue
+        if not include_unrated and movie.get("age_rating", "") == "Not Rated":
+            continue
         score, reasons = score_movie(movie, parsed_filters)
         if score >= min_score:
             matches.append((score, movie, reasons))
@@ -243,7 +245,7 @@ if parsed_filters:
             st.info("These are the closest matches I could find based on your request.")
 
         for score, movie, reasons in unique_results[:4]:
-            st.markdown(f"### 🎬 {movie['title']}")
+            st.markdown(f"### 🎮 {movie['title']}")
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
