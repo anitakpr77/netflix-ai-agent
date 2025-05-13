@@ -186,11 +186,13 @@ if user_input:
     candidates = [m[1] for m in matches[:12]]
 
     ranked_with_reasons = gpt_rank_movies(user_input, parsed_filters, candidates)
-    title_to_reason = {entry["title"]: entry["reason"] for entry in ranked_with_reasons}
 
-    final_movies = [m for m in candidates if m["title"] in title_to_reason]
-
-    if not final_movies and candidates:
+    if not ranked_with_reasons:
+        final_movies = candidates[:4]
+        title_to_reason = {m["title"]: "Top-rated based on your filters." for m in final_movies}
+    else:
+        title_to_reason = {entry["title"]: entry["reason"] for entry in ranked_with_reasons}
+        final_movies = [m for m in candidates if m["title"] in title_to_reason]
         # Fallback: use top 4 candidates with placeholder reasons
         final_movies = candidates[:4]
         title_to_reason = {m["title"]: "Top-rated based on your filters." for m in final_movies}
@@ -244,3 +246,4 @@ if user_input:
             st.session_state.shown_titles.append(title)
     else:
         st.warning("No matches found that GPT felt confident about.")
+
