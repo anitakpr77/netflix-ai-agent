@@ -11,6 +11,66 @@
   "director": "Frank Darabont",
   "stars": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
 },
+   {
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "rating": "86%",
+    "age_rating": "PG-13",
+    "runtime": 143,
+    "genres": ["Adventure", "Fantasy", "Action", "Comedy"],
+    "tags": ["pirates", "treasure", "cursed", "swashbuckling", "funny", "epic"],
+    "description": "Blacksmith Will Turner teams up with eccentric pirate Jack Sparrow to save Elizabeth Swann from cursed pirates led by Captain Barbossa.",
+    "rt_quote": "A rollicking adventure with a standout performance from Johnny Depp, revitalizing the swashbuckler genre.",
+    "director": "Gore Verbinski",
+    "stars": ["Johnny Depp", "Orlando Bloom", "Keira Knightley"]
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "rating": "53%",
+    "age_rating": "PG-13",
+    "runtime": 151,
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "tags": ["pirates", "sea monsters", "Davy Jones", "epic", "dark humor"],
+    "description": "Captain Jack Sparrow races against time to repay a blood debt to the legendary Davy Jones while dodging betrayal and the Kraken.",
+    "rt_quote": "More elaborate and darker than the original, with rich visuals and chaotic action.",
+    "director": "Gore Verbinski",
+    "stars": ["Johnny Depp", "Orlando Bloom", "Keira Knightley"]
+  },
+  {
+    "title": "Pirates of the Caribbean: At World's End",
+    "rating": "44%",
+    "age_rating": "PG-13",
+    "runtime": 169,
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "tags": ["pirates", "epic battles", "rescue", "alliance", "supernatural"],
+    "description": "Allies and enemies collide as the Pirate Lords unite for one final battle against the East India Trading Company and Davy Jones.",
+    "rt_quote": "Visually striking but narratively bloated, this finale leans heavily on spectacle.",
+    "director": "Gore Verbinski",
+    "stars": ["Johnny Depp", "Geoffrey Rush", "Keira Knightley", "Orlando Bloom"]
+  },
+  {
+    "title": "Pirates of the Caribbean: On Stranger Tides",
+    "rating": "33%",
+    "age_rating": "PG-13",
+    "runtime": 137,
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "tags": ["pirates", "fountain of youth", "Blackbeard", "mermaids"],
+    "description": "Jack Sparrow joins forces with Angelica and Blackbeard in a perilous quest to find the fabled Fountain of Youth.",
+    "rt_quote": "Loses the magic of earlier films but retains some charm through Depp’s charisma.",
+    "director": "Rob Marshall",
+    "stars": ["Johnny Depp", "Penélope Cruz", "Ian McShane"]
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Men Tell No Tales",
+    "rating": "30%",
+    "age_rating": "PG-13",
+    "runtime": 129,
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "tags": ["pirates", "revenge", "ghost ship", "family legacy"],
+    "description": "Haunted by Captain Salazar, Jack Sparrow seeks the Trident of Poseidon to escape his past and restore his luck.",
+    "rt_quote": "A visually competent but formulaic entry with a few nostalgic sparks.",
+    "director": "Joachim Rønning, Espen Sandberg",
+    "stars": ["Johnny Depp", "Javier Bardem", "Brenton Thwaites", "Kaya Scodelario"]
+  },
     {
     "title": "Seven Samurai",
     "rating": "100%",
