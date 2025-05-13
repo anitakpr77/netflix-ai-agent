@@ -13,9 +13,6 @@ st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
 st.title("🎮 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Toggle for "Not Rated" Films ---
-include_unrated = st.sidebar.checkbox("Include 'Not Rated' films", value=True)
-
 # --- Force timezone to Pacific Time ---
 pacific = pytz.timezone("America/Los_Angeles")
 now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
@@ -128,6 +125,10 @@ if user_input:
 # --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
+    age_warning = ""
+    if movie.get("age_rating") == "Not Rated":
+        age_warning = "\n\n\u26a0\ufe0f *This film is not officially rated. Viewer discretion advised.*"
+
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
 
@@ -141,14 +142,15 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 - Genres: {', '.join(movie.get('genres', []))}
 - Tags: {', '.join(movie.get('tags', []))}
 - Description: {movie.get('description')}
-- Critics Quote: \"{movie.get('rt_quote', '')}\"
+- Critics Quote: "{movie.get('rt_quote', '')}"
+{age_warning}
 
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
-- Start with: \"We chose this film because you asked for: '...\"
+- Start with: "We chose this film because you asked for: '..."
 - If the match is not perfect, say so honestly
 - Emphasize age-appropriateness if it's a good fit
-- End with something warm like \"We think you'll enjoy it!\"
+- End with something warm like "We think you'll enjoy it!"
 """
 
     try:
@@ -208,10 +210,15 @@ def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
         if movie["title"] in shown_titles:
             continue
         if parsed_filters.get("min_age_rating"):
-            if not is_rating_appropriate(movie.get("age_rating", ""), parsed_filters["min_age_rating"]):
+            movie_rating = movie.get("age_rating", "")
+            user_rating = parsed_filters["min_age_rating"]
+
+            if user_rating in ["G", "PG", "PG-13"] and movie_rating == "Not Rated":
                 continue
-        if not include_unrated and movie.get("age_rating", "") == "Not Rated":
-            continue
+
+            if not is_rating_appropriate(movie_rating, user_rating):
+                continue
+
         score, reasons = score_movie(movie, parsed_filters)
         if score >= min_score:
             matches.append((score, movie, reasons))
@@ -263,3 +270,4 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
+
