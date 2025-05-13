@@ -35,7 +35,11 @@ Important:
 - If the user says "romantic comedy" or "romcom", set genres to ["Romance", "Comedy"].
 - If the user doesn’t explicitly state the mood, infer it based on their phrasing.
 - Never return an empty list for mood — always include your best guess.
-- If the user mentions a specific age (e.g., "for a 10 year old" or "for teens"), infer and set the appropriate min_age_rating (e.g., PG for under 10, PG-13 for 13–15, R for adults).
+- If the user mentions a specific age:
+    - under 10 → set min_age_rating: "G"
+    - age 10–12 → "PG"
+    - age 13–17 → "PG-13"
+    - adults → "R"
 """
 
 # --- Load Movies ---
@@ -51,6 +55,14 @@ def is_rating_appropriate(movie_rating, user_min_rating):
     rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
     try:
         return rating_order.index(movie_rating) <= rating_order.index(user_min_rating)
+    except ValueError:
+        return False
+
+# --- Relaxed Age Rating Check ---
+def is_relaxed_rating_acceptable(movie_rating, user_min_rating):
+    rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
+    try:
+        return rating_order.index(movie_rating) <= rating_order.index("PG-13")
     except ValueError:
         return False
 
@@ -104,6 +116,42 @@ def score_movie(movie, filters):
 
     return score, reasons
 
+# --- GPT Ranking Function ---
+def gpt_rank_movies(user_input, filters, candidate_movies):
+    try:
+        movie_summaries = "\n".join([
+            f"{i+1}. {m['title']} - Genres: {', '.join(m['genres'])}; Tags: {', '.join(m['tags'])}" for i, m in enumerate(candidate_movies)
+        ])
+
+        gpt_prompt = f"""
+A user asked: "{user_input}"
+
+Structured filters:
+Genres: {filters.get('genres')}
+Mood: {filters.get('mood')}
+Min Age Rating: {filters.get('min_age_rating')}
+
+Candidate movies:
+{movie_summaries}
+
+Please select and rank the top 4 movies that best match the user's request. Return only a list of movie titles in order of best fit.
+"""
+
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=0,
+            messages=[
+                {"role": "user", "content": gpt_prompt}
+            ]
+        )
+
+        titles = response.choices[0].message.content.split("\n")
+        titles = [t.strip("0123456789. ") for t in titles if t.strip()]
+        return titles[:4]
+
+    except Exception:
+        return []
+
 # --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
@@ -150,44 +198,7 @@ Your task:
 
     return f"### 🎯 Why this movie?\n\n{explanation}"
 
-# --- GPT Ranking Function ---
-def gpt_rank_movies(user_input, filters, candidate_movies):
-    try:
-        movie_summaries = "\n".join([
-            f"{i+1}. {m['title']} - Genres: {', '.join(m['genres'])}; Tags: {', '.join(m['tags'])}" for i, m in enumerate(candidate_movies)
-        ])
-
-        gpt_prompt = f"""
-A user asked: "{user_input}"
-
-Structured filters:
-Genres: {filters.get('genres')}
-Mood: {filters.get('mood')}
-Min Age Rating: {filters.get('min_age_rating')}
-
-Candidate movies:
-{movie_summaries}
-
-Please select and rank the top 4 movies that best match the user's request. Return only a list of movie titles in order of best fit.
-"""
-
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            temperature=0,
-            messages=[
-                {"role": "user", "content": gpt_prompt}
-            ]
-        )
-
-        titles = response.choices[0].message.content.split("\n")
-        titles = [t.strip("0123456789. ") for t in titles if t.strip()]
-        return titles[:4]
-
-    except Exception as e:
-        st.warning("GPT ranking failed. Showing highest scored results instead.")
-        return []
-
-# --- Parse Filters ---
+# --- Main Logic ---
 parsed_filters = {}
 if user_input:
     with st.spinner("🧐 Thinking..."):
@@ -206,49 +217,23 @@ if user_input:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
-# --- Matching and Display Logic ---
-def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
-    matches = []
-    for movie in all_movies:
-        if movie["title"] in shown_titles:
-            continue
-        if parsed_filters.get("min_age_rating"):
-            movie_rating = movie.get("age_rating", "")
-            user_rating = parsed_filters["min_age_rating"]
+    shown_titles = st.session_state.get("shown_titles", [])
+    filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
-            if user_rating in ["G", "PG", "PG-13"] and movie_rating == "Not Rated":
-                continue
+    scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
+    scored = [pair for pair in scored if pair[0] > 0]
+    top_candidates = [m for _, m in sorted(scored, key=lambda x: x[0], reverse=True)[:12]]
 
-            if not is_rating_appropriate(movie_rating, user_rating):
-                continue
-
-        score, reasons = score_movie(movie, parsed_filters)
-        if score >= min_score:
-            matches.append((score, movie, reasons))
-    return matches
-
-if parsed_filters:
-    if "shown_titles" not in st.session_state:
-        st.session_state.shown_titles = []
-
-    random.shuffle(all_movies)
-    all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=1)
-
-    if all_matches:
-        top_candidates = [m[1] for m in sorted(all_matches, key=lambda x: x[0], reverse=True)[:12]]
+    if top_candidates:
         ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
         final_movies = [m for m in top_candidates if m["title"] in ranked_titles]
-    else:
-        final_movies = [m for _, m, _ in all_matches[:4]]
+        if not final_movies:
+            final_movies = top_candidates[:4]
 
-    if final_movies:
         st.subheader("Here’s what I found:")
-
-        for idx, movie in enumerate(final_movies, 1):
-            st.markdown(f"### {idx}. 🎬 {movie['title']}")
-
-            explanation = explain_why(movie, user_input, parsed_filters, client, now)
-            st.markdown(explanation)
+        for movie in final_movies:
+            st.markdown(f"### 🎬 {movie['title']}")
+            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
 
             if movie.get("runtime"):
                 minutes = movie["runtime"]
@@ -285,11 +270,14 @@ if parsed_filters:
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
             st.markdown(f"_{movie['description']}_")
             st.markdown("---")
-            st.session_state.shown_titles.append(movie["title"])
+            shown_titles.append(movie["title"])
 
-        if len(all_matches) > len(final_movies):
+        st.session_state["shown_titles"] = shown_titles
+
+        if len(filtered_movies) > len(final_movies):
             if st.button("🔄 Show me different options"):
                 st.session_state.shown_titles = []
                 st.rerun()
     else:
-        st.warning("No matches found that GPT felt confident about.")
+        st.warning("No strong matches found. Try a different request!")
+
