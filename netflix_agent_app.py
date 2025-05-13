@@ -190,6 +190,11 @@ if user_input:
 
     final_movies = [m for m in candidates if m["title"] in title_to_reason]
 
+    if not final_movies and candidates:
+        # Fallback: use top 4 candidates with placeholder reasons
+        final_movies = candidates[:4]
+        title_to_reason = {m["title"]: "Top-rated based on your filters." for m in final_movies}
+
     if final_movies:
         st.markdown(f"🔍 You asked for: *{user_input}*")
         st.subheader("Here’s what I found:")
