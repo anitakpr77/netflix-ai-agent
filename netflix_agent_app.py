@@ -204,10 +204,15 @@ if user_input:
             title = movie["title"]
             reason = title_to_reason.get(title, "")
             st.markdown(f"### {idx}. 🎬 {title}")
+            st.markdown(f"### 🎯 Why this movie?")
+            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+            st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
             st.markdown(f"🧠 **Why GPT picked it:** {reason}")
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
+            st.markdown(f"### 🎯 Why this movie?")
+            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
 
             
 
@@ -241,12 +246,10 @@ if user_input:
                 }.get(day_of_week, f"It’s {day_of_week}.")
 
                 st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
-            st.markdown(f"### 🎯 Why this movie?")
-            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
-            st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
+            
             st.markdown(f"_{movie['description']}_")
             
-            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+            
             st.markdown("---")
             st.session_state.shown_titles.append(title)
     else:
