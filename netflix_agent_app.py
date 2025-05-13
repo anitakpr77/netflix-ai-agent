@@ -104,55 +104,7 @@ def score_movie(movie, filters):
 
     return score, reasons
 
-# --- GPT-Based Ranking Function ---
-
-# --- Explain Why Function ---
-def explain_why(movie, user_input, filters, client, now):
-    parsed = json.dumps(filters, indent=2)
-    age_warning = """"
-    if movie.get("age_rating") == "Not Rated":
-        age_warning = "
-
-⚠️ *This film is not officially rated. Viewer discretion advised.*"""
-
-    prompt = f"""
-You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
-
-Your system parsed the following filters:
-{parsed}
-
-You selected the movie **{movie['title']}**. Here are the movie details:
-- Rating: {movie.get('rating')}
-- Age Rating: {movie.get('age_rating')}
-- Runtime: {movie.get('runtime')} minutes
-- Genres: {', '.join(movie.get('genres', []))}
-- Tags: {', '.join(movie.get('tags', []))}
-- Description: {movie.get('description')}
-- Critics Quote: \"{movie.get('rt_quote', '')}\"
-{age_warning}
-
-Your task:
-- Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
-- Start with: \"We chose this film because you asked for: '...\"'
-- If the match is not perfect, say so honestly
-- Emphasize age-appropriateness if it's a good fit
-- End with something warm like \"We think you'll enjoy it!\"
-"""
-
-    try:
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            temperature=0.7,
-            messages=[
-                {"role": "system", "content": "You are a thoughtful, honest movie assistant."},
-                {"role": "user", "content": prompt}
-            ]
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        return f"(There was an error generating a response.)
-
-{str(e)}"
+# --- GPT Ranking Function ---
 def gpt_rank_movies(user_input, filters, candidate_movies):
     try:
         movie_summaries = "\n".join([
@@ -170,33 +122,71 @@ Min Age Rating: {filters.get('min_age_rating')}
 Candidate movies:
 {movie_summaries}
 
-Please select and rank the top 4 movies that best match the user's request. For each movie, return:
-- The title
-- A short explanation for why it fits
-
-Format your response as JSON like this:
-[
-  {{"title": "Movie Title", "reason": "why it fits"}},
-  ...
-]
+Please select and rank the top 4 movies that best match the user's request. Return only a list of movie titles in order of best fit.
 """
 
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
-            temperature=0.7,
+            temperature=0,
             messages=[
                 {"role": "user", "content": gpt_prompt}
             ]
         )
 
-        ranked_output = json.loads(response.choices[0].message.content)
-        return ranked_output  # list of dicts with title + reason
+        titles = response.choices[0].message.content.split("\n")
+        titles = [t.strip("0123456789. ") for t in titles if t.strip()]
+        return titles[:4]
 
     except Exception as e:
         st.warning("GPT ranking failed. Showing highest scored results instead.")
         return []
 
-# --- Matching and Display Logic ---
+# --- Explain Why Function ---
+def explain_why(movie, user_input, filters, client, now):
+    parsed = json.dumps(filters, indent=2)
+    age_warning = ""
+    if movie.get("age_rating") == "Not Rated":
+        age_warning = "\n\n\u26a0\ufe0f *This film is not officially rated. Viewer discretion advised.*"
+
+    prompt = f"""
+You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
+
+Your system parsed the following filters:
+{parsed}
+
+You selected the movie **{movie['title']}**. Here are the movie details:
+- Rating: {movie.get('rating')}
+- Age Rating: {movie.get('age_rating')}
+- Runtime: {movie.get('runtime')} minutes
+- Genres: {', '.join(movie.get('genres', []))}
+- Tags: {', '.join(movie.get('tags', []))}
+- Description: {movie.get('description')}
+- Critics Quote: "{movie.get('rt_quote', '')}"
+{age_warning}
+
+Your task:
+- Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
+- Start with: "We chose this film because you asked for: '..."'
+- If the match is not perfect, say so honestly
+- Emphasize age-appropriateness if it's a good fit
+- End with something warm like "We think you'll enjoy it!"
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=0.7,
+            messages=[
+                {"role": "system", "content": "You are a thoughtful, honest movie assistant."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"(There was an error generating a response.)\n\n{str(e)}"
+
+# --- Parse Filters ---
+parsed_filters = {}
 if user_input:
     with st.spinner("🧐 Thinking..."):
         try:
@@ -210,61 +200,53 @@ if user_input:
             )
             raw_output = response.choices[0].message.content
             parsed_filters = json.loads(raw_output)
-
-            # --- GPT now handles age rating inference based on prompt --- (manual override removed)
         except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
+# --- Matching and Display Logic ---
+def get_scored_matches(all_movies, parsed_filters, shown_titles, min_score):
+    matches = []
+    for movie in all_movies:
+        if movie["title"] in shown_titles:
+            continue
+        if parsed_filters.get("min_age_rating"):
+            movie_rating = movie.get("age_rating", "")
+            user_rating = parsed_filters["min_age_rating"]
+
+            if user_rating in ["G", "PG", "PG-13"] and movie_rating == "Not Rated":
+                continue
+
+            if not is_rating_appropriate(movie_rating, user_rating):
+                continue
+
+        score, reasons = score_movie(movie, parsed_filters)
+        if score >= min_score:
+            matches.append((score, movie, reasons))
+    return matches
+
+if parsed_filters:
     if "shown_titles" not in st.session_state:
         st.session_state.shown_titles = []
 
-    def is_valid(movie):
-        if movie["title"] in st.session_state.shown_titles:
-            return False
-        age = movie.get("age_rating", "")
-        user_age = parsed_filters.get("min_age_rating")
-        if user_age in ["G", "PG", "PG-13"] and age == "Not Rated":
-            return False
-        return not user_age or is_rating_appropriate(age, user_age)
+    random.shuffle(all_movies)
+    all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=1)
 
-    matches = [(score_movie(m, parsed_filters)[0], m) for m in all_movies if is_valid(m)]
-    matches = [m for m in matches if m[0] >= 2]
-    matches.sort(key=lambda x: x[0], reverse=True)
-    candidates = [m[1] for m in matches[:12]]
-
-    ranked_with_reasons = gpt_rank_movies(user_input, parsed_filters, candidates)
-
-    if not ranked_with_reasons:
-        final_movies = candidates[:4]
-        title_to_reason = {m["title"]: "Top-rated based on your filters." for m in final_movies}
+    if all_matches:
+        top_candidates = [m[1] for m in sorted(all_matches, key=lambda x: x[0], reverse=True)[:12]]
+        ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
+        final_movies = [m for m in top_candidates if m["title"] in ranked_titles]
     else:
-        title_to_reason = {entry["title"]: entry["reason"] for entry in ranked_with_reasons}
-        final_movies = [m for m in candidates if m["title"] in title_to_reason]
-        # Fallback: use top 4 candidates with placeholder reasons
-        final_movies = candidates[:4]
-        title_to_reason = {m["title"]: "Top-rated based on your filters." for m in final_movies}
+        final_movies = [m for _, m, _ in all_matches[:4]]
 
     if final_movies:
-        st.markdown(f"🔍 You asked for: *{user_input}*")
         st.subheader("Here’s what I found:")
+
         for idx, movie in enumerate(final_movies, 1):
-            title = movie["title"]
-            reason = title_to_reason.get(title, "")
-            st.markdown(f"### {idx}. 🎬 {title}")
-                        
-            st.markdown(f"🧠 **Why GPT picked it:** {reason}")
-            st.markdown(f"🎨 **Directed by** {movie['director']}")
-            st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
-            st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
-            st.markdown(f"### 🎯 Why this movie?")
+            st.markdown(f"### {idx}. 🎬 {movie['title']}")
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
 
-            
-
-            # --- Add day/time label ---
             if movie.get("runtime"):
-                st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
                 minutes = movie["runtime"]
                 end_time = now + timedelta(minutes=minutes)
                 hour = now.hour
@@ -292,12 +274,21 @@ if user_input:
                     "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
                 }.get(day_of_week, f"It’s {day_of_week}.")
 
-                st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
-            
+                st.markdown(f"🕰 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
+
+            st.markdown(f"🎨 **Directed by** {movie['director']}")
+            st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
+            st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
             st.markdown(f"_{movie['description']}_")
-            
-            
             st.markdown("---")
-            st.session_state.shown_titles.append(title)
+            st.session_state.shown_titles.append(movie["title"])
+
+        if len(all_matches) > len(final_movies):
+            if st.button("🔄 Show me different options"):
+                st.session_state.shown_titles = []
+                st.rerun()
+    else:
+        st.warning("No matches found that GPT felt confident about.")
+
     else:
         st.warning("No matches found that GPT felt confident about.")
