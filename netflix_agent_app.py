@@ -111,7 +111,9 @@ def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
     age_warning = ""
     if movie.get("age_rating") == "Not Rated":
-        age_warning = "\n\n⚠️ *This film is not officially rated. Viewer discretion advised.*"
+        age_warning = "
+
+⚠️ *This film is not officially rated. Viewer discretion advised.*"
 
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
@@ -148,7 +150,9 @@ Your task:
         )
         return response.choices[0].message.content
     except Exception as e:
-        return f"(There was an error generating a response.)\n\n{str(e)}"
+        return f"(There was an error generating a response.)
+
+{str(e)}"
 def gpt_rank_movies(user_input, filters, candidate_movies):
     try:
         movie_summaries = "\n".join([
@@ -248,7 +252,7 @@ if user_input:
             title = movie["title"]
             reason = title_to_reason.get(title, "")
             st.markdown(f"### {idx}. 🎬 {title}")
-                        st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
+                        
             st.markdown(f"🧠 **Why GPT picked it:** {reason}")
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
@@ -260,6 +264,7 @@ if user_input:
 
             # --- Add day/time label ---
             if movie.get("runtime"):
+                st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
                 minutes = movie["runtime"]
                 end_time = now + timedelta(minutes=minutes)
                 hour = now.hour
@@ -296,4 +301,3 @@ if user_input:
             st.session_state.shown_titles.append(title)
     else:
         st.warning("No matches found that GPT felt confident about.")
-
