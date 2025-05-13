@@ -103,6 +103,43 @@ def score_movie(movie, filters):
 
     return score, reasons
 
+# --- GPT-Based Ranking Function ---
+def gpt_rank_movies(user_input, filters, candidate_movies):
+    try:
+        movie_summaries = "\n".join([
+            f"{i+1}. {m['title']} - Genres: {', '.join(m['genres'])}; Tags: {', '.join(m['tags'])}" for i, m in enumerate(candidate_movies)
+        ])
+
+        gpt_prompt = f"""
+A user asked: "{user_input}"
+
+Structured filters:
+Genres: {filters.get('genres')}
+Mood: {filters.get('mood')}
+Min Age Rating: {filters.get('min_age_rating')}
+
+Candidate movies:
+{movie_summaries}
+
+Please select and rank the top 4 movies that best match the user's request. Return only a list of movie titles in order of best fit.
+"""
+
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=0,
+            messages=[
+                {"role": "user", "content": gpt_prompt}
+            ]
+        )
+
+        titles = response.choices[0].message.content.split("\n")
+        titles = [t.strip("0123456789. ") for t in titles if t.strip()]
+        return titles[:4]
+
+    except Exception as e:
+        st.warning("GPT ranking failed. Showing highest scored results instead.")
+        return []
+
 # --- Parse Filters ---
 parsed_filters = {}
 if user_input:
@@ -229,29 +266,19 @@ if parsed_filters:
         st.session_state.shown_titles = []
 
     random.shuffle(all_movies)
-    scored_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=3)
+    all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=2)
 
-    if not scored_matches:
-        scored_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=1)
-        fallback_mode = True
+    if len(all_matches) > 6:
+        top_candidates = [m[1] for m in sorted(all_matches, reverse=True)[:12]]
+        ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
+        results_to_show = [m for m in top_candidates if m["title"] in ranked_titles]
     else:
-        fallback_mode = False
-
-    seen_titles = set()
-    unique_results = []
-    for score, movie, reasons in scored_matches:
-        if movie["title"] not in seen_titles:
-            seen_titles.add(movie["title"])
-            unique_results.append((score, movie, reasons))
-
-    results_to_show = [m for _, m, _ in unique_results[:4]]
+        results_to_show = [m for _, m, _ in all_matches[:4]]
 
     if results_to_show:
         st.subheader("Here’s what I found:")
-        if fallback_mode:
-            st.info("These are the closest matches I could find based on your request.")
 
-        for score, movie, reasons in unique_results[:4]:
+        for movie in results_to_show:
             st.markdown(f"### 🎮 {movie['title']}")
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
             st.markdown(f"🎨 **Directed by** {movie['director']}")
@@ -261,7 +288,7 @@ if parsed_filters:
             st.markdown("---")
             st.session_state.shown_titles.append(movie["title"])
 
-        if len(scored_matches) > len(results_to_show):
+        if len(all_matches) > len(results_to_show):
             if st.button("🔄 Show me different options"):
                 st.session_state.shown_titles = []
                 st.rerun()
