@@ -266,7 +266,7 @@ if parsed_filters:
         st.session_state.shown_titles = []
 
     random.shuffle(all_movies)
-    all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=2)
+    all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=1)
 
     if all_matches:
         top_candidates = [m[1] for m in sorted(all_matches, key=lambda x: x[0], reverse=True)[:12]]
