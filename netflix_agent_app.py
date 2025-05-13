@@ -66,6 +66,17 @@ def is_relaxed_rating_acceptable(movie_rating, user_min_rating):
     except ValueError:
         return False
 
+# --- Fallback Filtering ---
+def filter_movies_with_fallback(movies, filters):
+    strict_matches = []
+    relaxed_matches = []
+    for m in movies:
+        if is_rating_appropriate(m.get("age_rating", ""), filters.get("min_age_rating", "R")):
+            strict_matches.append(m)
+        elif is_relaxed_rating_acceptable(m.get("age_rating", ""), filters.get("min_age_rating", "R")):
+            relaxed_matches.append(m)
+    return strict_matches if strict_matches else relaxed_matches
+
 # --- Scoring Function ---
 def score_movie(movie, filters):
     score = 0
