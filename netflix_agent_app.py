@@ -192,7 +192,7 @@ if user_input:
 
     if final_movies:
         st.markdown(f"🔍 You asked for: *{user_input}*")
-st.subheader("Here’s what I found:")
+        st.subheader("Here’s what I found:")
         for idx, movie in enumerate(final_movies, 1):
             title = movie["title"]
             reason = title_to_reason.get(title, "")
@@ -238,4 +238,4 @@ st.subheader("Here’s what I found:")
             st.markdown("---")
             st.session_state.shown_titles.append(title)
     else:
-        st.warning("No matches found that GPT felt confident about. Want to try something else?")
+        st.warning("No matches found that GPT felt confident about.")
