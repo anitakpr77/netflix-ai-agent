@@ -9,8 +9,8 @@ import random
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="Netflix AI Agent", page_icon="🎮")
-st.title("🎮 Netflix AI Agent")
+st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
+st.title("🎬 Netflix AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Force timezone to Pacific Time ---
@@ -269,7 +269,7 @@ if parsed_filters:
     all_matches = get_scored_matches(all_movies, parsed_filters, st.session_state.shown_titles, min_score=2)
 
     if len(all_matches) > 6:
-        top_candidates = [m[1] for m in sorted(all_matches, reverse=True)[:12]]
+        top_candidates = [m[1] for m in sorted(all_matches, key=lambda x: x[0], reverse=True)[:12]]
         ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
         results_to_show = [m for m in top_candidates if m["title"] in ranked_titles]
     else:
@@ -297,4 +297,3 @@ if parsed_filters:
         if st.button("🔄 Show me something similar"):
             st.session_state.shown_titles = []
             st.rerun()
-
