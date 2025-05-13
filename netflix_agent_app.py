@@ -105,6 +105,50 @@ def score_movie(movie, filters):
     return score, reasons
 
 # --- GPT-Based Ranking Function ---
+
+# --- Explain Why Function ---
+def explain_why(movie, user_input, filters, client, now):
+    parsed = json.dumps(filters, indent=2)
+    age_warning = ""
+    if movie.get("age_rating") == "Not Rated":
+        age_warning = "\n\n⚠️ *This film is not officially rated. Viewer discretion advised.*"
+
+    prompt = f"""
+You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
+
+Your system parsed the following filters:
+{parsed}
+
+You selected the movie **{movie['title']}**. Here are the movie details:
+- Rating: {movie.get('rating')}
+- Age Rating: {movie.get('age_rating')}
+- Runtime: {movie.get('runtime')} minutes
+- Genres: {', '.join(movie.get('genres', []))}
+- Tags: {', '.join(movie.get('tags', []))}
+- Description: {movie.get('description')}
+- Critics Quote: \"{movie.get('rt_quote', '')}\"
+{age_warning}
+
+Your task:
+- Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
+- Start with: \"We chose this film because you asked for: '...\"'
+- If the match is not perfect, say so honestly
+- Emphasize age-appropriateness if it's a good fit
+- End with something warm like \"We think you'll enjoy it!\"
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            temperature=0.7,
+            messages=[
+                {"role": "system", "content": "You are a thoughtful, honest movie assistant."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"(There was an error generating a response.)\n\n{str(e)}"
 def gpt_rank_movies(user_input, filters, candidate_movies):
     try:
         movie_summaries = "\n".join([
@@ -204,9 +248,7 @@ if user_input:
             title = movie["title"]
             reason = title_to_reason.get(title, "")
             st.markdown(f"### {idx}. 🎬 {title}")
-            st.markdown(f"### 🎯 Why this movie?")
-            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
-            st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
+                        st.markdown(f"🕒 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
             st.markdown(f"🧠 **Why GPT picked it:** {reason}")
             st.markdown(f"🎨 **Directed by** {movie['director']}")
             st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
@@ -254,3 +296,4 @@ if user_input:
             st.session_state.shown_titles.append(title)
     else:
         st.warning("No matches found that GPT felt confident about.")
+
