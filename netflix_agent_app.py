@@ -109,11 +109,11 @@ def score_movie(movie, filters):
 # --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
-    age_warning = ""
+    age_warning = """"
     if movie.get("age_rating") == "Not Rated":
         age_warning = "
 
-⚠️ *This film is not officially rated. Viewer discretion advised.*"
+⚠️ *This film is not officially rated. Viewer discretion advised.*"""
 
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
