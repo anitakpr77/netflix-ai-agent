@@ -267,15 +267,17 @@ if user_input:
     top_candidates = top_candidates_pool[:12]
     final_movies = top_candidates[:4]  # Skip GPT — use random picks directly
 
-    # ✅ Pre-update shown_titles to prevent reversion on rerun
+    # ✅ Capture titles before render
     new_titles = [movie["title"] for movie in final_movies]
-    st.session_state["shown_titles"] = st.session_state["shown_titles"] + new_titles
 
     if final_movies:
         st.subheader("Here’s what I found:")
         for movie in final_movies:
             st.markdown(f"### 🎬 {movie['title']}")
             st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+
+     # ✅ Now update shown_titles at the very end
+        st.session_state["shown_titles"] = st.session_state["shown_titles"] + new_titles
 
             if movie.get("runtime"):
                 minutes = movie["runtime"]
