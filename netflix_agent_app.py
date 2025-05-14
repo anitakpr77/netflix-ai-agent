@@ -20,7 +20,7 @@ now = now_utc.astimezone(pacific)
 
 # --- Session State Init ---
 if "shuffle_seed" not in st.session_state:
-    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+    st.session_state.shuffle_seed = random.randint(0, 1000000)
 if "user_input" not in st.session_state:
     st.session_state.user_input = ""
 if "parsed_filters" not in st.session_state:
@@ -39,11 +39,11 @@ if user_input != st.session_state.user_input:
 
 # --- Refresh Flags ---
 if st.button("🔍 Search"):
-    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+    st.session_state.shuffle_seed = random.randint(0, 1000000)
     st.session_state.generate_trigger = True
 
 if st.button("🔄 Show me different options"):
-    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+    st.session_state.shuffle_seed = random.randint(0, 1000000)
     st.session_state.generate_trigger = True
 
 # --- Prompt Template ---
