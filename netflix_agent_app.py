@@ -198,6 +198,7 @@ if st.session_state.search_trigger:
         top_candidates_pool = [m for _, m in sorted_scored[:25]]
         random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
         st.session_state.final_movies = top_candidates_pool[:4]
+        st.write("Top pool titles:", [m["title"] for m in top_candidates_pool])
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
