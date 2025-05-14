@@ -256,11 +256,13 @@ if user_input:
         st.session_state.shuffle_seed = st.session_state.pending_shuffle_seed
         del st.session_state.pending_shuffle_seed
 
-    random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
-
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
+
+    # Shuffle after sorting to introduce randomness into the top picks
+    random.Random(st.session_state.shuffle_seed).shuffle(sorted_scored)
+
     top_candidates_pool = [m for _, m in sorted_scored[:25]]  # Take top 25 high scorers
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     top_candidates = top_candidates_pool[:12]  # Randomize which 12 are passed to GPT
