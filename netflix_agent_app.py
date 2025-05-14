@@ -193,7 +193,7 @@ if st.session_state.search_trigger:
         st.session_state.last_seed_used = st.session_state.shuffle_seed
 
         filtered_movies = filter_movies_with_fallback(all_movies, new_filters)
-        random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)  # <- shuffle before scoring
+        random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
         scored = [(score_movie(m, new_filters)[0], m) for m in filtered_movies]
         scored = [pair for pair in scored if pair[0] > 0]
         sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
