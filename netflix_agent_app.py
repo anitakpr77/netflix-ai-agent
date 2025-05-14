@@ -32,6 +32,8 @@ if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
 if "last_filters_hash" not in st.session_state:
     st.session_state.last_filters_hash = ""
+if "last_seed_used" not in st.session_state:
+    st.session_state.last_seed_used = -1
 
 # --- User Input Control ---
 input_val = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
@@ -186,9 +188,10 @@ if st.session_state.search_trigger:
             st.stop()
 
     new_hash = filters_hash(new_filters)
-    if new_hash != st.session_state.last_filters_hash or st.session_state.shuffle_seed:
+    if new_hash != st.session_state.last_filters_hash or st.session_state.shuffle_seed != st.session_state.last_seed_used:
         st.session_state.parsed_filters = new_filters
         st.session_state.last_filters_hash = new_hash
+        st.session_state.last_seed_used = st.session_state.shuffle_seed
 
         filtered_movies = filter_movies_with_fallback(all_movies, new_filters)
         scored = [(score_movie(m, new_filters)[0], m) for m in filtered_movies]
@@ -196,11 +199,8 @@ if st.session_state.search_trigger:
         sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
         top_candidates_pool = [m for _, m in sorted_scored[:25]]
-        shuffler = random.Random(st.session_state.shuffle_seed)
-        shuffler.shuffle(top_candidates_pool)
-        st.write("Shuffle seed:", st.session_state.shuffle_seed)
+        random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
         st.session_state.final_movies = top_candidates_pool[:4]
-        st.write("Top pool titles:", [m["title"] for m in top_candidates_pool])
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
@@ -245,3 +245,4 @@ if final_movies:
         st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
         st.markdown(f"_{movie['description']}_")
         st.markdown("---")
+
