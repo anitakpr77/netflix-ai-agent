@@ -26,7 +26,15 @@ if "shuffle_seed" not in st.session_state:
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 
 # --- User Input ---
-user_input = st.text_input("What are you in the mood for?", "")
+if "user_input" not in st.session_state:
+    st.session_state.user_input = ""
+
+user_input = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
+
+if user_input != st.session_state.user_input:
+    st.session_state.user_input = user_input
+    st.session_state.shown_titles = []
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 
 # --- Refresh Button ---
 if st.button("🔄 Show me different options"):
