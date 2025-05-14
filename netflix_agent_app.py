@@ -4,6 +4,7 @@ import json
 from datetime import datetime, timedelta
 import pytz
 import random
+import hashlib
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -29,6 +30,8 @@ if "search_trigger" not in st.session_state:
     st.session_state.search_trigger = False
 if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
+if "last_filters_hash" not in st.session_state:
+    st.session_state.last_filters_hash = ""
 
 # --- User Input Control ---
 input_val = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
@@ -158,6 +161,9 @@ Your task:
     except Exception as e:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
+def filters_hash(filters):
+    return hashlib.md5(json.dumps(filters, sort_keys=True).encode()).hexdigest()
+
 # --- Main Logic ---
 if st.session_state.search_trigger:
     st.session_state.search_trigger = False
@@ -174,20 +180,24 @@ if st.session_state.search_trigger:
                 ]
             )
             raw_output = response.choices[0].message.content
-            st.session_state.parsed_filters = json.loads(raw_output)
+            new_filters = json.loads(raw_output)
         except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
-    filters = st.session_state.parsed_filters
-    filtered_movies = filter_movies_with_fallback(all_movies, filters)
-    scored = [(score_movie(m, filters)[0], m) for m in filtered_movies]
-    scored = [pair for pair in scored if pair[0] > 0]
-    sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
+    new_hash = filters_hash(new_filters)
+    if new_hash != st.session_state.last_filters_hash or st.session_state.shuffle_seed:
+        st.session_state.parsed_filters = new_filters
+        st.session_state.last_filters_hash = new_hash
 
-    top_candidates_pool = [m for _, m in sorted_scored[:25]]
-    random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    st.session_state.final_movies = top_candidates_pool[:4]
+        filtered_movies = filter_movies_with_fallback(all_movies, new_filters)
+        scored = [(score_movie(m, new_filters)[0], m) for m in filtered_movies]
+        scored = [pair for pair in scored if pair[0] > 0]
+        sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
+
+        top_candidates_pool = [m for _, m in sorted_scored[:25]]
+        random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
+        st.session_state.final_movies = top_candidates_pool[:4]
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
