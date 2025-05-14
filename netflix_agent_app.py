@@ -149,8 +149,17 @@ def gpt_rank_movies(user_input, filters, candidate_movies):
             f"{i+1}. {m['title']} - Genres: {', '.join(m['genres'])}; Tags: {', '.join(m['tags'])}" for i, m in enumerate(candidate_movies)
         ])
 
-        gpt_prompt = f"""
+gpt_prompt = f"""
 A user asked: "{user_input}"
+
+Session context ID: {random.randint(0, 999999)}  # 👈 inject randomness here to avoid same GPT output
+
+Structured filters:
+Genres: {filters.get('genres')}
+Mood: {filters.get('mood')}
+Min Age Rating: {filters.get('min_age_rating')}
+...
+"""
 
 Structured filters:
 Genres: {filters.get('genres')}
