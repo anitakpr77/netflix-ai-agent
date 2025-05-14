@@ -226,6 +226,11 @@ Your task:
 # --- Main Logic ---
 parsed_filters = {}
 if user_input:
+    # --- Handle refresh trigger before processing ---
+    if st.session_state.get("refresh_trigger"):
+        st.session_state.refresh_trigger = False
+        st.experimental_rerun()
+
     with st.spinner("🧐 Thinking..."):
         try:
             response = client.chat.completions.create(
@@ -245,7 +250,7 @@ if user_input:
     shown_titles = st.session_state.get("shown_titles", [])
     filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
-   random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
+    random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
@@ -253,7 +258,6 @@ if user_input:
     top_candidates_pool = [m for _, m in sorted_scored[:25]]  # Take top 25 high scorers
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     top_candidates = top_candidates_pool[:12]  # Randomize which 12 are passed to GPT
-
 
     if top_candidates:
         ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
@@ -306,11 +310,9 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-           if st.button("🔄 Show me different options", key="refresh_button"):
-            st.session_state.shown_titles = []
-            st.session_state.shuffle_seed = random.randint(0, 10000)
-            st.session_state.refresh_trigger = True
-            
+            if st.button("🔄 Show me different options", key="refresh_button"):
+                st.session_state.shown_titles = []
+                st.session_state.shuffle_seed = random.randint(0, 10000)
+                st.session_state.refresh_trigger = True
     else:
         st.warning("No strong matches found. Try a different request!")
-
