@@ -196,7 +196,9 @@ if st.session_state.search_trigger:
         sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
         top_candidates_pool = [m for _, m in sorted_scored[:25]]
-        random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
+        shuffler = random.Random(st.session_state.shuffle_seed)
+        shuffler.shuffle(top_candidates_pool)
+        st.write("Shuffle seed:", st.session_state.shuffle_seed)
         st.session_state.final_movies = top_candidates_pool[:4]
         st.write("Top pool titles:", [m["title"] for m in top_candidates_pool])
 
