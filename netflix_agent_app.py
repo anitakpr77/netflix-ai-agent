@@ -27,6 +27,8 @@ if "parsed_filters" not in st.session_state:
     st.session_state.parsed_filters = {}
 if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
+if "generate_trigger" not in st.session_state:
+    st.session_state.generate_trigger = False
 
 # --- User Input Control ---
 user_input = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
@@ -34,15 +36,13 @@ if user_input != st.session_state.user_input:
     st.session_state.user_input = user_input
 
 # --- Refresh Flags ---
-should_generate = False
-
 if st.button("🔍 Search"):
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
-    should_generate = True
+    st.session_state.generate_trigger = True
 
 if st.button("🔄 Show me different options"):
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
-    should_generate = True
+    st.session_state.generate_trigger = True
 
 # --- Prompt Template ---
 system_prompt = """
@@ -158,7 +158,8 @@ Your task:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
 # --- Main Logic ---
-if should_generate and st.session_state.user_input:
+if st.session_state.generate_trigger and st.session_state.user_input:
+    st.session_state.generate_trigger = False
     with st.spinner("Thinking..."):
         try:
             response = client.chat.completions.create(
