@@ -23,9 +23,15 @@ if "shown_titles" not in st.session_state:
     st.session_state.shown_titles = []
 if "shuffle_seed" not in st.session_state:
     st.session_state.shuffle_seed = random.randint(0, 10000)
+if "refresh_trigger" not in st.session_state:
+    st.session_state.refresh_trigger = False
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
+# --- Handle refresh trigger before processing ---
+if st.session_state.get("refresh_trigger"):
+    st.session_state.refresh_trigger = False
+    st.experimental_rerun()
 
 # --- GPT Prompt for Filter Extraction ---
 system_prompt = """
@@ -303,7 +309,8 @@ if user_input:
            if st.button("🔄 Show me different options", key="refresh_button"):
             st.session_state.shown_titles = []
             st.session_state.shuffle_seed = random.randint(0, 10000)
-            st.rerun()
+            st.session_state.refresh_trigger = True
+            
     else:
         st.warning("No strong matches found. Try a different request!")
 
