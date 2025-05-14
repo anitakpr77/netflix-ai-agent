@@ -256,6 +256,11 @@ if user_input:
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
+    # Inject true randomness after sorting
+    top_candidates_pool = [m for _, m in sorted_scored[:25]]
+    random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
+    top_candidates = top_candidates_pool[:12]
+
     # Shuffle after sorting to introduce randomness into the top picks
     random.Random(st.session_state.shuffle_seed).shuffle(sorted_scored)
 
@@ -314,9 +319,9 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-          if st.button("🔄 Show me different options", key="refresh_button"):
+         if st.button("🔄 Show me different options", key="refresh_button"):
             st.session_state.shown_titles = []
-            st.session_state.shuffle_seed = random.randint(0, 10000)
+            st.session_state.shuffle_seed = random.randint(0, 1000000)
 
     else:
         st.warning("No strong matches found. Try a different request!")
