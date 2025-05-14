@@ -27,6 +27,8 @@ if "parsed_filters" not in st.session_state:
     st.session_state.parsed_filters = {}
 if "search_trigger" not in st.session_state:
     st.session_state.search_trigger = False
+if "final_movies" not in st.session_state:
+    st.session_state.final_movies = []
 
 # --- User Input Control ---
 input_val = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
@@ -185,12 +187,15 @@ if st.session_state.search_trigger:
 
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    final_movies = top_candidates_pool[:4]
+    st.session_state.final_movies = top_candidates_pool[:4]
 
+# --- Always Render from final_movies ---
+final_movies = st.session_state.get("final_movies", [])
+if final_movies:
     st.subheader("Here’s what I found:")
     for movie in final_movies:
         st.markdown(f"### 🎬 {movie['title']}")
-        st.markdown(explain_why(movie, user_input, filters, client, now))
+        st.markdown(explain_why(movie, st.session_state.user_input, st.session_state.parsed_filters, client, now))
 
         if movie.get("runtime"):
             minutes = movie["runtime"]
