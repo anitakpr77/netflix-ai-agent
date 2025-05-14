@@ -29,6 +29,8 @@ if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
 if "generate_trigger" not in st.session_state:
     st.session_state.generate_trigger = False
+if "last_used_seed" not in st.session_state:
+    st.session_state.last_used_seed = None
 
 # --- User Input Control ---
 user_input = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
@@ -158,7 +160,11 @@ Your task:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
 # --- Main Logic ---
-if st.session_state.generate_trigger and st.session_state.user_input:
+if (
+    st.session_state.generate_trigger
+    and st.session_state.user_input
+    and st.session_state.shuffle_seed != st.session_state.last_used_seed
+):
     st.session_state.final_movies = []  # 💥 Clear old movie list
     st.session_state.generate_trigger = False
     with st.spinner("Thinking..."):
@@ -188,6 +194,7 @@ if st.session_state.generate_trigger and st.session_state.user_input:
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     st.session_state.final_movies = top_candidates_pool[:4]
+    st.session_state.last_used_seed = st.session_state.shuffle_seed
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
