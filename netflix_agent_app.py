@@ -13,45 +13,44 @@ st.set_page_config(page_title="Movie AI Agent", page_icon="🎬")
 st.title("🎬 Movie AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
-# --- Force timezone to Pacific Time ---
+# --- Timezone ---
 pacific = pytz.timezone("America/Los_Angeles")
 now_utc = datetime.utcnow().replace(tzinfo=pytz.utc)
 now = now_utc.astimezone(pacific)
 
 # --- Session State Init ---
-if "shown_titles" not in st.session_state:
-    st.session_state.shown_titles = []
-
 if "shuffle_seed" not in st.session_state:
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+if "user_input" not in st.session_state:
+    st.session_state.user_input = ""
+if "parsed_filters" not in st.session_state:
+    st.session_state.parsed_filters = {}
+if "search_trigger" not in st.session_state:
+    st.session_state.search_trigger = False
 
-# --- User Input ---
-user_input = st.text_input("What are you in the mood for?", "")
+# --- User Input Control ---
+input_val = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
+if input_val != st.session_state.user_input:
+    st.session_state.user_input = input_val
+
+# --- Search Button ---
+if st.button("🔍 Search"):
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+    st.session_state.search_trigger = True
 
 # --- Refresh Button ---
 if st.button("🔄 Show me different options"):
-    st.session_state.shown_titles = []
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+    st.session_state.search_trigger = True
 
-# --- GPT Prompt for Filter Extraction ---
+# --- Prompt Template ---
 system_prompt = """
 You are a helpful movie assistant. Your job is to extract structured filters from natural-language movie prompts.
-
 Return a dictionary with these keys:
 - genres: list of genres like "Action", "Comedy", "Family"
 - mood: list of mood words like "Fun", "Adventurous", "Romantic", "Intense", "Chill"
 - min_age_rating: G, PG, PG-13, R, etc.
 - keywords: list of subject-related terms (e.g., dinosaurs, pirates)
-
-Important:
-- If the user says "romantic comedy" or "romcom", set genres to ["Romance", "Comedy"].
-- If the user doesn’t explicitly state the mood, infer it based on their phrasing.
-- Never return an empty list for mood — always include your best guess.
-- If the user mentions a specific age:
-    - under 10 → set min_age_rating: "G"
-    - age 10–12 → "PG"
-    - age 13–17 → "PG-13"
-    - adults → "R"
 """
 
 # --- Load Movies ---
@@ -62,7 +61,7 @@ except FileNotFoundError:
     st.error("Could not find movies.json. Make sure it's in the same folder.")
     st.stop()
 
-# --- Filter and Scoring ---
+# --- Filtering/Scoring Utilities ---
 def is_rating_appropriate(movie_rating, user_min_rating):
     rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
     try:
@@ -78,62 +77,53 @@ def is_relaxed_rating_acceptable(movie_rating, user_min_rating):
         return False
 
 def filter_movies_with_fallback(movies, filters):
-    strict_matches = []
-    relaxed_matches = []
+    strict, relaxed = [], []
     for m in movies:
         if is_rating_appropriate(m.get("age_rating", ""), filters.get("min_age_rating", "R")):
-            strict_matches.append(m)
+            strict.append(m)
         elif is_relaxed_rating_acceptable(m.get("age_rating", ""), filters.get("min_age_rating", "R")):
-            relaxed_matches.append(m)
-    return strict_matches if strict_matches else relaxed_matches
+            relaxed.append(m)
+    return strict if strict else relaxed
 
 def score_movie(movie, filters):
     score = 0
-    reasons = []
     genres = [g.lower() for g in filters.get("genres", [])]
     moods = [m.lower() for m in filters.get("mood", [])]
     keywords = [k.lower() for k in filters.get("keywords", [])]
     movie_genres = [g.lower() for g in movie.get("genres", [])]
     movie_tags = [t.lower() for t in movie.get("tags", [])]
     description = movie.get("description", "").lower()
+
     if "horror" in genres and "horror" not in movie_genres:
-        return 0, ["rejected: not a horror genre"]
+        return 0, []
     if "romance" in genres and "romance" not in movie_genres:
-        return 0, ["rejected: not a romance genre"]
+        return 0, []
     if "romance" in genres and "comedy" in genres:
         if "romance" in movie_genres and "comedy" in movie_genres:
             score += 3
-            reasons.append("perfect romcom match")
         elif "romance" in movie_genres or "comedy" in movie_genres:
             score += 1
-            reasons.append("partial romcom match — allowed")
-        else:
-            reasons.append("no romcom elements found")
+
     for g in genres:
         if g in movie_genres:
             score += 2 if g in ["romance", "horror"] else 1
-            reasons.append(f"matched genre: {g}")
     for m in moods:
         if m in movie_tags:
             score += 1
-            reasons.append(f"matched mood/tag: {m}")
     for k in keywords:
         if k in description:
             score += 1
-            reasons.append(f"matched keyword: {k}")
     if filters.get("min_age_rating") and movie.get("age_rating") == filters["min_age_rating"]:
         score += 1
-        reasons.append(f"matched age rating: {movie.get('age_rating')}")
-    return score, reasons
+    return score, []
 
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
     age_warning = ""
     if movie.get("age_rating") == "Not Rated":
-        age_warning = "\n\n⚠️ *This film is not officially rated. Viewer discretion advised.*"
+        age_warning = "\n\n🚨 *This film is not officially rated. Viewer discretion advised.*"
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
-
 Your system parsed the following filters:
 {parsed}
 
@@ -144,14 +134,14 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 - Genres: {', '.join(movie.get('genres', []))}
 - Tags: {', '.join(movie.get('tags', []))}
 - Description: {movie.get('description')}
-- Critics Quote: \"{movie.get('rt_quote', '')}\"{age_warning}
+- Critics Quote: "{movie.get('rt_quote', '')}"{age_warning}
 
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
-- Start with: \"We chose this film because you asked for: '...\"
+- Start with: "We chose this film because you asked for: '..."
 - If the match is not perfect, say so honestly
 - Emphasize age-appropriateness if it's a good fit
-- End with something warm like \"We think you'll enjoy it!\"
+- End with something warm like "We think you'll enjoy it!"
 """
     try:
         response = client.chat.completions.create(
@@ -162,14 +152,16 @@ Your task:
                 {"role": "user", "content": prompt}
             ]
         )
-        explanation = response.choices[0].message.content
+        return f"### 🎯 Why this movie?\n\n{response.choices[0].message.content}"
     except Exception as e:
-        explanation = f"(There was an error generating a response.)\n\n{str(e)}"
-    return f"### 🎯 Why this movie?\n\n{explanation}"
+        return f"(There was an error generating a response.)\n\n{str(e)}"
 
 # --- Main Logic ---
-if user_input:
-    with st.spinner("🤮 Thinking..."):
+if st.session_state.search_trigger:
+    st.session_state.search_trigger = False
+    user_input = st.session_state.user_input
+
+    with st.spinner("Thinking..."):
         try:
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -180,25 +172,25 @@ if user_input:
                 ]
             )
             raw_output = response.choices[0].message.content
-            parsed_filters = json.loads(raw_output)
+            st.session_state.parsed_filters = json.loads(raw_output)
         except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
-    filtered_movies = filter_movies_with_fallback(all_movies, parsed_filters)
-    scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
+    filters = st.session_state.parsed_filters
+    filtered_movies = filter_movies_with_fallback(all_movies, filters)
+    scored = [(score_movie(m, filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    top_candidates = top_candidates_pool[:12]
-    final_movies = top_candidates[:4]
+    final_movies = top_candidates_pool[:4]
 
     st.subheader("Here’s what I found:")
     for movie in final_movies:
         st.markdown(f"### 🎬 {movie['title']}")
-        st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+        st.markdown(explain_why(movie, user_input, filters, client, now))
 
         if movie.get("runtime"):
             minutes = movie["runtime"]
@@ -235,4 +227,3 @@ if user_input:
         st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
         st.markdown(f"_{movie['description']}_")
         st.markdown("---")
-
