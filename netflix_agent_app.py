@@ -188,10 +188,17 @@ if st.session_state.search_trigger:
             st.stop()
 
     new_hash = filters_hash(new_filters)
-    if new_hash != st.session_state.last_filters_hash or st.session_state.shuffle_seed != st.session_state.last_seed_used:
-        st.session_state.parsed_filters = new_filters
-        st.session_state.last_filters_hash = new_hash
-        st.session_state.last_seed_used = st.session_state.shuffle_seed
+force_regenerate = (
+    new_hash != st.session_state.last_filters_hash or
+    st.session_state.shuffle_seed != st.session_state.last_seed_used or
+    not st.session_state.final_movies
+)
+
+if force_regenerate:
+    st.session_state.parsed_filters = new_filters
+    st.session_state.last_filters_hash = new_hash
+    st.session_state.last_seed_used = st.session_state.shuffle_seed
+
 
         filtered_movies = filter_movies_with_fallback(all_movies, new_filters)
         scored = [(score_movie(m, new_filters)[0], m) for m in filtered_movies]
