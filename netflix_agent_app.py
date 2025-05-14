@@ -237,6 +237,8 @@ if user_input:
     shown_titles = st.session_state.get("shown_titles", [])
     filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
+    random.shuffle(filtered_movies)
+
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     top_candidates = [m for _, m in sorted(scored, key=lambda x: x[0], reverse=True)[:12]]
