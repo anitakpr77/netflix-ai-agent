@@ -9,8 +9,8 @@ import random
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="Netflix AI Agent", page_icon="🎬")
-st.title("🎬 Netflix AI Agent")
+st.set_page_config(page_title="Movie AI Agent", page_icon="🎬")
+st.title("🎬 Movie AI Agent")
 st.write("Tell me what you feel like watching and I’ll find something perfect.")
 
 # --- Force timezone to Pacific Time ---
@@ -21,13 +21,17 @@ now = now_utc.astimezone(pacific)
 # --- Session State Init ---
 if "shown_titles" not in st.session_state:
     st.session_state.shown_titles = []
+
 if "shuffle_seed" not in st.session_state:
-    st.session_state.shuffle_seed = random.randint(0, 10000)
-if "refresh_trigger" not in st.session_state:
-    st.session_state.refresh_trigger = False
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
+
+# --- Refresh Button ---
+if st.button("🔄 Show me different options"):
+    st.session_state.shown_titles = []
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 
 # --- GPT Prompt for Filter Extraction ---
 system_prompt = """
@@ -315,3 +319,5 @@ if user_input:
                 st.session_state.shuffle_seed = random.randint(0, 1000000)
     else:
         st.warning("No strong matches found. Try a different request!")
+
+        st.write("🎬 Final Movies:", [m["title"] for m in final_movies])
