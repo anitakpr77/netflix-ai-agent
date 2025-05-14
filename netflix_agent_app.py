@@ -239,11 +239,15 @@ if user_input:
     shown_titles = st.session_state.get("shown_titles", [])
     filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
-    random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
+   random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
-    top_candidates = [m for _, m in sorted(scored, key=lambda x: x[0], reverse=True)[:12]]
+    sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
+    top_candidates_pool = [m for _, m in sorted_scored[:25]]  # Take top 25 high scorers
+    random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
+    top_candidates = top_candidates_pool[:12]  # Randomize which 12 are passed to GPT
+
 
     if top_candidates:
         ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
