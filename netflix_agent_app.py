@@ -227,11 +227,7 @@ Your task:
 # --- Main Logic ---
 parsed_filters = {}
 if user_input:
-    # --- Handle refresh trigger before processing ---
-    if st.session_state.get("refresh_trigger"):
-        st.session_state.refresh_trigger = False
-        st.experimental_rerun()
-
+ 
     with st.spinner("🧐 Thinking..."):
         try:
             response = client.chat.completions.create(
@@ -318,9 +314,9 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-            if st.button("🔄 Show me different options", key="refresh_button"):
-                st.session_state.shown_titles = []
-                st.session_state.refresh_trigger = True
+          if st.button("🔄 Show me different options", key="refresh_button"):
+            st.session_state.shown_titles = []
+            st.session_state.shuffle_seed = random.randint(0, 10000)
 
     else:
         st.warning("No strong matches found. Try a different request!")
