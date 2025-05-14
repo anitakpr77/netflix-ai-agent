@@ -269,7 +269,7 @@ if user_input:
 
     # ✅ Pre-update shown_titles to prevent reversion on rerun
     new_titles = [movie["title"] for movie in final_movies]
-    st.session_state["shown_titles"] += new_titles
+    st.session_state["shown_titles"] = st.session_state["shown_titles"] + new_titles
 
     if final_movies:
         st.subheader("Here’s what I found:")
