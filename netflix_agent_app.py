@@ -268,9 +268,6 @@ if user_input:
     top_candidates = top_candidates_pool[:12]  # Randomized top 12 sent to GPT
 
     if top_candidates:
-        ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
-        final_movies = [m for m in top_candidates if m["title"] in ranked_titles]
-        if not final_movies:
             final_movies = top_candidates[:4]
 
         st.subheader("Here’s what I found:")
