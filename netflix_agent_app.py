@@ -250,6 +250,11 @@ if user_input:
     shown_titles = st.session_state.get("shown_titles", [])
     filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
+    # --- Commit pending shuffle seed if present ---
+    if "pending_shuffle_seed" in st.session_state:
+        st.session_state.shuffle_seed = st.session_state.pending_shuffle_seed
+        del st.session_state.pending_shuffle_seed
+
     random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
