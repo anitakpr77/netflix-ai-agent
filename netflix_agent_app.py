@@ -28,7 +28,7 @@ if "parsed_filters" not in st.session_state:
 if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
 if "generate_trigger" not in st.session_state:
-    
+    st.session_state.generate_trigger = False
 if "last_used_seed" not in st.session_state:
     st.session_state.last_used_seed = None
 
@@ -159,9 +159,8 @@ Your task:
     except Exception as e:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
-# --- Main Logic ---
-if st.session_state.user_input:
-    # Always regenerate filters (basic keyword parsing)
+# --- Main Logic (now includes trigger) ---
+if st.session_state.user_input or st.session_state.get("generate_trigger", False):
     filters = {
         "genres": [],
         "mood": [],
@@ -196,6 +195,9 @@ if st.session_state.user_input:
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     st.session_state.final_movies = top_candidates_pool[:4]
+
+    # Reset the shuffle trigger
+    st.session_state.generate_trigger = False
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
