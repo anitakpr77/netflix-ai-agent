@@ -312,7 +312,7 @@ if user_input:
         if len(filtered_movies) > len(final_movies):
             if st.button("🔄 Show me different options", key="refresh_button"):
                 st.session_state.shown_titles = []
-                st.session_state.shuffle_seed = random.randint(0, 10000)
+                st.session_state.pending_shuffle_seed = random.randint(0, 10000)
                 st.session_state.refresh_trigger = True
     else:
         st.warning("No strong matches found. Try a different request!")
