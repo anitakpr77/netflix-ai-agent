@@ -28,11 +28,6 @@ if "refresh_trigger" not in st.session_state:
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
-# --- Handle refresh trigger before processing ---
-if st.session_state.get("refresh_trigger"):
-     st.session_state.shuffle_seed = random.randint(0, 10000)  # Generate new seed here
-     st.session_state.refresh_trigger = False
-     st.experimental_rerun()
 
 # --- GPT Prompt for Filter Extraction ---
 system_prompt = """
