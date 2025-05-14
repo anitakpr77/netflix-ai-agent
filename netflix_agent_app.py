@@ -21,6 +21,8 @@ now = now_utc.astimezone(pacific)
 # --- Session State Init ---
 if "shown_titles" not in st.session_state:
     st.session_state.shown_titles = []
+if "shuffle_seed" not in st.session_state:
+    st.session_state.shuffle_seed = random.randint(0, 10000)
 
 # --- User Input ---
 user_input = st.text_input("What are you in the mood for?", "")
@@ -237,7 +239,7 @@ if user_input:
     shown_titles = st.session_state.get("shown_titles", [])
     filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
 
-    random.shuffle(filtered_movies)
+    random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
@@ -294,9 +296,10 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-            if st.button("🔄 Show me different options", key="refresh_button"):
-                st.session_state.shown_titles = []
-                st.rerun()
+           if st.button("🔄 Show me different options", key="refresh_button"):
+            st.session_state.shown_titles = []
+            st.session_state.shuffle_seed = random.randint(0, 10000)
+            st.rerun()
     else:
         st.warning("No strong matches found. Try a different request!")
 
