@@ -227,7 +227,6 @@ Your task:
 # --- Main Logic ---
 parsed_filters = {}
 if user_input:
- 
     with st.spinner("🧐 Thinking..."):
         try:
             response = client.chat.completions.create(
@@ -245,28 +244,19 @@ if user_input:
             st.stop()
 
     shown_titles = st.session_state.get("shown_titles", [])
-    filtered_movies = filter_movies_with_fallback([m for m in all_movies if m["title"] not in shown_titles], parsed_filters)
-
-    # --- Commit pending shuffle seed if present ---
-    if "pending_shuffle_seed" in st.session_state:
-        st.session_state.shuffle_seed = st.session_state.pending_shuffle_seed
-        del st.session_state.pending_shuffle_seed
+    filtered_movies = filter_movies_with_fallback(
+        [m for m in all_movies if m["title"] not in shown_titles],
+        parsed_filters
+    )
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
-    # Inject true randomness after sorting
-    top_candidates_pool = [m for _, m in sorted_scored[:25]]
-    random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    top_candidates = top_candidates_pool[:12]
-
-    # Shuffle after sorting to introduce randomness into the top picks
-    random.Random(st.session_state.shuffle_seed).shuffle(sorted_scored)
-
+    # Shuffle after scoring to ensure fresh candidate pool
     top_candidates_pool = [m for _, m in sorted_scored[:25]]  # Take top 25 high scorers
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    top_candidates = top_candidates_pool[:12]  # Randomize which 12 are passed to GPT
+    top_candidates = top_candidates_pool[:12]  # Randomized top 12 sent to GPT
 
     if top_candidates:
         ranked_titles = gpt_rank_movies(user_input, parsed_filters, top_candidates)
@@ -319,9 +309,9 @@ if user_input:
         st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
-         if st.button("🔄 Show me different options", key="refresh_button"):
-            st.session_state.shown_titles = []
-            st.session_state.shuffle_seed = random.randint(0, 1000000)
-
+            if st.button("🔄 Show me different options", key="refresh_button"):
+                st.session_state.shown_titles = []
+                st.session_state.shuffle_seed = random.randint(0, 1000000)
     else:
         st.warning("No strong matches found. Try a different request!")
+
