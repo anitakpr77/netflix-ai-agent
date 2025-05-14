@@ -20,7 +20,7 @@ now = now_utc.astimezone(pacific)
 
 # --- Session State Init ---
 if "shuffle_seed" not in st.session_state:
-    st.session_state.shuffle_seed = random.randint(0, 1000000)
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 if "user_input" not in st.session_state:
     st.session_state.user_input = ""
 if "parsed_filters" not in st.session_state:
@@ -28,7 +28,7 @@ if "parsed_filters" not in st.session_state:
 if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
 if "generate_trigger" not in st.session_state:
-    st.session_state.generate_trigger = False
+    
 if "last_used_seed" not in st.session_state:
     st.session_state.last_used_seed = None
 
@@ -39,11 +39,11 @@ if user_input != st.session_state.user_input:
 
 # --- Refresh Flags ---
 if st.button("🔍 Search"):
-    st.session_state.shuffle_seed = random.randint(0, 1000000)
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
     st.session_state.generate_trigger = True
 
 if st.button("🔄 Show me different options"):
-    st.session_state.shuffle_seed = random.randint(0, 1000000)
+    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
     st.session_state.generate_trigger = True
 
 # --- Prompt Template ---
@@ -165,6 +165,7 @@ if (
     and st.session_state.user_input
     and st.session_state.shuffle_seed != st.session_state.last_used_seed
 ):
+    st.session_state.generate_trigger = False
     st.session_state.final_movies = []  # 💥 Clear old movie list
     st.session_state.generate_trigger = False
 
@@ -206,6 +207,7 @@ if (
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     st.session_state.final_movies = top_candidates_pool[:4]
+    st.write("DEBUG: Showing new movies:", [m["title"] for m in top_candidates_pool[:4]])
     st.session_state.last_used_seed = st.session_state.shuffle_seed
 
 # --- Always Render from final_movies ---
