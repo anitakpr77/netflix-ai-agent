@@ -4,7 +4,6 @@ import json
 from datetime import datetime, timedelta
 import pytz
 import random
-import hashlib
 
 # --- API Key ---
 client = openai.OpenAI(api_key=st.secrets["openai_api_key"])
@@ -26,29 +25,24 @@ if "user_input" not in st.session_state:
     st.session_state.user_input = ""
 if "parsed_filters" not in st.session_state:
     st.session_state.parsed_filters = {}
-if "search_trigger" not in st.session_state:
-    st.session_state.search_trigger = False
 if "final_movies" not in st.session_state:
     st.session_state.final_movies = []
-if "last_filters_hash" not in st.session_state:
-    st.session_state.last_filters_hash = ""
-if "last_seed_used" not in st.session_state:
-    st.session_state.last_seed_used = -1
 
 # --- User Input Control ---
-input_val = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
-if input_val != st.session_state.user_input:
-    st.session_state.user_input = input_val
+user_input = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
+if user_input != st.session_state.user_input:
+    st.session_state.user_input = user_input
 
-# --- Search Button ---
+# --- Refresh Flags ---
+should_generate = False
+
 if st.button("🔍 Search"):
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
-    st.session_state.search_trigger = True
+    should_generate = True
 
-# --- Refresh Button ---
 if st.button("🔄 Show me different options"):
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
-    st.session_state.search_trigger = True
+    should_generate = True
 
 # --- Prompt Template ---
 system_prompt = """
@@ -163,13 +157,8 @@ Your task:
     except Exception as e:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
-def filters_hash(filters):
-    return hashlib.md5(json.dumps(filters, sort_keys=True).encode()).hexdigest()
-
 # --- Main Logic ---
-if st.session_state.search_trigger:
-    user_input = st.session_state.user_input
-
+if should_generate and st.session_state.user_input:
     with st.spinner("Thinking..."):
         try:
             response = client.chat.completions.create(
@@ -177,31 +166,23 @@ if st.session_state.search_trigger:
                 temperature=0,
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_input}
+                    {"role": "user", "content": st.session_state.user_input}
                 ]
             )
-            raw_output = response.choices[0].message.content
-            new_filters = json.loads(raw_output)
+            parsed_filters = json.loads(response.choices[0].message.content)
+            st.session_state.parsed_filters = parsed_filters
         except Exception:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
-    new_hash = filters_hash(new_filters)
-    if new_hash != st.session_state.last_filters_hash or st.session_state.shuffle_seed != st.session_state.last_seed_used:
-        st.session_state.parsed_filters = new_filters
-        st.session_state.last_filters_hash = new_hash
-        st.session_state.last_seed_used = st.session_state.shuffle_seed
+    filtered_movies = filter_movies_with_fallback(all_movies, st.session_state.parsed_filters)
+    scored = [(score_movie(m, st.session_state.parsed_filters)[0], m) for m in filtered_movies]
+    scored = [pair for pair in scored if pair[0] > 0]
+    sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
-        filtered_movies = filter_movies_with_fallback(all_movies, new_filters)
-        random.Random(st.session_state.shuffle_seed).shuffle(filtered_movies)
-        scored = [(score_movie(m, new_filters)[0], m) for m in filtered_movies]
-        scored = [pair for pair in scored if pair[0] > 0]
-        sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
-
-        top_candidates_pool = [m for _, m in sorted_scored[:25]]
-        random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-        st.session_state.final_movies = top_candidates_pool[:4]
-        st.session_state.search_trigger = False
+    top_candidates_pool = [m for _, m in sorted_scored[:25]]
+    random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
+    st.session_state.final_movies = top_candidates_pool[:4]
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
