@@ -261,14 +261,17 @@ if user_input:
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
-    # Shuffle after scoring to ensure fresh candidate pool
-    top_candidates_pool = [m for _, m in sorted_scored[:25]]  # Take top 25 high scorers
+    # Shuffle top 25 and take top 12
+    top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
-    top_candidates = top_candidates_pool[:12]  # Randomized top 12 sent to GPT
+    top_candidates = top_candidates_pool[:12]
+    final_movies = top_candidates[:4]  # Skip GPT — use random picks directly
 
-    if top_candidates:
-            final_movies = top_candidates[:4]
+    # ✅ Pre-update shown_titles to prevent reversion on rerun
+    new_titles = [movie["title"] for movie in final_movies]
+    st.session_state["shown_titles"] += new_titles
 
+    if final_movies:
         st.subheader("Here’s what I found:")
         for movie in final_movies:
             st.markdown(f"### 🎬 {movie['title']}")
@@ -309,15 +312,10 @@ if user_input:
             st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
             st.markdown(f"_{movie['description']}_")
             st.markdown("---")
-            shown_titles.append(movie["title"])
-
-        st.session_state["shown_titles"] = shown_titles
 
         if len(filtered_movies) > len(final_movies):
             if st.button("🔄 Show me different options", key="refresh_button"):
                 st.session_state.shown_titles = []
-                st.session_state.shuffle_seed = random.randint(0, 1000000)
+                st.session_state.shuffle_seed = random.randint(0, 1_000_000)
     else:
         st.warning("No strong matches found. Try a different request!")
-
-        st.write("🎬 Final Movies:", [m["title"] for m in final_movies])
