@@ -160,16 +160,8 @@ Your task:
         return f"(There was an error generating a response.)\n\n{str(e)}"
 
 # --- Main Logic ---
-if (
-    st.session_state.generate_trigger
-    and st.session_state.user_input
-    and st.session_state.shuffle_seed != st.session_state.last_used_seed
-):
-    st.session_state.generate_trigger = False
-    st.session_state.final_movies = []  # 💥 Clear old movie list
-    st.session_state.generate_trigger = False
-
-    # --- Basic Keyword Parsing Instead of GPT ---
+if st.session_state.user_input:
+    # Always regenerate filters (basic keyword parsing)
     filters = {
         "genres": [],
         "mood": [],
@@ -178,11 +170,9 @@ if (
     }
     text = st.session_state.user_input.lower()
 
-    # Basic genre matching
     genres = ["action", "comedy", "drama", "romance", "horror", "thriller", "sci-fi", "fantasy", "family"]
     filters["genres"] = [g for g in genres if g in text]
 
-    # Basic mood guessing
     if "fun" in text or "light" in text:
         filters["mood"].append("fun")
     if "romantic" in text:
@@ -192,7 +182,6 @@ if (
     if not filters["mood"]:
         filters["mood"] = ["thoughtful"]
 
-    # Keywords
     for word in ["dinosaur", "pirate", "robot", "space", "war"]:
         if word in text:
             filters["keywords"].append(word)
@@ -207,8 +196,6 @@ if (
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     st.session_state.final_movies = top_candidates_pool[:4]
-    st.write("DEBUG: Showing new movies:", [m["title"] for m in top_candidates_pool[:4]])
-    st.session_state.last_used_seed = st.session_state.shuffle_seed
 
 # --- Always Render from final_movies ---
 final_movies = st.session_state.get("final_movies", [])
