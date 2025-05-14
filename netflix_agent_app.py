@@ -167,27 +167,39 @@ if (
 ):
     st.session_state.final_movies = []  # 💥 Clear old movie list
     st.session_state.generate_trigger = False
-    with st.spinner("Thinking..."):
-        try:
-            response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                temperature=0,
-                messages=[
-    {"role": "system", "content": system_prompt},
-    {"role": "user", "content": f"{st.session_state.user_input}
 
-[Session ID: {st.session_state.shuffle_seed}]"}
-]
-            )
-            parsed_filters = json.loads(response.choices[0].message.content)
-            st.session_state.parsed_filters = parsed_filters
-        except Exception:
-    st.error("GPT request failed or response couldn't be parsed.")
-    st.session_state.final_movies = []  # 🔥 Clear on GPT failure
-            st.stop()
+    # --- Basic Keyword Parsing Instead of GPT ---
+    filters = {
+        "genres": [],
+        "mood": [],
+        "min_age_rating": "R",
+        "keywords": []
+    }
+    text = st.session_state.user_input.lower()
 
-    filtered_movies = filter_movies_with_fallback(all_movies, st.session_state.parsed_filters)
-    scored = [(score_movie(m, st.session_state.parsed_filters)[0], m) for m in filtered_movies]
+    # Basic genre matching
+    genres = ["action", "comedy", "drama", "romance", "horror", "thriller", "sci-fi", "fantasy", "family"]
+    filters["genres"] = [g for g in genres if g in text]
+
+    # Basic mood guessing
+    if "fun" in text or "light" in text:
+        filters["mood"].append("fun")
+    if "romantic" in text:
+        filters["mood"].append("romantic")
+    if "scary" in text or "tense" in text:
+        filters["mood"].append("intense")
+    if not filters["mood"]:
+        filters["mood"] = ["thoughtful"]
+
+    # Keywords
+    for word in ["dinosaur", "pirate", "robot", "space", "war"]:
+        if word in text:
+            filters["keywords"].append(word)
+
+    st.session_state.parsed_filters = filters
+
+    filtered_movies = filter_movies_with_fallback(all_movies, filters)
+    scored = [(score_movie(m, filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
