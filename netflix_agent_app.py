@@ -159,6 +159,7 @@ Your task:
 
 # --- Main Logic ---
 if st.session_state.generate_trigger and st.session_state.user_input:
+    st.session_state.final_movies = []  # 💥 Clear old movie list
     st.session_state.generate_trigger = False
     with st.spinner("Thinking..."):
         try:
@@ -175,7 +176,8 @@ if st.session_state.generate_trigger and st.session_state.user_input:
             parsed_filters = json.loads(response.choices[0].message.content)
             st.session_state.parsed_filters = parsed_filters
         except Exception:
-            st.error("GPT request failed or response couldn't be parsed.")
+    st.error("GPT request failed or response couldn't be parsed.")
+    st.session_state.final_movies = []  # 🔥 Clear on GPT failure
             st.stop()
 
     filtered_movies = filter_movies_with_fallback(all_movies, st.session_state.parsed_filters)
