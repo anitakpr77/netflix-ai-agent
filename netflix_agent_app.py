@@ -252,9 +252,7 @@ if user_input:
             st.stop()
 
     shown_titles = st.session_state.get("shown_titles", [])
-    filtered_movies = filter_movies_with_fallback(
-        [m for m in all_movies if m["title"] not in shown_titles],
-        parsed_filters
+   filtered_movies = filter_movies_with_fallback(all_movies, parsed_filters)
     )
 
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
