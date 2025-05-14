@@ -26,15 +26,7 @@ if "shuffle_seed" not in st.session_state:
     st.session_state.shuffle_seed = random.randint(0, 1_000_000)
 
 # --- User Input ---
-if "user_input" not in st.session_state:
-    st.session_state.user_input = ""
-
-user_input = st.text_input("What are you in the mood for?", value=st.session_state.user_input)
-
-if user_input != st.session_state.user_input:
-    st.session_state.user_input = user_input
-    st.session_state.shown_titles = []
-    st.session_state.shuffle_seed = random.randint(0, 1_000_000)
+user_input = st.text_input("What are you in the mood for?", "")
 
 # --- Refresh Button ---
 if st.button("🔄 Show me different options"):
@@ -70,7 +62,7 @@ except FileNotFoundError:
     st.error("Could not find movies.json. Make sure it's in the same folder.")
     st.stop()
 
-# --- Age Rating Filter ---
+# --- Filter and Scoring ---
 def is_rating_appropriate(movie_rating, user_min_rating):
     rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
     try:
@@ -78,7 +70,6 @@ def is_rating_appropriate(movie_rating, user_min_rating):
     except ValueError:
         return False
 
-# --- Relaxed Age Rating Check ---
 def is_relaxed_rating_acceptable(movie_rating, user_min_rating):
     rating_order = ["G", "PG", "PG-13", "R", "NC-17"]
     try:
@@ -86,7 +77,6 @@ def is_relaxed_rating_acceptable(movie_rating, user_min_rating):
     except ValueError:
         return False
 
-# --- Fallback Filtering ---
 def filter_movies_with_fallback(movies, filters):
     strict_matches = []
     relaxed_matches = []
@@ -97,25 +87,19 @@ def filter_movies_with_fallback(movies, filters):
             relaxed_matches.append(m)
     return strict_matches if strict_matches else relaxed_matches
 
-# --- Scoring Function ---
 def score_movie(movie, filters):
     score = 0
     reasons = []
-
     genres = [g.lower() for g in filters.get("genres", [])]
     moods = [m.lower() for m in filters.get("mood", [])]
     keywords = [k.lower() for k in filters.get("keywords", [])]
-
     movie_genres = [g.lower() for g in movie.get("genres", [])]
     movie_tags = [t.lower() for t in movie.get("tags", [])]
     description = movie.get("description", "").lower()
-
     if "horror" in genres and "horror" not in movie_genres:
         return 0, ["rejected: not a horror genre"]
-
     if "romance" in genres and "romance" not in movie_genres:
         return 0, ["rejected: not a romance genre"]
-
     if "romance" in genres and "comedy" in genres:
         if "romance" in movie_genres and "comedy" in movie_genres:
             score += 3
@@ -125,82 +109,28 @@ def score_movie(movie, filters):
             reasons.append("partial romcom match — allowed")
         else:
             reasons.append("no romcom elements found")
-
     for g in genres:
         if g in movie_genres:
             score += 2 if g in ["romance", "horror"] else 1
             reasons.append(f"matched genre: {g}")
-
     for m in moods:
         if m in movie_tags:
             score += 1
             reasons.append(f"matched mood/tag: {m}")
-
     for k in keywords:
         if k in description:
             score += 1
             reasons.append(f"matched keyword: {k}")
-
     if filters.get("min_age_rating") and movie.get("age_rating") == filters["min_age_rating"]:
         score += 1
         reasons.append(f"matched age rating: {movie.get('age_rating')}")
-
     return score, reasons
 
-# (the rest of the code remains unchanged)
-
-# --- GPT Ranking Function ---
-def gpt_rank_movies(user_input, filters, candidate_movies):
-    try:
-        movie_summaries = "\n".join([
-            f"{i+1}. {m['title']} - Genres: {', '.join(m['genres'])}; Tags: {', '.join(m['tags'])}" for i, m in enumerate(candidate_movies)
-        ])
-
-gpt_prompt = f"""
-A user asked: "{user_input}"
-
-Session context ID: {random.randint(0, 999999)}  # 👈 inject randomness here to avoid same GPT output
-
-Structured filters:
-Genres: {filters.get('genres')}
-Mood: {filters.get('mood')}
-Min Age Rating: {filters.get('min_age_rating')}
-...
-"""
-
-Structured filters:
-Genres: {filters.get('genres')}
-Mood: {filters.get('mood')}
-Min Age Rating: {filters.get('min_age_rating')}
-
-Candidate movies:
-{movie_summaries}
-
-Please select and rank the top 4 movies that best match the user's request. Return only a list of movie titles in order of best fit.
-"""
-
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            temperature=0,
-            messages=[
-                {"role": "user", "content": gpt_prompt}
-            ]
-        )
-
-        titles = response.choices[0].message.content.split("\n")
-        titles = [t.strip("0123456789. ") for t in titles if t.strip()]
-        return titles[:4]
-
-    except Exception:
-        return []
-
-# --- Explain Why Function ---
 def explain_why(movie, user_input, filters, client, now):
     parsed = json.dumps(filters, indent=2)
     age_warning = ""
     if movie.get("age_rating") == "Not Rated":
         age_warning = "\n\n⚠️ *This film is not officially rated. Viewer discretion advised.*"
-
     prompt = f"""
 You are an AI movie assistant. A user asked for a movie recommendation: "{user_input}"
 
@@ -214,17 +144,15 @@ You selected the movie **{movie['title']}**. Here are the movie details:
 - Genres: {', '.join(movie.get('genres', []))}
 - Tags: {', '.join(movie.get('tags', []))}
 - Description: {movie.get('description')}
-- Critics Quote: "{movie.get('rt_quote', '')}"
-{age_warning}
+- Critics Quote: \"{movie.get('rt_quote', '')}\"{age_warning}
 
 Your task:
 - Write a short, conversational explanation (~3–5 sentences) of **why this movie fits their request**
-- Start with: "We chose this film because you asked for: '..."
+- Start with: \"We chose this film because you asked for: '...\"
 - If the match is not perfect, say so honestly
 - Emphasize age-appropriateness if it's a good fit
-- End with something warm like "We think you'll enjoy it!"
+- End with something warm like \"We think you'll enjoy it!\"
 """
-
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -237,13 +165,11 @@ Your task:
         explanation = response.choices[0].message.content
     except Exception as e:
         explanation = f"(There was an error generating a response.)\n\n{str(e)}"
-
     return f"### 🎯 Why this movie?\n\n{explanation}"
 
 # --- Main Logic ---
-parsed_filters = {}
 if user_input:
-    with st.spinner("🧐 Thinking..."):
+    with st.spinner("🤮 Thinking..."):
         try:
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -259,71 +185,54 @@ if user_input:
             st.error("GPT request failed or response couldn't be parsed.")
             st.stop()
 
-    shown_titles = st.session_state.get("shown_titles", [])
-   filtered_movies = filter_movies_with_fallback(all_movies, parsed_filters)
-    )
-
+    filtered_movies = filter_movies_with_fallback(all_movies, parsed_filters)
     scored = [(score_movie(m, parsed_filters)[0], m) for m in filtered_movies]
     scored = [pair for pair in scored if pair[0] > 0]
     sorted_scored = sorted(scored, key=lambda x: x[0], reverse=True)
 
-    # Shuffle top 25 and take top 12
     top_candidates_pool = [m for _, m in sorted_scored[:25]]
     random.Random(st.session_state.shuffle_seed).shuffle(top_candidates_pool)
     top_candidates = top_candidates_pool[:12]
-    final_movies = top_candidates[:4]  # Skip GPT — use random picks directly
+    final_movies = top_candidates[:4]
 
-    # ✅ Capture titles before render
-    new_titles = [movie["title"] for movie in final_movies]
+    st.subheader("Here’s what I found:")
+    for movie in final_movies:
+        st.markdown(f"### 🎬 {movie['title']}")
+        st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
 
-    if final_movies:
-        st.subheader("Here’s what I found:")
-        for movie in final_movies:
-            st.markdown(f"### 🎬 {movie['title']}")
-            st.markdown(explain_why(movie, user_input, parsed_filters, client, now))
+        if movie.get("runtime"):
+            minutes = movie["runtime"]
+            end_time = now + timedelta(minutes=minutes)
+            hour = now.hour
+            if 5 <= hour < 11:
+                label = "perfect for a morning watch"
+            elif 11 <= hour < 14:
+                label = "a great midday pick"
+            elif 14 <= hour < 17:
+                label = "a great afternoon pick"
+            elif 17 <= hour < 21:
+                label = "ideal for tonight’s unwind"
+            elif 21 <= hour < 23:
+                label = "a solid late-night option"
+            else:
+                label = "a very late watch — maybe save it for tomorrow"
 
-     # ✅ Now update shown_titles at the very end
-        st.session_state["shown_titles"] = st.session_state["shown_titles"] + new_titles
+            day_of_week = now.strftime('%A')
+            day_label = {
+                "Friday": "It’s Friday night — perfect for family movie time.",
+                "Saturday": "It’s Saturday — time to relax and enjoy something fun.",
+                "Sunday": "It’s Sunday — the perfect wind-down before a new week.",
+                "Monday": "It’s Monday — how about something uplifting?",
+                "Tuesday": "It’s Tuesday — a midweek escape could be just right.",
+                "Wednesday": "It’s Wednesday — halfway there, treat yourself.",
+                "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
+            }.get(day_of_week, f"It’s {day_of_week}.")
 
-            if movie.get("runtime"):
-                minutes = movie["runtime"]
-                end_time = now + timedelta(minutes=minutes)
-                hour = now.hour
-                if 5 <= hour < 11:
-                    label = "perfect for a morning watch"
-                elif 11 <= hour < 14:
-                    label = "a great midday pick"
-                elif 14 <= hour < 17:
-                    label = "a great afternoon pick"
-                elif 17 <= hour < 21:
-                    label = "ideal for tonight’s unwind"
-                elif 21 <= hour < 23:
-                    label = "a solid late-night option"
-                else:
-                    label = "a very late watch — maybe save it for tomorrow"
+            st.markdown(f"🕰 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
 
-                day_of_week = now.strftime('%A')
-                day_label = {
-                    "Friday": "It’s Friday night — perfect for family movie time.",
-                    "Saturday": "It’s Saturday — time to relax and enjoy something fun.",
-                    "Sunday": "It’s Sunday — the perfect wind-down before a new week.",
-                    "Monday": "It’s Monday — how about something uplifting?",
-                    "Tuesday": "It’s Tuesday — a midweek escape could be just right.",
-                    "Wednesday": "It’s Wednesday — halfway there, treat yourself.",
-                    "Thursday": "It’s Thursday — almost the weekend, time for something cozy."
-                }.get(day_of_week, f"It’s {day_of_week}.")
+        st.markdown(f"🎨 **Directed by** {movie['director']}")
+        st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
+        st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
+        st.markdown(f"_{movie['description']}_")
+        st.markdown("---")
 
-                st.markdown(f"🕰 {day_label} You’ll finish by {end_time.strftime('%I:%M %p')} — {label}.")
-
-            st.markdown(f"🎨 **Directed by** {movie['director']}")
-            st.markdown(f"⭐ **Starring** {', '.join(movie['stars'])}")
-            st.markdown(f"🌟 **{movie['rating']} Audience Score | {movie['age_rating']} | {movie['runtime']} mins**")
-            st.markdown(f"_{movie['description']}_")
-            st.markdown("---")
-
-        if len(filtered_movies) > len(final_movies):
-            if st.button("🔄 Show me different options", key="refresh_button"):
-                st.session_state.shown_titles = []
-                st.session_state.shuffle_seed = random.randint(0, 1_000_000)
-    else:
-        st.warning("No strong matches found. Try a different request!")
